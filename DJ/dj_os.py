@@ -17,7 +17,7 @@ class Py_cmd():
         
 def main():
     # import builtwith
-    # a=builtwith.parse('http://www.jimuti.com/')
+    # a=builtwith.parse('')
     # print(a)
     p1=Py_cmd()
     p1.cmd()
