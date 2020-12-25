@@ -30,12 +30,20 @@
         console.log('开始发送ajax请求')
         try {
             let result = await ajaxGet('https://mock.yonyoucloud.com/mock/7551/543'); // 执行到这里报错，直接跳至下面 catch() 语句
+            //确定后端返回的数据类型
+            if(typeof(result)==='string'){
+                let result=JSON.parse(result);
+            }
+
             console.log(result);
         } catch (err) {
             console.log(err)
         }
     }
     getDate();
+
+
+    
 </script>
 
 </html>
