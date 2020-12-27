@@ -148,8 +148,14 @@ class Port:
         data=data[wei:]
         print(data)
         # print(type(data))
-p1=Port()
-p1.cat()
+# p1=Port()
+# p1.cat()
  
+ccc=Regedit()
+ccc.del_startup('aaa')
+# bbb=ccc.reg_startup('aaa','G:\CSDN_L\python\MQ1_test\aa.py')
+# print(bbb)
+# ddd=ccc.get_list()
+# print(ddd)
 
 

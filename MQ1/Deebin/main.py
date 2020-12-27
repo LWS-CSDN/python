@@ -1,5 +1,7 @@
 '''
 deebin10
+https://vault.centos.org/
+https://vault.centos.org/6.7/os/x86_64/
 https://www.cnblogs.com/syrgdm/p/12854186.html
 1.执行sh脚本文件
 例如:./test.sh
@@ -81,4 +83,8 @@ chmod +x 文件位置
 rpm -ivh /tmp/chkconfig-1.3.30.2-2.el5.x86_64.rpm
 然后chkconfig命令就可以用了。
 http://www.maersk.com.cn/
+
+
+
+执行不了就加sudo在前面
 '''

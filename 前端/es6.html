@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>123</p>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    class L_Ajax{
+        constructor(){
+        }
+        ajaxGet(url) {
+            return new Promise(function(resolve, reject) {
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function(res) {
+                        resolve(res)
+                    },
+                    error: function(err) {
+                        reject(url + '这个接口请求失败')
+                    }
+                })
+            })
+        }
+        async getDate(url) {
+            console.log(url+'开始发送ajax请求');
+            try {
+                let result = await this.ajaxGet(url);
+                if(typeof(result)==='string'){
+                    /*
+                    这里判断后端返回的数据类型,防止后端更改接口时,前端受到影响
+                    */
+                    result=JSON.parse(result);
+                }
+                console.log(result);
+                return result;
+                //这里可以改进返回promise的内容return
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    }
+    aa=new L_Ajax();
+    bb=aa.getDate('https://mock.yonyoucloud.com/mock/7551/543');
+    console.log("bb:",bb);
+
+    //补充一下js的知识
+    function aaa(){
+        let res=0;
+        function bbb(){
+            let res='2';
+            if(typeof(res)==='string'){
+                res='456';
+                console.log(res);
+            }
+            console.log(res);
+        }
+        bbb();
+    }
+    aaa();
+    console.log("*******************");
+    function ccc(){
+        let res=0;
+        function ddd(){
+            let res='2';
+            if(typeof(res)==='string'){
+                let res='456';
+                console.log(res);
+            }
+            console.log(res);
+        }
+        ddd();
+    }
+    ccc();
+    console.log("-------------------");
+    function eee(){
+        var res=0;
+        function fff(){
+            var res='2';
+            if(typeof(res)==='string'){
+                res='456';
+                console.log(res);
+            }
+            console.log(res);
+        }
+        fff();
+    }
+    eee();
+    console.log("@@@@@@@@@@@@@@@@@@@@");
+    function ggg(){
+        var res=0;
+        function hhh(){
+            var res='2';
+            if(typeof(res)==='string'){
+                var res='456';
+                console.log(res);
+            }
+            console.log(res);
+        }
+        hhh();
+    }
+    ggg();
+</script>
+</html>

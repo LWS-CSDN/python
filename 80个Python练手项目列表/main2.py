@@ -7,7 +7,7 @@ import threading
 MAX_CONN=200000
 PORT=80
 HOST="127.0.0.1"
-PAGE="/jimuti/DebugMy"
+PAGE="/DebugMy"
 #---------------------------
 buf=("POST %s HTTP/1.1\r\n"
 "Host: %s\r\n"
