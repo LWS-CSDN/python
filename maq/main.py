@@ -10,7 +10,7 @@ import requests
 import random
 
 class Spider:
-    def __init__(self,domain='maersk.com.cn'):
+    def __init__(self,domain='maersk.com.cn/hub'):
         self.headers_maersk={
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Accept-Encoding': 'gzip, deflate, br',
@@ -33,11 +33,11 @@ class Spider:
         self.__domain = domain
         self.timeOut=30
         self.cookies={
-            '_uetvid':'85079510352c11eb9b0dfbe3a7e12585'
+            'SRCHHPGUSR':'CW=1536&CH=722&DPR=1.25&UTC=480&HV=1580472939&WTS=63716068086'
         }
 
 
-    def SetLoginDomain(self,domain='maersk.com.cn'):
+    def SetLoginDomain(self,domain='maersk.com.cn/hub'):
         """设置登录域名"""
         self.__domain=domain
         return self.__domain
@@ -80,5 +80,5 @@ class Spider:
 if __name__ == '__main__':
     spider=Spider()
     spider.set_cookies()
-    content=spider.open_url(url='https://www.maersk.com.cn')
+    content=spider.open_url(url='https://www.maersk.com.cn/hub')
     print(content)
