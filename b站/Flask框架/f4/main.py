@@ -1,0 +1,19 @@
+'''
+2.Flask
+-装饰器实现
+    -位置
+    -URL起别名(不能重复)
+-类似django中间件的东西:before_request装饰器
+
+3.上下文管理预习:
+a.threading.local
+b.functools.wraps
+functools.partial
+c.面向对象封装
+d.面向对象中:
+__setattr__
+__getattr__
+__delattr__
+4.
+http://www.cnblogs.com/wupeiqi/articles/7552008.html
+'''

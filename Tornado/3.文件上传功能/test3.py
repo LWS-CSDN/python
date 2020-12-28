@@ -42,10 +42,10 @@ class UploadHandler(tornado.web.RequestHandler):
         
 
 app=tornado.web.Application([
-    (r'/upload/',UploadHandler)
+    (r'/',UploadHandler)
 ])
 
-app.listen(9998)
+app.listen(80)
 
 tornado.ioloop.IOLoop.instance().start()
 
