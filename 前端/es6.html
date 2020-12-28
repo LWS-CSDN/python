@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box1{
+            width: 50px;
+            height: 50px;
+            border: 0;
+            background-color: orange;
+            cursor: pointer;
+            text-align: center;
+            color: aliceblue;
+            margin-bottom: 10px;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            float: right;
+            background-color:#ccc;
+            margin-right: 10px;
+           
+        }
+    </style>
 </head>
 <body>
     <p>123</p>
+    <div class="box1">按钮</div>
+    <div class="box1">按钮</div>
+    <div class="box1">按钮</div>
+    <div class="box1">按钮</div>
+    <div class="box1">按钮</div>
+    <div class="box1">按钮</div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
+    <div class="box2"></div>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
@@ -45,10 +81,26 @@
             }
         }
     }
+    class L_Btn{
+        constructor(){
+        }
+        btn_click(btns,box){
+            /*
+            一批按钮让一批盒子显示
+            */
+            for(let i=0;i<btns.length;i++){
+                btns[i].onclick=function(){   
+                    console.log(box);
+                }
+            }
+        }
+    }
     aa=new L_Ajax();
     bb=aa.getDate('https://mock.yonyoucloud.com/mock/7551/543');
     console.log("bb:",bb);
-
+    cc=new L_Btn();
+    //cc.btn_click($('.box1'),$('.box2'));
+    cc.btn_click(document.getElementsByClassName('.box1'),document.getElementsByClassName('.box2'));
     //补充一下js的知识
     function aaa(){
         let res=0;
