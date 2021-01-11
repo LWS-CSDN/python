@@ -85,9 +85,9 @@
     let arr = []
     function l_bind() {
         $('#ulmenu').on('click', '.url_link', function (event) {
-            console.log($('#ulmenu'))
+//console.log($('#ulmenu'))
             event = event || window.event;
-            console.log("ev", event);
+           // console.log("ev", event);
             arr.indexOf(event.target.dataset.id) > -1 ? alert('元素已添加') : addDom(event)
 
 
@@ -96,7 +96,7 @@
             let qwer = $(this);
             $("#main_box2_ul").on('click', '.box600_aaa', function (event) {
                 event = event || window.event;
-                console.log(event)
+                //console.log(event)
                 if (event.target.className === 'box600_aaa_close') {
                     arr.remove(event.target.dataset.id);
                     $(this).remove();
@@ -125,6 +125,8 @@
     function addDom(event) {
         if (event.target.className === 'url_link') {
             arr.push(event.target.dataset.id)
+            console.log(event.target.dataset.id)
+            console.log(arr);
             console.log(event.target.innerHTML);
             div_data = `<div class="box600_aaa">${event.target.innerHTML}
                     <div class="box600_aaa_close" data-id="${event.target.dataset.id}">关闭</div>

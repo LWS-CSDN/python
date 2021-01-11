@@ -139,7 +139,7 @@
             //console.log("event:", event.currentTarget);
             
             arr.indexOf(event.target.dataset.id) > -1 ?l_binds(event) : addDom(event)
-            event.stopPropagation()
+            
             
             
         })
@@ -149,8 +149,8 @@
             if(event.target.className==='box600_aaa_close'){
                 
                 //arr.remove(event.target.dataset.id);
-                arr.remove(event.currentTarget.dataset.id);
-                console.log("arr",arr);
+                arr.remove(event.target.dataset.id);
+               // console.log("arr",arr);
                 $(this).remove();
             }
         })
@@ -165,12 +165,14 @@
         //console.log($('#ulmenu'))
         
         console.log("e",event)
+        
+        console.log("父级元素",event.target.parentNode.parentNode.querySelector('.box601_name').innerText)
         arr.push(event.target.dataset.id);
         console.log(arr);
             //console.log(event.target.innerHTML);
-        div_data=`<div class="box600_aaa">标题:${event.target.innerText}
-            链接:${event.target.innerText}
-                <div class="box600_aaa_close" data-id="${event.currentTarget.dataset.id}">关闭</div>
+        div_data=`<div class="box600_aaa">标题:${event.target.parentNode.parentNode.querySelector('.box601_name').innerText}
+            链接:${event.target.parentNode.parentNode.querySelector('.box601_func').innerText}
+                <div class="box600_aaa_close" data-id="${event.target.dataset.id}">关闭</div>
                 </div>`;
         $(div_data).appendTo("#main_box2_ul");
         //    // console.log(arr);
