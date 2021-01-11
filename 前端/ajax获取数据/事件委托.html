@@ -77,50 +77,125 @@
     // })
     /* jQuery事件委托语法：$('父元素').on('事件名','哪个子元素触发',传给回调函数的参数,事件触发时的回调函数);*/
     //let qwer;
+
+    let arr=[];
     function l_bind(){
         $('#ulmenu').on('click','.url_link',function(event){
-        event=event||window.event;
-        console.log("ev",event);
-        if(event.target.className==='url_link'){
-            console.log(event.target.innerHTML);
-            div_data=`<div class="box600_aaa">${event.target.innerHTML}
-                <div class="box600_aaa_close">关闭</div>
-                </div>`;
-            $(div_data).appendTo("#main_box2_ul");
-            $(this).unbind('click');
-        } 
-        
-            //     console.log(123);
-        
-        let qwer=$(this);
-        $("#main_box2_ul").on('click','.box600_aaa',function(event){
             event=event||window.event;
-            if(event.target.className==='box600_aaa_close'){
-                $(this).remove();
-            }
-        // $('.box600_aaa').on('click','.box600_aaa_close',function(event){
-        //     console.log("123")
-        // })
-        })
-        
-        //console.log("qwer",qwer);
-        // let box600_aaa_data=$('.box600_aaa');
-        // //console.log("box600_aaa_data",box600_aaa_data.length);
-        // if(box600_aaa_data.length<1){
-            
-        // }else{
-        //     let box600_aaa_datas=$('.box600_aaa');
-        //     console.log("box600_aaa_datas",box600_aaa_datas[0]);
-        // }
-       
-        
-          
+            arr.indexOf(event.target.dataset.id) > -1 ?alert("元素已添加"):addDom(event)
+            let qwer=$(this);
+            $("#main_box2_ul").on('click','.box600_aaa',function(event){
+                event=event||window.event;
+                if(event.target.className==='box600_aaa_close'){
+                    arr.remove(event.target.dataset.id);
+                    $(this).remove();
+                }
+            })
         })
     }
-    l_bind()
+    function addDom(event){
+        //event=event||window.event;
+        if(event.target.className==='url_link'){
+            arr.push(event.target.dataset.id);
+            
+            div_data=`<div class="box600_aaa">${event.target.innerHTML}
+                    <div class="box600_aaa_close" data-id="${event.target.dataset.id}">关闭</div>
+                     </div>`;
+            $(div_data).appendTo("#main_box2_ul");
+            console.log(arr)
+            $(this).unbind('click');   
+        }
+    }
+    //数组元素删除
+    Array.prototype.remove=function(val){
+        var index=this.indexOf(val);
+        if(index > -1){
+            this.splice(index,1);
+        }
+    }
+    l_bind();
     function l_remove(){
 
     }
+    // function l_bind(){
+    //     let box_list=[];
+    //     $('#ulmenu').on('click','.url_link',function(event){
+    //         event=event||window.event;
+    //         //console.log("ev",event);
+    //         if(event.target.className==='url_link'){
+    //             //console.log();
+    //             if(box_list.length===0){
+    //                 div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                 <div class="box600_aaa_close">关闭</div>
+    //                 </div>`;
+    //                 $(div_data).appendTo("#main_box2_ul");
+    //                 // for(let ){
+    //                 box_list.push(event.target.innerHTML);
+    //                 // }
+    //                // box_list.push(event.target.innerHTML);
+    //             }else{
+    //                 let code=true;
+    //                 for(let i=0;i<box_list.length;i++){
+    //                     console.log(box_list[i]);
+    //                     console.log(event.target.innerHTML);
+    //                     if(box_list[i]===event.target.innerHTML){
+    //                         code=false;
+    //                         console.log("有一样的了");
+    //                         return
+    //                     }else{
+    //                        console.log("没有一样的");
+    //                     }   
+    //                     console.log("123",box_list)     
+    //                 }
+    //                 if(code){
+
+    //                 }else{
+    //                     div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                     <div class="box600_aaa_close">关闭</div>
+    //                     </div>`;
+    //                     $(div_data).appendTo("#main_box2_ul");
+    //                     box_list.push(event.target.innerHTML);
+    //                 }
+               
+                    
+    //                 // div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                 // <div class="box600_aaa_close">关闭</div>
+    //                 // </div>`;
+    //                 // $(div_data).appendTo("#main_box2_ul");
+    //             }
+               
+    //         } 
+    //     })
+    //         //     console.log(123);
+        
+    //     //let qwer=$(this);
+       
+        
+    //     //console.log("qwer",qwer);
+    //     // let box600_aaa_data=$('.box600_aaa');
+    //     // //console.log("box600_aaa_data",box600_aaa_data.length);
+    //     // if(box600_aaa_data.length<1){
+            
+    //     // }else{
+    //     //     let box600_aaa_datas=$('.box600_aaa');
+    //     //     console.log("box600_aaa_datas",box600_aaa_datas[0]);
+    //     // }
+       
+        
+          
+        
+    //     $("#main_box2_ul").on('click','.box600_aaa',function(event){
+    //         event=event||window.event;
+    //         if(event.target.className==='box600_aaa_close'){
+    //             $(this).remove();
+    //         }
+    //     // $('.box600_aaa').on('click','.box600_aaa_close',function(event){
+    //     //     console.log("123")
+    //     // })
+    //     })
+    // }
+    //l_bind()
+    
    
 </script>
 </html>
