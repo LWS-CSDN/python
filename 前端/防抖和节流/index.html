@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 3000px;">
+    
+</body>
+<script>
+    /*old-demo*/
+    // function showTop(){
+    //     var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+    //     console.log("滚动条位置:",screenTop);
+    // }
+    // window.onscroll=showTop
+
+
+    function debounce(fn,delay){
+        /* 
+        fn[function]需要防抖的函数
+        delay[number]毫秒,防抖
+        */
+        let timer = null //借助闭包
+        return function() {
+            if(timer){
+                clearTimeout(timer) //进入该分支语句，说明当前正在一个计时过程中，并且又触发了相同事件。所以要取消当前的计时，重新开始计时
+                timer = setTimeout(fn,delay) 
+            }else{
+                timer = setTimeout(fn,delay) // 进入该分支说明当前并没有在计时，那么就开始一个计时
+            }
+        }
+    }
+</script>
+</html>

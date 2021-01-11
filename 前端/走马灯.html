@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text-Carousel</title>
+    <style>
+        .horizontal-carousel {
+            /* 一定要隐藏掉超出部分的内容 */
+            overflow: hidden;
+            width: 500px;
+            height: 50px;
+            border: 1px solid gray;
+        }
+        .horizontal-carousel ol {
+            /* 这里不能设为inline，否则translate不起作用要用margin-left来做动画 */
+            display: inline-block; 
+            /* 强制不换行，不设的话由于内容较多会换行到下方 */
+            white-space: nowrap;
+            animation: horizontal-move 20s linear infinite;
+            /* 容器的宽度，似乎纯CSS的话只能写死 */
+            transform: translate(500px);
+        }
+        @keyframes horizontal-move {
+            0% {
+                transform: translate(500px);
+            }
+            100% {
+                /* 100%是自身的宽度 */
+                transform: translate(calc(-500px - 100%));
+            }
+        }
+        .horizontal-carousel ol li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .vertical-carousel {
+            overflow: hidden;
+            width: 500px;
+            height: 200px;
+            border: 1px solid gray;
+
+        }
+        .vertical-carousel ol {
+            list-style-type: none;
+            animation: vertical-move 20s linear infinite;
+            /* 容器的高度，似乎纯CSS的话只能写死 */
+            transform: translate(0, 200px);
+        }
+        .vertical-carousel ol li {
+            line-height: 50px;
+            height: 50px;
+        }
+        @keyframes vertical-move {
+            0% {
+                transform: translate(0, 200px);
+            }
+            100% {
+                transform: translate(0, calc(-200px - 100%));
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>横向滚动跑马灯</h2>
+    <div class="horizontal-carousel">
+        <ol>
+            <li>披绣闼</li>
+            <li>俯雕甍</li>
+            <li>山原旷其盈视</li>
+            <li>川泽纡其骇瞩</li>
+            <li>闾阎扑地，钟鸣鼎食之家</li>
+            <li>舸舰弥津，青雀黄龙之舳</li>
+            <li>云销雨霁，彩彻区明</li>
+            <li>落霞与孤鹜齐飞</li>
+            <li>秋水共长天一色</li>
+            <li>渔舟唱晚，响穷彭蠡之滨</li>
+            <li>雁阵惊寒，声断衡阳之浦</li>
+        </ol>
+    </div>
+    <h2>纵向滚动跑马灯</h2>
+    <div class="vertical-carousel">
+        <ol>
+            <li>披绣闼</li>
+            <li>俯雕甍</li>
+            <li>山原旷其盈视</li>
+            <li>川泽纡其骇瞩</li>
+            <li>闾阎扑地，钟鸣鼎食之家</li>
+            <li>舸舰弥津，青雀黄龙之舳</li>
+            <li>云销雨霁，彩彻区明</li>
+            <li>落霞与孤鹜齐飞</li>
+            <li>秋水共长天一色</li>
+            <li>渔舟唱晚，响穷彭蠡之滨</li>
+            <li>雁阵惊寒，声断衡阳之浦</li>
+        </ol>
+    </div>
+</body>
+</html>
