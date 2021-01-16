@@ -33,7 +33,7 @@ def get_page(str):
 name_list=['xiaozi','aa','bb','cc','dd','ee','ff','gg']
 
 #实例化一个线程池对象
-pool=Pool(4)
+pool=Pool(7)
 #将列表中每一个列表元素传递给get_page进行处理
 pool.map(get_page,name_list)
 

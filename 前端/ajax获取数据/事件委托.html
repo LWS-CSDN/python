@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ulmenu>.url_link{
+           
+            background-color: #ccc;
+            margin-bottom: 20px;
+            cursor: pointer;        
+        }
+        .main_box1{
+            width: 1000px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .box600_aaa{
+            width: 200px;
+            height: 300px;
+            float: left;
+            background-color: orange;
+            margin-right:10px ;
+        }
+        .box600_aaa_close{
+            width: 50px;
+            height: 50px;
+            background-color:rebeccapurple;
+            float:right;
+            cursor: pointer;
+            color: #ccc;
+        }
+        .box601_name{
+            width: 80px;
+            height: 100%;
+            background-color: #ccc;
+            border-right: 2px solid red;
+            float: left;
+        }
+        .box601_func{
+            width: 300px;
+            height: 100%;
+            background-color: #ccc;
+            border-right: 2px solid red;
+            float: left;
+        }
+        .box601_btns{
+            width: 200px;
+            height: 100%;
+            background-color: #ccc;
+            float: left;
+            border-right: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="maincontent">
+        <div class="main_box1">
+            <ul class="main_box2" id="main_box2_ul">
+                
+            </ul>
+        </div>
+        <div id="menu">
+            <ul id="ulmenu" style="background-color: bisque;">
+                <li class="url_link">
+                    <div class="box601_name">镇宁1</div>
+                    <div class="box601_func">http://www.baidu.com</div>
+                    <div class="box601_btns">
+                        <div class="box601_btn" data-id="link1">按钮</div>
+                    </div> 
+                     
+                </li>
+                <li class="url_link">
+                    <div class="box601_name">镇宁2</div>
+                    <div class="box601_func">http://www.baidu.com</div>
+                    <div class="box601_btns">
+                        <div class="box601_btn"  data-id="link2">按钮</div>
+                    </div>        
+                </li>
+                <li class="url_link">
+                    <div class="box601_name">镇宁3</div>
+                    <div class="box601_func">http://www.baidu.com</div>
+                    <div class="box601_btns">
+                        <div class="box601_btn" data-id="link3">按钮</div>
+                    </div>        
+                </li>
+                <li class="url_link">
+                    <div class="box601_name">镇宁4</div>
+                    <div class="box601_func">http://www.baidu.com</div>
+                    <div class="box601_btns">
+                        <div class="box601_btn" data-id="link4">按钮</div>
+                    </div>        
+                </li>
+                <li class="url_link">
+                    <div class="box601_name">镇宁5</div>
+                    <div class="box601_func">http://www.baidu.com</div>
+                    <div class="box601_btns">
+                        <div class="box601_btn" data-id="link5">按钮</div>
+                    </div>        
+                </li>
+             
+            </ul>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // var ul=document.getElementsByTagName('ul')[0];
+    // console.log(ul)
+    // ul.onclick=function(e){
+    //     e=e||window.event;
+    //     console.log(e.target.innerHTML);
+    // }
+    /*
+    参数1:给ul加点击事件
+    参数2:但是只由ul里面的li触发
+    参数3:字符串,可以传递给事件的回调函数,在事件的回调函数的事件对象里可以通过data拿到
+    参数4:时间回调函数
+    */
+    // $('ul').on('click','li','我是数据',function(event){
+    //     //通过事件对象,data可以拿到参数3传递过来的数据,但一般不会用
+    //     event=event||window.event;
+    //     console.log(event.data);
+    //     console.log(event.target.innerHTML);
+    //     console.log(this.innerHTML);
+    // })
+    /* jQuery事件委托语法：$('父元素').on('事件名','哪个子元素触发',传给回调函数的参数,事件触发时的回调函数);*/
+    //let qwer;
+
+    let arr=[];
+    function l_bind(){
+        $('#ulmenu').on('click','.box601_btn',function(event){
+            
+            event=event||window.event;  
+            //console.log("event:", event.currentTarget);
+            
+            arr.indexOf(event.target.dataset.id) > -1 ?l_binds(event) : addDom(event)
+            event.stopPropagation()
+            
+            
+        })
+        $("#main_box2_ul").on('click','.box600_aaa',function(event){
+            event=event||window.event;
+            console.log("",event)
+            if(event.target.className==='box600_aaa_close'){
+                
+                //arr.remove(event.target.dataset.id);
+                arr.remove(event.currentTarget.dataset.id);
+                console.log("arr",arr);
+                $(this).remove();
+            }
+        })
+        
+    }
+    function l_binds(event){
+
+    }
+    function addDom(event){
+        //event=event||window.event;
+        //let that=this;
+        //console.log($('#ulmenu'))
+        
+        console.log("e",event)
+        arr.push(event.target.dataset.id);
+        console.log(arr);
+            //console.log(event.target.innerHTML);
+        div_data=`<div class="box600_aaa">标题:${event.target.innerText}
+            链接:${event.target.innerText}
+                <div class="box600_aaa_close" data-id="${event.currentTarget.dataset.id}">关闭</div>
+                </div>`;
+        $(div_data).appendTo("#main_box2_ul");
+        //    // console.log(arr);
+        //     //console.log(event.target.innerHTML);
+        //     console.log($(this));
+        //     $(that).unbind('click');   
+        
+    }
+    //数组元素删除
+    Array.prototype.remove=function(val){
+        var index=this.indexOf(val);
+        if(index > -1){
+            this.splice(index,1);
+        }
+    }
+    l_bind();
+   
+    // function l_bind(){
+    //     let box_list=[];
+    //     $('#ulmenu').on('click','.url_link',function(event){
+    //         event=event||window.event;
+    //         //console.log("ev",event);
+    //         if(event.target.className==='url_link'){
+    //             //console.log();
+    //             if(box_list.length===0){
+    //                 div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                 <div class="box600_aaa_close">关闭</div>
+    //                 </div>`;
+    //                 $(div_data).appendTo("#main_box2_ul");
+    //                 // for(let ){
+    //                 box_list.push(event.target.innerHTML);
+    //                 // }
+    //                // box_list.push(event.target.innerHTML);
+    //             }else{
+    //                 let code=true;
+    //                 for(let i=0;i<box_list.length;i++){
+    //                     console.log(box_list[i]);
+    //                     console.log(event.target.innerHTML);
+    //                     if(box_list[i]===event.target.innerHTML){
+    //                         code=false;
+    //                         console.log("有一样的了");
+    //                         return
+    //                     }else{
+    //                        console.log("没有一样的");
+    //                     }   
+    //                     console.log("123",box_list)     
+    //                 }
+    //                 if(code){
+
+    //                 }else{
+    //                     div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                     <div class="box600_aaa_close">关闭</div>
+    //                     </div>`;
+    //                     $(div_data).appendTo("#main_box2_ul");
+    //                     box_list.push(event.target.innerHTML);
+    //                 }
+               
+                    
+    //                 // div_data=`<div class="box600_aaa">${event.target.innerHTML}
+    //                 // <div class="box600_aaa_close">关闭</div>
+    //                 // </div>`;
+    //                 // $(div_data).appendTo("#main_box2_ul");
+    //             }
+               
+    //         } 
+    //     })
+    //         //     console.log(123);
+        
+    //     //let qwer=$(this);
+       
+        
+    //     //console.log("qwer",qwer);
+    //     // let box600_aaa_data=$('.box600_aaa');
+    //     // //console.log("box600_aaa_data",box600_aaa_data.length);
+    //     // if(box600_aaa_data.length<1){
+            
+    //     // }else{
+    //     //     let box600_aaa_datas=$('.box600_aaa');
+    //     //     console.log("box600_aaa_datas",box600_aaa_datas[0]);
+    //     // }
+       
+        
+          
+        
+    //     $("#main_box2_ul").on('click','.box600_aaa',function(event){
+    //         event=event||window.event;
+    //         if(event.target.className==='box600_aaa_close'){
+    //             $(this).remove();
+    //         }
+    //     // $('.box600_aaa').on('click','.box600_aaa_close',function(event){
+    //     //     console.log("123")
+    //     // })
+    //     })
+    // }
+    //l_bind()
+    
+   
+</script>
+</html>

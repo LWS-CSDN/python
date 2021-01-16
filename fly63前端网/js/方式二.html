@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // ipify接口,get请求获取
+	function get(url,cb){
+		var httpRequest = new XMLHttpRequest();
+		httpRequest.open('GET', url, true);
+		httpRequest.send();
+		httpRequest.onreadystatechange = function () {
+		    if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+		        var json = httpRequest.responseText;
+				cb(json);
+		    }
+		};	
+	}
+	get("https://api.ipify.org/?format=json",function(data){
+		data=JSON.parse(data);
+		console.log(data.ip);
+	});
+</script>
+</html>

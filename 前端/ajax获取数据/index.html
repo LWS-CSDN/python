@@ -5,45 +5,414 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box1,.box2{
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            cursor: pointer;
+            margin-right: 10px;
+            float: left;
+        }
+        .box2{
+            background-color: orange;
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div></div>
+    <button class="creat">生成p0标签</button>
+    <button class="creat">生成p1标签</button>
+    <button class="creat">生成p2标签</button>
+    <button class="creat">生成p3标签</button>
+    <button class="creat">生成p4标签</button>
+    <button class="creat">生成p5标签</button>
 </body>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    function ajaxGet(url) {
-        return new Promise(function(resolve, reject) {
-            $.ajax({
-                url: url,
-                type: 'GET',
-                success: function(res) {
-                    resolve(res)
-                },
-                error: function(err) {
-                    reject(url + '这个接口请求失败')
-                }
-            })
-        })
-    };
-    async function getDate() {
-        console.log('开始发送ajax请求')
-        try {
-            let result = await ajaxGet('https://mock.yonyoucloud.com/mock/7551/543'); // 执行到这里报错，直接跳至下面 catch() 语句
-            //确定后端返回的数据类型
-            if(typeof(result)==='string'){
-                let result=JSON.parse(result);
-            }
+<!--[if !IE]><!-->除IE外都可识别
+<!--<![endif]-->
+<!--[if IE]> 所有的IE可识别 <![endif]-->
+<!--[if IE 6]> 仅IE6可识别 <![endif]-->
+<!--[if lt IE 6]> IE6以及IE6以下版本可识别 <![endif]-->
+<!--[if gte IE 6]> IE6以及IE6以上版本可识别 <![endif]-->
+<!--[if IE 7]> 仅IE7可识别 <![endif]-->
+<!--[if lt IE 7]> IE7以及IE7以下版本可识别 <![endif]-->
+<!--[if gte IE 7]> IE7以及IE7以上版本可识别 <![endif]-->
+<!--[if IE 8]> 仅IE8可识别 <![endif]-->
+<!--[if IE 9]> 仅IE9可识别 <![endif]-->
 
-            console.log(result);
-        } catch (err) {
-            console.log(err)
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/js/polyfill-ie8-30f98ab294.js"></script>
+<![endif]-->
+<script>
+
+    // function CheckBrowser() {
+    //     //判断浏览器版本
+    //     var sys = {};
+    //     var ua = navigator.userAgent.toLowerCase();
+    //     if (ua.match(/msie/) != null || ua.match(/trident/) != null) {
+    //         //哈哈，现在可以检测ie11.0了！
+    //         var BrowserVersion = ua.match(/msie ([\d.]+)/) != null ? ua.match(/msie ([\d.]+)/)[1] : ua.match(/rv:([\d.]+)/)[1];
+    //         alert("IE:" + BrowserVersion);
+    //     }
+    //     else {
+    //         var s;
+    //         (s = ua.match(/firefox\/([\d.]+)/)) ? sys.firefox = s[1] :
+    //             (s = ua.match(/chrome\/([\d.]+)/)) ? sys.chrome = s[1] :
+    //                 (s = ua.match(/opera.([\d.]+)/)) ? sys.opera = s[1] :
+    //                     (s = ua.match(/version\/([\d.]+).*safari/)) ? sys.safari = s[1] : 0;
+    //         //以下进行测试
+    //         if (sys.firefox) {
+    //             alert('Firefox' + sys.firefox);
+    //         }
+    //         if (sys.chrome) {
+    //             alert('Chrome' + sys.chrome);
+    //         }
+    //         if (sys.opera) {
+    //             alert('Opera' + sys.opera);
+    //         }
+    //         if (sys.safari) {
+    //             alert('Safari' + sys.safari);
+    //         }
+    //     }
+
+    // }
+
+   // CheckBrowser();
+
+    //const Name = '张三';//使用新增的关键字;const声明常量
+    //alert(Name);
+
+</script>
+<script>
+    $(document.body).on('click','.creat','123456',function(e){
+        console.log("123");
+        let text=$(this)[0].innerText;
+        let index=$(this).index();
+        $(`<p class="p1" data-category="${index-1}">点我试试看${text}</p>`).appendTo('div');
+    });
+    $('.creat').on('click','.p1','789',function(e){
+        $(this).remove();
+    })
+</script>
+<script>
+    class L_ajax {
+        url(data){
+            //url转码
+            let data1=data+1;
+            return data1;
+        }
+        ajaxGet(url) {
+            return new Promise(function (resolve, reject) {
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function (res) {
+                        resolve(res)
+                    },
+                    error: function (err) {
+                        reject(err)
+                    }
+                })
+            })
+        }
+        async getDate(url,success,error,debug=false) {
+            //url:url地址
+            //success:成功回调
+            //error:失败回调
+            //debug默认关闭调试模式 开启true调试模式
+            if(debug){
+                console.log(url+'开始发送ajax请求');
+            }
+            try {
+                let result = await this.ajaxGet(url); // 执行到这里报错，直接跳至下面 catch() 语句       
+                if(debug){
+                    console.log(url+"请求返回的数据为:"+result);
+                    console.log(url+"请求的数据类型为:",typeof(result));
+                }
+                success(result);
+            } catch (err) {
+                if(debug){
+                    console.log(url+err);
+                }
+                error(err);         
+            }            
         }
     }
-    getDate();
+    class L_event{
+        l_onclick_custom(box,box_event){
+            /*
+            功能说明:绑定单个按钮点击事件
+            box:要点击的那个按钮 例如$('.divbox')[0]或者$('#divbox')
+            box_event:点击后要完成的函数
+            */ 
+            box_event.onclick=function(){
+                boxlist_event();
+            }
+           
+        }
+        l_onclick_show(boxlist,boxlist_event){
+            /*
+            功能说明:点击boxlist的按钮让boxlist_event显示
+            boxlist:要点击的一批按钮 例如:$('.box')
+            boxlist_event:要隐藏的那一批东西 例如:$('.box1')
+            */
+            for(let i=0;i<boxlist.length;i++){
+                boxlist[i].onclick=function(){
+                    boxlist_event[i].style.display='block';
+                }
+            }    
+        }
+        l_onclick_hide(boxlist,boxlist_event){
+            for(let i=0;i<boxlist.length;i++){
+                boxlist[i].onclick=function(){
+                    boxlist_event[i].style.display='none';
+                }
+            }
+        }
+    }
+    class L_animation{
+        l_loading(){
+            //加载
 
+        }
+        l_shuffling(){
+            //轮播图
 
+        }
+    }
+    class L_element{
+        l_tab(){
+            //tab页
+        }
+        l_button(){
+            //按钮
+        }
+        l_progress(){
+            //进度条
+        }
+        l_score(){
+            //评分(五星好评那种)
+        }
+        l_a(){
+            //点击弹窗
+        }
+    }
+   
     
+    // let creat=$(".creat");
+    // for(let i=0;i<creat.length;i++){
+    //     creat[i].onclick = function () {
+    //         console.log(i);
+    //         data=`<p class="p1">点我试试看${creat[i].innerText}</p>`;
+    //         $(data).appendTo('div');
+    //     }
+    //     // creat[i].on('click',function(){
+	// 	//    // $('div').html('<p class="p1">点我试试看</p>');
+	//     // })
+    // }
+    // $('.creat').on('click','.p1',function(){
+    //     $(this).remove();
+    // })
+    // $(".creat").one("click",function(){
+    //     console.log($(this)[0].innerText);
+    //     let text=$(this)[0].innerText;
+    //     $(`<p class="p1">点我试试看${text}</p>`).appendTo('div');
+    //     // let text=$(this).innerText;
+    //     // data=`<p class="p1">点我试试看${text}</p>`;
+    //     // $(data).appendTo('div');
+    // });
+    // for(let i=0;i<creat.length;i++){
+   // let index=0;
+    function l_remove(){
+//         // index+=1;
+//         // // console.log(data);
+//         // // console
+//         // //$('.p1').unbind('click');  
+//         // console.log("data",data);
+//         // console.log("data1",data1);
+//         //console.log(typeof(data1))
+//         //$('.')
+//         // console.log("123",$('.p1')[data-1]);
+//         // $($('.p1')[data-1]).on('click',function(){
+//         //     $('.p1')[data-1].remove();
+//         //     console.log("12",$('.creat'))
+//         //     $($('.creat')[data-1]).removeAttr("disabled"); 
+//         //    // $('.creat')[data-1].attr('disabled',false);
+//         // })
+//        // console.log("123",$('.p1:eq('+data+')'));
+            $('.creat').on('click','.p1',function(){
+                var myData = $(this).data("category");
+                console.log("my",myData);
+                console.log($('.creat'))
+                //$('.creat')[myData].unbind('click');  
+                $(this).remove();
+                
+
+            })
+//            // $('.p1')[data].remove();
+//             // console.log("12",$('.creat'))
+//             // $($('.creat')[data]).removeAttr("disabled"); 
+//             // console.log("现在只能有删除事件");
+//             // //$(data).remove();
+//             // //$(this)
+//             // //console.log("this",$(this));
+
+
+             
+//             // $('#boxId').unbind('click').bind('click',function(){
+//             //     console.log(123);
+//             // });
+// ​           /*
+//             // console.log($(this).index())
+//             // console.log();
+            
+           
+//             // console.log("btn",$('.creat'));
+           
+//             // $('.creat').unbind('click');
+//             // console.log("data",data);
+//             //console.log("222222222222",$($('.creat')[data]))
+//             //$($('.creat')[data-1]).attr('disabled',false);
+            
+//             //data[$(this).index()].attr('disabled',false);
+//             // console.log("按钮显示",data);
+//             // l_binds(data);
+//             // console.log("this",$(this));
+//             // $(this).bind('click',function(){    
+//             //     let text=$(this)[0].innerText;
+//             //     $(`<p class="p1">点我试试看${text}</p>`).appendTo('div');
+//             // })*/
+            
+       
+     }
+    
+    //console.log("creat",$(".creat")[0]);
+
+    function l_bind(){ 
+        // let aaa
+        $(document.body).on('click','.creat',function(){
+            console.log("绑定了当前按钮")
+            let text=$(this)[0].innerText;
+            let index=$(this).index();
+            $(`<p class="p1" data-category="${index-1}">点我试试看${text}</p>`).appendTo('div');
+            //console.log($(this));
+        })
+        var ev = window.event||ev
+        document.onclick = function(ev){
+            console.log(window.event);
+            console.log(event);
+            console.log(ev); //ff
+
+            //兼容
+            var ev = window.event || ev;
+            console.log(ev);
+        }
+
+        // $(".creat").on("click",function(){
+        //     //mySwiper.slideNext();
+        //     //console.log($(this)[0].innerText);
+            
+        //     console.log("绑定了当前按钮")
+        //     let text=$(this)[0].innerText;
+        //     let index=$(this).index();
+        //     $(`<p class="p1" data-category="${index-1}">点我试试看${text}</p>`).appendTo('div');
+        //     //console.log("按钮变灰",$(this));
+        //     //console.log();
+        //     //console.log($(this).index())
+        //     //$(this).attr('disabled',true);
+        //     // var myData = $(".p1").data("category");
+        //     // console.log("my",myData);
+        //     //console.log("1111111111111111",$(this))
+        //     //l_remove($(this),$(this).index());
+        //    // $(this).unbind('click');  
+        //     //console.log("解绑了");
+        //     //l_remove($(this)); 
+        //     //l_binds($(this));
+        //     //console.log("2",$(this).index())
+        //     //let btn_index=$(this).index();
+        //     //console.log("btn_index",btn_index);
+        //     //l_remove($(this),btn_index-1);
+           
+        // });    
+    }
+   //l_bind();
+   // l_remove();
+    
+    //console.log("bbb",bbb);
+    
+    
+    // function l_binds(data){
+    //     console.log("移出之后再添加");
+    //     console.log("data",data)
+    //     data.bind("click",function(){
+    //         let text=data[0].innerText;
+    //         $(`<p class="p1">点我试试看${text}</p>`).appendTo('div');
+    //     })
+    // }
+    // $(document.body).on('click','.p1',function(){
+    //     alert('hello world');
+    // })
+    
+    // b=new L_event();
+    // b.l_onclick_show($('.box1'),$('.box2'));
+
+
+    //b.l_onclick_hide($('.box1'),$('.box2'));
+    // a = new L_ajax();
+    // function suc(res){
+    //     console.log("成功",res);
+    // }
+    // function err(err){
+    //     console.log("失败",err);
+    // }
+    // a.getDate('https://mock.yonyoucloud.com/mock/7551/543',suc,err);
+    
+    //console.log("----------");
+    //a.getDate('https://mock.yonyoucloud.com/mock/7551/543',suc,err,true);
+
+
+
+
+
+
+    // function ajaxGet(url) {
+    //     return new Promise(function (resolve, reject) {
+    //         $.ajax({
+    //             url: url,
+    //             type: 'GET',
+    //             success: function (res) {
+    //                 resolve(res)
+    //             },
+    //             error: function (err) {
+    //                 reject(url + '这个接口请求失败')
+    //             }
+    //         })
+    //     })
+    // };
+    // async function getDate() {
+    //     console.log('开始发送ajax请求')
+    //     try {
+    //         let result = await ajaxGet('https://mock.yonyoucloud.com/mock/7551/543'); // 执行到这里报错，直接跳至下面 catch() 语句
+    //         //确定后端返回的数据类型
+
+    //         if (typeof (result) === 'string') {
+    //             let result = JSON.parse(result);
+    //         }
+    //     } catch (err) {
+    //         console.log(err)
+    //     }
+    // }
+    //getDate();
+
+/*
+
+1.先给所有按钮添加点击事件
+2.如果哪个被点击过了然后给他解绑点击事件,除非他点了关闭按钮,再次给他个人帮上点击事件
+*/
+
 </script>
 
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+</body>
+<script>
+// Browsersync和webpack
+//自己总结的
+// 静态网站
+// browser-sync start --server --files "css/*.css,js/*.js, *.html"
+// 动态网站
+// browser-sync start --proxy "localhost:80/debugmy" --files "static/debugmy/css/*.css,static/debugmy/js/*.js,html/*.html"
+/*
+静态网页热更新和动态网站热更新
+1. 安装 Node.js
+BrowserSync是基于Node.js的, 是一个Node模块， 如果您想要快速使用它，也许您需要先安装一下Node.js
+安装适用于Mac OS，Windows和Linux。
+
+2. 安装 BrowserSync
+您可以选择从Node.js的包管理（NPM）库中 安装BrowserSync。打开一个终端窗口，运行以下命令：
+npm install -g browser-sync
+您告诉包管理器下载BrowserSync文件，并在全局下安装它们，您可以在所有项目(任何目录)中使用。
+当然您也可以结合gulpjs或gruntjs构建工具来使用，在您需要构建的项目里运行下面的命令:
+npm install --save-dev browser-sync
+
+3. 启动 BrowserSync
+一个基本用途是，如果您只希望在对某个css文件进行修改后会同步到浏览器里。那么您只需要运行命令行工具，进入到该项目（目录）下，并运行相应的命令：
+静态网站
+如果您想要监听.css文件, 您需要使用服务器模式。 BrowserSync 将启动一个小型服务器，并提供一个URL来查看您的网站。
+// --files 路径是相对于运行该命令的项目（目录） 
+browser-sync start --server --files "css/*.css"
+如果您需要监听多个类型的文件，您只需要用逗号隔开。例如我们再加入一个.html文件
+// --files 路径是相对于运行该命令的项目（目录） 
+browser-sync start --server --files "css/*.css, *.html"
+// 如果你的文件层级比较深，您可以考虑使用 **（表示任意目录）匹配，任意目录下任意.css 或 .html文件。 
+我们做了一个静态例子的示范，您可以下载示例包，文件您可以解压任何盘符的任何目录下，不能是中文路径。打开您的命令行工具，进入到BrowsersyncExample目录下，运行以下其中一条命令。Browsersync将创建一个本地服务器并自动打开你的浏览器后访问http://localhost:3000地址，这一切都会在命令行工具里显示。你也可以查看Browsersync静态示例视频
+// 监听css文件 
+browser-sync start --server --files "css/*.css"
+// 监听css和html文件 
+browser-sync start --server --files "css/*.css, *.html"
+
+动态网站
+如果您已经有其他本地服务器环境PHP或类似的，您需要使用代理模式。 BrowserSync将通过代理URL(localhost:3000)来查看您的网站。
+// 主机名可以是ip或域名
+browser-sync start --proxy "主机名" "css/*.css"
+在本地创建了一个PHP服务器环境，并通过绑定Browsersync.cn来访问本地服务器，使用以下命令方式，Browsersync将提供一个新的地址localhost:3000来访问Browsersync.cn，并监听其css目录下的所有css文件。
+browser-sync start --proxy "Browsersync.cn" "css/*.css"
+*/
+
+// var x=1;
+// function func(x,y=function anonymousl(){console.log("dd",x);x=2;console.log("cc",x)}){
+//     var x=3;
+//     console.log("aa",x);
+//     y();
+//     console.log("bb",x);
+// }
+// func(5);
+// console.log(x);
+// var a=1;
+// function aaa(){
+//     a=2;
+//     console.log("1",a);
+// }
+// aaa()
+// console.log(a);
+// var nums=[1,2,3,4,5,6];
+// var target=6;
+// function test(){
+// // 需求 给定一个整数数组nums和一个整数目标值target,请你在该数组中找出 和为目标值的那两个整数,并返回他们的数组下标
+// //你可以假设每种输入只会对应一个答案,但是数组中同一个元素不能使用两遍
+// //你可以按任意顺序返回答案
+// }
+// test(nums,target);
+</script>
+</html>

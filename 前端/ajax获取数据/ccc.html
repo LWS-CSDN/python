@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id = "div1">
+ 
+</div>
+<script>
+    setTimeout(() => {    //动态添加元素
+        const button = document.createElement('button');
+        const span = document.createElement('span');
+        span.textContent = 'click 1';
+        button.appendChild(span);
+        div1.appendChild(button)
+    }, 1000)
+ 
+    function on(eventType, element, selector, fn) {    //封装一个事件委托函数
+        if(!(element instanceof Element)){
+            //document.querySelector
+            element = document.querySelector(element)
+        }
+        element.addEventListener(eventType, e => {
+          let el = e.target
+          while (!el.matches(selector)) {
+            if (element === el) {    //找父节点的过程中不能超过被委托元素
+              el = null
+              break
+            }
+            el = el.parentNode
+          }
+          el && fn.call(el, e, el)
+        })
+        return element
+    }
+    on('click', '#div1>button', 'span', () => {
+        console.log('span被点击了')
+    })
+</script>
+</body>
+</html>

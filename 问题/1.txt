@@ -1,0 +1,162 @@
+py列表不能直接删有坑
+薄弱点
+1.Liunx基础
+2.SQL和NoSQL
+3.py的@
+4.py断言
+5.前端向上冒泡和向下委托
+6.大文件文件断点续传
+7.大文件上传分片上传
+8.vue(vue-cli + vue2.0 + vuex + vue-router + axios + element-ui),react,Angular
+9.flask(flask-cli + flask-debugToolbar + flask-WTF + falsk-login + flask-restful + flask-admin),tornado,Django,Scrapy,Scrapy-redis,Celery
+10.redis
+11.nginx
+12.apache
+13.Numpy,opencv,pyqt5,pandas,Matplotlib
+14.js高级设计
+15.防抖和节流
+16.py进程池,线程池,线程池
+17.py进程通信,py线程通信,py线程通信
+18.py队列
+19.py装饰器
+20.数据库连接池
+21.py多个线程操控一个文件进行增删改查
+22.FastAPI,Bottle,web.py
+23.V8引擎 √
+24.GET相同文件缓存问题
+25.路由懒加载,图片懒加载
+26.cookie session 
+27.pygame
+28.SQL注入
+29.前端压力测试
+30.py压力测试
+31.前端首页白屏
+32.前端移动端300ms延迟 √
+33.前端移动端rem布局
+34.微信客户端浏览器独有引擎
+25.SVN
+26.前端热更新 √
+27.Flutter
+28.websocket
+29.socket
+30.cocos2d
+31.前端WebAssembly(20.1k)
+32.npm镜像 pip镜像
+33.前端脚手架工具Angular CLI：Vue CLI：Create React App 2
+34.TypeScript
+35.Electron
+36.webgis
+37.docker
+38.less&sass
+39.Canvas &SVG
+40.RabbitMQ
+41.Dubbo
+42.登录保持7天
+43.记住密码
+44.前端css样式穿透>>> 比!important还强 √
+45.后端发邮件,发验证码
+46.前端热更新原理
+47.别的电脑没有安装python环境,也想执行python环境,想分享给小姐姐太麻烦了,用pyinstaller,再找个好看小图标.ico
+48.编译性语言和解释型语言
+49.框架分析
+50.文献资料https://www.sci-hub.ren/
+51.
+
+
+附加:
+tensorflow
+java
+c
+c++
+golang
+php
+Node.js
+https://www.codingame.com/ide/puzzle/onboarding
+
+# BAT开发流程
+1. PM（产品经理） 交互原型图
+2. UE（用户体验功能） + UI（界面 图标）设计图
+3. 需求评审（FE、Sever、UE、UI、PM、QA）估工时
+4. FE开发
+5. 前后端联调
+6. ShowCase(提测前)
+7. 测试（QA）
+   - web项目 BS是Browser/Sever(浏览器/服务器)架构
+   - app项目 CS 是Client/Sever(客户端/服务器)架构
+   - 浏览器的兼容则是一般是选择不同的浏览器内核进行测试（IE、chrome、Firefox）
+     - IE、chrome、Firefox的内核分别是 Tredent、Gecko、Webkit
+   - app的测试则必须依赖iphone或者是pad，不仅要看分辨率，屏幕测试，还要看设备系统
+   - 系统主要分为Android(java)和IOS(oc)
+     - 国内的Android的定制系统太多，比较容易出现问题
+       - 一般app的测试三种方法：云测试、请团队测试、真机测试
+8. 修bug（禅道项目管理软件）
+9. 上线（运维）
+   1. 各种云
+      - 系统linux、windows
+      - linux的界面化centOS（新手）、Ubuntu、红旗（国产）
+   2. 自己搭建服务器
+      - 没有固定IP，可以用nginx反向代理
+      - 花生壳
+10. 回归
+    - SVN 集中式
+    - GIT 分布式
+
+
+- vuex的优点
+  - 解决非父子组件的消息传递（将数据放到state中）
+  - 减少了AJAX 请求次数，有些情景可以直接从内存中的state获取
+- vuex的缺点
+  - 刷新浏览器，vuex中的state会重新变为初始化状态
+    - 解决方案
+      - `vuex-along(235)` ,`vuex-persistedstate(4.9K)`
+      - https://github.com/robinvdvleuten/vuex-persistedstate
+
+1. #####  对 SPA 单页面的理解，优缺点是什么
+
+     > SPA 即 single-page-application，仅在 Web 页面初始化时加载相应的 `HTML、JavaScript、CSS。`  一旦页面加载完成，SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是 `利用路由机制实现 HTML  内容的变换`，`UI` 与用户的交互，避免页面的重新加载。
+     >
+     > - 优点
+     >   1. 用户体验好、快，内容的改变不需要重新加载整个页面，避免了 `不必要的跳转和重复渲染`；
+     >   2. SPA 相对对服务器的压力小；
+     >   3. 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理
+     > - 缺点
+     >   1. `首屏（初次）加载慢`：为实现单页面 Web 应用功能及显示效果，需要在加载页面的时候将 `JavaScript、CSS ` 统一加载，部分页面按需加载；
+     >   2. `不利于SEO`：由于所有的内容都在一个页面中动态替换显示，所以在 `SEO`上其有着天然的弱势。
+
+  2. #####  `new Vue()` 发生了什么？
+
+     > - `结论` ：`new Vue()` 是创建了一个`Vue` 实例化对象，它内部执行了根实例的初始化过程
+     > - 具体包括以下`操作`：
+     >   1. 选项合并
+     >   2. `$children，$refs，$slots，$createElement` 等实例属性的方法初始化
+     >   3. 自定义事件处理
+     >   4. 数据响应式处理
+     >   5. 生命周期钩子调用（`beforecreate created`）
+     >   6. 可能的挂载
+     > - `总结`：`new Vue()` 创建了根实例并准备好数据和方法，未来执行挂载时，此过程还会递归的应用于它的子组件上，最终形成一个有紧密关系的组件实例树。
+     > - 源码地址： `src/core/instance/init.js`
+
+  3. ##### `Vue.use` 是干什么的？原理是什么？
+
+     > `Vue.use`是用来使用插件的，我们可以在插件中 `扩展全局组件、指令、原型方法` 等。
+     >
+     > - 检查插件是否注册，若已注册，则直接跳出；
+     > - 处理入参，将第一个参数之后的参数归集，并直接在首部塞入 this 上下文；
+     > - 执行注册方法，调用定义好的 install 方法，传入处理参数，若没有 install 方法并且插件本身为 function 则直接进行注册；
+     >
+     > 1. 插件不能重复的加载
+     >
+     >    install 方法的第一个参数是  `Vue` 的构造函数，其他参数是 `Vue.set` 中除了第一个参数的其他参数；代码：`args.unshift(this)` 
+     >
+     > 2. 调用插件的 install 方法代码：`typeof plugin.install === 'function'`
+     > 3. 插件本身是一个函数，直接让函数执行。代码：`plugin.apply(null,args)`
+     >    1. 缓存插件。代码：`installedPlugins.push(plugin)`
+     >
+     > 源码地址：`src/core/global-api/use.js`
+
+
+
+
+
+
+

@@ -1,23 +1,7 @@
 #!/usr/bin/python
 #coding=utf-8
 '''
-shutil
-文件删除
-文件拷贝
-time
-浮点型时间戳
-整型时间戳
-两个时间戳相减(参数暂定为整型),返回值是一个带 年天时分秒的值
 
-tm_year ：年
-tm_mon ：月（1-12）
-tm_mday ：日（1-31）
-tm_hour ：时（0-23）
-tm_min ：分（0-59）
-tm_sec ：秒（0-59）
-tm_wday ：星期几（0-6,0表示周日）
-tm_yday ：一年中的第几天（1-366）
-tm_isdst ：是否是夏令时（默认为-1）
 
 '''
 import time

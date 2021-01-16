@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mDialogs {
+            display: inline-block;
+            padding: 0 20px;
+            text-decoration: none;
+            outline: none;
+            margin: 20px 10px;
+            background: #222;
+            color: #fff;
+            line-height: 40px;
+            text-align: center
+        }
+
+        .dialog_load2.c_alert_wrap {
+            background: none;
+            box-shadow: none
+        }
+
+        .dialog_load.c_alert_wrap {
+            background: none;
+        }
+
+        .dialog_load .c_alert_con {
+            background: rgba(0, 0, 0, .7);
+            padding: 24px 25px
+        }
+
+        .c_alert_con img {
+            vertical-align: top
+        }
+    </style>
+    <link href="https://www.17sucai.com/preview/367454/2018-06-27/A24TG4TWRF/dist/dialog.css" rel="stylesheet">
+</head>
+
+<body>
+    <a class="mDialogs" id="mdialog4" href="javascript:;">带有按钮</a>
+    <a class="mDialogs" id="mdialog9" href="javascript:;">正在加载</a>
+    
+</body>
+<script src="https://www.17sucai.com/preview/367454/2018-06-27/A24TG4TWRF/dist/mDialogMin.js"></script>
+<script>
+    mdialog4.onclick = function () {
+        Dialog.init('<input type="text" placeholder="请输入5个字符"  style="margin:8px 0;width:100%;padding:11px 8px;font-size:15px; border:1px solid #999;"/>', {
+            title: '输入点什么吧！',
+            button: {
+                确定: function () {
+                    if (this.querySelector('input').value.length >= 5) {
+                        Dialog.init('你输入的内容是：' + this.querySelector('input').value);
+                        Dialog.close(this);
+                    } else {
+                        Dialog.init('你输入的内容不符合要求！', 1100);
+                    };
+                },
+                点击关闭: function () {
+                    Dialog.init('你点击了关闭', 1000);
+                    Dialog.close(this);
+                }
+            }
+        });
+    }
+    mdialog9.onclick = function () {
+        Dialog.init('<img src="https://www.17sucai.com/preview/367454/2018-06-27/A24TG4TWRF/dist/load3.gif" width="48px"/>', {
+            mask: 0,
+            addClass: 'dialog_load',
+            time: 3000,
+            after: function () {
+                Dialog.init('加载成功！', 1000);
+            }
+        });
+    }
+</script>
+
+</html>
