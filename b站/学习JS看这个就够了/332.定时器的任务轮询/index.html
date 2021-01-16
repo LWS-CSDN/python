@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+<script>
+    function interval(callback,delay=50) {
+        let id=setInterval(()=>callback(id),delay);
+    }
+    interval(timeId=>{
+        const div=document.querySelector('div');
+        let left=parseInt(window.getComputedStyle(div).left);
+        div.style.left=left+10+"px";
+        if(left>=200){
+            clearInterval(timeId);
+            interval(timeId=>{
+                let width=parseInt(window.getComputedStyle(div).width);
+                div.style.width=width-10+"px";
+                if(width<=20){
+                    clearInterval(timeId);
+                }
+            },100)
+        }
+        console.log(left);
+    });
+    console.log("小黄人");
+    for(let i=0;i<20000;i++){
+        console.log(i);
+    }
+
+
+</script>
+</html>

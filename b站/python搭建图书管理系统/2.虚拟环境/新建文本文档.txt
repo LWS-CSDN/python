@@ -1,0 +1,11 @@
+1.虚拟环境
+1.1虚拟环境的创建
+
+mkvirtualenv tornado_py3 -p python3
+
+1.2安装tornado
+pip install tornado
+
+1.3虚拟环境其他的操作
+mkvirtualenv创建虚拟环境
+删除虚拟环境2 nz
