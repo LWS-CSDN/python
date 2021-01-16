@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="box1">
+        <div class="box2">123</div>
+    </div>
+</body>
+<script src="fastclick.js"></script>
+<script>
+    // # @Time : 2021/1/14 11:56
+    // # Author : L
+    // # @File: index.html
+    // # @Software: VsCode
+    //guthub官网地址: https://github.com/ftlabs/fastclick(18.4K)
+    //只要在导入插件后在js里面写入以下代码,那么所有的点击事件都会默认取消300ms延迟
+    if ('addEventListener' in document) {
+        document.addEventListener('DOMContentLoaded', function() {
+            FastClick.attach(document.body);
+        }, false);
+    }
+</script>
+</html>
