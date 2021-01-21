@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="ajax.js"></script>
+<script>
+    let sit="ccc.com";
+    ajax(`https://mock.yonyoucloud.com/mock/7551/543`,
+        user=>{
+        console.log(user);
+        ajax(`https://mock.yonyoucloud.com/mock/7551/543`,
+        user=>{
+        console.log(user);
+    });
+    });
+    console.log("小黄人");
+</script>
+</html>
