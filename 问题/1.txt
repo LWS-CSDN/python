@@ -60,9 +60,14 @@ py列表不能直接删有坑
 48.编译性语言和解释型语言
 49.框架分析
 50.文献资料https://www.sci-hub.ren/
+<<<<<<< HEAD
+51.前端知识体系https://blog.csdn.net/u013063153/article/details/52424176?ops_request_misc=%25257B%252522request%25255Fid%252522%25253A%252522161093448916780274172340%252522%25252C%252522scm%252522%25253A%25252220140713.130102334.pc%25255Fall.%252522%25257D&request_id=161093448916780274172340&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v29-21-52424176.pc_search_result_cache&utm_term=%E5%89%8D%E7%AB%AF%E5%8F%96%E8%89%B2%E5%99%A8
+52.搜索引擎(https://kaifa.baidu.com/)
+=======
 51.
 
 
+>>>>>>> 8534c85c7e686070fa534794a8d9c2aaf071b2c7
 附加:
 tensorflow
 java

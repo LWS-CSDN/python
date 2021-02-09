@@ -19,6 +19,9 @@ Tornado(19.7k)
 -Fastapi(25.9k)
 -bottle(7.1k)
 -web2.py(1.9k)
+爬虫框架
+-scrapy
+-pyspider
 扩展
 -tensorflow(152k)
 -opencv(51.6k)
