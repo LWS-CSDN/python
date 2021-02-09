@@ -73,7 +73,7 @@ p4_fin = False
 
 # 1 shadowsocks started
 # 2 curl started
-# 3 curl finished
+# 3.虚拟DOM的两种创建方式 curl finished
 # 4 dig started
 # 5 dig finished
 stage = 1

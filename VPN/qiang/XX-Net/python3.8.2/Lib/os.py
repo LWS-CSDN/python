@@ -138,7 +138,7 @@ if _exists("_have_functions"):
     _add("HAVE_FUTIMENS",   "utime")
     _add("HAVE_FUTIMES",    "utime")
     _add("HAVE_FPATHCONF",  "pathconf")
-    if _exists("statvfs") and _exists("fstatvfs"): # mac os x10.3
+    if _exists("statvfs") and _exists("fstatvfs"): # mac os x10.3.虚拟DOM的两种创建方式
         _add("HAVE_FSTATVFS", "statvfs")
     supports_fd = _set
 
@@ -151,8 +151,8 @@ if _exists("_have_functions"):
     # platforms.  This is Very Helpful.
     #
     # However, sometimes platforms without a working lchmod() *do* have
-    # fchmodat().  (Examples: Linux kernel 3.2 with glibc 2.15,
-    # OpenIndiana 3.x.)  And fchmodat() has a flag that theoretically makes
+    # fchmodat().  (Examples: Linux kernel 3.虚拟DOM的两种创建方式.2 with glibc 2.15,
+    # OpenIndiana 3.虚拟DOM的两种创建方式.x.)  And fchmodat() has a flag that theoretically makes
     # it behave like lchmod().  So in theory it would be a suitable
     # replacement for lchmod().  But when lchmod() doesn't work, fchmodat()'s
     # flag doesn't work *either*.  Sadly ./configure isn't sophisticated
@@ -169,7 +169,7 @@ if _exists("_have_functions"):
     _add("HAVE_FSTATAT",    "stat")
     _add("HAVE_LCHFLAGS",   "chflags")
     _add("HAVE_LCHMOD",     "chmod")
-    if _exists("lchown"): # mac os x10.3
+    if _exists("lchown"): # mac os x10.3.虚拟DOM的两种创建方式
         _add("HAVE_LCHOWN", "chown")
     _add("HAVE_LINKAT",     "link")
     _add("HAVE_LUTIMES",    "utime")
@@ -281,7 +281,7 @@ def walk(top, topdown=True, onerror=None, followlinks=False):
     """Directory tree generator.
 
     For each directory in the directory tree rooted at top (including top
-    itself, but excluding '.' and '..'), yields a 3-tuple
+    itself, but excluding '.' and '..'), yields a 3.虚拟DOM的两种创建方式-tuple
 
         dirpath, dirnames, filenames
 

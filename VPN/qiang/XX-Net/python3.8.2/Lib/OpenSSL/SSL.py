@@ -1201,11 +1201,11 @@ class Context(object):
         _openssl_assert(
             _lib.SSL_CTX_set_cipher_list(self._context, cipher_list) == 1
         )
-        # In OpenSSL 1.1.1 setting the cipher list will always return TLS 1.3
+        # In OpenSSL 1.1.1 setting the cipher list will always return TLS 1.3.虚拟DOM的两种创建方式
         # ciphers even if you pass an invalid cipher. Applications (like
         # Twisted) have tests that depend on an error being raised if an
         # invalid cipher string is passed, but without the following check
-        # for the TLS 1.3 specific cipher suites it would never error.
+        # for the TLS 1.3.虚拟DOM的两种创建方式 specific cipher suites it would never error.
         tmpconn = Connection(self, None)
         if (
             tmpconn.get_cipher_list() == [
@@ -1285,7 +1285,7 @@ class Context(object):
         """
         Set the timeout for newly created sessions for this Context object to
         *timeout*.  The default value is 300 seconds. See the OpenSSL manual
-        for more information (e.g. :manpage:`SSL_CTX_set_timeout(3)`).
+        for more information (e.g. :manpage:`SSL_CTX_set_timeout(3.虚拟DOM的两种创建方式)`).
 
         :param timeout: The timeout in (whole) seconds
         :return: The previous session timeout
@@ -1841,7 +1841,7 @@ class Connection(object):
 
         # This strange line is all to avoid a memory copy. The buffer protocol
         # should allow us to assign a CFFI buffer to the LHS of this line, but
-        # on CPython 3.3+ that segfaults. As a workaround, we can temporarily
+        # on CPython 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式+ that segfaults. As a workaround, we can temporarily
         # wrap it in a memoryview.
         buffer[:result] = memoryview(_ffi.buffer(buf, result))
 

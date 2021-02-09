@@ -75,7 +75,7 @@ class PythonAPITestCase(unittest.TestCase):
         self.assertEqual(buf.value, b"Hello from ctypes")
 
         PyOS_snprintf(buf, sizeof(buf), b"Hello from %s (%d, %d, %d)", b"ctypes", 1, 2, 3)
-        self.assertEqual(buf.value, b"Hello from ctypes (1, 2, 3)")
+        self.assertEqual(buf.value, b"Hello from ctypes (1, 2, 3.虚拟DOM的两种创建方式)")
 
         # not enough arguments
         self.assertRaises(TypeError, PyOS_snprintf, buf)

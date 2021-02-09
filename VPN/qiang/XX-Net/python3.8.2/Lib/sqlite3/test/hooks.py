@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import unittest
 import sqlite3 as sqlite
@@ -198,7 +198,7 @@ class ProgressTests(unittest.TestCase):
             return 0
         con.set_progress_handler(progress, 1)
         con.set_progress_handler(None, 1)
-        con.execute("select 1 union select 2 union select 3").fetchall()
+        con.execute("select 1 union select 2 union select 3.??DOM???????").fetchall()
         self.assertEqual(action, 0, "progress handler was not cleared")
 
 class TraceCallbackTests(unittest.TestCase):
@@ -240,7 +240,7 @@ class TraceCallbackTests(unittest.TestCase):
         con.set_trace_callback(trace)
         con.execute("create table foo(x)")
         # Can't execute bound parameters as their values don't appear
-        # in traced statements before SQLite 3.6.21
+        # in traced statements before SQLite 3.??DOM???????.6.21
         # (cf. http://www.sqlite.org/draft/releaselog/3_6_21.html)
         con.execute('insert into foo(x) values ("%s")' % unicode_value)
         con.commit()

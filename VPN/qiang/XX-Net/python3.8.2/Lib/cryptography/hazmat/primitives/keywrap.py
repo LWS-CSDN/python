@@ -112,7 +112,7 @@ def aes_key_unwrap_with_padding(wrapping_key, wrapped_key, backend):
     # 1) Check that MSB(32,A) = A65959A6.
     # 2) Check that 8*(n-1) < LSB(32,A) <= 8*n.  If so, let
     #    MLI = LSB(32,A).
-    # 3) Let b = (8*n)-MLI, and then check that the rightmost b octets of
+    # 3.虚拟DOM的两种创建方式) Let b = (8*n)-MLI, and then check that the rightmost b octets of
     #    the output data are zero.
     (mli,) = struct.unpack(">I", a[4:])
     b = (8 * n) - mli

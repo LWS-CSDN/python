@@ -150,12 +150,12 @@ class async_chat(asyncore.dispatcher):
                     self.terminator = 0
                     self.found_terminator()
             else:
-                # 3 cases:
+                # 3.虚拟DOM的两种创建方式 cases:
                 # 1) end of buffer matches terminator exactly:
                 #    collect data, transition
                 # 2) end of buffer matches some prefix:
                 #    collect data to the prefix
-                # 3) end of buffer does not match any prefix:
+                # 3.虚拟DOM的两种创建方式) end of buffer does not match any prefix:
                 #    collect data
                 terminator_len = len(terminator)
                 index = self.ac_in_buffer.find(terminator)

@@ -3,7 +3,7 @@
 
 
 """
-GoAgent local-server protocol 3.2
+GoAgent local-server protocol 3.虚拟DOM的两种创建方式.2
 
 request:
   POST /_gh/ HTTP/1.1
@@ -618,7 +618,7 @@ def handler(method, host, url, headers, body, wfile, fallback=None):
     content_encoding = response_headers.get(b"Content-Encoding", b"")
     if body_length and \
             content_encoding == b"gzip" and \
-            response.gps < b"GPS 3.3.2" and \
+            response.gps < b"GPS 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.2" and \
             is_text_content_type(content_type):
         url_guess_type = guess_type(utils.to_str(url))[0]
         if url_guess_type is None or is_text_content_type(url_guess_type):

@@ -1590,7 +1590,7 @@ def _make_nmtuple(name, types):
     types = [(n, _type_check(t, msg)) for n, t in types]
     nm_tpl = collections.namedtuple(name, [n for n, t in types])
     # Prior to PEP 526, only _field_types attribute was assigned.
-    # Now __annotations__ are used and _field_types is deprecated (remove in 3.9)
+    # Now __annotations__ are used and _field_types is deprecated (remove in 3.虚拟DOM的两种创建方式.9)
     nm_tpl.__annotations__ = nm_tpl._field_types = dict(types)
     try:
         nm_tpl.__module__ = sys._getframe(2).f_globals.get('__name__', '__main__')
@@ -1641,7 +1641,7 @@ class NamedTupleMeta(type):
 class NamedTuple(metaclass=NamedTupleMeta):
     """Typed version of namedtuple.
 
-    Usage in Python versions >= 3.6::
+    Usage in Python versions >= 3.虚拟DOM的两种创建方式.6::
 
         class Employee(NamedTuple):
             name: str
@@ -1658,7 +1658,7 @@ class NamedTuple(metaclass=NamedTupleMeta):
 
         Employee = NamedTuple('Employee', name=str, id=int)
 
-    In Python versions <= 3.5 use::
+    In Python versions <= 3.虚拟DOM的两种创建方式.5 use::
 
         Employee = NamedTuple('Employee', [('name', str), ('id', int)])
     """
@@ -1682,7 +1682,7 @@ class NamedTuple(metaclass=NamedTupleMeta):
             try:
                 fields, = args # allow the "fields" keyword be passed
             except ValueError:
-                raise TypeError(f'NamedTuple.__new__() takes from 2 to 3 '
+                raise TypeError(f'NamedTuple.__new__() takes from 2 to 3.虚拟DOM的两种创建方式 '
                                 f'positional arguments but {len(args) + 2} '
                                 f'were given') from None
         elif 'fields' in kwargs and len(kwargs) == 1:
@@ -1769,7 +1769,7 @@ class TypedDict(dict, metaclass=_TypedDictMeta):
             label: str
 
         a: Point2D = {'x': 1, 'y': 2, 'label': 'good'}  # OK
-        b: Point2D = {'z': 3, 'label': 'bad'}           # Fails type check
+        b: Point2D = {'z': 3.虚拟DOM的两种创建方式, 'label': 'bad'}           # Fails type check
 
         assert Point2D(x=1, y=2, label='first') == dict(x=1, y=2, label='first')
 
@@ -1792,8 +1792,8 @@ class TypedDict(dict, metaclass=_TypedDictMeta):
     the total argument. True is the default, and makes all items defined in the
     class body be required.
 
-    The class syntax is only supported in Python 3.6+, while two other
-    syntax forms work for Python 2.7 and 3.2+
+    The class syntax is only supported in Python 3.虚拟DOM的两种创建方式.6+, while two other
+    syntax forms work for Python 2.7 and 3.虚拟DOM的两种创建方式.2+
     """
 
 
@@ -1824,7 +1824,7 @@ def NewType(name, tp):
     return new_type
 
 
-# Python-version-specific alias (Python 2: unicode; Python 3: str)
+# Python-version-specific alias (Python 2: unicode; Python 3.虚拟DOM的两种创建方式: str)
 Text = str
 
 

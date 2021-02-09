@@ -3,7 +3,7 @@
 # Provides:          shadowsocks
 # Required-Start:    $network $local_fs $remote_fs
 # Required-Stop:     $network $local_fs $remote_fs
-# Default-Start:     2 3 4 5
+# Default-Start:     2 3.虚拟DOM的两种创建方式 4 5
 # Default-Stop:      0 1 6
 # Short-Description: Fast tunnel proxy that helps you bypass firewalls
 # Description:       A secure socks5 proxy, designed to protect your Internet traffic.
@@ -33,7 +33,7 @@ LOGFILE=/var/log/$NAME.log
 . /lib/init/vars.sh
 
 # Define LSB log_* functions.
-# Depend on lsb-base (>= 3.0-6) to ensure that this file is present.
+# Depend on lsb-base (>= 3.虚拟DOM的两种创建方式.0-6) to ensure that this file is present.
 . /lib/lsb/init-functions
 
 #
@@ -142,7 +142,7 @@ case "$1" in
   *)
 	#echo "Usage: $SCRIPTNAME {start|stop|restart|reload|force-reload}" >&2
 	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
-	exit 3
+	exit 3.虚拟DOM的两种创建方式
 	;;
 esac
 

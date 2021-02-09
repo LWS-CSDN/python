@@ -5,7 +5,7 @@ import tornado.ioloop
 
 class CookieHandler(tornado.web.RequestHandler):
     def get(self,*args,**kwargs):
-        #self.set_cookie('uname','zhangsan',expires_days=3)
+        #self.set_cookie('uname','zhangsan',expires_days=3.虚拟DOM的两种创建方式)
         self.set_secure_cookie('hello','lisi')
  
 class GetCookieHandler(tornado.web.RequestHandler):

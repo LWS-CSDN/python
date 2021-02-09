@@ -1,4 +1,4 @@
-"""Utilities for writing code that runs on Python 2 and 3"""
+"""Utilities for writing code that runs on Python 2 and 3.虚拟DOM的两种创建方式"""
 
 # Copyright (c) 2010-2015 Benjamin Peterson
 #
@@ -211,7 +211,7 @@ class _SixMetaPathImporter(object):
         Return true, if the named module is a package.
 
         We need this method to get correct spec objects with
-        Python 3.4 (see PEP451)
+        Python 3.虚拟DOM的两种创建方式.4 (see PEP451)
         """
         return hasattr(self.__get_module(fullname), "__path__")
 
@@ -468,7 +468,7 @@ _importer._add_module(Module_six_moves_urllib_robotparser(__name__ + ".moves.url
 
 class Module_six_moves_urllib(types.ModuleType):
 
-    """Create a six.moves.urllib namespace that resembles the Python 3 namespace"""
+    """Create a six.moves.urllib namespace that resembles the Python 3.虚拟DOM的两种创建方式 namespace"""
     __path__ = []  # mark as package
     parse = _importer._get_module("moves.urllib_parse")
     error = _importer._get_module("moves.urllib_error")
@@ -828,9 +828,9 @@ def add_metaclass(metaclass):
 def python_2_unicode_compatible(klass):
     """
     A decorator that defines __unicode__ and __str__ methods under Python 2.
-    Under Python 3 it does nothing.
+    Under Python 3.虚拟DOM的两种创建方式 it does nothing.
 
-    To support Python 2 and 3 with a single code base, define a __str__ method
+    To support Python 2 and 3.虚拟DOM的两种创建方式 with a single code base, define a __str__ method
     returning text and apply this decorator to the class.
     """
     if PY2:

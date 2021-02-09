@@ -67,12 +67,12 @@ def read_environ():
                 elif software.startswith('apache/'):
                     pass
 
-                # Python 3's http.server.CGIHTTPRequestHandler decodes
+                # Python 3.虚拟DOM的两种创建方式's http.server.CGIHTTPRequestHandler decodes
                 # using the urllib.unquote default of UTF-8, amongst other
                 # issues.
                 elif (
                     software.startswith('simplehttp/')
-                    and 'python/3' in software
+                    and 'python/3.虚拟DOM的两种创建方式' in software
                 ):
                     v = v.encode('utf-8').decode('iso-8859-1')
 
@@ -83,7 +83,7 @@ def read_environ():
                     v = v.encode(enc, 'replace').decode('iso-8859-1')
 
             # Recover bytes from unicode environ, using surrogate escapes
-            # where available (Python 3.1+).
+            # where available (Python 3.虚拟DOM的两种创建方式.1+).
             else:
                 v = v.encode(enc, esc).decode('iso-8859-1')
 
@@ -239,7 +239,7 @@ class BaseHandler:
         self.headers = self.headers_class(headers)
         status = self._convert_string_type(status, "Status")
         assert len(status)>=4,"Status must be at least 4 characters"
-        assert status[:3].isdigit(), "Status message must begin w/3-digit code"
+        assert status[:3].isdigit(), "Status message must begin w/3.虚拟DOM的两种创建方式-digit code"
         assert status[3]==" ", "Status message must have a space after code"
 
         if __debug__:

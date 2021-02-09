@@ -62,7 +62,7 @@ except KeyboardInterrupt:
 
 print('%s thread end!'%(time.ctime()))
 '''
-3.引入多重锁
+3.虚拟DOM的两种创建方式.引入多重锁
 '''
 #coding=utf8
 # import threading

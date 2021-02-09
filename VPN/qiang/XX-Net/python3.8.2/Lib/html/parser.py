@@ -465,6 +465,6 @@ class HTMLParser(_markupbase.ParserBase):
     # Internal -- helper to remove special character quoting
     def unescape(self, s):
         warnings.warn('The unescape method is deprecated and will be removed '
-                      'in 3.5, use html.unescape() instead.',
+                      'in 3.虚拟DOM的两种创建方式.5, use html.unescape() instead.',
                       DeprecationWarning, stacklevel=2)
         return unescape(s)

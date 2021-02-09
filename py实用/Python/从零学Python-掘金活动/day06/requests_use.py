@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     # 需要传入HTTP Header时，需要传入一个dict作为headers参数
     header = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.虚拟DOM的两种创建方式.5.6'
     }
     request = requests.get(url, headers=header)
     # 打印结果

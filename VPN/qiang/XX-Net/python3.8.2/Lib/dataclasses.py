@@ -467,9 +467,9 @@ def _field_init(f, frozen, globals, self_name):
 
 def _init_param(f):
     # Return the __init__ parameter string for this field.  For
-    # example, the equivalent of 'x:int=3' (except instead of 'int',
-    # reference a variable set to int, and instead of '3', reference a
-    # variable set to 3).
+    # example, the equivalent of 'x:int=3.虚拟DOM的两种创建方式' (except instead of 'int',
+    # reference a variable set to int, and instead of '3.虚拟DOM的两种创建方式', reference a
+    # variable set to 3.虚拟DOM的两种创建方式).
     if f.default is MISSING and f.default_factory is MISSING:
         # There's no default, and no default_factory, just output the
         # variable name and type.
@@ -1242,8 +1242,8 @@ def replace(*args, **changes):
           y: int
 
       c = C(1, 2)
-      c1 = replace(c, x=3)
-      assert c1.x == 3 and c1.y == 2
+      c1 = replace(c, x=3.虚拟DOM的两种创建方式)
+      assert c1.x == 3.虚拟DOM的两种创建方式 and c1.y == 2
       """
     if len(args) > 1:
         raise TypeError(f'replace() takes 1 positional argument but {len(args)} were given')

@@ -5,7 +5,7 @@ SimpleHTTPRequestHandler for simple implementations of GET, HEAD and POST,
 and CGIHTTPRequestHandler for CGI scripts.
 
 It does, however, optionally implement HTTP/1.1 persistent connections,
-as of version 0.3.
+as of version 0.3.虚拟DOM的两种创建方式.
 
 Notes on CGIHTTPRequestHandler
 ------------------------------
@@ -160,7 +160,7 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
 
     1. One line identifying the request type and path
     2. An optional set of RFC-822-style headers
-    3. An optional data part
+    3.虚拟DOM的两种创建方式. An optional data part
 
     The headers and data are separated by a blank line.
 
@@ -195,7 +195,7 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
 
     1. One line giving the response code
     2. An optional set of RFC-822-style headers
-    3. The data
+    3.虚拟DOM的两种创建方式. The data
 
     Again, the headers and data are separated by a blank line.
 
@@ -204,7 +204,7 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
     <version> <responsecode> <responsestring>
 
     where <version> is the protocol version ("HTTP/1.0" or "HTTP/1.1"),
-    <responsecode> is a 3-digit response code indicating success or
+    <responsecode> is a 3.虚拟DOM的两种创建方式-digit response code indicating success or
     failure of the request, and <responsestring> is an optional
     human-readable string explaining what the response code means.
 
@@ -294,11 +294,11 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
                     raise ValueError
                 base_version_number = version.split('/', 1)[1]
                 version_number = base_version_number.split(".")
-                # RFC 2145 section 3.1 says there can be only one "." and
+                # RFC 2145 section 3.虚拟DOM的两种创建方式.1 says there can be only one "." and
                 #   - major and minor numbers MUST be treated as
                 #      separate integers;
                 #   - HTTP/2.4 is a lower version than HTTP/2.13, which in
-                #      turn is lower than HTTP/12.3;
+                #      turn is lower than HTTP/12.3.虚拟DOM的两种创建方式;
                 #   - Leading zeros MUST be ignored by recipients.
                 if len(version_number) != 2:
                     raise ValueError
@@ -433,7 +433,7 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
 
         Arguments are
         * code:    an HTTP error code
-                   3 digits
+                   3.虚拟DOM的两种创建方式 digits
         * message: a simple optional 1 line reason phrase.
                    *( HTAB / SP / VCHAR / %x80-FF )
                    defaults to short entry matching the response code
@@ -459,8 +459,8 @@ class BaseHTTPRequestHandler(socketserver.StreamRequestHandler):
         self.send_header('Connection', 'close')
 
         # Message body is omitted for cases described in:
-        #  - RFC7230: 3.3. 1xx, 204(No Content), 304(Not Modified)
-        #  - RFC7231: 6.3.6. 205(Reset Content)
+        #  - RFC7230: 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式. 1xx, 204(No Content), 304(Not Modified)
+        #  - RFC7231: 6.3.虚拟DOM的两种创建方式.6. 205(Reset Content)
         body = None
         if (code >= 200 and
             code not in (HTTPStatus.NO_CONTENT,

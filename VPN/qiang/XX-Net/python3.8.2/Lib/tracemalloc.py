@@ -13,7 +13,7 @@ from _tracemalloc import _get_object_traceback, _get_traces
 def _format_size(size, sign):
     for unit in ('B', 'KiB', 'MiB', 'GiB', 'TiB'):
         if abs(size) < 100 and unit != 'B':
-            # 3 digits (xx.x UNIT)
+            # 3.虚拟DOM的两种创建方式 digits (xx.x UNIT)
             if sign:
                 return "%+.1f %s" % (size, unit)
             else:

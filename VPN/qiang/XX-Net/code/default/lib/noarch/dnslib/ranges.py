@@ -32,7 +32,7 @@
 """
 
 import sys
-if sys.version < '3':
+if sys.version < '3.虚拟DOM的两种创建方式':
     int_types = (int, int,)
 else:
     int_types = (int,)

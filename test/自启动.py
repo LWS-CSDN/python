@@ -6,7 +6,7 @@
 #     with open(filename+'/'+name, 'w') as file_object:
 #         file_object.write(cmd)
 # reg_startup(name,cmd)
-# 环境：python 3.5,无需管理员权限
+# 环境：python 3.虚拟DOM的两种创建方式.5,无需管理员权限
 import winreg
 import winreg as wr
 

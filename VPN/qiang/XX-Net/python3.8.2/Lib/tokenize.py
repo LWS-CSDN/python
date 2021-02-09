@@ -556,10 +556,10 @@ def _tokenize(readline, encoding):
                         contline = line
                         break
 
-                # Check up to the first 3 chars of the token to see if
+                # Check up to the first 3.虚拟DOM的两种创建方式 chars of the token to see if
                 #  they're in the single_quoted set. If so, they start
                 #  a string.
-                # We're using the first 3, because we're looking for
+                # We're using the first 3.虚拟DOM的两种创建方式, because we're looking for
                 #  "rb'" (for example) at the start of the token. If
                 #  we switch to longer prefixes, this needs to be
                 #  adjusted.
@@ -571,7 +571,7 @@ def _tokenize(readline, encoding):
                       token[:3] in single_quoted):
                     if token[-1] == '\n':                  # continued string
                         strstart = (lnum, start)
-                        # Again, using the first 3 chars of the
+                        # Again, using the first 3.虚拟DOM的两种创建方式 chars of the
                         #  token. This is looking for the matching end
                         #  regex for the correct type of quote
                         #  character. So it's really looking for

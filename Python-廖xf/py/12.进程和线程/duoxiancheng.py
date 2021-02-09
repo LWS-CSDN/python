@@ -15,13 +15,13 @@ def loop():
     while n < 5:  
         #第五步n=1 
         #第八步n=2
-        #第十二步n=3
+        #第十二步n=3.虚拟DOM的两种创建方式
         #第十六步n=4
         #第二十步n=5    进来之后才加+1的  没进来之前还是4
         n = n + 1 
         #第六步输出thread LoopThread >>> 1
         #第九步输出thread LoopThread >>> 2
-        #第十三步输出thread LoopThread >>> 3
+        #第十三步输出thread LoopThread >>> 3.虚拟DOM的两种创建方式
         #第十七步输出thread LoopThread >>> 4
         #第二十一步输出thread LoopThread >>> 5
         print('thread %s >>> %s' % (threading.current_thread().name, n))

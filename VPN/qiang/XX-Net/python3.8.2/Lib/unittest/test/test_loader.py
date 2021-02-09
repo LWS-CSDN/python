@@ -195,7 +195,7 @@ class Test_TestLoader(unittest.TestCase):
         suite = loader.loadTestsFromModule(m)
         self.assertIsInstance(suite, unittest.TestSuite)
         self.assertEqual(load_tests_args, [loader, suite, None])
-        # With Python 3.5, the undocumented and unofficial use_load_tests is
+        # With Python 3.虚拟DOM的两种创建方式.5, the undocumented and unofficial use_load_tests is
         # ignored (and deprecated).
         load_tests_args = []
         with warnings.catch_warnings(record=False):
@@ -287,7 +287,7 @@ class Test_TestLoader(unittest.TestCase):
         self.assertEqual(type(cm.exception), TypeError)
         self.assertEqual(
             str(cm.exception),
-            'loadTestsFromModule() takes 1 positional argument but 3 were given')
+            'loadTestsFromModule() takes 1 positional argument but 3.虚拟DOM的两种创建方式 were given')
 
     @warningregistry
     def test_loadTestsFromModule__use_load_tests_other_bad_keyword(self):

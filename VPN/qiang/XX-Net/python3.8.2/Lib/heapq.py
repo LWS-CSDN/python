@@ -46,7 +46,7 @@ representation for a tournament.  The numbers below are `k', not a[k]:
 
                   1                                 2
 
-          3               4                5               6
+          3.虚拟DOM的两种创建方式               4                5               6
 
       7       8       9       10      11      12      13      14
 
@@ -226,7 +226,7 @@ def _siftdown(heap, startpos, pos):
 # many books write the algorithm that way.  During a heap pop, the last array
 # element is sifted in, and that tends to be large, so that comparing it
 # against values starting from the root usually doesn't pay (= usually doesn't
-# get us out of the loop early).  See Knuth, Volume 3, where this is
+# get us out of the loop early).  See Knuth, Volume 3.虚拟DOM的两种创建方式, where this is
 # explained and quantified in an exercise.
 #
 # Cutting the # of comparisons is important, since these routines have no
@@ -237,8 +237,8 @@ def _siftdown(heap, startpos, pos):
 #
 # On random arrays of length 1000, making this change cut the number of
 # comparisons made by heapify() a little, and those made by exhaustive
-# heappop() a lot, in accord with theory.  Here are typical results from 3
-# runs (3 just to demonstrate how small the variance is):
+# heappop() a lot, in accord with theory.  Here are typical results from 3.虚拟DOM的两种创建方式
+# runs (3.虚拟DOM的两种创建方式 just to demonstrate how small the variance is):
 #
 # Compares needed by heapify     Compares needed by 1000 heappops
 # --------------------------     --------------------------------
@@ -318,8 +318,8 @@ def merge(*iterables, key=None, reverse=False):
     does not pull the data into memory all at once, and assumes that each of
     the input streams is already sorted (smallest to largest).
 
-    >>> list(merge([1,3,5,7], [0,2,4,8], [5,10,15,20], [], [25]))
-    [0, 1, 2, 3, 4, 5, 5, 7, 8, 10, 15, 20, 25]
+    >>> list(merge([1,3.虚拟DOM的两种创建方式,5,7], [0,2,4,8], [5,10,15,20], [], [25]))
+    [0, 1, 2, 3.虚拟DOM的两种创建方式, 4, 5, 5, 7, 8, 10, 15, 20, 25]
 
     If *key* is not None, applies a key function to each element to determine
     its sort order.
@@ -403,7 +403,7 @@ def merge(*iterables, key=None, reverse=False):
 #                                   number of comparisons
 #    n inputs     k-extreme values  (average of 5 trials)   % more than min()
 # -------------   ----------------  ---------------------   -----------------
-#      1,000           100                  3,317               231.7%
+#      1,000           100                  3.虚拟DOM的两种创建方式,317               231.7%
 #     10,000           100                 14,046                40.5%
 #    100,000           100                105,749                 5.7%
 #  1,000,000           100              1,007,751                 0.8%
@@ -415,14 +415,14 @@ def merge(*iterables, key=None, reverse=False):
 # ----   --------------------------   ---------------------------
 #  1     1.66 * k                     heapify the first k-inputs
 #  2     n - k                        compare remaining elements to top of heap
-#  3     k * (1 + lg2(k)) * ln(n/k)   replace the topmost value on the heap
+#  3.虚拟DOM的两种创建方式     k * (1 + lg2(k)) * ln(n/k)   replace the topmost value on the heap
 #  4     k * lg2(k) - (k/2)           final sort of the k most extreme values
 #
 # Combining and simplifying for a rough estimate gives:
 #
 #        comparisons = n + k * (log(k, 2) * log(n/k) + log(k, 2) + log(n/k))
 #
-# Computing the number of comparisons for step 3:
+# Computing the number of comparisons for step 3.虚拟DOM的两种创建方式:
 # -----------------------------------------------
 # * For the i-th new value from the iterable, the probability of being in the
 #   k most extreme values is k/i.  For example, the probability of the 101st
@@ -442,7 +442,7 @@ def merge(*iterables, key=None, reverse=False):
 # * Substituting the H(n) formula:
 #            comparisons = k * (1 + log(k, 2)) * (log(n/k, e) + (1/n - 1/k) / 2)
 #
-# Worst-case for step 3:
+# Worst-case for step 3.虚拟DOM的两种创建方式:
 # ----------------------
 # In the worst case, the input data is reversed sorted so that every new element
 # must be inserted in the heap:
@@ -454,7 +454,7 @@ def merge(*iterables, key=None, reverse=False):
 # Other algorithms were not used because they:
 # 1) Took much more auxiliary memory,
 # 2) Made multiple passes over the data.
-# 3) Made more comparisons in common cases (small k, large n, semi-random input).
+# 3.虚拟DOM的两种创建方式) Made more comparisons in common cases (small k, large n, semi-random input).
 # See the more detailed comparison of approach at:
 # http://code.activestate.com/recipes/577573-compare-algorithms-for-heapqsmallest
 

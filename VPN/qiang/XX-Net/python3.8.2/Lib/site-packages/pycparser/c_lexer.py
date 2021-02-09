@@ -181,7 +181,7 @@ class CLexer(object):
     ##
     ##
 
-    # valid C identifiers (K&R2: A.2.3), plus '$' (supported by some compilers)
+    # valid C identifiers (K&R2: A.2.3.虚拟DOM的两种创建方式), plus '$' (supported by some compilers)
     identifier = r'[a-zA-Z_$][0-9a-zA-Z_$]*'
 
     hex_prefix = '0[xX]'
@@ -222,7 +222,7 @@ class CLexer(object):
     # - bad_escape does not allow any decimals (8-9), to avoid conflicting with the permissive decimal_escape.
     #
     # Without this change, python's `re` module would recursively try parsing each ambiguous escape sequence in multiple ways.
-    # e.g. `\123` could be parsed as `\1`+`23`, `\12`+`3`, and `\123`.
+    # e.g. `\123` could be parsed as `\1`+`23`, `\12`+`3.虚拟DOM的两种创建方式`, and `\123`.
 
     simple_escape = r"""([a-wyzA-Z._~!=&\^\-\\?'"]|x(?![0-9a-fA-F]))"""
     decimal_escape = r"""(\d+)(?!\d)"""
@@ -249,7 +249,7 @@ class CLexer(object):
     wstring_literal = 'L'+string_literal
     bad_string_literal = '"'+string_char+'*'+bad_escape+string_char+'*"'
 
-    # floating constants (K&R2: A.2.5.3)
+    # floating constants (K&R2: A.2.5.3.虚拟DOM的两种创建方式)
     exponent_part = r"""([eE][-+]?[0-9]+)"""
     fractional_constant = r"""([0-9]*\.[0-9]+)|([0-9]+\.)"""
     floating_constant = '(((('+fractional_constant+')'+exponent_part+'?)|([0-9]+'+exponent_part+'))[FfLl]?)'

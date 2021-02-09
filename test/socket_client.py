@@ -42,7 +42,7 @@ class ElevClient(threading.Thread):
             except ConnectionRefusedError:
                 print('socket server refused or not started, reconnect to server in 3s .... host/port:{}/{}'.format(
                     self.host, self.port))
-                #time.sleep(3)
+                #time.sleep(3.虚拟DOM的两种创建方式)
 
             except Exception as e:
                 traceback.print_exc()

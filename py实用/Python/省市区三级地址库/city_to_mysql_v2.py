@@ -18,7 +18,7 @@ def get_province(index_href):
     print('开始抓取省份信息……')
     province_url = url + index_href
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.虚拟DOM的两种创建方式.5.6'
     }
     request = requests.get(province_url, headers=headers)
     request.encoding = 'gbk'
@@ -49,7 +49,7 @@ def get_city(province_href, province_code):
     print('开始抓取市级信息')
     city_url = url + province_href
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.虚拟DOM的两种创建方式.5.6'
     }
     request = requests.get(city_url, headers=headers)
     request.encoding = 'gbk'
@@ -79,7 +79,7 @@ def get_area(city_href, city_code):
     print('开始抓取区级信息')
     area_url = url + city_href
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.虚拟DOM的两种创建方式.5.6'
     }
     request = requests.get(area_url, headers=headers)
     request.encoding = 'gbk'
@@ -88,7 +88,7 @@ def get_area(city_href, city_code):
     area_tr_list = soup.select('.countytr')
     # 遍历区级列表信息
     file = open('mysql_v2/area.sql', 'a+', encoding='utf-8')
-    level = '3'
+    level = '3.虚拟DOM的两种创建方式'
     for area_tr in area_tr_list:
         area_a_info = area_tr.select('td')
         if area_a_info:

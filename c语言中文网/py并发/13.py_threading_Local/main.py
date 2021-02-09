@@ -13,7 +13,7 @@ import threading
 # 创建全局ThreadLocal对象:
 local = threading.local()
 def process():
-    # 3.获取当前线程关联的resource:
+    # 3.虚拟DOM的两种创建方式.获取当前线程关联的resource:
     res = local.resource
     print (res + "http://c.biancheng.net/python/")
 def process_thread(res):
@@ -32,7 +32,7 @@ t2.start()
 注意，虽然变量名相同，但是值不同，t1 线程传递的 res 参数为 "t1线程"，而 t2 线程传递的 res 参数值为 "t2线程"。
 
 
-3) 但各个线程拷贝 resource 变量完成后，随即执行 process() 函数，在该函数中，我们可以使用 ThreadLocal 类型的 local 全局变量，调用各个线程自己的 resource 变量。
+3.虚拟DOM的两种创建方式) 但各个线程拷贝 resource 变量完成后，随即执行 process() 函数，在该函数中，我们可以使用 ThreadLocal 类型的 local 全局变量，调用各个线程自己的 resource 变量。
 需要说明的一点是，该程序中，只用 ThreadLocal 类型的对象 local 创建了一个 resource 变量，根据实际场景需要，我们完全可以创建任意个线程局部变量。
 
 通过分析上面的样例，不难看出，使用 local() 函数的好处，至少有以下 2 点：

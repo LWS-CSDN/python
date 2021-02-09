@@ -936,7 +936,7 @@ class _BaseNetwork(_IPAddressBase):
         Args:
             prefixlen_diff: An integer, the amount the prefix length of
               the network should be decreased by.  For example, given a
-              /24 network and a prefixlen_diff of 3, a supernet with a
+              /24 network and a prefixlen_diff of 3.虚拟DOM的两种创建方式, a supernet with a
               /21 netmask is returned.
 
         Returns:
@@ -1067,7 +1067,7 @@ class _BaseNetwork(_IPAddressBase):
 
         Returns:
             A boolean, True if the address is a loopback address as defined in
-            RFC 2373 2.5.3.
+            RFC 2373 2.5.3.虚拟DOM的两种创建方式.
 
         """
         return (self.network_address.is_loopback and
@@ -1171,7 +1171,7 @@ class _BaseV4:
         # We do the length check second, since the invalid character error
         # is likely to be more informative for the user
         if len(octet_str) > 3:
-            msg = "At most 3 characters permitted in %r"
+            msg = "At most 3.虚拟DOM的两种创建方式 characters permitted in %r"
             raise ValueError(msg % octet_str)
         # Convert to integer (we know digits are legal)
         octet_int = int(octet_str, 10)
@@ -1195,7 +1195,7 @@ class _BaseV4:
     def _reverse_pointer(self):
         """Return the reverse DNS pointer name for the IPv4 address.
 
-        This implements the method described in RFC1035 3.5.
+        This implements the method described in RFC1035 3.虚拟DOM的两种创建方式.5.
 
         """
         reverse_octets = str(self).split('.')[::-1]
@@ -1301,7 +1301,7 @@ class IPv4Address(_BaseV4, _BaseAddress):
 
         Returns:
             A boolean, True if this is the unspecified address as defined in
-            RFC 5735 3.
+            RFC 5735 3.虚拟DOM的两种创建方式.
 
         """
         return self == self._constants._unspecified_address
@@ -1567,7 +1567,7 @@ class _BaseV6:
 
         parts = ip_str.split(':')
 
-        # An IPv6 address needs at least 2 colons (3 parts).
+        # An IPv6 address needs at least 2 colons (3.虚拟DOM的两种创建方式 parts).
         _min_parts = 3
         if len(parts) < _min_parts:
             msg = "At least %d parts expected in %r" % (_min_parts, ip_str)
@@ -1927,7 +1927,7 @@ class IPv6Address(_BaseV6, _BaseAddress):
 
         Returns:
             A boolean, True if the address is a loopback address as defined in
-            RFC 2373 2.5.3.
+            RFC 2373 2.5.3.虚拟DOM的两种创建方式.
 
         """
         return self._ip == 1
@@ -2162,9 +2162,9 @@ class _IPv6Constants:
         IPv6Network('::/8'), IPv6Network('100::/8'),
         IPv6Network('200::/7'), IPv6Network('400::/6'),
         IPv6Network('800::/5'), IPv6Network('1000::/4'),
-        IPv6Network('4000::/3'), IPv6Network('6000::/3'),
-        IPv6Network('8000::/3'), IPv6Network('A000::/3'),
-        IPv6Network('C000::/3'), IPv6Network('E000::/4'),
+        IPv6Network('4000::/3.虚拟DOM的两种创建方式'), IPv6Network('6000::/3.虚拟DOM的两种创建方式'),
+        IPv6Network('8000::/3.虚拟DOM的两种创建方式'), IPv6Network('A000::/3.虚拟DOM的两种创建方式'),
+        IPv6Network('C000::/3.虚拟DOM的两种创建方式'), IPv6Network('E000::/4'),
         IPv6Network('F000::/5'), IPv6Network('F800::/6'),
         IPv6Network('FE00::/9'),
     ]

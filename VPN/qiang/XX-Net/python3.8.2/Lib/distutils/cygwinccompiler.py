@@ -40,9 +40,9 @@ cygwin in no-cygwin mode).
 #     this is windows standard and there are normally not the necessary symbols
 #     in the dlls.
 #   *** only the version of June 2000 shows these problems
-# * cygwin gcc 3.2/ld 2.13.90 works
+# * cygwin gcc 3.虚拟DOM的两种创建方式.2/ld 2.13.90 works
 #   (ld supports -shared)
-# * mingw gcc 3.2/ld 2.13 works
+# * mingw gcc 3.虚拟DOM的两种创建方式.2/ld 2.13 works
 #   (ld supports -shared)
 
 import os

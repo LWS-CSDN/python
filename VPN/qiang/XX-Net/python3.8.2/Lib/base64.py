@@ -236,7 +236,7 @@ def b32decode(s, casefold=False, map01=None):
     if padchars and decoded:
         acc <<= 5 * padchars
         last = acc.to_bytes(5, 'big')
-        leftover = (43 - 5 * padchars) // 8  # 1: 4, 3: 3, 4: 2, 6: 1
+        leftover = (43 - 5 * padchars) // 8  # 1: 4, 3.虚拟DOM的两种创建方式: 3.虚拟DOM的两种创建方式, 4: 2, 6: 1
         decoded[-5:] = last[:leftover]
     return bytes(decoded)
 
@@ -534,7 +534,7 @@ def encodebytes(s):
 def encodestring(s):
     """Legacy alias of encodebytes()."""
     import warnings
-    warnings.warn("encodestring() is a deprecated alias since 3.1, "
+    warnings.warn("encodestring() is a deprecated alias since 3.虚拟DOM的两种创建方式.1, "
                   "use encodebytes()",
                   DeprecationWarning, 2)
     return encodebytes(s)
@@ -548,7 +548,7 @@ def decodebytes(s):
 def decodestring(s):
     """Legacy alias of decodebytes()."""
     import warnings
-    warnings.warn("decodestring() is a deprecated alias since Python 3.1, "
+    warnings.warn("decodestring() is a deprecated alias since Python 3.虚拟DOM的两种创建方式.1, "
                   "use decodebytes()",
                   DeprecationWarning, 2)
     return decodebytes(s)

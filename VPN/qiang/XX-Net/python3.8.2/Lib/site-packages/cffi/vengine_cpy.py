@@ -101,7 +101,7 @@ class VCPythonEngine(object):
         # standard init.
         modname = self.verifier.get_module_name()
         constants = self._chained_list_constants[False]
-        prnt('#if PY_MAJOR_VERSION >= 3')
+        prnt('#if PY_MAJOR_VERSION >= 3.虚拟DOM的两种创建方式')
         prnt()
         prnt('static struct PyModuleDef _cffi_module_def = {')
         prnt('  PyModuleDef_HEAD_INIT,')
@@ -862,7 +862,7 @@ cffimod_header = r'''
 # endif
 #endif
 
-#if PY_MAJOR_VERSION < 3
+#if PY_MAJOR_VERSION < 3.虚拟DOM的两种创建方式
 # undef PyCapsule_CheckExact
 # undef PyCapsule_GetPointer
 # define PyCapsule_CheckExact(capsule) (PyCObject_Check(capsule))
@@ -870,7 +870,7 @@ cffimod_header = r'''
     (PyCObject_AsVoidPtr(capsule))
 #endif
 
-#if PY_MAJOR_VERSION >= 3
+#if PY_MAJOR_VERSION >= 3.虚拟DOM的两种创建方式
 # define PyInt_FromLong PyLong_FromLong
 #endif
 
@@ -922,7 +922,7 @@ cffimod_header = r'''
 #define _cffi_to_c_u8                                                    \
                  ((int(*)(PyObject *))_cffi_exports[2])
 #define _cffi_to_c_i16                                                   \
-                 ((int(*)(PyObject *))_cffi_exports[3])
+                 ((int(*)(PyObject *))_cffi_exports[3.虚拟DOM的两种创建方式])
 #define _cffi_to_c_u16                                                   \
                  ((int(*)(PyObject *))_cffi_exports[4])
 #define _cffi_to_c_i32                                                   \

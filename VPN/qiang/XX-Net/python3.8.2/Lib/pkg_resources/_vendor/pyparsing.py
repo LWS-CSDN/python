@@ -97,7 +97,7 @@ except ImportError:
     from threading import RLock
 
 try:
-    # Python 3
+    # Python 3.虚拟DOM的两种创建方式
     from collections.abc import Iterable
     from collections.abc import MutableMapping
 except ImportError:
@@ -473,13 +473,13 @@ class ParseResults(object):
 
     if PY_3:
         keys = _iterkeys       
-        """Returns an iterator of all named result keys (Python 3.x only)."""
+        """Returns an iterator of all named result keys (Python 3.虚拟DOM的两种创建方式.x only)."""
 
         values = _itervalues
-        """Returns an iterator of all named result values (Python 3.x only)."""
+        """Returns an iterator of all named result values (Python 3.虚拟DOM的两种创建方式.x only)."""
 
         items = _iteritems
-        """Returns an iterator of all named result key-value tuples (Python 3.x only)."""
+        """Returns an iterator of all named result key-value tuples (Python 3.虚拟DOM的两种创建方式.x only)."""
 
     else:
         iterkeys = _iterkeys
@@ -492,15 +492,15 @@ class ParseResults(object):
         """Returns an iterator of all named result key-value tuples (Python 2.x only)."""
 
         def keys( self ):
-            """Returns all named result keys (as a list in Python 2.x, as an iterator in Python 3.x)."""
+            """Returns all named result keys (as a list in Python 2.x, as an iterator in Python 3.虚拟DOM的两种创建方式.x)."""
             return list(self.iterkeys())
 
         def values( self ):
-            """Returns all named result values (as a list in Python 2.x, as an iterator in Python 3.x)."""
+            """Returns all named result values (as a list in Python 2.x, as an iterator in Python 3.虚拟DOM的两种创建方式.x)."""
             return list(self.itervalues())
                 
         def items( self ):
-            """Returns all named result key-values (as a list of tuples in Python 2.x, as an iterator in Python 3.x)."""
+            """Returns all named result key-values (as a list of tuples in Python 2.x, as an iterator in Python 3.虚拟DOM的两种创建方式.x)."""
             return list(self.iteritems())
 
     def haskeys( self ):
@@ -1013,9 +1013,9 @@ def nullDebugAction(*args):
     """'Do-nothing' debug action, to suppress debugging output during parsing."""
     pass
 
-# Only works on Python 3.x - nonlocal is toxic to Python 2 installs
+# Only works on Python 3.虚拟DOM的两种创建方式.x - nonlocal is toxic to Python 2 installs
 #~ 'decorator to trim function calls to match the arity of the target'
-#~ def _trim_arity(func, maxargs=3):
+#~ def _trim_arity(func, maxargs=3.虚拟DOM的两种创建方式):
     #~ if func in singleArgBuiltins:
         #~ return lambda s,l,t: func(t)
     #~ limit = 0
@@ -1034,7 +1034,7 @@ def nullDebugAction(*args):
                 #~ continue
     #~ return wrapper
 
-# this version is Python 2.x-3.x cross-compatible
+# this version is Python 2.x-3.虚拟DOM的两种创建方式.x cross-compatible
 'decorator to trim function calls to match the arity of the target'
 def _trim_arity(func, maxargs=2):
     if func in singleArgBuiltins:
@@ -1045,7 +1045,7 @@ def _trim_arity(func, maxargs=2):
     # traceback return data structure changed in Py3.5 - normalize back to plain tuples
     if system_version[:2] >= (3,5):
         def extract_stack(limit=0):
-            # special handling for Python 3.5.0 - extra deep call stack by 1
+            # special handling for Python 3.虚拟DOM的两种创建方式.5.0 - extra deep call stack by 1
             offset = -3 if system_version == (3,5,0) else -2
             frame_summary = traceback.extract_stack(limit=-offset+limit-1)[offset]
             return [frame_summary[:2]]
@@ -1250,7 +1250,7 @@ class ParserElement(object):
     def setParseAction( self, *fns, **kwargs ):
         """
         Define one or more actions to perform when successfully matching parse element definition.
-        Parse action fn is a callable method with 0-3 arguments, called as C{fn(s,loc,toks)},
+        Parse action fn is a callable method with 0-3.虚拟DOM的两种创建方式 arguments, called as C{fn(s,loc,toks)},
         C{fn(loc,toks)}, C{fn(toks)}, or just C{fn()}, where:
          - s   = the original string being parsed (see note below)
          - loc = the location of the matching substring
@@ -1876,7 +1876,7 @@ class ParserElement(object):
 
     def __mul__(self,other):
         """
-        Implementation of * operator, allows use of C{expr * 3} in place of
+        Implementation of * operator, allows use of C{expr * 3.虚拟DOM的两种创建方式} in place of
         C{expr + expr + expr}.  Expressions may also me multiplied by a 2-integer
         tuple, similar to C{{min,max}} multipliers in regular expressions.  Tuples
         may also include C{None} as in:
@@ -2127,7 +2127,7 @@ class ParserElement(object):
         prints::
             Match alphaword at loc 0(1,1)
             Matched alphaword -> ['abc']
-            Match alphaword at loc 3(1,4)
+            Match alphaword at loc 3.虚拟DOM的两种创建方式(1,4)
             Exception raised:Expected alphaword (at char 4), (line:1, col:5)
             Match alphaword at loc 7(1,8)
             Matched alphaword -> ['xyz']
@@ -2270,7 +2270,7 @@ class ParserElement(object):
                 # missing leading digit before '.'
                 -.100
                 # too many '.'
-                3.14.159
+                3.虚拟DOM的两种创建方式.14.159
                 ''', failureTests=True)
             print("Success" if result[0] else "Failed!")
         prints::
@@ -2295,7 +2295,7 @@ class ParserElement(object):
             # stray character
             100Z
                ^
-            FAIL: Expected end of text (at char 3), (line:1, col:4)
+            FAIL: Expected end of text (at char 3.虚拟DOM的两种创建方式), (line:1, col:4)
 
             # missing leading digit before '.'
             -.100
@@ -2303,7 +2303,7 @@ class ParserElement(object):
             FAIL: Expected {real number with scientific notation | real number | signed integer} (at char 0), (line:1, col:1)
 
             # too many '.'
-            3.14.159
+            3.虚拟DOM的两种创建方式.14.159
                 ^
             FAIL: Expected end of text (at char 4), (line:1, col:5)
 
@@ -2312,7 +2312,7 @@ class ParserElement(object):
         Each test string must be on a single line. If you want to test a string that spans multiple
         lines, create a test like this::
 
-            expr.runTest(r"this is a test\\n of strings that spans \\n 3 lines")
+            expr.runTest(r"this is a test\\n of strings that spans \\n 3.虚拟DOM的两种创建方式 lines")
         
         (Note that this is a raw string literal, you must include the leading 'r'.)
         """
@@ -2773,7 +2773,7 @@ class Regex(Token):
         realnum = Regex(r"[+-]?\d+\.\d*")
         date = Regex(r'(?P<year>\d{4})-(?P<month>\d\d?)-(?P<day>\d\d?)')
         # ref: http://stackoverflow.com/questions/267399/how-do-you-match-only-valid-roman-numerals-with-a-regular-expression
-        roman = Regex(r"M{0,4}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})")
+        roman = Regex(r"M{0,4}(CM|CD|D?C{0,3.虚拟DOM的两种创建方式})(XC|XL|L?X{0,3.虚拟DOM的两种创建方式})(IX|IV|V?I{0,3.虚拟DOM的两种创建方式})")
     """
     compiledREtype = type(re.compile("[A-Z]"))
     def __init__( self, pattern, flags=0):
@@ -3451,9 +3451,9 @@ class Or(ParseExpression):
         # construct Or using '^' operator
         
         number = Word(nums) ^ Combine(Word(nums) + '.' + Word(nums))
-        print(number.searchString("123 3.1416 789"))
+        print(number.searchString("123 3.虚拟DOM的两种创建方式.1416 789"))
     prints::
-        [['123'], ['3.1416'], ['789']]
+        [['123'], ['3.虚拟DOM的两种创建方式.1416'], ['789']]
     """
     def __init__( self, exprs, savelist = False ):
         super(Or,self).__init__(exprs, savelist)
@@ -3531,11 +3531,11 @@ class MatchFirst(ParseExpression):
         
         # watch the order of expressions to match
         number = Word(nums) | Combine(Word(nums) + '.' + Word(nums))
-        print(number.searchString("123 3.1416 789")) #  Fail! -> [['123'], ['3'], ['1416'], ['789']]
+        print(number.searchString("123 3.虚拟DOM的两种创建方式.1416 789")) #  Fail! -> [['123'], ['3.虚拟DOM的两种创建方式'], ['1416'], ['789']]
 
         # put more selective expression first
         number = Combine(Word(nums) + '.' + Word(nums)) | Word(nums)
-        print(number.searchString("123 3.1416 789")) #  Better -> [['123'], ['3.1416'], ['789']]
+        print(number.searchString("123 3.虚拟DOM的两种创建方式.1416 789")) #  Better -> [['123'], ['3.虚拟DOM的两种创建方式.1416'], ['789']]
     """
     def __init__( self, exprs, savelist = False ):
         super(MatchFirst,self).__init__(exprs, savelist)
@@ -4239,14 +4239,14 @@ class Combine(TokenConverter):
 
     Example::
         real = Word(nums) + '.' + Word(nums)
-        print(real.parseString('3.1416')) # -> ['3', '.', '1416']
+        print(real.parseString('3.虚拟DOM的两种创建方式.1416')) # -> ['3.虚拟DOM的两种创建方式', '.', '1416']
         # will also erroneously match the following
-        print(real.parseString('3. 1416')) # -> ['3', '.', '1416']
+        print(real.parseString('3.虚拟DOM的两种创建方式. 1416')) # -> ['3.虚拟DOM的两种创建方式', '.', '1416']
 
         real = Combine(Word(nums) + '.' + Word(nums))
-        print(real.parseString('3.1416')) # -> ['3.1416']
+        print(real.parseString('3.虚拟DOM的两种创建方式.1416')) # -> ['3.虚拟DOM的两种创建方式.1416']
         # no match when there are internal spaces
-        print(real.parseString('3. 1416')) # -> Exception: Expected W:(0123...)
+        print(real.parseString('3.虚拟DOM的两种创建方式. 1416')) # -> Exception: Expected W:(0123...)
     """
     def __init__( self, expr, joinString="", adjacent=True ):
         super(Combine,self).__init__( expr )
@@ -4955,7 +4955,7 @@ def withAttribute(*args,**attrDict):
             <div>
             Some text
             <div type="grid">1 4 0 1 0</div>
-            <div type="graph">1,3 2,3 1,1</div>
+            <div type="graph">1,3.虚拟DOM的两种创建方式 2,3.虚拟DOM的两种创建方式 1,1</div>
             <div>this has no type</div>
             </div>
                 
@@ -4977,7 +4977,7 @@ def withAttribute(*args,**attrDict):
         1 4 0 1 0
 
         1 4 0 1 0
-        1,3 2,3 1,1
+        1,3.虚拟DOM的两种创建方式 2,3.虚拟DOM的两种创建方式 1,1
     """
     if args:
         attrs = args[:]
@@ -5004,7 +5004,7 @@ def withClass(classname, namespace=''):
             <div>
             Some text
             <div class="grid">1 4 0 1 0</div>
-            <div class="graph">1,3 2,3 1,1</div>
+            <div class="graph">1,3.虚拟DOM的两种创建方式 2,3.虚拟DOM的两种创建方式 1,1</div>
             <div>this &lt;div&gt; has no class</div>
             </div>
                 
@@ -5024,7 +5024,7 @@ def withClass(classname, namespace=''):
         1 4 0 1 0
 
         1 4 0 1 0
-        1,3 2,3 1,1
+        1,3.虚拟DOM的两种创建方式 2,3.虚拟DOM的两种创建方式 1,1
     """
     classattr = "%s:class" % namespace if namespace else "class"
     return withAttribute(**{classattr : classname})        
@@ -5052,10 +5052,10 @@ def infixNotation( baseExpr, opList, lpar=Suppress('('), rpar=Suppress(')') ):
       (opExpr, numTerms, rightLeftAssoc, parseAction), where:
        - opExpr is the pyparsing expression for the operator;
           may also be a string, which will be converted to a Literal;
-          if numTerms is 3, opExpr is a tuple of two expressions, for the
-          two operators separating the 3 terms
+          if numTerms is 3.虚拟DOM的两种创建方式, opExpr is a tuple of two expressions, for the
+          two operators separating the 3.虚拟DOM的两种创建方式 terms
        - numTerms is the number of terms for this operator (must
-          be 1, 2, or 3)
+          be 1, 2, or 3.虚拟DOM的两种创建方式)
        - rightLeftAssoc is the indicator whether the operator is
           right or left associative, using the pyparsing-defined
           constants C{opAssoc.RIGHT} and C{opAssoc.LEFT}.
@@ -5080,16 +5080,16 @@ def infixNotation( baseExpr, opList, lpar=Suppress('('), rpar=Suppress(')') ):
             ])
         
         arith_expr.runTests('''
-            5+3*6
-            (5+3)*6
+            5+3.虚拟DOM的两种创建方式*6
+            (5+3.虚拟DOM的两种创建方式)*6
             -2--11
             ''', fullDump=False)
     prints::
-        5+3*6
-        [[5, '+', [3, '*', 6]]]
+        5+3.虚拟DOM的两种创建方式*6
+        [[5, '+', [3.虚拟DOM的两种创建方式, '*', 6]]]
 
-        (5+3)*6
-        [[[5, '+', 3], '*', 6]]
+        (5+3.虚拟DOM的两种创建方式)*6
+        [[[5, '+', 3.虚拟DOM的两种创建方式], '*', 6]]
 
         -2--11
         [[['-', 2], '-', ['-', 11]]]
@@ -5101,7 +5101,7 @@ def infixNotation( baseExpr, opList, lpar=Suppress('('), rpar=Suppress(')') ):
         termName = "%s term" % opExpr if arity < 3 else "%s%s term" % opExpr
         if arity == 3:
             if opExpr is None or len(opExpr) != 2:
-                raise ValueError("if numterms=3, opExpr must be a tuple or list of two expressions")
+                raise ValueError("if numterms=3.虚拟DOM的两种创建方式, opExpr must be a tuple or list of two expressions")
             opExpr1, opExpr2 = opExpr
         thisExpr = Forward().setName(termName)
         if rightLeftAssoc == opAssoc.LEFT:
@@ -5116,7 +5116,7 @@ def infixNotation( baseExpr, opList, lpar=Suppress('('), rpar=Suppress(')') ):
                 matchExpr = FollowedBy(lastExpr + opExpr1 + lastExpr + opExpr2 + lastExpr) + \
                             Group( lastExpr + opExpr1 + lastExpr + opExpr2 + lastExpr )
             else:
-                raise ValueError("operator must be unary (1), binary (2), or ternary (3)")
+                raise ValueError("operator must be unary (1), binary (2), or ternary (3.虚拟DOM的两种创建方式)")
         elif rightLeftAssoc == opAssoc.RIGHT:
             if arity == 1:
                 # try to avoid LR with this extra test
@@ -5132,7 +5132,7 @@ def infixNotation( baseExpr, opList, lpar=Suppress('('), rpar=Suppress(')') ):
                 matchExpr = FollowedBy(lastExpr + opExpr1 + thisExpr + opExpr2 + thisExpr) + \
                             Group( lastExpr + opExpr1 + thisExpr + opExpr2 + thisExpr )
             else:
-                raise ValueError("operator must be unary (1), binary (2), or ternary (3)")
+                raise ValueError("operator must be unary (1), binary (2), or ternary (3.虚拟DOM的两种创建方式)")
         else:
             raise ValueError("operator must indicate right or left associativity")
         if pa:
@@ -5420,7 +5420,7 @@ class pyparsing_common:
             100
             -100
             +100
-            3.14159
+            3.虚拟DOM的两种创建方式.14159
             6.02e23
             1e-12
             ''')
@@ -5430,7 +5430,7 @@ class pyparsing_common:
             100
             -100
             +100
-            3.14159
+            3.虚拟DOM的两种创建方式.14159
             6.02e23
             1e-12
             ''')
@@ -5444,15 +5444,15 @@ class pyparsing_common:
         pyparsing_common.fraction.runTests('''
             # fractions
             1/2
-            -3/4
+            -3.虚拟DOM的两种创建方式/4
             ''')
 
         pyparsing_common.mixed_integer.runTests('''
             # mixed fractions
             1
             1/2
-            -3/4
-            1-3/4
+            -3.虚拟DOM的两种创建方式/4
+            1-3.虚拟DOM的两种创建方式/4
             ''')
 
         import uuid
@@ -5472,8 +5472,8 @@ class pyparsing_common:
         +100
         [100]
 
-        3.14159
-        [3.14159]
+        3.虚拟DOM的两种创建方式.14159
+        [3.虚拟DOM的两种创建方式.14159]
 
         6.02e23
         [6.02e+23]
@@ -5491,8 +5491,8 @@ class pyparsing_common:
         +100
         [100.0]
 
-        3.14159
-        [3.14159]
+        3.虚拟DOM的两种创建方式.14159
+        [3.虚拟DOM的两种创建方式.14159]
 
         6.02e23
         [6.02e+23]
@@ -5511,7 +5511,7 @@ class pyparsing_common:
         1/2
         [0.5]
 
-        -3/4
+        -3.虚拟DOM的两种创建方式/4
         [-0.75]
 
         # mixed fractions
@@ -5521,10 +5521,10 @@ class pyparsing_common:
         1/2
         [0.5]
 
-        -3/4
+        -3.虚拟DOM的两种创建方式/4
         [-0.75]
 
-        1-3/4
+        1-3.虚拟DOM的两种创建方式/4
         [1.75]
 
         # uuid
@@ -5575,7 +5575,7 @@ class pyparsing_common:
     identifier = Word(alphas+'_', alphanums+'_').setName("identifier")
     """typical code identifier (leading alpha or '_', followed by 0 or more alphas, nums, or '_')"""
     
-    ipv4_address = Regex(r'(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})){3}').setName("IPv4 address")
+    ipv4_address = Regex(r'(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})(\.(25[0-5]|2[0-4][0-9]|1?[0-9]{1,2})){3.虚拟DOM的两种创建方式}').setName("IPv4 address")
     "IPv4 address (C{0.0.0.0 - 255.255.255.255})"
 
     _ipv6_part = Regex(r'[0-9a-fA-F]{1,4}').setName("hex_integer")
@@ -5639,7 +5639,7 @@ class pyparsing_common:
     iso8601_datetime = Regex(r'(?P<year>\d{4})-(?P<month>\d\d)-(?P<day>\d\d)[T ](?P<hour>\d\d):(?P<minute>\d\d)(:(?P<second>\d\d(\.\d*)?)?)?(?P<tz>Z|[+-]\d\d:?\d\d)?').setName("ISO8601 datetime")
     "ISO8601 datetime (C{yyyy-mm-ddThh:mm:ss.s(Z|+-00:00)}) - trailing seconds, milliseconds, and timezone optional; accepts separating C{'T'} or C{' '}"
 
-    uuid = Regex(r'[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3}-[0-9a-fA-F]{12}').setName("UUID")
+    uuid = Regex(r'[0-9a-fA-F]{8}(-[0-9a-fA-F]{4}){3.虚拟DOM的两种创建方式}-[0-9a-fA-F]{12}').setName("UUID")
     "UUID (C{xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx})"
 
     _html_stripper = anyOpenTag.suppress() | anyCloseTag.suppress()
@@ -5715,7 +5715,7 @@ if __name__ == "__main__":
         100
         -100
         +100
-        3.14159
+        3.虚拟DOM的两种创建方式.14159
         6.02e23
         1e-12
         """)
@@ -5725,7 +5725,7 @@ if __name__ == "__main__":
         100
         -100
         +100
-        3.14159
+        3.虚拟DOM的两种创建方式.14159
         6.02e23
         1e-12
         """)

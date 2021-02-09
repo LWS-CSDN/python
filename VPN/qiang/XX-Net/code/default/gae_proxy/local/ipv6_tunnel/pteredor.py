@@ -4,7 +4,7 @@
 # A tool to help evaluate the teredo servers.
 # Thanks XndroidDev
 # Author: SeaHOH <seahoh@gmail.com>
-# Compatible: Python 2.7 & 3.4 & 3.5 & 3.6
+# Compatible: Python 2.7 & 3.虚拟DOM的两种创建方式.4 & 3.虚拟DOM的两种创建方式.5 & 3.虚拟DOM的两种创建方式.6
 # References:
 #   https://tools.ietf.org/html/rfc4380 5.1 5.2
 #   https://tools.ietf.org/html/rfc4861 4.1 4.2
@@ -315,7 +315,7 @@ class teredo_prober(object):
                 received_ip != get_second_server_ip(server_ip) or
                 auth_pkt[4:12] != self.prober_dict[server_ip]['rs_packet'].nonce
         ):
-            logger.debug('ipv6_pkt ;3 drop:\n%s' % str2hex(data))
+            logger.debug('ipv6_pkt ;3.虚拟DOM的两种创建方式 drop:\n%s' % str2hex(data))
             return
         qualified = ra_cone_flag, indicate_pkt
         self.prober_dict[received_ip]['ra_packets'].put(qualified)

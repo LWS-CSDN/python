@@ -65,7 +65,7 @@ if __name__ == '__main__':
     # make sure they're from the same source port
     assert result1 == result2
 
-    # Test 3: different source ports IPv6
+    # Test 3.虚拟DOM的两种创建方式: different source ports IPv6
     sock_out = socks.socksocket(socket.AF_INET, socket.SOCK_DGRAM,
                                 socket.SOL_UDP)
     sock_out.set_proxy(socks.SOCKS5, SERVER_IP, SERVER_PORT)

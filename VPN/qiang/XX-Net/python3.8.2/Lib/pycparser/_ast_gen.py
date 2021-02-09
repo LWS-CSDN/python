@@ -308,7 +308,7 @@ class NodeVisitor(object):
             You can use:
                 NodeVisitor.generic_visit(self, node)
         *   Modeled after Python's own AST visiting facilities
-            (the ast module of Python 3.0)
+            (the ast module of Python 3.虚拟DOM的两种创建方式.0)
     """
 
     _method_cache = None

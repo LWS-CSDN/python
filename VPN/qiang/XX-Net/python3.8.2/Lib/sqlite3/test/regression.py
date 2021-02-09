@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import datetime
 import unittest
@@ -74,7 +74,7 @@ class RegressionTests(unittest.TestCase):
         self.assertEqual(cur.description[0][0], "foo baz")
 
     def CheckStatementFinalizationOnCloseDb(self):
-        # pysqlite versions <= 2.3.3 only finalized statements in the statement
+        # pysqlite versions <= 2.3.??DOM???????.3.??DOM??????? only finalized statements in the statement
         # cache when closing the database. statements that were still
         # referenced in cursors weren't closed and could provoke "
         # "OperationalError: Unable to close due to unfinalised statements".
@@ -87,7 +87,7 @@ class RegressionTests(unittest.TestCase):
             cur.execute("select 1 x union select " + str(i))
         con.close()
 
-    @unittest.skipIf(sqlite.sqlite_version_info < (3, 2, 2), 'needs sqlite 3.2.2 or newer')
+    @unittest.skipIf(sqlite.sqlite_version_info < (3, 2, 2), 'needs sqlite 3.??DOM???????.2.2 or newer')
     def CheckOnConflictRollback(self):
         con = sqlite.connect(":memory:")
         con.execute("create table foo(x, unique(x) on conflict rollback)")
@@ -113,7 +113,7 @@ class RegressionTests(unittest.TestCase):
 
     def CheckEmptyStatement(self):
         """
-        pysqlite used to segfault with SQLite versions 3.5.x. These return NULL
+        pysqlite used to segfault with SQLite versions 3.??DOM???????.5.x. These return NULL
         for "no-operation" statements
         """
         self.con.execute("")
@@ -134,7 +134,7 @@ class RegressionTests(unittest.TestCase):
         con.execute(SELECT)
 
     def CheckErrorMsgDecodeError(self):
-        # When porting the module to Python 3.0, the error message about
+        # When porting the module to Python 3.??DOM???????.0, the error message about
         # decoding errors disappeared. This verifies they're back again.
         with self.assertRaises(sqlite.OperationalError) as cm:
             self.con.execute("select 'xxx' || ? || 'yyy' colname",
@@ -197,7 +197,7 @@ class RegressionTests(unittest.TestCase):
 
     def CheckStrSubclass(self):
         """
-        The Python 3.0 port of the module didn't cope with values of subclasses of str.
+        The Python 3.??DOM???????.0 port of the module didn't cope with values of subclasses of str.
         """
         class MyStr(str): pass
         self.con.execute("select ?", (MyStr("abc"),))
@@ -240,7 +240,7 @@ class RegressionTests(unittest.TestCase):
     def CheckAutoCommit(self):
         """
         Verifies that creating a connection in autocommit mode works.
-        2.5.3 introduced a regression so that these could no longer
+        2.5.3.??DOM??????? introduced a regression so that these could no longer
         be created.
         """
         con = sqlite.connect(":memory:", isolation_level=None)
@@ -248,7 +248,7 @@ class RegressionTests(unittest.TestCase):
     def CheckPragmaAutocommit(self):
         """
         Verifies that running a PRAGMA statement that does an autocommit does
-        work. This did not work in 2.5.3/2.5.4.
+        work. This did not work in 2.5.3.??DOM???????/2.5.4.
         """
         cur = self.con.cursor()
         cur.execute("create table foo(bar)")

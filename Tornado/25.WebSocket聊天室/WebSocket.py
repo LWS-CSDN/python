@@ -33,7 +33,7 @@ class WebSocketSever(tornado.websocket.WebSocketHandler):
 
     def on_message(self, message):
         '''
-        3.这个方法是在接受到来自客户端的数据的时候触发的方法，在这个方法里面我们可以去实现对数据的判断从而调用对应的方法，去处理该做的事情。
+        3.虚拟DOM的两种创建方式.这个方法是在接受到来自客户端的数据的时候触发的方法，在这个方法里面我们可以去实现对数据的判断从而调用对应的方法，去处理该做的事情。
         '''
         print(type(message))
         if message == "close":

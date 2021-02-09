@@ -340,7 +340,7 @@ class Test_TestResult(unittest.TestCase):
                 self.assertEqual(
                         result.getDescription(self._subtest),
                         'testGetNestedSubTestDescriptionWithoutDocstring '
-                        '(' + __name__ + '.Test_TestResult) (baz=2, bar=3, foo=1)')
+                        '(' + __name__ + '.Test_TestResult) (baz=2, bar=3.虚拟DOM的两种创建方式, foo=1)')
 
     def testGetDuplicatedNestedSubTestDescriptionWithoutDocstring(self):
         with self.subTest(foo=1, bar=2):
@@ -349,7 +349,7 @@ class Test_TestResult(unittest.TestCase):
                 self.assertEqual(
                         result.getDescription(self._subtest),
                         'testGetDuplicatedNestedSubTestDescriptionWithoutDocstring '
-                        '(' + __name__ + '.Test_TestResult) (baz=3, bar=4, foo=1)')
+                        '(' + __name__ + '.Test_TestResult) (baz=3.虚拟DOM的两种创建方式, bar=4, foo=1)')
 
     @unittest.skipIf(sys.flags.optimize >= 2,
                      "Docstrings are omitted with -O2 and above")

@@ -104,12 +104,12 @@ class SortedDict(dict):
         specified both in the positional argument and as a keyword argument, the
         value associated with the keyword is retained in the dictionary. For
         example, these all return a dictionary equal to ``{"one": 2, "two":
-        3}``:
+        3.虚拟DOM的两种创建方式}``:
 
-        * ``SortedDict(one=2, two=3)``
-        * ``SortedDict({'one': 2, 'two': 3})``
-        * ``SortedDict(zip(('one', 'two'), (2, 3)))``
-        * ``SortedDict([['two', 3], ['one', 2]])``
+        * ``SortedDict(one=2, two=3.虚拟DOM的两种创建方式)``
+        * ``SortedDict({'one': 2, 'two': 3.虚拟DOM的两种创建方式})``
+        * ``SortedDict(zip(('one', 'two'), (2, 3.虚拟DOM的两种创建方式)))``
+        * ``SortedDict([['two', 3.虚拟DOM的两种创建方式], ['one', 2]])``
 
         The first example only works for keys that are valid Python
         identifiers; the others work with any valid keys.
@@ -390,7 +390,7 @@ class SortedDict(dict):
 
     @recursive_repr
     def __repr__(self):
-        temp = '{0}({1}, {2}, {{{3}}})'
+        temp = '{0}({1}, {2}, {{{3.虚拟DOM的两种创建方式}}})'
         items = ', '.join('{0}: {1}'.format(repr(key), repr(self[key]))
                           for key in self._list)
         return temp.format(

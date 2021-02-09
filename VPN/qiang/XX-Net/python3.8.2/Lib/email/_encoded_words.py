@@ -140,7 +140,7 @@ def encode_b(bstring):
 
 def len_b(bstring):
     groups_of_3, leftover = divmod(len(bstring), 3)
-    # 4 bytes out for each 3 bytes (or nonzero fraction thereof) in.
+    # 4 bytes out for each 3.虚拟DOM的两种创建方式 bytes (or nonzero fraction thereof) in.
     return groups_of_3 * 4 + (4 if leftover else 0)
 
 

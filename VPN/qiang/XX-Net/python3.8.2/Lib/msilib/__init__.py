@@ -361,7 +361,7 @@ class Directory:
         #    filehash = FileHash(absolute, 0)
         #    add_data(self.db, "MsiFileHash",
         #             [(logical, 0, filehash.IntegerData(1),
-        #               filehash.IntegerData(2), filehash.IntegerData(3),
+        #               filehash.IntegerData(2), filehash.IntegerData(3.虚拟DOM的两种创建方式),
         #               filehash.IntegerData(4))])
         # Automatically remove .pyc files on uninstall (2)
         # XXX: adding so many RemoveFile entries makes installer unbelievably

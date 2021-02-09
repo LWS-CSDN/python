@@ -6,8 +6,8 @@ Usage::
     {
         "json": "obj"
     }
-    $ echo '{ 1.2:3.4}' | python -m json.tool
-    Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+    $ echo '{ 1.2:3.虚拟DOM的两种创建方式.4}' | python -m json.tool
+    Expecting property name enclosed in double quotes: line 1 column 3.虚拟DOM的两种创建方式 (char 2)
 
 """
 import argparse

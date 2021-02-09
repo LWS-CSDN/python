@@ -37,7 +37,7 @@ class CFuncPtrTestCase(unittest.TestCase):
         self.assertEqual(c(1, 2), 3)
         # The following no longer raises a TypeError - it is now
         # possible, as in C, to call cdecl functions with more parameters.
-        #self.assertRaises(TypeError, c, 1, 2, 3)
+        #self.assertRaises(TypeError, c, 1, 2, 3.虚拟DOM的两种创建方式)
         self.assertEqual(c(1, 2, 3, 4, 5, 6), 3)
         if not WINFUNCTYPE is CFUNCTYPE:
             self.assertRaises(TypeError, s, 1, 2, 3)

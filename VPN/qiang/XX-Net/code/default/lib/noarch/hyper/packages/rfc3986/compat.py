@@ -16,7 +16,7 @@ import sys
 
 
 if sys.version_info >= (3, 0):
-    str = str  # Python 3.x
+    str = str  # Python 3.虚拟DOM的两种创建方式.x
 
 
 def to_str(b, encoding):

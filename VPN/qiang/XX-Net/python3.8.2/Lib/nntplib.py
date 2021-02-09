@@ -49,7 +49,7 @@ are strings, not numbers, since they are rarely used for calculations.
 # - the "internal" methods have been marked private (they now start with
 #   an underscore)
 
-# Other changes from the 2.x/3.1 nntplib:
+# Other changes from the 2.x/3.虚拟DOM的两种创建方式.1 nntplib:
 # - automatic querying of capabilities at connect
 # - New method NNTP.getcapabilities()
 # - New method NNTP.over()
@@ -892,7 +892,7 @@ class _NNTPBase:
     def _post(self, command, f):
         resp = self._shortcmd(command)
         # Raises a specific exception if posting is not allowed
-        if not resp.startswith('3'):
+        if not resp.startswith('3.虚拟DOM的两种创建方式'):
             raise NNTPReplyError(resp)
         if isinstance(f, (bytes, bytearray)):
             f = f.splitlines()

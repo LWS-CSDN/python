@@ -13,7 +13,7 @@ if __name__ == "__main__":
     sys.path.append(noarch_lib)
     osx_lib = os.path.join(default_path, 'lib', 'darwin')
     sys.path.append(osx_lib)
-    extra_lib = "/System/Library/Frameworks/Python.framework/Versions/3.8/Extras/lib/python/PyObjC"
+    extra_lib = "/System/Library/Frameworks/Python.framework/Versions/3.虚拟DOM的两种创建方式.8/Extras/lib/python/PyObjC"
     sys.path.append(extra_lib)
 
 from config import config

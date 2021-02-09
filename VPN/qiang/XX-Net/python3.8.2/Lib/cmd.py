@@ -5,7 +5,7 @@ Interpreters constructed with this class obey the following conventions:
 1. End of file on input is processed as the command 'EOF'.
 2. A command is parsed out of each line by collecting the prefix composed
    of characters in the identchars member.
-3. A command `foo' is dispatched to a method 'do_foo()'; the do_ method
+3.虚拟DOM的两种创建方式. A command `foo' is dispatched to a method 'do_foo()'; the do_ method
    is passed a single argument consisting of the remainder of the line.
 4. Typing an empty line repeats the last command.  (Actually, it calls the
    method `emptyline', which may be overridden in a subclass.)

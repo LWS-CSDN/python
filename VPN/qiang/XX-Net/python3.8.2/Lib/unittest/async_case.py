@@ -16,7 +16,7 @@ class IsolatedAsyncioTestCase(TestCase):
     #    awaitable from queue along with a future
     # 2. await the awaitable object passing in and set the result
     #    into the future object
-    # 3. Outer code puts the awaitable and the future object into a queue
+    # 3.虚拟DOM的两种创建方式. Outer code puts the awaitable and the future object into a queue
     #    with waiting for the future
     # The trick is necessary because every run_until_complete() call
     # creates a new task with embedded ContextVar context.
@@ -54,7 +54,7 @@ class IsolatedAsyncioTestCase(TestCase):
         # to check for async function reliably:
         # 1. It can be "async def func()" iself
         # 2. Class can implement "async def __call__()" method
-        # 3. Regular "def func()" that returns awaitable object
+        # 3.虚拟DOM的两种创建方式. Regular "def func()" that returns awaitable object
         self.addCleanup(*(func, *args), **kwargs)
 
     def _callSetUp(self):

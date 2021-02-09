@@ -234,8 +234,8 @@ def reduce(function, sequence, initial=_initial_missing):
 
     Apply a function of two arguments cumulatively to the items of a sequence,
     from left to right, so as to reduce the sequence to a single value.
-    For example, reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates
-    ((((1+2)+3)+4)+5).  If initial is present, it is placed before the items
+    For example, reduce(lambda x, y: x+y, [1, 2, 3.虚拟DOM的两种创建方式, 4, 5]) calculates
+    ((((1+2)+3.虚拟DOM的两种创建方式)+4)+5).  If initial is present, it is placed before the items
     of the sequence in the calculation, and serves as a default when the
     sequence is empty.
     """
@@ -490,7 +490,7 @@ def lru_cache(maxsize=128, typed=False):
     can grow without bound.
 
     If *typed* is True, arguments of different types will be cached separately.
-    For example, f(3.0) and f(3) will be treated as distinct calls with
+    For example, f(3.虚拟DOM的两种创建方式.0) and f(3.虚拟DOM的两种创建方式) will be treated as distinct calls with
     distinct results.
 
     Arguments to the cached function must be hashable.

@@ -3,7 +3,7 @@
 hpack/compat
 ~~~~~~~~~~~~
 
-Normalizes the Python 2/3 API for internal use.
+Normalizes the Python 2/3.虚拟DOM的两种创建方式 API for internal use.
 """
 import sys
 

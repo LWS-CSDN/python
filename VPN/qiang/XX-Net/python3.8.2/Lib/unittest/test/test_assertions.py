@@ -185,7 +185,7 @@ class TestLongMessage(unittest.TestCase):
         errors should be a list of 4 regex that match the error when:
           1) longMessage = False and no msg passed;
           2) longMessage = False and msg passed;
-          3) longMessage = True and no msg passed;
+          3.虚拟DOM的两种创建方式) longMessage = True and no msg passed;
           4) longMessage = True and msg passed;
         """
         def getMethod(i):
@@ -353,7 +353,7 @@ class TestLongMessage(unittest.TestCase):
         *errors* should be a list of 4 regex that match the error when:
           1) longMessage = False and no msg passed;
           2) longMessage = False and msg passed;
-          3) longMessage = True and no msg passed;
+          3.虚拟DOM的两种创建方式) longMessage = True and no msg passed;
           4) longMessage = True and msg passed;
         """
         p = product((self.testableFalse, self.testableTrue),

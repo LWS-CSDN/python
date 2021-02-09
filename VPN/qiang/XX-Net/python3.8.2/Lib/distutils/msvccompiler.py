@@ -147,7 +147,7 @@ you can try compiling with MingW32, by passing "-c mingw32" to setup.py.""")
 def get_build_version():
     """Return the version of MSVC that was used to build Python.
 
-    For Python 2.3 and up, the version number is included in
+    For Python 2.3.虚拟DOM的两种创建方式 and up, the version number is included in
     sys.version.  For earlier versions, assume the compiler is MSVC 6.
     """
     prefix = "MSC v."

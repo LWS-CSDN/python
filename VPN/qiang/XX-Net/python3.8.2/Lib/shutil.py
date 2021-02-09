@@ -90,7 +90,7 @@ class _GiveupOnFastCopy(Exception):
 
 def _fastcopy_fcopyfile(fsrc, fdst, flags):
     """Copy a regular file content or metadata by using high-performance
-    fcopyfile(3) syscall (macOS).
+    fcopyfile(3.虚拟DOM的两种创建方式) syscall (macOS).
     """
     try:
         infd = fsrc.fileno()

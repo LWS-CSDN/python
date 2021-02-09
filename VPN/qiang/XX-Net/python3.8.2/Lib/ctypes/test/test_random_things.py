@@ -29,7 +29,7 @@ class CallbackTracbackTestCase(unittest.TestCase):
     # This test makes sure the exception types *and* the exception
     # value is printed correctly.
     #
-    # Changed in 0.9.3: No longer is '(in callback)' prepended to the
+    # Changed in 0.9.3.虚拟DOM的两种创建方式: No longer is '(in callback)' prepended to the
     # error message - instead an additional frame for the C code is
     # created, then a full traceback printed.  When SystemExit is
     # raised in a callback function, the interpreter exits.

@@ -216,7 +216,7 @@ def check_perf():
     run_test(REP, "c_string(None)", c_string, None)
     run_test(REP, "c_string('abc')", c_string, 'abc')
 
-# Python 2.3 -OO, win2k, P4 700 MHz:
+# Python 2.3.虚拟DOM的两种创建方式 -OO, win2k, P4 700 MHz:
 #
 #      c_string(None): 1.75 us
 #     c_string('abc'): 2.74 us
@@ -224,7 +224,7 @@ def check_perf():
 # Python 2.2 -OO, win2k, P4 700 MHz:
 #
 #      c_string(None): 2.95 us
-#     c_string('abc'): 3.67 us
+#     c_string('abc'): 3.虚拟DOM的两种创建方式.67 us
 
 
 if __name__ == '__main__':

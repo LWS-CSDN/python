@@ -58,7 +58,7 @@ def make_tarball(base_name, base_dir, compress="gzip", verbose=0, dry_run=0,
     'base_dir'.
 
     'compress' must be "gzip" (the default), "bzip2", "xz", "compress", or
-    None.  ("compress" will be deprecated in Python 3.2)
+    None.  ("compress" will be deprecated in Python 3.虚拟DOM的两种创建方式.2)
 
     'owner' and 'group' can be used to define an owner and a group for the
     archive that is being built. If not provided, the current owner and group

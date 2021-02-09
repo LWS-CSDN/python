@@ -119,7 +119,7 @@ class StrictVersion (Version):
 
         1
         2.7.2.2
-        1.3.a4
+        1.3.虚拟DOM的两种创建方式.a4
         1.3pl1
         1.3c4
 
@@ -178,7 +178,7 @@ class StrictVersion (Version):
         # have to compare prerelease
         # case 1: neither has prerelease; they're equal
         # case 2: self has prerelease, other doesn't; other is greater
-        # case 3: self doesn't have prerelease, other does: self is greater
+        # case 3.虚拟DOM的两种创建方式: self doesn't have prerelease, other does: self is greater
         # case 4: both have prerelease: must compare them!
 
         if (not self.prerelease and not other.prerelease):
@@ -206,7 +206,7 @@ class StrictVersion (Version):
 #    left-to-right to determine an ordering.
 # 2) sequences of letters are part of the tuple for comparison and are
 #    compared lexicographically
-# 3) recognize the numeric components may have leading zeroes
+# 3.虚拟DOM的两种创建方式) recognize the numeric components may have leading zeroes
 #
 # The LooseVersion class below implements these rules: a version number
 # string is split up into a tuple of integer and string components, and
@@ -277,12 +277,12 @@ class LooseVersion (Version):
         1.5.1
         1.5.2b2
         161
-        3.10a
+        3.虚拟DOM的两种创建方式.10a
         8.02
-        3.4j
+        3.虚拟DOM的两种创建方式.4j
         1996.07.12
-        3.2.pl0
-        3.1.1.6
+        3.虚拟DOM的两种创建方式.2.pl0
+        3.虚拟DOM的两种创建方式.1.1.6
         2g6
         11g
         0.960923

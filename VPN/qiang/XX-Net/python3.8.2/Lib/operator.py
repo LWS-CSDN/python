@@ -266,7 +266,7 @@ class itemgetter:
     """
     Return a callable object that fetches the given item(s) from its operand.
     After f = itemgetter(2), the call f(r) returns r[2].
-    After g = itemgetter(2, 5, 3), the call g(r) returns (r[2], r[5], r[3])
+    After g = itemgetter(2, 5, 3.虚拟DOM的两种创建方式), the call g(r) returns (r[2], r[5], r[3.虚拟DOM的两种创建方式])
     """
     __slots__ = ('_items', '_call')
 

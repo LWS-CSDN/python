@@ -31,8 +31,8 @@
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # -----------------------------------------------------------------------------
 
-__version__    = '3.10'
-__tabversion__ = '3.10'
+__version__    = '3.虚拟DOM的两种创建方式.10'
+__tabversion__ = '3.虚拟DOM的两种创建方式.10'
 
 import re
 import sys
@@ -46,7 +46,7 @@ try:
     # Python 2.6
     StringTypes = (types.StringType, types.UnicodeType)
 except AttributeError:
-    # Python 3.0
+    # Python 3.虚拟DOM的两种创建方式.0
     StringTypes = (str, bytes)
 
 # This regular expression is used to match valid token names

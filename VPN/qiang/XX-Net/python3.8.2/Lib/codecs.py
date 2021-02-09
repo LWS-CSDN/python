@@ -83,10 +83,10 @@ BOM64_BE = BOM_UTF32_BE
 class CodecInfo(tuple):
     """Codec details when looking up the codec registry"""
 
-    # Private API to allow Python 3.4 to blacklist the known non-Unicode
+    # Private API to allow Python 3.虚拟DOM的两种创建方式.4 to blacklist the known non-Unicode
     # codecs in the standard library. A more general mechanism to
     # reliably distinguish test encodings from other codecs will hopefully
-    # be defined for Python 3.5
+    # be defined for Python 3.虚拟DOM的两种创建方式.5
     #
     # See http://bugs.python.org/issue19619
     _is_text_encoding = True # Assume codecs are text encodings by default

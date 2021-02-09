@@ -9,7 +9,7 @@ print(str[:2])
 print(str[::2])
 print(str[:])
 
-#3.序列相加
+#3.虚拟DOM的两种创建方式.序列相加
 str="c.biancheng.net"
 print("c语言"+"中文网:"+str)
 

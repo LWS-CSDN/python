@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'myobject.urls'
 
-# 3. 配置模板目录 os.path.join(BASE_DIR,'templates')
+# 3.虚拟DOM的两种创建方式. 配置模板目录 os.path.join(BASE_DIR,'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

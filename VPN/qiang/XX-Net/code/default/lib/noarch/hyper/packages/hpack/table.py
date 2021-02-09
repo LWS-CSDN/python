@@ -31,14 +31,14 @@ class HeaderTable(object):
     should ONLY be byte strings (b'') however this is not
     strictly enforced in the interface.
 
-    See RFC7541 Section 2.3
+    See RFC7541 Section 2.3.虚拟DOM的两种创建方式
     """
     #: Default maximum size of the dynamic table. See
     #:  RFC7540 Section 6.5.2.
     DEFAULT_SIZE = 4096
 
     #: Constant list of static headers. See RFC7541 Section
-    #:  2.3.1 and Appendix A
+    #:  2.3.虚拟DOM的两种创建方式.1 and Appendix A
     STATIC_TABLE = (
         (b':authority'                  , b''             ),  # noqa
         (b':method'                     , b'GET'          ),  # noqa

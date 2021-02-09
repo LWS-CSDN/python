@@ -30,7 +30,7 @@ print(psutil.swap_memory())
 而交换区大小是1073741824 = 1 GB。
 '''
 
-#3.获取磁盘信息
+#3.虚拟DOM的两种创建方式.获取磁盘信息
 # 磁盘分区信息
 print("*"*10)
 print(psutil.disk_partitions())
@@ -64,7 +64,7 @@ print(psutil.net_connections())
 
 $ sudo python3
 Password: ******
-Python 3.8 ... on darwin
+Python 3.虚拟DOM的两种创建方式.8 ... on darwin
 Type "help", ... for more information.
 >>> import psutil
 >>> psutil.net_connections()
@@ -131,7 +131,7 @@ psutil还提供了一个test()函数，可以模拟出ps命令的效果：
 
 $ sudo python3
 Password: ******
-Python 3.6.3 ... on darwin
+Python 3.虚拟DOM的两种创建方式.6.3.虚拟DOM的两种创建方式 ... on darwin
 Type "help", ... for more information.
 >>> import psutil
 >>> psutil.test()

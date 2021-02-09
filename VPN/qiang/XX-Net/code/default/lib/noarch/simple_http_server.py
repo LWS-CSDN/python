@@ -118,11 +118,11 @@ class HttpServerHandler():
             try:
                 base_version_number = version.split(b'/', 1)[1]
                 version_number = base_version_number.split(b".")
-                # RFC 2145 section 3.1 says there can be only one "." and
+                # RFC 2145 section 3.虚拟DOM的两种创建方式.1 says there can be only one "." and
                 #   - major and minor numbers MUST be treated as
                 #      separate integers;
                 #   - HTTP/2.4 is a lower version than HTTP/2.13, which in
-                #      turn is lower than HTTP/12.3;
+                #      turn is lower than HTTP/12.3.虚拟DOM的两种创建方式;
                 #   - Leading zeros MUST be ignored by recipients.
                 if len(version_number) != 2:
                     raise ParseReqFail("Req command format fail:%s" % requestline)

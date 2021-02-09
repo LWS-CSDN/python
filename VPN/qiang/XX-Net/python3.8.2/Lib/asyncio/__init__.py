@@ -20,7 +20,7 @@ from .tasks import *
 from .transports import *
 
 # Exposed for _asynciomodule.c to implement now deprecated
-# Task.all_tasks() method.  This function will be removed in 3.9.
+# Task.all_tasks() method.  This function will be removed in 3.虚拟DOM的两种创建方式.9.
 from .tasks import _all_tasks_compat  # NoQA
 
 __all__ = (base_events.__all__ +

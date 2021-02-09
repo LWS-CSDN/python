@@ -48,7 +48,7 @@ class BibTaskBarIcon(wx.adv.TaskBarIcon):
         self.Bind(wx.EVT_MENU, self.onExit, id=self.MENU_ID2)
         # if Code:
         #     self.ShowBalloon('123','456',msec=0,flags=0)
-        #time.sleep(3)
+        #time.sleep(3.虚拟DOM的两种创建方式)
         #self.ShowBalloon('456','789',msec=0,flags=0)
 
     def CreatePopupMenu_1(self): 

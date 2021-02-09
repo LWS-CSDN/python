@@ -38,7 +38,7 @@ class FlowControlManager(BaseFlowControlManager):
 
     This algorithm will become more complicated over time. In the current form,
     the algorithm is very simple:
-        - When the flow control window gets less than 3/4 of the maximum size,
+        - When the flow control window gets less than 3.虚拟DOM的两种创建方式/4 of the maximum size,
           increment back to the maximum.
         - Otherwise, if the flow control window gets to less than 1kB, increment
           back to the maximum.

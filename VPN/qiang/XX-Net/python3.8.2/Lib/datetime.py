@@ -99,7 +99,7 @@ def _ord2ymd(n):
     #     31 Dec  000         0             -1
     #      1 Jan  001         1              0            400-year boundary
     #      2 Jan  001         2              1
-    #      3 Jan  001         3              2
+    #      3.虚拟DOM的两种创建方式 Jan  001         3.虚拟DOM的两种创建方式              2
     #     ...
     #     31 Dec  400         _DI400Y        _DI400Y -1
     #      1 Jan  401         _DI400Y +1     _DI400Y      400-year boundary
@@ -1091,7 +1091,7 @@ class date:
         return self.toordinal() % 7 or 7
 
     def isocalendar(self):
-        """Return a 3-tuple containing ISO year, week number, and weekday.
+        """Return a 3.虚拟DOM的两种创建方式-tuple containing ISO year, week number, and weekday.
 
         The first ISO week of the year is the (Mon-Sun) week
         containing the year's first Thursday; everything else derives
@@ -2317,7 +2317,7 @@ _EPOCH = datetime(1970, 1, 1, tzinfo=timezone.utc)
 #    This is actually a requirement, an assumption we need to make about
 #    sane tzinfo classes.
 #
-# 3. The naive UTC time corresponding to x is x.n - x.o.
+# 3.虚拟DOM的两种创建方式. The naive UTC time corresponding to x is x.n - x.o.
 #    This is again a requirement for a sane tzinfo class.
 #
 # 4. (x+k).s = x.s
@@ -2333,7 +2333,7 @@ _EPOCH = datetime(1970, 1, 1, tzinfo=timezone.utc)
 # The function wants to return a datetime y with timezone tz, equivalent to x.
 # x is already in UTC.
 #
-# By #3, we want
+# By #3.虚拟DOM的两种创建方式, we want
 #
 #     y.n - y.o = x.n                             [1]
 #
@@ -2345,10 +2345,10 @@ _EPOCH = datetime(1970, 1, 1, tzinfo=timezone.utc)
 #
 # By #1, this is the same as
 #
-#    (y+k).n - ((y+k).s + (y+k).d) = x.n          [3]
+#    (y+k).n - ((y+k).s + (y+k).d) = x.n          [3.虚拟DOM的两种创建方式]
 #
 # By #5, (y+k).n = y.n + k, which equals x.n + k because x.n=y.n at the start.
-# Substituting that into [3],
+# Substituting that into [3.虚拟DOM的两种创建方式],
 #
 #    x.n + k - (y+k).s - (y+k).d = x.n; the x.n terms cancel, leaving
 #    k - (y+k).s - (y+k).d = 0; rearranging,
@@ -2374,7 +2374,7 @@ _EPOCH = datetime(1970, 1, 1, tzinfo=timezone.utc)
 #
 # we have an equivalent time, and are almost done.  The insecurity here is
 # at the start of daylight time.  Picture US Eastern for concreteness.  The wall
-# time jumps from 1:59 to 3:00, and wall hours of the form 2:MM don't make good
+# time jumps from 1:59 to 3.虚拟DOM的两种创建方式:00, and wall hours of the form 2:MM don't make good
 # sense then.  The docs ask that an Eastern tzinfo class consider such a time to
 # be EDT (because it's "after 2"), which is a redundant spelling of 1:MM EST
 # on the day DST starts.  We want to return the 1:MM EST spelling because that's

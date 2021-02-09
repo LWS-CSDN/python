@@ -8,7 +8,7 @@ print(list1)
 list2=str.split('>>>')
 print(list2)
 
-#3.采用.号进行分割
+#3.虚拟DOM的两种创建方式.采用.号进行分割
 list3=str.split('.')
 print(list3)
 

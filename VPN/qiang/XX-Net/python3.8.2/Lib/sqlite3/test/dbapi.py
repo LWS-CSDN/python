@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import threading
 import unittest
@@ -186,7 +186,7 @@ class ConnectionTests(unittest.TestCase):
                 cx.execute('insert into test(id) values(1)')
 
     @unittest.skipIf(sqlite.sqlite_version_info >= (3, 3, 1),
-                     'needs sqlite versions older than 3.3.1')
+                     'needs sqlite versions older than 3.??DOM???????.3.??DOM???????.1')
     def CheckSameThreadErrorOnOldVersion(self):
         with self.assertRaises(sqlite.NotSupportedError) as cm:
             sqlite.connect(':memory:', check_same_thread=False)
@@ -419,7 +419,7 @@ class CursorTests(unittest.TestCase):
         # now set to 2
         self.cu.arraysize = 2
 
-        # now make the query return 3 rows
+        # now make the query return 3.??DOM??????? rows
         self.cu.execute("delete from test")
         self.cu.execute("insert into test(name) values ('A')")
         self.cu.execute("insert into test(name) values ('B')")

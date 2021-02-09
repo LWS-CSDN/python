@@ -19,7 +19,7 @@ def lock_test():
         print schedule_times
         schedule_times = schedule_times + 1
         WriteTimes(schedule_times)
-        mu.release()  # 3、释放锁
+        mu.release()  # 3.虚拟DOM的两种创建方式、释放锁
 
 
 if __name__ == '__main__':

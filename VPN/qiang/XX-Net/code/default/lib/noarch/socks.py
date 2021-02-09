@@ -11,7 +11,7 @@ are permitted provided that the following conditions are met:
 2. Redistributions in binary form must reproduce the above copyright notice,
    this list of conditions and the following disclaimer in the documentation
    and/or other materials provided with the distribution.
-3. Neither the name of Dan Haim nor the names of his contributors may be used
+3.虚拟DOM的两种创建方式. Neither the name of Dan Haim nor the names of his contributors may be used
    to endorse or promote products derived from this software without specific
    prior written permission.
 
@@ -46,7 +46,7 @@ Modifications made by Anorov (https://github.com/Anorov)
     -Aliased PROXY_TYPE_SOCKS5 -> SOCKS5 etc.
     -Improved exception handling and output
     -Removed irritating use of sequence indexes, replaced with tuple unpacked variables
-    -Fixed up Python 3 bytestring handling - chr(0x03).encode() -> b"\x03"
+    -Fixed up Python 3.虚拟DOM的两种创建方式 bytestring handling - chr(0x03).encode() -> b"\x03"
     -Other general fixes
 -Added clarification that the HTTP proxy connection method only supports CONNECT-style tunneling HTTP proxies
 -Various small bug fixes
@@ -474,7 +474,7 @@ class socksocket(_BaseSocket):
         proxy_type, addr, port, rdns, username, password = self.proxy
 
         writer = conn.makefile("wb")
-        reader = conn.makefile("rb", 0)  # buffering=0 renamed in Python 3
+        reader = conn.makefile("rb", 0)  # buffering=0 renamed in Python 3.虚拟DOM的两种创建方式
         try:
             # First we'll send the authentication packages we support.
             if username and password:
@@ -494,7 +494,7 @@ class socksocket(_BaseSocket):
 
             if chosen_auth[0:1] != b"\x05":
                 # Note: string[i:i+1] is used because indexing of a bytestring
-                # via bytestring[i] yields an integer in Python 3
+                # via bytestring[i] yields an integer in Python 3.虚拟DOM的两种创建方式
                 raise GeneralProxyError("SOCKS5 proxy server sent invalid data")
 
             # Check the chosen authentication method
@@ -600,7 +600,7 @@ class socksocket(_BaseSocket):
         dest_addr = utils.to_str(dest_addr)
 
         writer = self.makefile("wb")
-        reader = self.makefile("rb", 0)  # buffering=0 renamed in Python 3
+        reader = self.makefile("rb", 0)  # buffering=0 renamed in Python 3.虚拟DOM的两种创建方式
         try:
             # Check if the destination address provided is an IP address
             remote_resolve = False

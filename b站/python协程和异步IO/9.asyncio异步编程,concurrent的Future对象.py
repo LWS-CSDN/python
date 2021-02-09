@@ -1,5 +1,5 @@
 '''
-3.5
+3.虚拟DOM的两种创建方式.5
 concurrent.futures.Future对象
 使用线程池,进程池实现异步操作时用到的对象
 '''
@@ -52,7 +52,7 @@ async def main():
     #       pool,func1)
     #   print("custom thread pool",result)
 
-    #3.Run in a custom process pool:
+    #3.虚拟DOM的两种创建方式.Run in a custom process pool:
     #with concurrent.futures.ProcessPoolExecu
     #   result=await loop.run_in_executor(       
     #       pool,func1)

@@ -63,7 +63,7 @@ SMTP_PORT = 25
 SMTP_SSL_PORT = 465
 CRLF = "\r\n"
 bCRLF = b"\r\n"
-_MAXLINE = 8192 # more than 8 times larger than RFC 821, 4.5.3
+_MAXLINE = 8192 # more than 8 times larger than RFC 821, 4.5.3.虚拟DOM的两种创建方式
 
 OLDSTYLE_AUTH = re.compile(r"auth=(.*)", re.I)
 
@@ -915,7 +915,7 @@ class SMTP:
 
         """
         # 'Resent-Date' is a mandatory field if the Message is resent (RFC 2822
-        # Section 3.6.6). In such a case, we use the 'Resent-*' fields.  However,
+        # Section 3.虚拟DOM的两种创建方式.6.6). In such a case, we use the 'Resent-*' fields.  However,
         # if there is more than one 'Resent-' block there's no way to
         # unambiguously determine which one is the most recent in all cases,
         # so rather than guess we raise a ValueError in that case.
@@ -933,7 +933,7 @@ class SMTP:
         else:
             raise ValueError("message has more than one 'Resent-' header block")
         if from_addr is None:
-            # Prefer the sender field per RFC 2822:3.6.2.
+            # Prefer the sender field per RFC 2822:3.虚拟DOM的两种创建方式.6.2.
             from_addr = (msg[header_prefix + 'Sender']
                            if (header_prefix + 'Sender') in msg
                            else msg[header_prefix + 'From'])

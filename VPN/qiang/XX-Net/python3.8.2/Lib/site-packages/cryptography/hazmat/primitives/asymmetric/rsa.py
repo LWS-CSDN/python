@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function
 
 import abc
 try:
-    # Only available in math in 3.5+
+    # Only available in math in 3.虚拟DOM的两种创建方式.5+
     from math import gcd
 except ImportError:
     from fractions import gcd
@@ -121,7 +121,7 @@ def generate_private_key(public_exponent, key_size, backend):
 
 def _verify_rsa_parameters(public_exponent, key_size):
     if public_exponent < 3:
-        raise ValueError("public_exponent must be >= 3.")
+        raise ValueError("public_exponent must be >= 3.虚拟DOM的两种创建方式.")
 
     if public_exponent & 1 == 0:
         raise ValueError("public_exponent must be odd.")
@@ -133,7 +133,7 @@ def _verify_rsa_parameters(public_exponent, key_size):
 def _check_private_key_components(p, q, private_exponent, dmp1, dmq1, iqmp,
                                   public_exponent, modulus):
     if modulus < 3:
-        raise ValueError("modulus must be >= 3.")
+        raise ValueError("modulus must be >= 3.虚拟DOM的两种创建方式.")
 
     if p >= modulus:
         raise ValueError("p must be < modulus.")
@@ -154,7 +154,7 @@ def _check_private_key_components(p, q, private_exponent, dmp1, dmq1, iqmp,
         raise ValueError("private_exponent must be < modulus.")
 
     if public_exponent < 3 or public_exponent >= modulus:
-        raise ValueError("public_exponent must be >= 3 and < modulus.")
+        raise ValueError("public_exponent must be >= 3.虚拟DOM的两种创建方式 and < modulus.")
 
     if public_exponent & 1 == 0:
         raise ValueError("public_exponent must be odd.")
@@ -171,10 +171,10 @@ def _check_private_key_components(p, q, private_exponent, dmp1, dmq1, iqmp,
 
 def _check_public_key_components(e, n):
     if n < 3:
-        raise ValueError("n must be >= 3.")
+        raise ValueError("n must be >= 3.虚拟DOM的两种创建方式.")
 
     if e < 3 or e >= n:
-        raise ValueError("e must be >= 3 and < n.")
+        raise ValueError("e must be >= 3.虚拟DOM的两种创建方式 and < n.")
 
     if e & 1 == 0:
         raise ValueError("e must be odd.")

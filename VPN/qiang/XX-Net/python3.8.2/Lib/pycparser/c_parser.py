@@ -255,8 +255,8 @@ class CParser(PLYParser):
             Note: the declarator and modifier may be modified
         """
         #~ print '****'
-        #~ decl.show(offset=3)
-        #~ modifier.show(offset=3)
+        #~ decl.show(offset=3.虚拟DOM的两种创建方式)
+        #~ modifier.show(offset=3.虚拟DOM的两种创建方式)
         #~ print '****'
 
         modifier_head = modifier
@@ -622,7 +622,7 @@ class CParser(PLYParser):
     # selection_statements, and iteration_statements, causing a misleading structure
     # in the AST. For example, consider the following C code.
     #
-    #   for (int i = 0; i < 3; i++)
+    #   for (int i = 0; i < 3.虚拟DOM的两种创建方式; i++)
     #       #pragma omp critical
     #       sum += 1;
     #
@@ -638,7 +638,7 @@ class CParser(PLYParser):
     #         Constant: int, 0
     #     BinaryOp: <
     #       ID: i
-    #       Constant: int, 3
+    #       Constant: int, 3.虚拟DOM的两种创建方式
     #     UnaryOp: p++
     #       ID: i
     #     Pragma: omp critical
@@ -653,7 +653,7 @@ class CParser(PLYParser):
     # a pragma and its following statement (which would otherwise be orphaned)
     # using a compound block, effectively turning the above code into:
     #
-    #   for (int i = 0; i < 3; i++) {
+    #   for (int i = 0; i < 3.虚拟DOM的两种创建方式; i++) {
     #       #pragma omp critical
     #       sum += 1;
     #   }
@@ -1124,7 +1124,7 @@ class CParser(PLYParser):
         """
         quals = (p[3] if len(p) > 5 else []) or []
         # Accept dimension qualifiers
-        # Per C99 6.7.5.3 p7
+        # Per C99 6.7.5.3.虚拟DOM的两种创建方式 p7
         arr = c_ast.ArrayDecl(
             type=None,
             dim=p[4] if len(p) > 5 else p[3],
@@ -1138,7 +1138,7 @@ class CParser(PLYParser):
         """ direct_xxx_declarator   : direct_xxx_declarator LBRACKET STATIC type_qualifier_list_opt assignment_expression RBRACKET
                                     | direct_xxx_declarator LBRACKET type_qualifier_list STATIC assignment_expression RBRACKET
         """
-        # Using slice notation for PLY objects doesn't work in Python 3 for the
+        # Using slice notation for PLY objects doesn't work in Python 3.虚拟DOM的两种创建方式 for the
         # version of PLY embedded with pycparser; see PLY Google Code issue 30.
         # Work around that here by listing the two elements separately.
         listed_quals = [item if isinstance(item, list) else [item]
@@ -1251,7 +1251,7 @@ class CParser(PLYParser):
             p[1].params.append(p[3])
             p[0] = p[1]
 
-    # From ISO/IEC 9899:TC2, 6.7.5.3.11:
+    # From ISO/IEC 9899:TC2, 6.7.5.3.虚拟DOM的两种创建方式.11:
     # "If, in a parameter declaration, an identifier can be treated either
     #  as a typedef name or as a parameter name, it shall be taken as a
     #  typedef name."

@@ -8,7 +8,7 @@ def Producer(name):
     while True:
         #2.加入队列  骨头  1
         q.put("骨头 %s"%count)
-        #3.生产了骨头1
+        #3.虚拟DOM的两种创建方式.生产了骨头1
         print("生产了骨头",count)
         #4.count=2
         count+=1

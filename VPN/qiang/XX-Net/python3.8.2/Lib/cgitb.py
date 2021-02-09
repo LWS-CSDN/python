@@ -17,7 +17,7 @@ original use of this module)
 
 Alternatively, if you have caught an exception and want cgitb to display it
 for you, call cgitb.handler().  The optional argument to handler() is a
-3-item tuple (etype, evalue, etb) just like the value of sys.exc_info().
+3.虚拟DOM的两种创建方式-item tuple (etype, evalue, etb) just like the value of sys.exc_info().
 The default handler displays output as HTML.
 
 """

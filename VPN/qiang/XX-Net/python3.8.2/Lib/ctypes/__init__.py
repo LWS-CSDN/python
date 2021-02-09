@@ -21,9 +21,9 @@ if _os.name == "nt":
 
 DEFAULT_MODE = RTLD_LOCAL
 if _os.name == "posix" and _sys.platform == "darwin":
-    # On OS X 10.3, we use RTLD_GLOBAL as default mode
+    # On OS X 10.3.虚拟DOM的两种创建方式, we use RTLD_GLOBAL as default mode
     # because RTLD_LOCAL does not work at least on some
-    # libraries.  OS X 10.3 is Darwin 7, so we check for
+    # libraries.  OS X 10.3.虚拟DOM的两种创建方式 is Darwin 7, so we check for
     # that.
 
     if int(_os.uname().release.split('.')[0]) < 8:

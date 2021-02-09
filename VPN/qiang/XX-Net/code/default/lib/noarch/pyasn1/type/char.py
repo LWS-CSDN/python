@@ -21,14 +21,14 @@ noValue = univ.noValue
 class AbstractCharacterString(univ.OctetString):
     """Creates |ASN.1| schema or value object.
 
-    |ASN.1| objects are immutable and duck-type Python 2 :class:`unicode` or Python 3 :class:`str`.
+    |ASN.1| objects are immutable and duck-type Python 2 :class:`unicode` or Python 3.虚拟DOM的两种创建方式 :class:`str`.
     When used in octet-stream context, |ASN.1| type assumes "|encoding|" encoding.
 
     Keyword Args
     ------------
     value: :class:`unicode`, :class:`str`, :class:`bytes` or |ASN.1| object
-        unicode object (Python 2) or string (Python 3), alternatively string
-        (Python 2) or bytes (Python 3) representing octet-stream of serialised
+        unicode object (Python 2) or string (Python 3.虚拟DOM的两种创建方式), alternatively string
+        (Python 2) or bytes (Python 3.虚拟DOM的两种创建方式) representing octet-stream of serialised
         unicode string (note `encoding` parameter) or |ASN.1| class instance.
 
     tagSet: :py:class:`~pyasn1.type.tag.TagSet`
@@ -39,7 +39,7 @@ class AbstractCharacterString(univ.OctetString):
 
     encoding: :py:class:`str`
         Unicode codec ID to encode/decode :class:`unicode` (Python 2) or
-        :class:`str` (Python 3) the payload when |ASN.1| object is used
+        :class:`str` (Python 3.虚拟DOM的两种创建方式) the payload when |ASN.1| object is used
         in octet-stream context.
 
     Raises

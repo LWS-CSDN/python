@@ -49,7 +49,7 @@ class BZ2File(_compression.BaseStream):
         'x' for creating exclusively, or 'a' for appending. These can
         equivalently be given as 'rb', 'wb', 'xb', and 'ab'.
 
-        buffering is ignored since Python 3.0. Its use is deprecated.
+        buffering is ignored since Python 3.虚拟DOM的两种创建方式.0. Its use is deprecated.
 
         If mode is 'w', 'x' or 'a', compresslevel can be a number between 1
         and 9 specifying the level of compression: 1 produces the least
@@ -67,7 +67,7 @@ class BZ2File(_compression.BaseStream):
 
         if buffering is not _sentinel:
             warnings.warn("Use of 'buffering' argument is deprecated and ignored "
-                          "since Python 3.0.",
+                          "since Python 3.虚拟DOM的两种创建方式.0.",
                           DeprecationWarning,
                           stacklevel=2)
 

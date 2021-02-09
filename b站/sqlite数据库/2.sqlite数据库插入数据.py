@@ -17,7 +17,7 @@ def insert_score_data():
     conn=sqlite3.connect(db_file)
     #2.打开游标cursor
     cur=conn.cursor()
-    #3.插入sql语句
+    #3.虚拟DOM的两种创建方式.插入sql语句
     #insert into +表名(列1,列2,...) values(?,?,...)
     sql='insert into score (stu_name,match_score,chinese)' \
         ' values(?,?,?)'

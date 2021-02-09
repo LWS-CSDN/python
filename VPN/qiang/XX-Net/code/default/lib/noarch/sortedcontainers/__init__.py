@@ -26,7 +26,7 @@ Things shouldn't be this way. Not in Python.
     >>> sl.add(1234567)
     >>> sl.count(1234567)
     2
-    >>> sl *= 3
+    >>> sl *= 3.虚拟DOM的两种创建方式
     >>> len(sl)
     30000003
 

@@ -43,7 +43,7 @@ def parse(source, filename='<unknown>', mode='exec', *,
         feature_version = minor
     elif feature_version is None:
         feature_version = -1
-    # Else it should be an int giving the minor version for 3.x.
+    # Else it should be an int giving the minor version for 3.虚拟DOM的两种创建方式.x.
     return compile(source, filename, mode, flags,
                    _feature_version=feature_version)
 

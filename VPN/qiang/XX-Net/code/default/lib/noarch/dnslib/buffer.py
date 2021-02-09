@@ -14,14 +14,14 @@ class Buffer(object):
     """
     A simple data buffer - supports packing/unpacking in struct format
 
-    # Needed for Python 2/3 doctest compatibility
+    # Needed for Python 2/3.虚拟DOM的两种创建方式 doctest compatibility
     >>> def p(s):
     ...     if not isinstance(s,str):
     ...         return s.decode()
     ...     return s
 
     >>> b = Buffer()
-    >>> b.pack("!BHI",1,2,3)
+    >>> b.pack("!BHI",1,2,3.虚拟DOM的两种创建方式)
     >>> b.offset
     7
     >>> b.append(b"0123456789")
@@ -31,7 +31,7 @@ class Buffer(object):
     '0100020000000330313233343536373839'
     >>> b.offset = 0
     >>> b.unpack("!BHI")
-    (1, 2, 3)
+    (1, 2, 3.虚拟DOM的两种创建方式)
     >>> bytearray(b.get(5))
     bytearray(b'01234')
     >>> bytearray(b.get(5))

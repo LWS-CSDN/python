@@ -33,7 +33,7 @@ class classWSGI:
         self.ROUTE_LIST = {
             "/url":callable
         }
-        #3.路由列表
+        #3.虚拟DOM的两种创建方式.路由列表
         self.ROUTE_LIST.clear()
         #4.清除
         self.ROUTE_FILE_LIST={

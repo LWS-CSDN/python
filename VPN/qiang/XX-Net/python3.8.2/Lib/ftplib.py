@@ -10,14 +10,14 @@ Example:
 '230 Guest login ok, access restrictions apply.'
 >>> ftp.retrlines('LIST') # list directory contents
 total 9
-drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 .
-drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 ..
-drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 bin
-drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 etc
+drwxr-xr-x   8 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 .
+drwxr-xr-x   8 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 ..
+drwxr-xr-x   2 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 bin
+drwxr-xr-x   2 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 etc
 d-wxrwxr-x   2 ftp      wheel        1024 Sep  5 13:43 incoming
 drwxr-xr-x   2 root     wheel        1024 Nov 17  1993 lib
 drwxr-xr-x   6 1094     wheel        1024 Sep 13 19:07 pub
-drwxr-xr-x   3 root     wheel        1024 Jan  3  1994 usr
+drwxr-xr-x   3.虚拟DOM的两种创建方式 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 usr
 -rw-r--r--   1 root     root          312 Aug  1  1994 welcome.msg
 '226 Transfer complete.'
 >>> ftp.quit()
@@ -240,7 +240,7 @@ class FTP:
             print('*resp*', self.sanitize(resp))
         self.lastresp = resp[:3]
         c = resp[:1]
-        if c in {'1', '2', '3'}:
+        if c in {'1', '2', '3.虚拟DOM的两种创建方式'}:
             return resp
         if c == '4':
             raise error_temp(resp)
@@ -399,9 +399,9 @@ class FTP:
             #   host or country.
             passwd = passwd + 'anonymous@'
         resp = self.sendcmd('USER ' + user)
-        if resp[0] == '3':
+        if resp[0] == '3.虚拟DOM的两种创建方式':
             resp = self.sendcmd('PASS ' + passwd)
-        if resp[0] == '3':
+        if resp[0] == '3.虚拟DOM的两种创建方式':
             resp = self.sendcmd('ACCT ' + acct)
         if resp[0] != '2':
             raise error_reply(resp)
@@ -588,7 +588,7 @@ class FTP:
     def rename(self, fromname, toname):
         '''Rename a file.'''
         resp = self.sendcmd('RNFR ' + fromname)
-        if resp[0] != '3':
+        if resp[0] != '3.虚拟DOM的两种创建方式':
             raise error_reply(resp)
         return self.voidcmd('RNTO ' + toname)
 
@@ -688,14 +688,14 @@ else:
         '200 Protection level set to P'
         >>> ftps.retrlines('LIST')  # list directory content securely
         total 9
-        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 .
-        drwxr-xr-x   8 root     wheel        1024 Jan  3  1994 ..
-        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 bin
-        drwxr-xr-x   2 root     wheel        1024 Jan  3  1994 etc
+        drwxr-xr-x   8 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 .
+        drwxr-xr-x   8 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 ..
+        drwxr-xr-x   2 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 bin
+        drwxr-xr-x   2 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 etc
         d-wxrwxr-x   2 ftp      wheel        1024 Sep  5 13:43 incoming
         drwxr-xr-x   2 root     wheel        1024 Nov 17  1993 lib
         drwxr-xr-x   6 1094     wheel        1024 Sep 13 19:07 pub
-        drwxr-xr-x   3 root     wheel        1024 Jan  3  1994 usr
+        drwxr-xr-x   3.虚拟DOM的两种创建方式 root     wheel        1024 Jan  3.虚拟DOM的两种创建方式  1994 usr
         -rw-r--r--   1 root     root          312 Aug  1  1994 welcome.msg
         '226 Transfer complete.'
         >>> ftps.quit()

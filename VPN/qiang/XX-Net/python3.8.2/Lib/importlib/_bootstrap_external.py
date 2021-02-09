@@ -155,14 +155,14 @@ _code_type = type(_write_atomic.__code__)
 # The current working scheme is to increment the previous value by
 # 10.
 #
-# Starting with the adoption of PEP 3147 in Python 3.2, every bump in magic
+# Starting with the adoption of PEP 3147 in Python 3.虚拟DOM的两种创建方式.2, every bump in magic
 # number also includes a new "magic tag", i.e. a human readable string used
 # to represent the magic number in __pycache__ directories.  When you change
 # the magic number, you must also set a new unique magic tag.  Generally this
 # can be named after the Python major version of the magic number bump, but
 # it can really be anything, as long as it's different than anything else
 # that's come before.  The tags are included in the following table, starting
-# with Python 3.2a0.
+# with Python 3.虚拟DOM的两种创建方式.2a0.
 #
 # Known values:
 #  Python 1.5:   20121
@@ -211,66 +211,66 @@ _code_type = type(_write_atomic.__code__)
 #                    3091 (kill str8 interning)
 #                    3101 (merge from 2.6a0, see 62151)
 #                    3103 (__file__ points to source file)
-#     Python 3.0a4: 3111 (WITH_CLEANUP optimization).
-#     Python 3.0b1: 3131 (lexical exception stacking, including POP_EXCEPT
+#     Python 3.虚拟DOM的两种创建方式.0a4: 3111 (WITH_CLEANUP optimization).
+#     Python 3.虚拟DOM的两种创建方式.0b1: 3131 (lexical exception stacking, including POP_EXCEPT
                           #3021)
-#     Python 3.1a1: 3141 (optimize list, set and dict comprehensions:
+#     Python 3.虚拟DOM的两种创建方式.1a1: 3141 (optimize list, set and dict comprehensions:
 #                         change LIST_APPEND and SET_ADD, add MAP_ADD #2183)
-#     Python 3.1a1: 3151 (optimize conditional branches:
+#     Python 3.虚拟DOM的两种创建方式.1a1: 3151 (optimize conditional branches:
 #                         introduce POP_JUMP_IF_FALSE and POP_JUMP_IF_TRUE
                           #4715)
-#     Python 3.2a1: 3160 (add SETUP_WITH #6101)
+#     Python 3.虚拟DOM的两种创建方式.2a1: 3160 (add SETUP_WITH #6101)
 #                   tag: cpython-32
-#     Python 3.2a2: 3170 (add DUP_TOP_TWO, remove DUP_TOPX and ROT_FOUR #9225)
+#     Python 3.虚拟DOM的两种创建方式.2a2: 3170 (add DUP_TOP_TWO, remove DUP_TOPX and ROT_FOUR #9225)
 #                   tag: cpython-32
-#     Python 3.2a3  3180 (add DELETE_DEREF #4617)
-#     Python 3.3a1  3190 (__class__ super closure changed)
-#     Python 3.3a1  3200 (PEP 3155 __qualname__ added #13448)
-#     Python 3.3a1  3210 (added size modulo 2**32 to the pyc header #13645)
-#     Python 3.3a2  3220 (changed PEP 380 implementation #14230)
-#     Python 3.3a4  3230 (revert changes to implicit __class__ closure #14857)
-#     Python 3.4a1  3250 (evaluate positional default arguments before
+#     Python 3.虚拟DOM的两种创建方式.2a3  3180 (add DELETE_DEREF #4617)
+#     Python 3.虚拟DOM的两种创建方式.3a1  3190 (__class__ super closure changed)
+#     Python 3.虚拟DOM的两种创建方式.3a1  3200 (PEP 3155 __qualname__ added #13448)
+#     Python 3.虚拟DOM的两种创建方式.3a1  3210 (added size modulo 2**32 to the pyc header #13645)
+#     Python 3.虚拟DOM的两种创建方式.3a2  3220 (changed PEP 380 implementation #14230)
+#     Python 3.虚拟DOM的两种创建方式.3a4  3230 (revert changes to implicit __class__ closure #14857)
+#     Python 3.虚拟DOM的两种创建方式.4a1  3250 (evaluate positional default arguments before
 #                        keyword-only defaults #16967)
-#     Python 3.4a1  3260 (add LOAD_CLASSDEREF; allow locals of class to override
+#     Python 3.虚拟DOM的两种创建方式.4a1  3260 (add LOAD_CLASSDEREF; allow locals of class to override
 #                        free vars #17853)
-#     Python 3.4a1  3270 (various tweaks to the __class__ closure #12370)
-#     Python 3.4a1  3280 (remove implicit class argument)
-#     Python 3.4a4  3290 (changes to __qualname__ computation #19301)
-#     Python 3.4a4  3300 (more changes to __qualname__ computation #19301)
-#     Python 3.4rc2 3310 (alter __qualname__ computation #20625)
-#     Python 3.5a1  3320 (PEP 465: Matrix multiplication operator #21176)
-#     Python 3.5b1  3330 (PEP 448: Additional Unpacking Generalizations #2292)
-#     Python 3.5b2  3340 (fix dictionary display evaluation order #11205)
-#     Python 3.5b3  3350 (add GET_YIELD_FROM_ITER opcode #24400)
-#     Python 3.5.2  3351 (fix BUILD_MAP_UNPACK_WITH_CALL opcode #27286)
-#     Python 3.6a0  3360 (add FORMAT_VALUE opcode #25483)
-#     Python 3.6a1  3361 (lineno delta of code.co_lnotab becomes signed #26107)
-#     Python 3.6a2  3370 (16 bit wordcode #26647)
-#     Python 3.6a2  3371 (add BUILD_CONST_KEY_MAP opcode #27140)
-#     Python 3.6a2  3372 (MAKE_FUNCTION simplification, remove MAKE_CLOSURE
+#     Python 3.虚拟DOM的两种创建方式.4a1  3270 (various tweaks to the __class__ closure #12370)
+#     Python 3.虚拟DOM的两种创建方式.4a1  3280 (remove implicit class argument)
+#     Python 3.虚拟DOM的两种创建方式.4a4  3290 (changes to __qualname__ computation #19301)
+#     Python 3.虚拟DOM的两种创建方式.4a4  3300 (more changes to __qualname__ computation #19301)
+#     Python 3.虚拟DOM的两种创建方式.4rc2 3310 (alter __qualname__ computation #20625)
+#     Python 3.虚拟DOM的两种创建方式.5a1  3320 (PEP 465: Matrix multiplication operator #21176)
+#     Python 3.虚拟DOM的两种创建方式.5b1  3330 (PEP 448: Additional Unpacking Generalizations #2292)
+#     Python 3.虚拟DOM的两种创建方式.5b2  3340 (fix dictionary display evaluation order #11205)
+#     Python 3.虚拟DOM的两种创建方式.5b3  3350 (add GET_YIELD_FROM_ITER opcode #24400)
+#     Python 3.虚拟DOM的两种创建方式.5.2  3351 (fix BUILD_MAP_UNPACK_WITH_CALL opcode #27286)
+#     Python 3.虚拟DOM的两种创建方式.6a0  3360 (add FORMAT_VALUE opcode #25483)
+#     Python 3.虚拟DOM的两种创建方式.6a1  3361 (lineno delta of code.co_lnotab becomes signed #26107)
+#     Python 3.虚拟DOM的两种创建方式.6a2  3370 (16 bit wordcode #26647)
+#     Python 3.虚拟DOM的两种创建方式.6a2  3371 (add BUILD_CONST_KEY_MAP opcode #27140)
+#     Python 3.虚拟DOM的两种创建方式.6a2  3372 (MAKE_FUNCTION simplification, remove MAKE_CLOSURE
 #                         #27095)
-#     Python 3.6b1  3373 (add BUILD_STRING opcode #27078)
-#     Python 3.6b1  3375 (add SETUP_ANNOTATIONS and STORE_ANNOTATION opcodes
+#     Python 3.虚拟DOM的两种创建方式.6b1  3373 (add BUILD_STRING opcode #27078)
+#     Python 3.虚拟DOM的两种创建方式.6b1  3375 (add SETUP_ANNOTATIONS and STORE_ANNOTATION opcodes
 #                         #27985)
-#     Python 3.6b1  3376 (simplify CALL_FUNCTIONs & BUILD_MAP_UNPACK_WITH_CALL
+#     Python 3.虚拟DOM的两种创建方式.6b1  3376 (simplify CALL_FUNCTIONs & BUILD_MAP_UNPACK_WITH_CALL
                           #27213)
-#     Python 3.6b1  3377 (set __class__ cell from type.__new__ #23722)
-#     Python 3.6b2  3378 (add BUILD_TUPLE_UNPACK_WITH_CALL #28257)
-#     Python 3.6rc1 3379 (more thorough __class__ validation #23722)
-#     Python 3.7a1  3390 (add LOAD_METHOD and CALL_METHOD opcodes #26110)
-#     Python 3.7a2  3391 (update GET_AITER #31709)
-#     Python 3.7a4  3392 (PEP 552: Deterministic pycs #31650)
-#     Python 3.7b1  3393 (remove STORE_ANNOTATION opcode #32550)
-#     Python 3.7b5  3394 (restored docstring as the first stmt in the body;
+#     Python 3.虚拟DOM的两种创建方式.6b1  3377 (set __class__ cell from type.__new__ #23722)
+#     Python 3.虚拟DOM的两种创建方式.6b2  3378 (add BUILD_TUPLE_UNPACK_WITH_CALL #28257)
+#     Python 3.虚拟DOM的两种创建方式.6rc1 3379 (more thorough __class__ validation #23722)
+#     Python 3.虚拟DOM的两种创建方式.7a1  3390 (add LOAD_METHOD and CALL_METHOD opcodes #26110)
+#     Python 3.虚拟DOM的两种创建方式.7a2  3391 (update GET_AITER #31709)
+#     Python 3.虚拟DOM的两种创建方式.7a4  3392 (PEP 552: Deterministic pycs #31650)
+#     Python 3.虚拟DOM的两种创建方式.7b1  3393 (remove STORE_ANNOTATION opcode #32550)
+#     Python 3.虚拟DOM的两种创建方式.7b5  3394 (restored docstring as the first stmt in the body;
 #                         this might affected the first line number #32911)
-#     Python 3.8a1  3400 (move frame block handling to compiler #17611)
-#     Python 3.8a1  3401 (add END_ASYNC_FOR #33041)
-#     Python 3.8a1  3410 (PEP570 Python Positional-Only Parameters #36540)
-#     Python 3.8b2  3411 (Reverse evaluation order of key: value in dict
+#     Python 3.虚拟DOM的两种创建方式.8a1  3400 (move frame block handling to compiler #17611)
+#     Python 3.虚拟DOM的两种创建方式.8a1  3401 (add END_ASYNC_FOR #33041)
+#     Python 3.虚拟DOM的两种创建方式.8a1  3410 (PEP570 Python Positional-Only Parameters #36540)
+#     Python 3.虚拟DOM的两种创建方式.8b2  3411 (Reverse evaluation order of key: value in dict
 #                         comprehensions #35224)
-#     Python 3.8b2  3412 (Swap the position of positional args and positional
+#     Python 3.虚拟DOM的两种创建方式.8b2  3412 (Swap the position of positional args and positional
 #                         only args in ast.arguments #37593)
-#     Python 3.8b4  3413 (Fix "break" and "continue" in "finally" #37830)
+#     Python 3.虚拟DOM的两种创建方式.8b4  3413 (Fix "break" and "continue" in "finally" #37830)
 #
 # MAGIC must change whenever the bytecode emitted by the compiler may no
 # longer be understood by older implementations of the eval loop (usually

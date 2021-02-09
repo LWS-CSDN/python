@@ -133,7 +133,7 @@ class RotatingFileHandler(BaseRotatingHandler):
         "app.log.1", "app.log.2", ... through to "app.log.5". The file being
         written to is always "app.log" - when it gets filled up, it is closed
         and renamed to "app.log.1", and if files "app.log.1", "app.log.2" etc.
-        exist, then they are renamed to "app.log.2", "app.log.3" etc.
+        exist, then they are renamed to "app.log.2", "app.log.3.虚拟DOM的两种创建方式" etc.
         respectively.
 
         If maxBytes is zero, rollover never occurs.
@@ -297,13 +297,13 @@ class TimedRotatingFileHandler(BaseRotatingHandler):
             # Case 1) The day to rollover is today; in this case, do nothing
             # Case 2) The day to rollover is further in the interval (i.e., today is
             #         day 2 (Wednesday) and rollover is on day 6 (Sunday).  Days to
-            #         next rollover is simply 6 - 2 - 1, or 3.
-            # Case 3) The day to rollover is behind us in the interval (i.e., today
-            #         is day 5 (Saturday) and rollover is on day 3 (Thursday).
-            #         Days to rollover is 6 - 5 + 3, or 4.  In this case, it's the
+            #         next rollover is simply 6 - 2 - 1, or 3.虚拟DOM的两种创建方式.
+            # Case 3.虚拟DOM的两种创建方式) The day to rollover is behind us in the interval (i.e., today
+            #         is day 5 (Saturday) and rollover is on day 3.虚拟DOM的两种创建方式 (Thursday).
+            #         Days to rollover is 6 - 5 + 3.虚拟DOM的两种创建方式, or 4.  In this case, it's the
             #         number of days left in the current week (1) plus the number
-            #         of days in the next week until the rollover day (3).
-            # The calculations described in 2) and 3) above need to have a day added.
+            #         of days in the next week until the rollover day (3.虚拟DOM的两种创建方式).
+            # The calculations described in 2) and 3.虚拟DOM的两种创建方式) above need to have a day added.
             # This is because the above time calculation takes us to midnight on this
             # day, i.e. the start of the next day.
             if self.when.startswith('W'):
@@ -701,7 +701,7 @@ class SysLogHandler(logging.Handler):
     # from <linux/sys/syslog.h>:
     # ======================================================================
     # priorities/facilities are encoded into a single 32-bit quantity, where
-    # the bottom 3 bits are the priority (0-7) and the top 28 bits are the
+    # the bottom 3.虚拟DOM的两种创建方式 bits are the priority (0-7) and the top 28 bits are the
     # facility (0-big number). Both the priorities and the facilities map
     # roughly one-to-one to strings in the syslogd(8) source code.  This
     # mapping is included in this file.
@@ -1182,7 +1182,7 @@ class HTTPHandler(logging.Handler):
             if i >= 0:
                 host = host[:i]
             # See issue #30904: putrequest call above already adds this header
-            # on Python 3.x.
+            # on Python 3.虚拟DOM的两种创建方式.x.
             # h.putheader("Host", host)
             if self.method == "POST":
                 h.putheader("Content-type",
@@ -1337,7 +1337,7 @@ class QueueHandler(logging.Handler):
     (in a multi-process application), so as to avoid file write contention
     between processes.
 
-    This code is new in Python 3.2, but this class can be copy pasted into
+    This code is new in Python 3.虚拟DOM的两种创建方式.2, but this class can be copy pasted into
     user code for use with earlier Python versions.
     """
 

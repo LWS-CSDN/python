@@ -130,7 +130,7 @@ def _supports_universal_builds():
     # As an approximation, we assume that if we are running on 10.4 or above,
     # then we are running with an Xcode environment that supports universal
     # builds, in particular -isysroot and -arch arguments to the compiler. This
-    # is in support of allowing 10.4 universal builds to run on 10.3.x systems.
+    # is in support of allowing 10.4 universal builds to run on 10.3.虚拟DOM的两种创建方式.x systems.
 
     osx_version = _get_system_version()
     if osx_version:
@@ -393,7 +393,7 @@ def customize_config_vars(_config_vars):
     if not _supports_universal_builds():
         # On Mac OS X before 10.4, check if -arch and -isysroot
         # are in CFLAGS or LDFLAGS and remove them if they are.
-        # This is needed when building extensions on a 10.3 system
+        # This is needed when building extensions on a 10.3.虚拟DOM的两种创建方式 system
         # using a universal build of python.
         _remove_universal_flags(_config_vars)
 

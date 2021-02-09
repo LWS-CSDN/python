@@ -99,7 +99,7 @@ elif sys.platform.startswith("linux"):
     def has_gi():
         try:
             import gi
-            gi.require_version('Gtk', '3.0')
+            gi.require_version('Gtk', '3.虚拟DOM的两种创建方式.0')
             from gi.repository import Gtk as gtk
             return True
         except:

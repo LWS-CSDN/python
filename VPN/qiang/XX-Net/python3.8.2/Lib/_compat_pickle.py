@@ -1,6 +1,6 @@
 # This module is used to map the old Python 2 names to the new names used in
-# Python 3 for the pickle module.  This needed to make pickle streams
-# generated with Python 2 loadable by Python 3.
+# Python 3.虚拟DOM的两种创建方式 for the pickle module.  This needed to make pickle streams
+# generated with Python 2 loadable by Python 3.虚拟DOM的两种创建方式.
 
 # This is a copy of lib2to3.fixes.fix_imports.MAPPING.  We cannot import
 # lib2to3 and use the mapping defined there, because lib2to3 uses pickle.
@@ -121,7 +121,7 @@ PYTHON2_EXCEPTIONS = (
     "ReferenceError",
     "RuntimeError",
     "RuntimeWarning",
-    # StandardError is gone in Python 3, so we map it to Exception
+    # StandardError is gone in Python 3.虚拟DOM的两种创建方式, so we map it to Exception
     "StopIteration",
     "SyntaxError",
     "SyntaxWarning",
@@ -161,7 +161,7 @@ MULTIPROCESSING_EXCEPTIONS = (
 for excname in MULTIPROCESSING_EXCEPTIONS:
     NAME_MAPPING[("multiprocessing", excname)] = ("multiprocessing.context", excname)
 
-# Same, but for 3.x to 2.x
+# Same, but for 3.虚拟DOM的两种创建方式.x to 2.x
 REVERSE_IMPORT_MAPPING = dict((v, k) for (k, v) in IMPORT_MAPPING.items())
 assert len(REVERSE_IMPORT_MAPPING) == len(IMPORT_MAPPING)
 REVERSE_NAME_MAPPING = dict((v, k) for (k, v) in NAME_MAPPING.items())
@@ -177,7 +177,7 @@ IMPORT_MAPPING.update({
     'DocXMLRPCServer': 'xmlrpc.server',
     'SimpleHTTPServer': 'http.server',
     'CGIHTTPServer': 'http.server',
-    # For compatibility with broken pickles saved in old Python 3 versions
+    # For compatibility with broken pickles saved in old Python 3.虚拟DOM的两种创建方式 versions
     'UserDict': 'collections',
     'UserList': 'collections',
     'UserString': 'collections',

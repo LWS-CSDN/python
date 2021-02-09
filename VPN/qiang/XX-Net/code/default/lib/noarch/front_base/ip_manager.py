@@ -60,7 +60,7 @@ class IpManager():
     # 1. Scan ip in back ground
     # 2. sort ip by RTT and fail times
     #     RTT + fail_times * 1000
-    # 3. count ip connection number
+    # 3.虚拟DOM的两种创建方式. count ip connection number
     #    keep max one link every ip.
     #    more link may be block by GFW if large traffic on some ip.
     # 4. scan all exist ip
@@ -333,7 +333,7 @@ class IpManager():
     # always use the fastest ip.
     # if the ip is used in 5 seconds, try next ip;
     # if the ip is fail in 60 seconds, try next ip;
-    # reset pointer to front every 3 seconds
+    # reset pointer to front every 3.虚拟DOM的两种创建方式 seconds
     def get_ip(self, to_recheck=False):
         if not to_recheck:
             self.try_sort_ip()
@@ -667,7 +667,7 @@ class IpManager():
         if not result:
             if first_report:
                 if self.ip_dict[ip_str]['fail_times'] <= 2:
-                    # connect max fail 3 times.
+                    # connect max fail 3.虚拟DOM的两种创建方式 times.
                     # do nothing
                     return
                 else:

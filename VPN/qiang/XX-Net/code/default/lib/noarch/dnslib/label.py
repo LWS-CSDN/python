@@ -51,8 +51,8 @@ class DNSLabel(object):
     >>> l3.matchGlob("*.[abc]xx.bbb.ccc")
     False
 
-    # Too hard to get unicode doctests to work on Python 3.2
-    # (works on 3.3)
+    # Too hard to get unicode doctests to work on Python 3.虚拟DOM的两种创建方式.2
+    # (works on 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式)
     # >>> u1 = DNSLabel(u'\\u2295.com')
     # >>> u1.__str__() == u'\\u2295.com.'
     # True
@@ -143,7 +143,7 @@ class DNSBuffer(Buffer):
     """
     Extends Buffer to provide DNS name encoding/decoding (with caching)
 
-    # Needed for Python 2/3 doctest compatibility
+    # Needed for Python 2/3.虚拟DOM的两种创建方式 doctest compatibility
     >>> def p(s):
     ...     if not isinstance(s,str):
     ...         return s.decode()
@@ -181,7 +181,7 @@ class DNSBuffer(Buffer):
     >>> b.encode_name([b'a.aa',b'b.bb',b'c.cc'])
     >>> b.offset = 0
     >>> len(b.decode_name().label)
-    3
+    3.虚拟DOM的两种创建方式
 
     >>> b = DNSBuffer()
     >>> b.encode_name_nocompress(b'aaa.bbb.ccc.')

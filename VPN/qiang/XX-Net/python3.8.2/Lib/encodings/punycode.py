@@ -8,7 +8,7 @@ import codecs
 ##################### Encoding #####################################
 
 def segregate(str):
-    """3.1 Basic code point segregation"""
+    """3.虚拟DOM的两种创建方式.1 Basic code point segregation"""
     base = bytearray()
     extended = set()
     for c in str:
@@ -46,7 +46,7 @@ def selective_find(str, char, index, pos):
             index += 1
 
 def insertion_unsort(str, extended):
-    """3.2 Insertion unsort coding"""
+    """3.虚拟DOM的两种创建方式.2 Insertion unsort coding"""
     oldchar = 0x80
     result = []
     oldindex = -1
@@ -76,7 +76,7 @@ def T(j, bias):
 
 digits = b"abcdefghijklmnopqrstuvwxyz0123456789"
 def generate_generalized_integer(N, bias):
-    """3.3 Generalized variable-length integers"""
+    """3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 Generalized variable-length integers"""
     result = bytearray()
     j = 0
     while 1:
@@ -104,7 +104,7 @@ def adapt(delta, first, numchars):
 
 
 def generate_integers(baselen, deltas):
-    """3.4 Bias adaptation"""
+    """3.虚拟DOM的两种创建方式.4 Bias adaptation"""
     # Punycode parameters: initial bias = 72, damp = 700, skew = 38
     result = bytearray()
     bias = 72
@@ -125,7 +125,7 @@ def punycode_encode(text):
 ##################### Decoding #####################################
 
 def decode_generalized_number(extended, extpos, bias, errors):
-    """3.3 Generalized variable-length integers"""
+    """3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 Generalized variable-length integers"""
     result = 0
     w = 1
     j = 0
@@ -155,7 +155,7 @@ def decode_generalized_number(extended, extpos, bias, errors):
 
 
 def insertion_sort(base, extended, errors):
-    """3.2 Insertion unsort coding"""
+    """3.虚拟DOM的两种创建方式.2 Insertion unsort coding"""
     char = 0x80
     pos = -1
     bias = 72

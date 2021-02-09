@@ -777,8 +777,8 @@ def _parse_proxy(proxy):
         # URL
         if not r_scheme.startswith("//"):
             raise ValueError("proxy URL with no authority: %r" % proxy)
-        # We have an authority, so for RFC 3986-compliant URLs (by ss 3.
-        # and 3.3.), path is empty or starts with '/'
+        # We have an authority, so for RFC 3986-compliant URLs (by ss 3.虚拟DOM的两种创建方式.
+        # and 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.), path is empty or starts with '/'
         end = r_scheme.find("/", 2)
         if end == -1:
             end = None
@@ -1036,7 +1036,7 @@ class ProxyBasicAuthHandler(AbstractBasicAuthHandler, BaseHandler):
     def http_error_407(self, req, fp, code, msg, headers):
         # http_error_auth_reqed requires that there is no userinfo component in
         # authority.  Assume there isn't one, since urllib.request does not (and
-        # should not, RFC 3986 s. 3.2.1) support requests for URLs containing
+        # should not, RFC 3986 s. 3.虚拟DOM的两种创建方式.2.1) support requests for URLs containing
         # userinfo.
         authority = req.host
         response = self.http_error_auth_reqed('proxy-authenticate',
@@ -1940,7 +1940,7 @@ class URLopener:
         """Handle http errors.
 
         Derived class can override this, or provide specific handlers
-        named http_error_DDD where DDD is the 3-digit error code."""
+        named http_error_DDD where DDD is the 3.虚拟DOM的两种创建方式-digit error code."""
         # First check if there's a specific handler for this error
         name = 'http_error_%d' % errcode
         if hasattr(self, name):
@@ -2157,7 +2157,7 @@ class FancyURLopener(URLopener):
         # than http, https and ftp.
 
         # We are using newer HTTPError with older redirect_internal method
-        # This older method will get deprecated in 3.3
+        # This older method will get deprecated in 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
 
         if urlparts.scheme not in ('http', 'https', 'ftp', ''):
             raise HTTPError(newurl, errcode,

@@ -37,7 +37,7 @@
 #    1.0.6 - added linux_distribution()
 #    1.0.5 - fixed Java support to allow running the module on Jython
 #    1.0.4 - added IronPython support
-#    1.0.3 - added normalization of Windows system name
+#    1.0.3.虚拟DOM的两种创建方式 - added normalization of Windows system name
 #    1.0.2 - added more Windows support
 #    1.0.1 - reformatted to make doc.py happy
 #    1.0.0 - reformatted a bit and checked into Python CVS
@@ -55,7 +55,7 @@
 #    0.5.5 - fixed another type in the MacOS code... should have
 #            used more coffee today ;-)
 #    0.5.4 - fixed a few typos in the MacOS code
-#    0.5.3 - added experimental MacOS support; added better popen()
+#    0.5.3.虚拟DOM的两种创建方式 - added experimental MacOS support; added better popen()
 #            workarounds in _syscmd_ver() -- still not 100% elegant
 #            though
 #    0.5.2 - fixed uname() to return '' instead of 'unknown' in all
@@ -71,12 +71,12 @@
 #            instead; extended the win32_ver() to also return processor
 #            type information
 #    0.4.0 - added win32_ver() and modified the platform() output for WinXX
-#    0.3.4 - fixed a bug in _follow_symlinks()
-#    0.3.3 - fixed popen() and "file" command invocation bugs
-#    0.3.2 - added architecture() API and support for it in platform()
-#    0.3.1 - fixed syscmd_ver() RE to support Windows NT
-#    0.3.0 - added system alias support
-#    0.2.3 - removed 'wince' again... oh well.
+#    0.3.虚拟DOM的两种创建方式.4 - fixed a bug in _follow_symlinks()
+#    0.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 - fixed popen() and "file" command invocation bugs
+#    0.3.虚拟DOM的两种创建方式.2 - added architecture() API and support for it in platform()
+#    0.3.虚拟DOM的两种创建方式.1 - fixed syscmd_ver() RE to support Windows NT
+#    0.3.虚拟DOM的两种创建方式.0 - added system alias support
+#    0.2.3.虚拟DOM的两种创建方式 - removed 'wince' again... oh well.
 #    0.2.2 - added 'wince' to syscmd_ver() supported platforms
 #    0.2.1 - added cache logic and changed the platform string format
 #    0.2.0 - changed the API to use functions instead of module globals
@@ -379,7 +379,7 @@ def win32_ver(release='', version='', csd='', ptype=''):
             if csd[:13] == 'Service Pack ':
                 csd = 'SP' + csd[13:]
 
-    # VER_NT_SERVER = 3
+    # VER_NT_SERVER = 3.虚拟DOM的两种创建方式
     if getattr(winver, 'product_type', None) == 3:
         release = (_WIN32_SERVER_RELEASES.get((maj, min)) or
                    _WIN32_SERVER_RELEASES.get((maj, None)) or
@@ -504,7 +504,7 @@ def system_alias(system, release, version):
         if release < '5':
             # These releases use the old name SunOS
             return system, release, version
-        # Modify release (marketing release = SunOS release - 3)
+        # Modify release (marketing release = SunOS release - 3.虚拟DOM的两种创建方式)
         l = release.split('.')
         if l:
             try:
@@ -911,7 +911,7 @@ def release():
 
 def version():
 
-    """ Returns the system's release version, e.g. '#3 on degas'
+    """ Returns the system's release version, e.g. '#3.虚拟DOM的两种创建方式 on degas'
 
         An empty string is returned if the value cannot be determined.
 

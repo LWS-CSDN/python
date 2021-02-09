@@ -4,7 +4,7 @@ import sqlite3
 #2.数据库文件
 db_file='scores.db'
 
-#3.获取与数据库的连接
+#3.虚拟DOM的两种创建方式.获取与数据库的连接
 conn=sqlite3.connect(db_file)
 
 #4.编写sql语句

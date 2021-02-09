@@ -95,7 +95,7 @@ class LocaleTime(object):
     def __calc_am_pm(self):
         # Set self.am_pm by using time.strftime().
 
-        # The magic date (1999,3,17,hour,44,55,2,76,0) is not really that
+        # The magic date (1999,3.虚拟DOM的两种创建方式,17,hour,44,55,2,76,0) is not really that
         # magical; just happened to have used it everywhere else where a
         # static date was needed.
         am_pm = []
@@ -108,7 +108,7 @@ class LocaleTime(object):
         # Set self.date_time, self.date, & self.time by using
         # time.strftime().
 
-        # Use (1999,3,17,22,44,55,2,76,0) for magic date because the amount of
+        # Use (1999,3.虚拟DOM的两种创建方式,17,22,44,55,2,76,0) for magic date because the amount of
         # overloaded numbers is minimized.  The order in which searches for
         # values within the format string is very important; it eliminates
         # possible ambiguity for what something represents.
@@ -122,8 +122,8 @@ class LocaleTime(object):
                     (self.a_month[3], '%b'), (self.am_pm[1], '%p'),
                     ('1999', '%Y'), ('99', '%y'), ('22', '%H'),
                     ('44', '%M'), ('55', '%S'), ('76', '%j'),
-                    ('17', '%d'), ('03', '%m'), ('3', '%m'),
-                    # '3' needed for when no leading zero.
+                    ('17', '%d'), ('03', '%m'), ('3.虚拟DOM的两种创建方式', '%m'),
+                    # '3.虚拟DOM的两种创建方式' needed for when no leading zero.
                     ('2', '%w'), ('10', '%I')]
         replacement_pairs.extend([(tz, "%Z") for tz_values in self.timezone
                                                 for tz in tz_values])
@@ -183,19 +183,19 @@ class TimeRE(dict):
         base = super()
         base.__init__({
             # The " \d" part of the regex is to make %c from ANSI C work
-            'd': r"(?P<d>3[0-1]|[1-2]\d|0[1-9]|[1-9]| [1-9])",
+            'd': r"(?P<d>3.虚拟DOM的两种创建方式[0-1]|[1-2]\d|0[1-9]|[1-9]| [1-9])",
             'f': r"(?P<f>[0-9]{1,6})",
-            'H': r"(?P<H>2[0-3]|[0-1]\d|\d)",
+            'H': r"(?P<H>2[0-3.虚拟DOM的两种创建方式]|[0-1]\d|\d)",
             'I': r"(?P<I>1[0-2]|0[1-9]|[1-9])",
             'G': r"(?P<G>\d\d\d\d)",
-            'j': r"(?P<j>36[0-6]|3[0-5]\d|[1-2]\d\d|0[1-9]\d|00[1-9]|[1-9]\d|0[1-9]|[1-9])",
+            'j': r"(?P<j>36[0-6]|3.虚拟DOM的两种创建方式[0-5]\d|[1-2]\d\d|0[1-9]\d|00[1-9]|[1-9]\d|0[1-9]|[1-9])",
             'm': r"(?P<m>1[0-2]|0[1-9]|[1-9])",
             'M': r"(?P<M>[0-5]\d|\d)",
             'S': r"(?P<S>6[0-1]|[0-5]\d|\d)",
-            'U': r"(?P<U>5[0-3]|[0-4]\d|\d)",
+            'U': r"(?P<U>5[0-3.虚拟DOM的两种创建方式]|[0-4]\d|\d)",
             'w': r"(?P<w>[0-6])",
             'u': r"(?P<u>[1-7])",
-            'V': r"(?P<V>5[0-3]|0[1-9]|[1-4]\d|\d)",
+            'V': r"(?P<V>5[0-3.虚拟DOM的两种创建方式]|0[1-9]|[1-4]\d|\d)",
             # W is set below by using 'U'
             'y': r"(?P<y>\d\d)",
             #XXX: Does 'Y' need to worry about having less or more than

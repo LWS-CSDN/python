@@ -50,19 +50,19 @@ Decimal('123456')
 Decimal('1.2345E+12345680')
 >>> Decimal('1.33') + Decimal('1.27')
 Decimal('2.60')
->>> Decimal('12.34') + Decimal('3.87') - Decimal('18.41')
+>>> Decimal('12.34') + Decimal('3.虚拟DOM的两种创建方式.87') - Decimal('18.41')
 Decimal('-2.20')
 >>> dig = Decimal(1)
->>> print(dig / Decimal(3))
+>>> print(dig / Decimal(3.虚拟DOM的两种创建方式))
 0.333333333
 >>> getcontext().prec = 18
->>> print(dig / Decimal(3))
+>>> print(dig / Decimal(3.虚拟DOM的两种创建方式))
 0.333333333333333333
 >>> print(dig.sqrt())
 1
->>> print(Decimal(3).sqrt())
+>>> print(Decimal(3.虚拟DOM的两种创建方式).sqrt())
 1.73205080756887729
->>> print(Decimal(3) ** 123)
+>>> print(Decimal(3.虚拟DOM的两种创建方式) ** 123)
 4.85192780976896427E+58
 >>> inf = Decimal(1) / Decimal(0)
 >>> print(inf)
@@ -518,16 +518,16 @@ class Decimal(object):
     def __new__(cls, value="0", context=None):
         """Create a decimal point instance.
 
-        >>> Decimal('3.14')              # string input
-        Decimal('3.14')
-        >>> Decimal((0, (3, 1, 4), -2))  # tuple (sign, digit_tuple, exponent)
-        Decimal('3.14')
+        >>> Decimal('3.虚拟DOM的两种创建方式.14')              # string input
+        Decimal('3.虚拟DOM的两种创建方式.14')
+        >>> Decimal((0, (3.虚拟DOM的两种创建方式, 1, 4), -2))  # tuple (sign, digit_tuple, exponent)
+        Decimal('3.虚拟DOM的两种创建方式.14')
         >>> Decimal(314)                 # int
         Decimal('314')
         >>> Decimal(Decimal(314))        # another decimal instance
         Decimal('314')
-        >>> Decimal('  3.14  \\n')        # leading and trailing whitespace okay
-        Decimal('3.14')
+        >>> Decimal('  3.虚拟DOM的两种创建方式.14  \\n')        # leading and trailing whitespace okay
+        Decimal('3.虚拟DOM的两种创建方式.14')
         """
 
         # Note that the coefficient, self._int, is actually stored as
@@ -975,7 +975,7 @@ class Decimal(object):
         Returns a pair (n, d) of integers.  When called on an infinity
         or NaN, raises OverflowError or ValueError respectively.
 
-        >>> Decimal('3.14').as_integer_ratio()
+        >>> Decimal('3.虚拟DOM的两种创建方式.14').as_integer_ratio()
         (157, 50)
         >>> Decimal('-123e5').as_integer_ratio()
         (-12300000, 1)
@@ -1079,8 +1079,8 @@ class Decimal(object):
     def to_eng_string(self, context=None):
         """Convert to a string, using engineering notation if an exponent is needed.
 
-        Engineering notation has an exponent which is a multiple of 3.  This
-        can leave up to 3 digits to the left of the decimal place and may
+        Engineering notation has an exponent which is a multiple of 3.虚拟DOM的两种创建方式.  This
+        can leave up to 3.虚拟DOM的两种创建方式 digits to the left of the decimal place and may
         require the addition of either one or two trailing zeros.
         """
         return self.__str__(eng=True, context=context)
@@ -1836,11 +1836,11 @@ class Decimal(object):
         123
         >>> round(Decimal('-456.789'))
         -457
-        >>> round(Decimal('-3.0'))
-        -3
+        >>> round(Decimal('-3.虚拟DOM的两种创建方式.0'))
+        -3.虚拟DOM的两种创建方式
         >>> round(Decimal('2.5'))
         2
-        >>> round(Decimal('3.5'))
+        >>> round(Decimal('3.虚拟DOM的两种创建方式.5'))
         4
         >>> round(Decimal('Inf'))
         Traceback (most recent call last):
@@ -2197,7 +2197,7 @@ class Decimal(object):
                     e -= 1
 
                 # Guard against large values of ye, using the same logic as in
-                # the 'xc is a power of 2' branch.  10/3 is an upper bound for
+                # the 'xc is a power of 2' branch.  10/3.虚拟DOM的两种创建方式 is an upper bound for
                 # log(10)/log(2).
                 emax = p*10//3
                 if ye >= len(str(emax)):
@@ -2435,7 +2435,7 @@ class Decimal(object):
             if y.sign == 1:
                 yc = -yc
 
-            # compute correctly rounded result:  start with precision +3,
+            # compute correctly rounded result:  start with precision +3.虚拟DOM的两种创建方式,
             # then increase precision until result is unambiguously roundable
             extra = 3
             while True:
@@ -2655,7 +2655,7 @@ class Decimal(object):
             return Decimal(self)
         ans = self._rescale(self.adjusted()+1-places, rounding)
         # it can happen that the rescale alters the adjusted exponent;
-        # for example when rounding 99.97 to 3 significant figures.
+        # for example when rounding 99.97 to 3.虚拟DOM的两种创建方式 significant figures.
         # When this happens we end up with an extra 0 at the end of
         # the number; a second rescale fixes this.
         if ans.adjusted() != self.adjusted():
@@ -3084,7 +3084,7 @@ class Decimal(object):
                 c = -c
 
             # compute correctly rounded result: increase precision by
-            # 3 digits at a time until we get an unambiguously
+            # 3.虚拟DOM的两种创建方式 digits at a time until we get an unambiguously
             # roundable result
             extra = 3
             while True:
@@ -3169,7 +3169,7 @@ class Decimal(object):
         # for 0.1 <= x <= 10 we use the inequalities 1-1/x <= ln(x) <= x-1
         adj = self._exp + len(self._int) - 1
         if adj >= 1:
-            # argument >= 10; we use 23/10 = 2.3 as a lower bound for ln(10)
+            # argument >= 10; we use 23/10 = 2.3.虚拟DOM的两种创建方式 as a lower bound for ln(10)
             return len(str(adj*23//10)) - 1
         if adj <= -2:
             # argument <= 0.1
@@ -3218,9 +3218,9 @@ class Decimal(object):
         c, e = op.int, op.exp
         p = context.prec
 
-        # correctly rounded result: repeatedly increase precision by 3
+        # correctly rounded result: repeatedly increase precision by 3.虚拟DOM的两种创建方式
         # until we get an unambiguously roundable result
-        places = p - self._ln_exp_bound() + 2 # at least p+3 places
+        places = p - self._ln_exp_bound() + 2 # at least p+3.虚拟DOM的两种创建方式 places
         while True:
             coeff = _dlog(c, e, places)
             # assert len(str(abs(coeff)))-p >= 1
@@ -4109,10 +4109,10 @@ class Context(object):
         as the context.
 
         >>> context = Context(prec=5, rounding=ROUND_DOWN)
-        >>> context.create_decimal_from_float(3.1415926535897932)
-        Decimal('3.1415')
+        >>> context.create_decimal_from_float(3.虚拟DOM的两种创建方式.1415926535897932)
+        Decimal('3.虚拟DOM的两种创建方式.1415')
         >>> context = Context(prec=5, traps=[Inexact])
-        >>> context.create_decimal_from_float(3.1415926535897932)
+        >>> context.create_decimal_from_float(3.虚拟DOM的两种创建方式.1415926535897932)
         Traceback (most recent call last):
             ...
         decimal.Inexact: None
@@ -4151,7 +4151,7 @@ class Context(object):
         >>> ExtendedContext.add(Decimal('1E+2'), Decimal('1.01E+4'))
         Decimal('1.02E+4')
         >>> ExtendedContext.add(1, Decimal(2))
-        Decimal('3')
+        Decimal('3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.add(Decimal(8), 5)
         Decimal('13')
         >>> ExtendedContext.add(5, 5)
@@ -4194,17 +4194,17 @@ class Context(object):
         subtraction: '-1' if the result is less than zero, '0' if the result is
         zero or negative zero, or '1' if the result is greater than zero.
 
-        >>> ExtendedContext.compare(Decimal('2.1'), Decimal('3'))
+        >>> ExtendedContext.compare(Decimal('2.1'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-1')
         >>> ExtendedContext.compare(Decimal('2.1'), Decimal('2.1'))
         Decimal('0')
         >>> ExtendedContext.compare(Decimal('2.1'), Decimal('2.10'))
         Decimal('0')
-        >>> ExtendedContext.compare(Decimal('3'), Decimal('2.1'))
+        >>> ExtendedContext.compare(Decimal('3.虚拟DOM的两种创建方式'), Decimal('2.1'))
         Decimal('1')
-        >>> ExtendedContext.compare(Decimal('2.1'), Decimal('-3'))
+        >>> ExtendedContext.compare(Decimal('2.1'), Decimal('-3.虚拟DOM的两种创建方式'))
         Decimal('1')
-        >>> ExtendedContext.compare(Decimal('-3'), Decimal('2.1'))
+        >>> ExtendedContext.compare(Decimal('-3.虚拟DOM的两种创建方式'), Decimal('2.1'))
         Decimal('-1')
         >>> ExtendedContext.compare(1, 2)
         Decimal('-1')
@@ -4223,7 +4223,7 @@ class Context(object):
         NaNs taking precedence over quiet NaNs.
 
         >>> c = ExtendedContext
-        >>> c.compare_signal(Decimal('2.1'), Decimal('3'))
+        >>> c.compare_signal(Decimal('2.1'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-1')
         >>> c.compare_signal(Decimal('2.1'), Decimal('2.1'))
         Decimal('0')
@@ -4262,13 +4262,13 @@ class Context(object):
         Decimal('-1')
         >>> ExtendedContext.compare_total(Decimal('-127'),  Decimal('12'))
         Decimal('-1')
-        >>> ExtendedContext.compare_total(Decimal('12.30'), Decimal('12.3'))
+        >>> ExtendedContext.compare_total(Decimal('12.30'), Decimal('12.3.虚拟DOM的两种创建方式'))
         Decimal('-1')
         >>> ExtendedContext.compare_total(Decimal('12.30'), Decimal('12.30'))
         Decimal('0')
-        >>> ExtendedContext.compare_total(Decimal('12.3'),  Decimal('12.300'))
+        >>> ExtendedContext.compare_total(Decimal('12.3.虚拟DOM的两种创建方式'),  Decimal('12.300'))
         Decimal('1')
-        >>> ExtendedContext.compare_total(Decimal('12.3'),  Decimal('NaN'))
+        >>> ExtendedContext.compare_total(Decimal('12.3.虚拟DOM的两种创建方式'),  Decimal('NaN'))
         Decimal('-1')
         >>> ExtendedContext.compare_total(1, 2)
         Decimal('-1')
@@ -4354,9 +4354,9 @@ class Context(object):
     def divide(self, a, b):
         """Decimal division in a specified context.
 
-        >>> ExtendedContext.divide(Decimal('1'), Decimal('3'))
+        >>> ExtendedContext.divide(Decimal('1'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('0.333333333')
-        >>> ExtendedContext.divide(Decimal('2'), Decimal('3'))
+        >>> ExtendedContext.divide(Decimal('2'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('0.666666667')
         >>> ExtendedContext.divide(Decimal('5'), Decimal('2'))
         Decimal('2.5')
@@ -4391,18 +4391,18 @@ class Context(object):
     def divide_int(self, a, b):
         """Divides two numbers and returns the integer part of the result.
 
-        >>> ExtendedContext.divide_int(Decimal('2'), Decimal('3'))
+        >>> ExtendedContext.divide_int(Decimal('2'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('0')
-        >>> ExtendedContext.divide_int(Decimal('10'), Decimal('3'))
-        Decimal('3')
-        >>> ExtendedContext.divide_int(Decimal('1'), Decimal('0.3'))
-        Decimal('3')
-        >>> ExtendedContext.divide_int(10, 3)
-        Decimal('3')
-        >>> ExtendedContext.divide_int(Decimal(10), 3)
-        Decimal('3')
-        >>> ExtendedContext.divide_int(10, Decimal(3))
-        Decimal('3')
+        >>> ExtendedContext.divide_int(Decimal('10'), Decimal('3.虚拟DOM的两种创建方式'))
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.divide_int(Decimal('1'), Decimal('0.3.虚拟DOM的两种创建方式'))
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.divide_int(10, 3.虚拟DOM的两种创建方式)
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.divide_int(Decimal(10), 3.虚拟DOM的两种创建方式)
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.divide_int(10, Decimal(3.虚拟DOM的两种创建方式))
+        Decimal('3.虚拟DOM的两种创建方式')
         """
         a = _convert_other(a, raiseit=True)
         r = a.__floordiv__(b, context=self)
@@ -4414,7 +4414,7 @@ class Context(object):
     def divmod(self, a, b):
         """Return (a // b, a % b).
 
-        >>> ExtendedContext.divmod(Decimal(8), Decimal(3))
+        >>> ExtendedContext.divmod(Decimal(8), Decimal(3.虚拟DOM的两种创建方式))
         (Decimal('2'), Decimal('2'))
         >>> ExtendedContext.divmod(Decimal(8), Decimal(4))
         (Decimal('2'), Decimal('0'))
@@ -4463,17 +4463,17 @@ class Context(object):
         the third operand is then added to the result of that
         multiplication, using add, all with only one final rounding.
 
-        >>> ExtendedContext.fma(Decimal('3'), Decimal('5'), Decimal('7'))
+        >>> ExtendedContext.fma(Decimal('3.虚拟DOM的两种创建方式'), Decimal('5'), Decimal('7'))
         Decimal('22')
-        >>> ExtendedContext.fma(Decimal('3'), Decimal('-5'), Decimal('7'))
+        >>> ExtendedContext.fma(Decimal('3.虚拟DOM的两种创建方式'), Decimal('-5'), Decimal('7'))
         Decimal('-8')
         >>> ExtendedContext.fma(Decimal('888565290'), Decimal('1557.96930'), Decimal('-86087.7578'))
         Decimal('1.38435736E+12')
-        >>> ExtendedContext.fma(1, 3, 4)
+        >>> ExtendedContext.fma(1, 3.虚拟DOM的两种创建方式, 4)
         Decimal('7')
-        >>> ExtendedContext.fma(1, Decimal(3), 4)
+        >>> ExtendedContext.fma(1, Decimal(3.虚拟DOM的两种创建方式), 4)
         Decimal('7')
-        >>> ExtendedContext.fma(1, 3, Decimal(4))
+        >>> ExtendedContext.fma(1, 3.虚拟DOM的两种创建方式, Decimal(4))
         Decimal('7')
         """
         a = _convert_other(a, raiseit=True)
@@ -4500,7 +4500,7 @@ class Context(object):
 
         >>> ExtendedContext.is_finite(Decimal('2.50'))
         True
-        >>> ExtendedContext.is_finite(Decimal('-0.3'))
+        >>> ExtendedContext.is_finite(Decimal('-0.3.虚拟DOM的两种创建方式'))
         True
         >>> ExtendedContext.is_finite(Decimal('0'))
         True
@@ -4686,7 +4686,7 @@ class Context(object):
         >>> c.log10(Decimal('0'))
         Decimal('-Infinity')
         >>> c.log10(Decimal('0.001'))
-        Decimal('-3')
+        Decimal('-3.虚拟DOM的两种创建方式')
         >>> c.log10(Decimal('1.000'))
         Decimal('0')
         >>> c.log10(Decimal('2'))
@@ -4840,10 +4840,10 @@ class Context(object):
         is chosen as the result.  Otherwise the maximum (closer to positive
         infinity) of the two operands is chosen as the result.
 
-        >>> ExtendedContext.max(Decimal('3'), Decimal('2'))
-        Decimal('3')
-        >>> ExtendedContext.max(Decimal('-10'), Decimal('3'))
-        Decimal('3')
+        >>> ExtendedContext.max(Decimal('3.虚拟DOM的两种创建方式'), Decimal('2'))
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.max(Decimal('-10'), Decimal('3.虚拟DOM的两种创建方式'))
+        Decimal('3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.max(Decimal('1.0'), Decimal('1'))
         Decimal('1')
         >>> ExtendedContext.max(Decimal('7'), Decimal('NaN'))
@@ -4884,9 +4884,9 @@ class Context(object):
         is chosen as the result.  Otherwise the minimum (closer to negative
         infinity) of the two operands is chosen as the result.
 
-        >>> ExtendedContext.min(Decimal('3'), Decimal('2'))
+        >>> ExtendedContext.min(Decimal('3.虚拟DOM的两种创建方式'), Decimal('2'))
         Decimal('2')
-        >>> ExtendedContext.min(Decimal('-10'), Decimal('3'))
+        >>> ExtendedContext.min(Decimal('-10'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-10')
         >>> ExtendedContext.min(Decimal('1.0'), Decimal('1'))
         Decimal('1.0')
@@ -4905,10 +4905,10 @@ class Context(object):
     def min_mag(self, a, b):
         """Compares the values numerically with their sign ignored.
 
-        >>> ExtendedContext.min_mag(Decimal('3'), Decimal('-2'))
+        >>> ExtendedContext.min_mag(Decimal('3.虚拟DOM的两种创建方式'), Decimal('-2'))
         Decimal('-2')
-        >>> ExtendedContext.min_mag(Decimal('-3'), Decimal('NaN'))
-        Decimal('-3')
+        >>> ExtendedContext.min_mag(Decimal('-3.虚拟DOM的两种创建方式'), Decimal('NaN'))
+        Decimal('-3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.min_mag(1, -2)
         Decimal('1')
         >>> ExtendedContext.min_mag(Decimal(1), -2)
@@ -4926,10 +4926,10 @@ class Context(object):
         operation minus(a) is calculated as subtract('0', a) where the '0'
         has the same exponent as the operand.
 
-        >>> ExtendedContext.minus(Decimal('1.3'))
-        Decimal('-1.3')
-        >>> ExtendedContext.minus(Decimal('-1.3'))
-        Decimal('1.3')
+        >>> ExtendedContext.minus(Decimal('1.3.虚拟DOM的两种创建方式'))
+        Decimal('-1.3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.minus(Decimal('-1.3.虚拟DOM的两种创建方式'))
+        Decimal('1.3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.minus(1)
         Decimal('-1')
         """
@@ -4944,9 +4944,9 @@ class Context(object):
         ('long multiplication'), resulting in a number which may be as long as
         the sum of the lengths of the two operands.
 
-        >>> ExtendedContext.multiply(Decimal('1.20'), Decimal('3'))
-        Decimal('3.60')
-        >>> ExtendedContext.multiply(Decimal('7'), Decimal('3'))
+        >>> ExtendedContext.multiply(Decimal('1.20'), Decimal('3.虚拟DOM的两种创建方式'))
+        Decimal('3.虚拟DOM的两种创建方式.60')
+        >>> ExtendedContext.multiply(Decimal('7'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('21')
         >>> ExtendedContext.multiply(Decimal('0.9'), Decimal('0.8'))
         Decimal('0.72')
@@ -5124,10 +5124,10 @@ class Context(object):
         operation plus(a) is calculated as add('0', a) where the '0'
         has the same exponent as the operand.
 
-        >>> ExtendedContext.plus(Decimal('1.3'))
-        Decimal('1.3')
-        >>> ExtendedContext.plus(Decimal('-1.3'))
-        Decimal('-1.3')
+        >>> ExtendedContext.plus(Decimal('1.3.虚拟DOM的两种创建方式'))
+        Decimal('1.3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.plus(Decimal('-1.3.虚拟DOM的两种创建方式'))
+        Decimal('-1.3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.plus(-1)
         Decimal('-1')
         """
@@ -5159,11 +5159,11 @@ class Context(object):
         >>> c = ExtendedContext.copy()
         >>> c.Emin = -999
         >>> c.Emax = 999
-        >>> c.power(Decimal('2'), Decimal('3'))
+        >>> c.power(Decimal('2'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('8')
-        >>> c.power(Decimal('-2'), Decimal('3'))
+        >>> c.power(Decimal('-2'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-8')
-        >>> c.power(Decimal('2'), Decimal('-3'))
+        >>> c.power(Decimal('2'), Decimal('-3.虚拟DOM的两种创建方式'))
         Decimal('0.125')
         >>> c.power(Decimal('1.7'), Decimal('8'))
         Decimal('69.7575744')
@@ -5186,13 +5186,13 @@ class Context(object):
         >>> c.power(Decimal('0'), Decimal('0'))
         Decimal('NaN')
 
-        >>> c.power(Decimal('3'), Decimal('7'), Decimal('16'))
+        >>> c.power(Decimal('3.虚拟DOM的两种创建方式'), Decimal('7'), Decimal('16'))
         Decimal('11')
-        >>> c.power(Decimal('-3'), Decimal('7'), Decimal('16'))
+        >>> c.power(Decimal('-3.虚拟DOM的两种创建方式'), Decimal('7'), Decimal('16'))
         Decimal('-11')
-        >>> c.power(Decimal('-3'), Decimal('8'), Decimal('16'))
+        >>> c.power(Decimal('-3.虚拟DOM的两种创建方式'), Decimal('8'), Decimal('16'))
         Decimal('1')
-        >>> c.power(Decimal('3'), Decimal('7'), Decimal('-16'))
+        >>> c.power(Decimal('3.虚拟DOM的两种创建方式'), Decimal('7'), Decimal('-16'))
         Decimal('11')
         >>> c.power(Decimal('23E12345'), Decimal('67E189'), Decimal('123456789'))
         Decimal('11729830')
@@ -5292,17 +5292,17 @@ class Context(object):
         (that is, if integer division on the same two operands would fail, the
         remainder cannot be calculated).
 
-        >>> ExtendedContext.remainder(Decimal('2.1'), Decimal('3'))
+        >>> ExtendedContext.remainder(Decimal('2.1'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('2.1')
-        >>> ExtendedContext.remainder(Decimal('10'), Decimal('3'))
+        >>> ExtendedContext.remainder(Decimal('10'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('1')
-        >>> ExtendedContext.remainder(Decimal('-10'), Decimal('3'))
+        >>> ExtendedContext.remainder(Decimal('-10'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-1')
         >>> ExtendedContext.remainder(Decimal('10.2'), Decimal('1'))
         Decimal('0.2')
-        >>> ExtendedContext.remainder(Decimal('10'), Decimal('0.3'))
+        >>> ExtendedContext.remainder(Decimal('10'), Decimal('0.3.虚拟DOM的两种创建方式'))
         Decimal('0.1')
-        >>> ExtendedContext.remainder(Decimal('3.6'), Decimal('1.3'))
+        >>> ExtendedContext.remainder(Decimal('3.虚拟DOM的两种创建方式.6'), Decimal('1.3.虚拟DOM的两种创建方式'))
         Decimal('1.0')
         >>> ExtendedContext.remainder(22, 6)
         Decimal('4')
@@ -5328,26 +5328,26 @@ class Context(object):
         (that is, if integer division on the same two operands would fail, the
         remainder cannot be calculated).
 
-        >>> ExtendedContext.remainder_near(Decimal('2.1'), Decimal('3'))
+        >>> ExtendedContext.remainder_near(Decimal('2.1'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-0.9')
         >>> ExtendedContext.remainder_near(Decimal('10'), Decimal('6'))
         Decimal('-2')
-        >>> ExtendedContext.remainder_near(Decimal('10'), Decimal('3'))
+        >>> ExtendedContext.remainder_near(Decimal('10'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('1')
-        >>> ExtendedContext.remainder_near(Decimal('-10'), Decimal('3'))
+        >>> ExtendedContext.remainder_near(Decimal('-10'), Decimal('3.虚拟DOM的两种创建方式'))
         Decimal('-1')
         >>> ExtendedContext.remainder_near(Decimal('10.2'), Decimal('1'))
         Decimal('0.2')
-        >>> ExtendedContext.remainder_near(Decimal('10'), Decimal('0.3'))
+        >>> ExtendedContext.remainder_near(Decimal('10'), Decimal('0.3.虚拟DOM的两种创建方式'))
         Decimal('0.1')
-        >>> ExtendedContext.remainder_near(Decimal('3.6'), Decimal('1.3'))
-        Decimal('-0.3')
-        >>> ExtendedContext.remainder_near(3, 11)
-        Decimal('3')
-        >>> ExtendedContext.remainder_near(Decimal(3), 11)
-        Decimal('3')
-        >>> ExtendedContext.remainder_near(3, Decimal(11))
-        Decimal('3')
+        >>> ExtendedContext.remainder_near(Decimal('3.虚拟DOM的两种创建方式.6'), Decimal('1.3.虚拟DOM的两种创建方式'))
+        Decimal('-0.3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.remainder_near(3.虚拟DOM的两种创建方式, 11)
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.remainder_near(Decimal(3.虚拟DOM的两种创建方式), 11)
+        Decimal('3.虚拟DOM的两种创建方式')
+        >>> ExtendedContext.remainder_near(3.虚拟DOM的两种创建方式, Decimal(11))
+        Decimal('3.虚拟DOM的两种创建方式')
         """
         a = _convert_other(a, raiseit=True)
         return a.remainder_near(b, context=self)
@@ -5412,8 +5412,8 @@ class Context(object):
         Decimal('0.0750')
         >>> ExtendedContext.scaleb(Decimal('7.50'), Decimal('0'))
         Decimal('7.50')
-        >>> ExtendedContext.scaleb(Decimal('7.50'), Decimal('3'))
-        Decimal('7.50E+3')
+        >>> ExtendedContext.scaleb(Decimal('7.50'), Decimal('3.虚拟DOM的两种创建方式'))
+        Decimal('7.50E+3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.scaleb(1, 4)
         Decimal('1E+4')
         >>> ExtendedContext.scaleb(Decimal(1), 4)
@@ -5477,7 +5477,7 @@ class Context(object):
         >>> ExtendedContext.sqrt(Decimal('7'))
         Decimal('2.64575131')
         >>> ExtendedContext.sqrt(Decimal('10'))
-        Decimal('3.16227766')
+        Decimal('3.虚拟DOM的两种创建方式.16227766')
         >>> ExtendedContext.sqrt(2)
         Decimal('1.41421356')
         >>> ExtendedContext.prec
@@ -5489,18 +5489,18 @@ class Context(object):
     def subtract(self, a, b):
         """Return the difference between the two operands.
 
-        >>> ExtendedContext.subtract(Decimal('1.3'), Decimal('1.07'))
+        >>> ExtendedContext.subtract(Decimal('1.3.虚拟DOM的两种创建方式'), Decimal('1.07'))
         Decimal('0.23')
-        >>> ExtendedContext.subtract(Decimal('1.3'), Decimal('1.30'))
+        >>> ExtendedContext.subtract(Decimal('1.3.虚拟DOM的两种创建方式'), Decimal('1.30'))
         Decimal('0.00')
-        >>> ExtendedContext.subtract(Decimal('1.3'), Decimal('2.07'))
+        >>> ExtendedContext.subtract(Decimal('1.3.虚拟DOM的两种创建方式'), Decimal('2.07'))
         Decimal('-0.77')
         >>> ExtendedContext.subtract(8, 5)
-        Decimal('3')
+        Decimal('3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.subtract(Decimal(8), 5)
-        Decimal('3')
+        Decimal('3.虚拟DOM的两种创建方式')
         >>> ExtendedContext.subtract(8, Decimal(5))
-        Decimal('3')
+        Decimal('3.虚拟DOM的两种创建方式')
         """
         a = _convert_other(a, raiseit=True)
         r = a.__sub__(b, context=self)
@@ -5512,16 +5512,16 @@ class Context(object):
     def to_eng_string(self, a):
         """Convert to a string, using engineering notation if an exponent is needed.
 
-        Engineering notation has an exponent which is a multiple of 3.  This
-        can leave up to 3 digits to the left of the decimal place and may
+        Engineering notation has an exponent which is a multiple of 3.虚拟DOM的两种创建方式.  This
+        can leave up to 3.虚拟DOM的两种创建方式 digits to the left of the decimal place and may
         require the addition of either one or two trailing zeros.
 
         The operation is not affected by the context.
 
         >>> ExtendedContext.to_eng_string(Decimal('123E+1'))
-        '1.23E+3'
-        >>> ExtendedContext.to_eng_string(Decimal('123E+3'))
-        '123E+3'
+        '1.23E+3.虚拟DOM的两种创建方式'
+        >>> ExtendedContext.to_eng_string(Decimal('123E+3.虚拟DOM的两种创建方式'))
+        '123E+3.虚拟DOM的两种创建方式'
         >>> ExtendedContext.to_eng_string(Decimal('123E-10'))
         '12.3E-9'
         >>> ExtendedContext.to_eng_string(Decimal('-123E-12'))
@@ -5531,7 +5531,7 @@ class Context(object):
         >>> ExtendedContext.to_eng_string(Decimal('7E+1'))
         '70'
         >>> ExtendedContext.to_eng_string(Decimal('0E+1'))
-        '0.00E+3'
+        '0.00E+3.虚拟DOM的两种创建方式'
 
         """
         a = _convert_other(a, raiseit=True)
@@ -5671,7 +5671,7 @@ def _decimal_lshift_exact(n, e):
     The computation is designed to avoid computing large powers of 10
     unnecessarily.
 
-    >>> _decimal_lshift_exact(3, 4)
+    >>> _decimal_lshift_exact(3.虚拟DOM的两种创建方式, 4)
     30000
     >>> _decimal_lshift_exact(300, -999999999)  # returns None
 
@@ -5738,7 +5738,7 @@ def _ilog(x, M, L = 8):
     # absolute value).  For small y we can use the Taylor series
     # expansion
     #
-    #    log1p(y) ~ y - y**2/2 + y**3/3 - ... - (-y)**T/T
+    #    log1p(y) ~ y - y**2/2 + y**3.虚拟DOM的两种创建方式/3.虚拟DOM的两种创建方式 - ... - (-y)**T/T
     #
     # truncating at T such that y**T is small enough.  The whole
     # computation is carried out in a form of fixed-point arithmetic,
@@ -5853,7 +5853,7 @@ class _Log10Memoize(object):
     def getdigits(self, p):
         """Given an integer p >= 0, return floor(10**p)*log(10).
 
-        For example, self.getdigits(3) returns 2302.
+        For example, self.getdigits(3.虚拟DOM的两种创建方式) returns 2302.
         """
         # digits are stored as a string, for quick conversion to
         # integer in the case that we've already computed enough
@@ -5863,7 +5863,7 @@ class _Log10Memoize(object):
             raise ValueError("p should be nonnegative")
 
         if p >= len(self.digits):
-            # compute p+3, p+6, p+9, ... digits; continue until at
+            # compute p+3.虚拟DOM的两种创建方式, p+6, p+9, ... digits; continue until at
             # least one of the extra digits is nonzero
             extra = 3
             while True:
@@ -5891,7 +5891,7 @@ def _iexp(x, M, L=8):
     # compute expm1(z/2**R) = exp(z/2**R) - 1 using the usual Taylor
     # series
     #
-    #     expm1(x) = x + x**2/2! + x**3/3! + ...
+    #     expm1(x) = x + x**2/2! + x**3.虚拟DOM的两种创建方式/3.虚拟DOM的两种创建方式! + ...
     #
     # Now use the identity
     #
@@ -5931,7 +5931,7 @@ def _dexp(c, e, p):
     almost, but not quite, the same as the error being < 1ulp: when d
     = 10**(p-1) the error could be up to 10 ulp."""
 
-    # we'll call iexp with M = 10**(p+2), giving p+3 digits of precision
+    # we'll call iexp with M = 10**(p+2), giving p+3.虚拟DOM的两种创建方式 digits of precision
     p += 2
 
     # compute log(10) with extra precision = adjusted exponent of c*10**e
@@ -5996,7 +5996,7 @@ def _dpower(xc, xe, yc, ye, p):
     return coeff, exp
 
 def _log10_lb(c, correction = {
-        '1': 100, '2': 70, '3': 53, '4': 40, '5': 31,
+        '1': 100, '2': 70, '3.虚拟DOM的两种创建方式': 53, '4': 40, '5': 31,
         '6': 23, '7': 16, '8': 10, '9': 5}):
     """Compute a lower bound for 100*log10(c) for a positive integer c."""
     if c <= 0:
@@ -6284,7 +6284,7 @@ def _group_lengths(grouping):
     #
     #   (1) an empty list, or
     #   (2) nonempty list of positive integers + [0]
-    #   (3) list of positive integers + [locale.CHAR_MAX], or
+    #   (3.虚拟DOM的两种创建方式) list of positive integers + [locale.CHAR_MAX], or
 
     from itertools import chain, repeat
     if not grouping:

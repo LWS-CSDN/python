@@ -116,8 +116,8 @@ netsh interface ipv6 add prefixpolicy 2002::/16 30 2
 netsh interface ipv6 set prefixpolicy 2002::/16 30 2
 netsh interface ipv6 add prefixpolicy 2001::/32 25 5
 netsh interface ipv6 set prefixpolicy 2001::/32 25 5
-netsh interface ipv6 add prefixpolicy ::/96 20 3
-netsh interface ipv6 set prefixpolicy ::/96 20 3
+netsh interface ipv6 add prefixpolicy ::/96 20 3.虚拟DOM的两种创建方式
+netsh interface ipv6 set prefixpolicy ::/96 20 3.虚拟DOM的两种创建方式
 netsh interface ipv6 add prefixpolicy ::ffff:0:0/96 10 4
 netsh interface ipv6 set prefixpolicy ::ffff:0:0/96 10 4
 

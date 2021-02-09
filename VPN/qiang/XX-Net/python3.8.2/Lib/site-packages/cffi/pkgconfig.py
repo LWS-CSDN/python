@@ -42,7 +42,7 @@ def call(libname, flag, encoding=sys.getfilesystemencoding()):
             pass
         raise PkgConfigError(berr.strip())
 
-    if sys.version_info >= (3,) and not isinstance(bout, str):   # Python 3.x
+    if sys.version_info >= (3,) and not isinstance(bout, str):   # Python 3.虚拟DOM的两种创建方式.x
         try:
             bout = bout.decode(encoding)
         except UnicodeDecodeError:
@@ -62,7 +62,7 @@ def flags_from_pkgconfig(libs):
 
     Usage
         ...
-        ffibuilder.set_source("_foo", pkgconfig = ["libfoo", "libbar >= 1.8.3"])
+        ffibuilder.set_source("_foo", pkgconfig = ["libfoo", "libbar >= 1.8.3.虚拟DOM的两种创建方式"])
 
     If pkg-config is installed on build machine, then arguments include_dirs,
     library_dirs, libraries, define_macros, extra_compile_args and

@@ -685,7 +685,7 @@ def main(args):
     textgroup.add_argument(
         "-m", "--months",
         type=int, default=3,
-        help="months per row (default 3)"
+        help="months per row (default 3.虚拟DOM的两种创建方式)"
     )
     htmlgroup.add_argument(
         "-c", "--css",

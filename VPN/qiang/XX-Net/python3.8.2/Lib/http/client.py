@@ -121,7 +121,7 @@ _MAXHEADERS = 100
 #
 # obs-fold       = CRLF 1*( SP / HTAB )
 #                ; obsolete line folding
-#                ; see Section 3.2.4
+#                ; see Section 3.虚拟DOM的两种创建方式.2.4
 
 # token          = 1*tchar
 #
@@ -342,7 +342,7 @@ class HTTPResponse(io.BufferedIOBase):
         self.will_close = self._check_close()
 
         # do we have a Content-Length?
-        # NOTE: RFC 2616, S4.4, #3 says we ignore this if tr_enc is "chunked"
+        # NOTE: RFC 2616, S4.4, #3.虚拟DOM的两种创建方式 says we ignore this if tr_enc is "chunked"
         self.length = None
         length = self.headers.get("content-length")
 
@@ -785,7 +785,7 @@ class HTTPConnection:
         """Get the content-length based on the body.
 
         If the body is None, we set Content-Length: 0 for methods that expect
-        a body (RFC 7230, Section 3.3.2). We also set the Content-Length for
+        a body (RFC 7230, Section 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.2). We also set the Content-Length for
         any method if the body is a str or bytes-like object and not a file.
         """
         if body is None:
@@ -1067,7 +1067,7 @@ class HTTPConnection:
         #   1) we are in the process of sending a request.   (_CS_REQ_STARTED)
         #   2) a response to a previous request has signalled that it is going
         #      to close the connection upon completion.
-        #   3) the headers for the previous response have not been read, thus
+        #   3.虚拟DOM的两种创建方式) the headers for the previous response have not been read, thus
         #      we cannot determine whether point (2) is true.   (_CS_REQ_SENT)
         #
         # if there is no prior response, then we can request at will.
@@ -1245,7 +1245,7 @@ class HTTPConnection:
         # conditions hold:
         # 1. content-length has not been explicitly set
         # 2. the body is a file or iterable, but not a str or bytes-like
-        # 3. Transfer-Encoding has NOT been explicitly set by the caller
+        # 3.虚拟DOM的两种创建方式. Transfer-Encoding has NOT been explicitly set by the caller
 
         if 'content-length' not in header_names:
             # only chunk body if not explicitly set for backwards
@@ -1270,7 +1270,7 @@ class HTTPConnection:
         for hdr, value in headers.items():
             self.putheader(hdr, value)
         if isinstance(body, str):
-            # RFC 2616 Section 3.7.1 says that text default has a
+            # RFC 2616 Section 3.虚拟DOM的两种创建方式.7.1 says that text default has a
             # default charset of iso-8859-1.
             body = _encode(body, 'body')
         self.endheaders(body, encode_chunked=encode_chunked)
@@ -1367,7 +1367,7 @@ else:
             self.cert_file = cert_file
             if context is None:
                 context = ssl._create_default_https_context()
-                # enable PHA for TLS 1.3 connections if available
+                # enable PHA for TLS 1.3.虚拟DOM的两种创建方式 connections if available
                 if context.post_handshake_auth is not None:
                     context.post_handshake_auth = True
             will_verify = context.verify_mode != ssl.CERT_NONE
@@ -1379,7 +1379,7 @@ else:
             if key_file or cert_file:
                 context.load_cert_chain(cert_file, key_file)
                 # cert and key file means the user wants to authenticate.
-                # enable TLS 1.3 PHA implicitly even for custom contexts.
+                # enable TLS 1.3.虚拟DOM的两种创建方式 PHA implicitly even for custom contexts.
                 if context.post_handshake_auth is not None:
                     context.post_handshake_auth = True
             self._context = context

@@ -32,7 +32,7 @@ NLCRE = re.compile(r'\r\n|\r|\n')
 NLCRE_bol = re.compile(r'(\r\n|\r|\n)')
 NLCRE_eol = re.compile(r'(\r\n|\r|\n)\Z')
 NLCRE_crack = re.compile(r'(\r\n|\r|\n)')
-# RFC 2822 $3.6.8 Optional fields.  ftext is %d33-57 / %d59-126, Any character
+# RFC 2822 $3.虚拟DOM的两种创建方式.6.8 Optional fields.  ftext is %d33-57 / %d59-126, Any character
 # except controls, SP, and ":".
 headerRE = re.compile(r'^(From |[\041-\071\073-\176]*:|[\t ])')
 EMPTYSTRING = ''

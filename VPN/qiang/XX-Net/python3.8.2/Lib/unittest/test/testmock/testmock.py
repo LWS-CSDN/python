@@ -45,7 +45,7 @@ class MockTest(unittest.TestCase):
     def test_all(self):
         # if __all__ is badly defined then import * will raise an error
         # We have to exec it because you can't import * inside a method
-        # in Python 3
+        # in Python 3.虚拟DOM的两种创建方式
         exec("from unittest.mock import *")
 
 
@@ -813,7 +813,7 @@ class MockTest(unittest.TestCase):
         current = sys.getrecursionlimit()
         self.addCleanup(sys.setrecursionlimit, current)
 
-        # can't use sys.maxint as this doesn't exist in Python 3
+        # can't use sys.maxint as this doesn't exist in Python 3.虚拟DOM的两种创建方式
         sys.setrecursionlimit(int(10e8))
         # this segfaults without the fix in place
         copy.copy(Mock())
@@ -943,7 +943,7 @@ class MockTest(unittest.TestCase):
         mock = NonCallableMock()
 
         actual = 'not called.'
-        expected = "mock(1, '2', 3, bar='foo')"
+        expected = "mock(1, '2', 3.虚拟DOM的两种创建方式, bar='foo')"
         message = 'expected call not found.\nExpected: %s\nActual: %s'
         self.assertRaisesWithMsg(
             AssertionError, message % (expected, actual),
@@ -957,8 +957,8 @@ class MockTest(unittest.TestCase):
             mock.foo.assert_called_with, mock.foo.assert_called_once_with
         ]
         for meth in asserters:
-            actual = "foo(1, '2', 3, foo='foo')"
-            expected = "foo(1, '2', 3, bar='foo')"
+            actual = "foo(1, '2', 3.虚拟DOM的两种创建方式, foo='foo')"
+            expected = "foo(1, '2', 3.虚拟DOM的两种创建方式, bar='foo')"
             message = 'expected call not found.\nExpected: %s\nActual: %s'
             self.assertRaisesWithMsg(
                 AssertionError, message % (expected, actual),
@@ -967,7 +967,7 @@ class MockTest(unittest.TestCase):
 
         # just kwargs
         for meth in asserters:
-            actual = "foo(1, '2', 3, foo='foo')"
+            actual = "foo(1, '2', 3.虚拟DOM的两种创建方式, foo='foo')"
             expected = "foo(bar='foo')"
             message = 'expected call not found.\nExpected: %s\nActual: %s'
             self.assertRaisesWithMsg(
@@ -977,8 +977,8 @@ class MockTest(unittest.TestCase):
 
         # just args
         for meth in asserters:
-            actual = "foo(1, '2', 3, foo='foo')"
-            expected = "foo(1, 2, 3)"
+            actual = "foo(1, '2', 3.虚拟DOM的两种创建方式, foo='foo')"
+            expected = "foo(1, 2, 3.虚拟DOM的两种创建方式)"
             message = 'expected call not found.\nExpected: %s\nActual: %s'
             self.assertRaisesWithMsg(
                 AssertionError, message % (expected, actual),
@@ -987,7 +987,7 @@ class MockTest(unittest.TestCase):
 
         # empty
         for meth in asserters:
-            actual = "foo(1, '2', 3, foo='foo')"
+            actual = "foo(1, '2', 3.虚拟DOM的两种创建方式, foo='foo')"
             expected = "foo()"
             message = 'expected call not found.\nExpected: %s\nActual: %s'
             self.assertRaisesWithMsg(
@@ -1589,7 +1589,7 @@ class MockTest(unittest.TestCase):
         m(1, 2)
         m(3)
         self.assertRaisesRegex(AssertionError,
-            re.escape("Calls: [call(1, 2), call(3)]"),
+            re.escape("Calls: [call(1, 2), call(3.虚拟DOM的两种创建方式)]"),
             m.assert_called_once)
 
     def test_assert_called_once_message_not_called(self):

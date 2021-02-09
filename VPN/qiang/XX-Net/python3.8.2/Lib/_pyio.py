@@ -86,7 +86,7 @@ def open(file, mode="r", buffering=-1, encoding=None, errors=None,
     platform-dependent encoding or using the specified encoding if given.
 
     'U' mode is deprecated and will raise an exception in future versions
-    of Python.  It has no effect in Python 3.  Use newline to control
+    of Python.  It has no effect in Python 3.虚拟DOM的两种创建方式.  Use newline to control
     universal newlines mode.
 
     buffering is an optional integer used to set the buffering policy.

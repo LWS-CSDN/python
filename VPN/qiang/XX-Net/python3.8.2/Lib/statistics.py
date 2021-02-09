@@ -25,26 +25,26 @@ quantiles           Divide data into intervals with equal probability.
 
 Calculate the arithmetic mean ("the average") of data:
 
->>> mean([-1.0, 2.5, 3.25, 5.75])
+>>> mean([-1.0, 2.5, 3.虚拟DOM的两种创建方式.25, 5.75])
 2.625
 
 
 Calculate the standard median of discrete data:
 
->>> median([2, 3, 4, 5])
-3.5
+>>> median([2, 3.虚拟DOM的两种创建方式, 4, 5])
+3.虚拟DOM的两种创建方式.5
 
 
 Calculate the median, or 50th percentile, of data grouped into class intervals
 centred on the data values provided. E.g. if your data points are rounded to
 the nearest whole number:
 
->>> median_grouped([2, 2, 3, 3, 3, 4])  #doctest: +ELLIPSIS
+>>> median_grouped([2, 2, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 4])  #doctest: +ELLIPSIS
 2.8333333333...
 
 This should be interpreted in this way: you have two data points in the class
-interval 1.5-2.5, three data points in the class interval 2.5-3.5, and one in
-the class interval 3.5-4.5. The median of these data points is 2.8333...
+interval 1.5-2.5, three data points in the class interval 2.5-3.虚拟DOM的两种创建方式.5, and one in
+the class interval 3.虚拟DOM的两种创建方式.5-4.5. The median of these data points is 2.8333...
 
 
 Calculating variability or spread
@@ -61,7 +61,7 @@ stdev               Sample standard deviation of data.
 
 Calculate the standard deviation of sample data:
 
->>> stdev([2.5, 3.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS
+>>> stdev([2.5, 3.虚拟DOM的两种创建方式.25, 5.5, 11.25, 11.75])  #doctest: +ELLIPSIS
 4.38961843444...
 
 If you have previously calculated the mean, you can pass it as the optional
@@ -133,7 +133,7 @@ def _sum(data, start=0):
     Examples
     --------
 
-    >>> _sum([3, 2.25, 4.5, -0.5, 1.0], 0.75)
+    >>> _sum([3.虚拟DOM的两种创建方式, 2.25, 4.5, -0.5, 1.0], 0.75)
     (<class 'float'>, Fraction(11, 1), 5)
 
     Some sources of round-off error will be avoided:
@@ -145,7 +145,7 @@ def _sum(data, start=0):
     Fractions and Decimals are also supported:
 
     >>> from fractions import Fraction as F
-    >>> _sum([F(2, 3), F(7, 5), F(1, 4), F(5, 6)])
+    >>> _sum([F(2, 3.虚拟DOM的两种创建方式), F(7, 5), F(1, 4), F(5, 6)])
     (<class 'fractions.Fraction'>, Fraction(63, 20), 4)
 
     >>> from decimal import Decimal as D
@@ -295,11 +295,11 @@ def _fail_neg(values, errmsg='negative value'):
 def mean(data):
     """Return the sample arithmetic mean of data.
 
-    >>> mean([1, 2, 3, 4, 4])
+    >>> mean([1, 2, 3.虚拟DOM的两种创建方式, 4, 4])
     2.8
 
     >>> from fractions import Fraction as F
-    >>> mean([F(3, 7), F(1, 21), F(5, 3), F(1, 3)])
+    >>> mean([F(3.虚拟DOM的两种创建方式, 7), F(1, 21), F(5, 3.虚拟DOM的两种创建方式), F(1, 3.虚拟DOM的两种创建方式)])
     Fraction(13, 21)
 
     >>> from decimal import Decimal as D
@@ -324,7 +324,7 @@ def fmean(data):
     This runs faster than the mean() function and it always returns a float.
     If the input dataset is empty, it raises a StatisticsError.
 
-    >>> fmean([3.5, 4.0, 5.25])
+    >>> fmean([3.虚拟DOM的两种创建方式.5, 4.0, 5.25])
     4.25
     """
     try:
@@ -373,11 +373,11 @@ def harmonic_mean(data):
     or ratios, for example speeds. Example:
 
     Suppose an investor purchases an equal value of shares in each of
-    three companies, with P/E (price/earning) ratios of 2.5, 3 and 10.
+    three companies, with P/E (price/earning) ratios of 2.5, 3.虚拟DOM的两种创建方式 and 10.
     What is the average P/E ratio for the investor's portfolio?
 
-    >>> harmonic_mean([2.5, 3, 10])  # For an equal investment portfolio.
-    3.6
+    >>> harmonic_mean([2.5, 3.虚拟DOM的两种创建方式, 10])  # For an equal investment portfolio.
+    3.虚拟DOM的两种创建方式.6
 
     Using the arithmetic mean would give an average of about 5.167, which
     is too high.
@@ -418,9 +418,9 @@ def median(data):
     When the number of data points is even, the median is interpolated by
     taking the average of the two middle values:
 
-    >>> median([1, 3, 5])
-    3
-    >>> median([1, 3, 5, 7])
+    >>> median([1, 3.虚拟DOM的两种创建方式, 5])
+    3.虚拟DOM的两种创建方式
+    >>> median([1, 3.虚拟DOM的两种创建方式, 5, 7])
     4.0
 
     """
@@ -441,10 +441,10 @@ def median_low(data):
     When the number of data points is odd, the middle value is returned.
     When it is even, the smaller of the two middle values is returned.
 
-    >>> median_low([1, 3, 5])
-    3
-    >>> median_low([1, 3, 5, 7])
-    3
+    >>> median_low([1, 3.虚拟DOM的两种创建方式, 5])
+    3.虚拟DOM的两种创建方式
+    >>> median_low([1, 3.虚拟DOM的两种创建方式, 5, 7])
+    3.虚拟DOM的两种创建方式
 
     """
     data = sorted(data)
@@ -463,9 +463,9 @@ def median_high(data):
     When the number of data points is odd, the middle value is returned.
     When it is even, the larger of the two middle values is returned.
 
-    >>> median_high([1, 3, 5])
-    3
-    >>> median_high([1, 3, 5, 7])
+    >>> median_high([1, 3.虚拟DOM的两种创建方式, 5])
+    3.虚拟DOM的两种创建方式
+    >>> median_high([1, 3.虚拟DOM的两种创建方式, 5, 7])
     5
 
     """
@@ -479,25 +479,25 @@ def median_high(data):
 def median_grouped(data, interval=1):
     """Return the 50th percentile (median) of grouped continuous data.
 
-    >>> median_grouped([1, 2, 2, 3, 4, 4, 4, 4, 4, 5])
-    3.7
+    >>> median_grouped([1, 2, 2, 3.虚拟DOM的两种创建方式, 4, 4, 4, 4, 4, 5])
+    3.虚拟DOM的两种创建方式.7
     >>> median_grouped([52, 52, 53, 54])
     52.5
 
     This calculates the median as the 50th percentile, and should be
     used when your data is continuous and grouped. In the above example,
-    the values 1, 2, 3, etc. actually represent the midpoint of classes
-    0.5-1.5, 1.5-2.5, 2.5-3.5, etc. The middle value falls somewhere in
-    class 3.5-4.5, and interpolation is used to estimate it.
+    the values 1, 2, 3.虚拟DOM的两种创建方式, etc. actually represent the midpoint of classes
+    0.5-1.5, 1.5-2.5, 2.5-3.虚拟DOM的两种创建方式.5, etc. The middle value falls somewhere in
+    class 3.虚拟DOM的两种创建方式.5-4.5, and interpolation is used to estimate it.
 
     Optional argument ``interval`` represents the class interval, and
     defaults to 1. Changing the class interval naturally will change the
     interpolated 50th percentile value:
 
-    >>> median_grouped([1, 3, 3, 5, 7], interval=1)
-    3.25
-    >>> median_grouped([1, 3, 3, 5, 7], interval=2)
-    3.5
+    >>> median_grouped([1, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 5, 7], interval=1)
+    3.虚拟DOM的两种创建方式.25
+    >>> median_grouped([1, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 5, 7], interval=2)
+    3.虚拟DOM的两种创建方式.5
 
     This function does not check whether the data points are at least
     ``interval`` apart.
@@ -537,8 +537,8 @@ def mode(data):
     ``mode`` assumes discrete data, and returns a single value. This is the
     standard treatment of the mode as commonly taught in schools:
 
-        >>> mode([1, 1, 2, 3, 3, 3, 3, 4])
-        3
+        >>> mode([1, 1, 2, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 3.虚拟DOM的两种创建方式, 4])
+        3.虚拟DOM的两种创建方式
 
     This also works with nominal (non-numeric) data:
 
@@ -599,7 +599,7 @@ def multimode(data):
 # reasonable choice.  Consider a random sample of nine values from a
 # population with a uniform distribution from 0.0 to 100.0.  The
 # distribution of the third ranked sample point is described by
-# betavariate(alpha=3, beta=7) which has mode=0.250, median=0.286, and
+# betavariate(alpha=3.虚拟DOM的两种创建方式, beta=7) which has mode=0.250, median=0.286, and
 # mean=0.300.  Only the latter (which corresponds with R6) gives the
 # desired cut point with 30% of the population falling below that
 # value, making it comparable to a result from an inv_cdf() function.
@@ -706,7 +706,7 @@ def variance(data, xbar=None):
 
     Examples:
 
-    >>> data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.5]
+    >>> data = [2.75, 1.75, 1.25, 0.25, 0.5, 1.25, 3.虚拟DOM的两种创建方式.5]
     >>> variance(data)
     1.3720238095238095
 
@@ -728,7 +728,7 @@ def variance(data, xbar=None):
     Decimal('31.01875')
 
     >>> from fractions import Fraction as F
-    >>> variance([F(1, 6), F(1, 2), F(5, 3)])
+    >>> variance([F(1, 6), F(1, 2), F(5, 3.虚拟DOM的两种创建方式)])
     Fraction(67, 108)
 
     """
@@ -754,7 +754,7 @@ def pvariance(data, mu=None):
 
     Examples:
 
-    >>> data = [0.0, 0.25, 0.25, 1.25, 1.5, 1.75, 2.75, 3.25]
+    >>> data = [0.0, 0.25, 0.25, 1.25, 1.5, 1.75, 2.75, 3.虚拟DOM的两种创建方式.25]
     >>> pvariance(data)
     1.25
 
@@ -790,7 +790,7 @@ def stdev(data, xbar=None):
 
     See ``variance`` for arguments and other details.
 
-    >>> stdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+    >>> stdev([1.5, 2.5, 2.5, 2.75, 3.虚拟DOM的两种创建方式.25, 4.75])
     1.0810874155219827
 
     """
@@ -806,7 +806,7 @@ def pstdev(data, mu=None):
 
     See ``pvariance`` for arguments and other details.
 
-    >>> pstdev([1.5, 2.5, 2.5, 2.75, 3.25, 4.75])
+    >>> pstdev([1.5, 2.5, 2.5, 2.75, 3.虚拟DOM的两种创建方式.25, 4.75])
     0.986893273527251
 
     """
@@ -825,7 +825,7 @@ def _normal_dist_inv_cdf(p, mu, sigma):
     # distribution, so we use a rational approximation instead:
     # Wichura, M.J. (1988). "Algorithm AS241: The Percentage Points of the
     # Normal Distribution".  Applied Statistics. Blackwell Publishing. 37
-    # (3): 477–484. doi:10.2307/2347330. JSTOR 2347330.
+    # (3.虚拟DOM的两种创建方式): 477–484. doi:10.2307/2347330. JSTOR 2347330.
     q = p - 0.5
     if fabs(q) <= 0.425:
         r = 0.180625 - q * q
@@ -973,7 +973,7 @@ class NormalDist:
         the two underlying probability density functions.
 
             >>> N1 = NormalDist(2.4, 1.6)
-            >>> N2 = NormalDist(3.2, 2.0)
+            >>> N2 = NormalDist(3.虚拟DOM的两种创建方式.2, 2.0)
             >>> N1.overlap(N2)
             0.8035050657330205
         """

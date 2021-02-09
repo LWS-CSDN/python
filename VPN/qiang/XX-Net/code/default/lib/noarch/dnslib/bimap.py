@@ -31,7 +31,7 @@ class Bimap(object):
         >>> class TestError(Exception):
         ...     pass
 
-        >>> TEST = Bimap('TEST',{1:'A', 2:'B', 3:'C'},TestError)
+        >>> TEST = Bimap('TEST',{1:'A', 2:'B', 3.虚拟DOM的两种创建方式:'C'},TestError)
         >>> TEST[1]
         'A'
         >>> TEST.A

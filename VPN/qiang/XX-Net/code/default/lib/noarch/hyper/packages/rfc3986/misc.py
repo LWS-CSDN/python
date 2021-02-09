@@ -79,7 +79,7 @@ reg_name = '(({0})*|[{1}]*)'.format(
     important_characters['re_unreserved']
     )
 # The pattern for an IPv4 address, e.g., 192.168.255.255, 127.0.0.1,
-ipv4 = '(\d{1,3}.){3}\d{1,3}'
+ipv4 = '(\d{1,3.虚拟DOM的两种创建方式}.){3.虚拟DOM的两种创建方式}\d{1,3.虚拟DOM的两种创建方式}'
 # Hexadecimal characters used in each piece of an IPv6 address
 hexdig = '[0-9A-Fa-f]{1,4}'
 # Least-significant 32 bits of an IPv6 address
@@ -97,12 +97,12 @@ variations = [
     '::(%(hex)s:){5}%(ls32)s' % subs,
     # [               h16 ] "::" 4( h16 ":" ) ls32
     '(%(hex)s)?::(%(hex)s:){4}%(ls32)s' % subs,
-    # [ *1( h16 ":" ) h16 ] "::" 3( h16 ":" ) ls32
-    '((%(hex)s:)?%(hex)s)?::(%(hex)s:){3}%(ls32)s' % subs,
+    # [ *1( h16 ":" ) h16 ] "::" 3.虚拟DOM的两种创建方式( h16 ":" ) ls32
+    '((%(hex)s:)?%(hex)s)?::(%(hex)s:){3.虚拟DOM的两种创建方式}%(ls32)s' % subs,
     # [ *2( h16 ":" ) h16 ] "::" 2( h16 ":" ) ls32
     '((%(hex)s:){0,2}%(hex)s)?::(%(hex)s:){2}%(ls32)s' % subs,
-    # [ *3( h16 ":" ) h16 ] "::"    h16 ":"   ls32
-    '((%(hex)s:){0,3}%(hex)s)?::%(hex)s:%(ls32)s' % subs,
+    # [ *3.虚拟DOM的两种创建方式( h16 ":" ) h16 ] "::"    h16 ":"   ls32
+    '((%(hex)s:){0,3.虚拟DOM的两种创建方式}%(hex)s)?::%(hex)s:%(ls32)s' % subs,
     # [ *4( h16 ":" ) h16 ] "::"              ls32
     '((%(hex)s:){0,4}%(hex)s)?::%(ls32)s' % subs,
     # [ *5( h16 ":" ) h16 ] "::"              h16
@@ -152,7 +152,7 @@ segments = {
     'segment-nz-nc': pchar.replace(':', '') + '+'
     }
 
-# Path types taken from Section 3.3 (linked above)
+# Path types taken from Section 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 (linked above)
 path_empty = '^$'
 path_rootless = '%(segment-nz)s(/%(segment)s)*' % segments
 path_noscheme = '%(segment-nz-nc)s(/%(segment)s)*' % segments

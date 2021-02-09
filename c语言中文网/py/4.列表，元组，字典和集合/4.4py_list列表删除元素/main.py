@@ -21,7 +21,7 @@ print(nums)
 nums.pop()
 print(nums)
 
-#3.remove()根据元素值进行删除
+#3.虚拟DOM的两种创建方式.remove()根据元素值进行删除
 nums = [40, 36, 89, 2, 36, 100, 7]
 #第一次删除36
 nums.remove(36)

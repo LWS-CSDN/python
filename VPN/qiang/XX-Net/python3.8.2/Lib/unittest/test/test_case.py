@@ -322,9 +322,9 @@ class Test_TestCase(unittest.TestCase, TestEquality, TestHashing):
         # Order is the following:
         # i=1 => subtest failure
         # i=2, j=2 => subtest success
-        # i=2, j=3 => subtest error
-        # i=3, j=2 => subtest error
-        # i=3, j=3 => subtest success
+        # i=2, j=3.虚拟DOM的两种创建方式 => subtest error
+        # i=3.虚拟DOM的两种创建方式, j=2 => subtest error
+        # i=3.虚拟DOM的两种创建方式, j=3.虚拟DOM的两种创建方式 => subtest success
         # toplevel => error
         Foo(events).run(result)
         self.assertEqual(events, expected_events)
@@ -1606,8 +1606,8 @@ test case
             with self.assertLogs() as cm:
                 log_foo.info("1")
                 log_foobar.debug("2")
-                log_quux.warning("3")
-            self.assertEqual(cm.output, ["INFO:foo:1", "WARNING:quux:3"])
+                log_quux.warning("3.虚拟DOM的两种创建方式")
+            self.assertEqual(cm.output, ["INFO:foo:1", "WARNING:quux:3.虚拟DOM的两种创建方式"])
             self.assertLogRecords(cm.records,
                                    [{'name': 'foo'}, {'name': 'quux'}])
 
@@ -1617,8 +1617,8 @@ test case
             with self.assertLogs(level=level) as cm:
                 log_foo.warning("1")
                 log_foobar.error("2")
-                log_quux.critical("3")
-            self.assertEqual(cm.output, ["ERROR:foo.bar:2", "CRITICAL:quux:3"])
+                log_quux.critical("3.虚拟DOM的两种创建方式")
+            self.assertEqual(cm.output, ["ERROR:foo.bar:2", "CRITICAL:quux:3.虚拟DOM的两种创建方式"])
             self.assertLogRecords(cm.records,
                                    [{'name': 'foo.bar'}, {'name': 'quux'}])
 
@@ -1633,12 +1633,12 @@ test case
                 with self.assertLogs(logger, level='DEBUG') as cm:
                     log_foo.info("1")
                     log_foobar.debug("2")
-                    log_quux.warning("3")
+                    log_quux.warning("3.虚拟DOM的两种创建方式")
                 self.assertEqual(cm.output, ["INFO:foo:1", "DEBUG:foo.bar:2"])
                 self.assertLogRecords(cm.records,
                                        [{'name': 'foo'}, {'name': 'foo.bar'}])
             # The outer catchall caught the quux log
-            self.assertEqual(outer_cm.output, ["WARNING:quux:3"])
+            self.assertEqual(outer_cm.output, ["WARNING:quux:3.虚拟DOM的两种创建方式"])
 
     def testAssertLogsPerLogger(self):
         self.checkAssertLogsPerLogger(logging.getLogger('foo'))
@@ -1694,7 +1694,7 @@ test case
     # disable this test for now. When the version where the fail* methods will
     # be removed is decided, re-enable it and update the version
     def _testDeprecatedFailMethods(self):
-        """Test that the deprecated fail* methods get removed in 3.x"""
+        """Test that the deprecated fail* methods get removed in 3.虚拟DOM的两种创建方式.x"""
         if sys.version_info[:2] < (3, 3):
             return
         deprecated_names = [
@@ -1704,7 +1704,7 @@ test case
         ]
         for deprecated_name in deprecated_names:
             with self.assertRaises(AttributeError):
-                getattr(self, deprecated_name)  # remove these in 3.x
+                getattr(self, deprecated_name)  # remove these in 3.虚拟DOM的两种创建方式.x
 
     def testDeepcopy(self):
         # Issue: 5660

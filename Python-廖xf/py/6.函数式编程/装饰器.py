@@ -1,5 +1,5 @@
 def now():
-    print('2015-3-25')
+    print('2015-3.虚拟DOM的两种创建方式-25')
 f = now
 f()
 print(now.__name__)
@@ -13,7 +13,7 @@ def log(func):
 
 @log
 def now():
-    print('2015-3-25')
+    print('2015-3.虚拟DOM的两种创建方式-25')
 
 now()
 

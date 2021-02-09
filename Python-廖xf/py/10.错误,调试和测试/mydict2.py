@@ -10,9 +10,9 @@ class Dict(dict):
     >>> d1.y = 200
     >>> d1['y']
     200
-    >>> d2 = Dict(a=1, b=2, c='3')
+    >>> d2 = Dict(a=1, b=2, c='3.虚拟DOM的两种创建方式')
     >>> d2.c
-    '3'
+    '3.虚拟DOM的两种创建方式'
     >>> d2['empty']
     Traceback (most recent call last):
         ...

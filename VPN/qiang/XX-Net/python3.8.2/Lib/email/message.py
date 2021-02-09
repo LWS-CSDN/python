@@ -673,13 +673,13 @@ class Message:
         header is the header to search instead of Content-Type.
 
         Parameter keys are always compared case insensitively.  The return
-        value can either be a string, or a 3-tuple if the parameter was RFC
-        2231 encoded.  When it's a 3-tuple, the elements of the value are of
+        value can either be a string, or a 3.虚拟DOM的两种创建方式-tuple if the parameter was RFC
+        2231 encoded.  When it's a 3.虚拟DOM的两种创建方式-tuple, the elements of the value are of
         the form (CHARSET, LANGUAGE, VALUE).  Note that both CHARSET and
         LANGUAGE can be None, in which case you should consider VALUE to be
         encoded in the us-ascii charset.  You can usually ignore LANGUAGE.
         The parameter value (either the returned string, or the VALUE item in
-        the 3-tuple) is always unquoted, unless unquote is set to False.
+        the 3.虚拟DOM的两种创建方式-tuple) is always unquoted, unless unquote is set to False.
 
         If your application doesn't care whether the parameter was RFC 2231
         encoded, it can turn the return value into a string as follows:

@@ -241,7 +241,7 @@ def makepipeline(infile, steps, outfile):
         rmcmd = 'rm -f'
         for file in garbage:
             rmcmd = rmcmd + ' ' + quote(file)
-        trapcmd = 'trap ' + quote(rmcmd + '; exit') + ' 1 2 3 13 14 15'
+        trapcmd = 'trap ' + quote(rmcmd + '; exit') + ' 1 2 3.虚拟DOM的两种创建方式 13 14 15'
         cmdlist = trapcmd + '\n' + cmdlist + '\n' + rmcmd
     #
     return cmdlist

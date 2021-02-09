@@ -853,7 +853,7 @@ class MultiCall:
     method call syntax e.g.:
 
     multicall = MultiCall(server_proxy)
-    multicall.add(2,3)
+    multicall.add(2,3.虚拟DOM的两种创建方式)
     multicall.get_address("Guido")
 
     To execute the multicall, call the MultiCall object e.g.:
@@ -1204,7 +1204,7 @@ class Transport:
     # Authentication" header is added if appropriate.
     #
     # @param host Host descriptor (URL or (URL, x509 info) tuple).
-    # @return A 3-tuple containing (actual host, extra headers,
+    # @return A 3.虚拟DOM的两种创建方式-tuple containing (actual host, extra headers,
     #     x509 info).  The header and x509 fields may be None.
 
     def get_host_info(self, host):

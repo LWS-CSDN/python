@@ -88,11 +88,11 @@ def clear_cache():
 
 
 # Helpers for bytes handling
-# For 3.2, we deliberately require applications that
+# For 3.虚拟DOM的两种创建方式.2, we deliberately require applications that
 # handle improperly quoted URLs to do their own
 # decoding and encoding. If valid use cases are
 # presented, we may relax this by using latin-1
-# decoding internally for 3.3
+# decoding internally for 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
 _implicit_encoding = 'ascii'
 _implicit_errors = 'strict'
 
@@ -812,7 +812,7 @@ def quote(string, safe='/', encoding=None, errors=None):
     typical usage the quote function is being called on a path where the
     existing slash characters are to be preserved.
 
-    Python 3.7 updates from using RFC 2396 to RFC 3986 to quote URL strings.
+    Python 3.虚拟DOM的两种创建方式.7 updates from using RFC 2396 to RFC 3986 to quote URL strings.
     Now, "~" is included in the set of unreserved characters.
 
     string and safe may be either str or bytes objects. encoding and errors
@@ -959,7 +959,7 @@ def urlencode(query, doseq=False, safe='', encoding=None, errors=None,
 
 
 def to_bytes(url):
-    warnings.warn("urllib.parse.to_bytes() is deprecated as of 3.8",
+    warnings.warn("urllib.parse.to_bytes() is deprecated as of 3.虚拟DOM的两种创建方式.8",
                   DeprecationWarning, stacklevel=2)
     return _to_bytes(url)
 
@@ -992,7 +992,7 @@ def unwrap(url):
 
 
 def splittype(url):
-    warnings.warn("urllib.parse.splittype() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splittype() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splittype(url)
@@ -1013,7 +1013,7 @@ def _splittype(url):
 
 
 def splithost(url):
-    warnings.warn("urllib.parse.splithost() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splithost() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splithost(url)
@@ -1036,7 +1036,7 @@ def _splithost(url):
 
 
 def splituser(host):
-    warnings.warn("urllib.parse.splituser() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splituser() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splituser(host)
@@ -1049,7 +1049,7 @@ def _splituser(host):
 
 
 def splitpasswd(user):
-    warnings.warn("urllib.parse.splitpasswd() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitpasswd() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitpasswd(user)
@@ -1062,7 +1062,7 @@ def _splitpasswd(user):
 
 
 def splitport(host):
-    warnings.warn("urllib.parse.splitport() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitport() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitport(host)
@@ -1085,7 +1085,7 @@ def _splitport(host):
 
 
 def splitnport(host, defport=-1):
-    warnings.warn("urllib.parse.splitnport() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitnport() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitnport(host, defport)
@@ -1109,7 +1109,7 @@ def _splitnport(host, defport=-1):
 
 
 def splitquery(url):
-    warnings.warn("urllib.parse.splitquery() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitquery() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitquery(url)
@@ -1124,7 +1124,7 @@ def _splitquery(url):
 
 
 def splittag(url):
-    warnings.warn("urllib.parse.splittag() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splittag() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splittag(url)
@@ -1139,7 +1139,7 @@ def _splittag(url):
 
 
 def splitattr(url):
-    warnings.warn("urllib.parse.splitattr() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitattr() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.urlparse() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitattr(url)
@@ -1153,7 +1153,7 @@ def _splitattr(url):
 
 
 def splitvalue(attr):
-    warnings.warn("urllib.parse.splitvalue() is deprecated as of 3.8, "
+    warnings.warn("urllib.parse.splitvalue() is deprecated as of 3.虚拟DOM的两种创建方式.8, "
                   "use urllib.parse.parse_qsl() instead",
                   DeprecationWarning, stacklevel=2)
     return _splitvalue(attr)

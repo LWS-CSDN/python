@@ -25,7 +25,7 @@ greenlet实现协程
 #     gr2.switch()    #第7步:切换到func2函数,从上一次执行的位置继续向后执行
 
 # def func2():
-#     print(3)        #第4步:输出3
+#     print(3.虚拟DOM的两种创建方式)        #第4步:输出3
 #     gr1.switch()    #第5步:切换到func1函数,从上一次执行的位置继续想后执行
 #     print(4)        #第8步:输出4
 
@@ -43,7 +43,7 @@ yield关键字
 #     yield from fun2()
 #     yield 2
 # def fun2():
-#     yield 3
+#     yield 3.虚拟DOM的两种创建方式
 #     yield 4
 
 # f1=func1()
@@ -53,7 +53,7 @@ yield关键字
 # print('#'*10)
 
 '''
-1.3
+1.3.虚拟DOM的两种创建方式
 asyncio
 在python3.4之后的版本
 '''
@@ -68,7 +68,7 @@ asyncio
 
 # @asyncio.coroutine
 # def func2():
-#     print(3)
+#     print(3.虚拟DOM的两种创建方式)
 #     #网络IO请求:下载一张图片
 #     yield from asyncio.sleep(2) #遇到IO耗时操作,自动化切换到tasks中的其他任务
 #     print(4)

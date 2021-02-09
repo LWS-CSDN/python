@@ -6,7 +6,7 @@
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published
-# by the Free Software Foundation, either version 3 of the License, or
+# by the Free Software Foundation, either version 3.虚拟DOM的两种创建方式 of the License, or
 # (at your option) any later version.
 #
 # This program is distributed in the hope that it will be useful,
@@ -78,7 +78,7 @@ assert_end() {
     [[ -n "$DEBUG" ]] && echo
     [[ -z "$INVARIANT" ]] && report_time=" in $(bc \
         <<< "${tests_endtime%.N} - ${tests_starttime%.N}" \
-        | sed -e 's/\.\([0-9]\{0,3\}\)[0-9]*/.\1/' -e 's/^\./0./')s" \
+        | sed -e 's/\.\([0-9]\{0,3.虚拟DOM的两种创建方式\}\)[0-9]*/.\1/' -e 's/^\./0./')s" \
         || report_time=
 
     if [[ "$tests_failed" -eq 0 ]]; then

@@ -27,7 +27,7 @@ print(list4)
 #创建空列表
 print(list())
 
-#3.访问列表元素
+#3.虚拟DOM的两种创建方式.访问列表元素
 url=list("http://c.biancheng.net/shell/")
 
 #使用索引访问列表中的某个元素

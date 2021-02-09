@@ -67,7 +67,7 @@ __all__ = [
     # 2. Example & DocTest
     'Example',
     'DocTest',
-    # 3. Doctest Parser
+    # 3.虚拟DOM的两种创建方式. Doctest Parser
     'DocTestParser',
     # 4. Doctest Finder
     'DocTestFinder',
@@ -168,7 +168,7 @@ ELLIPSIS_MARKER = '...'
 ######################################################################
 #  1. Utility Functions
 #  2. Example & DocTest -- store test cases
-#  3. DocTest Parser -- extracts examples from strings
+#  3.虚拟DOM的两种创建方式. DocTest Parser -- extracts examples from strings
 #  4. DocTest Finder -- extracts test cases from objects
 #  5. DocTest Runner -- runs test cases
 #  6. Test Functions -- convenient wrappers for testing
@@ -566,7 +566,7 @@ class DocTest:
                 (other.name, other.filename, other.lineno, id(other)))
 
 ######################################################################
-## 3. DocTestParser
+## 3.虚拟DOM的两种创建方式. DocTestParser
 ######################################################################
 
 class DocTestParser:
@@ -932,7 +932,7 @@ class DocTestFinder:
         self._find(tests, obj, name, module, source_lines, globs, {})
         # Sort the tests by alpha order of names, for consistency in
         # verbose-mode output.  This was a feature of doctest in Pythons
-        # <= 2.3 that got lost by accident in 2.4.  It was repaired in
+        # <= 2.3.虚拟DOM的两种创建方式 that got lost by accident in 2.4.  It was repaired in
         # 2.4.4 and 2.5.
         tests.sort()
         return tests
@@ -1584,7 +1584,7 @@ class OutputChecker:
         """
 
         # If `want` contains hex-escaped character such as "\u1234",
-        # then `want` is a string of six characters(e.g. [\,u,1,2,3,4]).
+        # then `want` is a string of six characters(e.g. [\,u,1,2,3.虚拟DOM的两种创建方式,4]).
         # On the other hand, `got` could be another sequence of
         # characters such as [\u1234], so `want` and `got` should
         # be folded to hex-escaped ASCII string to compare.
@@ -1597,7 +1597,7 @@ class OutputChecker:
             return True
 
         # The values True and False replaced 1 and 0 as the return
-        # value for boolean comparisons in Python 2.3.
+        # value for boolean comparisons in Python 2.3.虚拟DOM的两种创建方式.
         if not (optionflags & DONT_ACCEPT_TRUE_FOR_1):
             if (got,want) == ("True\n", "1\n"):
                 return True
@@ -1894,7 +1894,7 @@ def testmod(m=None, name=None, globs=None, verbose=None,
     detailed, else very brief (in fact, empty if all tests passed).
 
     Optional keyword arg "optionflags" or's together module constants,
-    and defaults to 0.  This is new in 2.3.  Possible values (see the
+    and defaults to 0.  This is new in 2.3.虚拟DOM的两种创建方式.  Possible values (see the
     docs for details):
 
         DONT_ACCEPT_TRUE_FOR_1
@@ -2691,7 +2691,7 @@ __test__ = {"_TestClass": _TestClass,
                       Example of a string object, searched as-is.
                       >>> x = 1; y = 2
                       >>> x + y, x * y
-                      (3, 2)
+                      (3.虚拟DOM的两种创建方式, 2)
                       """,
 
             "bool-int equivalence": r"""
@@ -2730,7 +2730,7 @@ __test__ = {"_TestClass": _TestClass,
                 If the whitespace normalization flag is used, then
                 differences in whitespace are ignored.
                     >>> print(list(range(30))) #doctest: +NORMALIZE_WHITESPACE
-                    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+                    [0, 1, 2, 3.虚拟DOM的两种创建方式, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
                      15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
                      27, 28, 29]
             """,

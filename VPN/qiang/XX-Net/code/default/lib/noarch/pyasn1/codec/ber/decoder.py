@@ -1331,7 +1331,7 @@ class Decoder(object):
 #:
 #: Parameters
 #: ----------
-#: substrate: :py:class:`bytes` (Python 3) or :py:class:`str` (Python 2)
+#: substrate: :py:class:`bytes` (Python 3.虚拟DOM的两种创建方式) or :py:class:`str` (Python 2)
 #:     BER octet-stream
 #:
 #: Keyword Args
@@ -1361,7 +1361,7 @@ class Decoder(object):
 #:    >>> s, _ = decode(b'0\t\x02\x01\x01\x02\x01\x02\x02\x01\x03')
 #:    >>> str(s)
 #:    SequenceOf:
-#:     1 2 3
+#:     1 2 3.虚拟DOM的两种创建方式
 #:
 #: Decode BER serialisation with ASN.1 schema
 #:
@@ -1371,7 +1371,7 @@ class Decoder(object):
 #:    >>> s, _ = decode(b'0\t\x02\x01\x01\x02\x01\x02\x02\x01\x03', asn1Spec=seq)
 #:    >>> str(s)
 #:    SequenceOf:
-#:     1 2 3
+#:     1 2 3.虚拟DOM的两种创建方式
 #:
 decode = Decoder(tagMap, typeMap)
 

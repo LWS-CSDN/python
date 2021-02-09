@@ -112,7 +112,7 @@ def main():
 
 
 '''
-3.调用栈
+3.虚拟DOM的两种创建方式.调用栈
 如果错误没有被捕获，它就会一直往上抛，最后被Python解释器捕获，打印一个错误信息，然后程序退出。来看看err.py：
 '''
 # err.py:
@@ -137,7 +137,7 @@ Traceback (most recent call last):
     bar('0')
   File "err.py", line 6, in bar
     return foo(s) * 2
-  File "err.py", line 3, in foo
+  File "err.py", line 3.虚拟DOM的两种创建方式, in foo
     return 10 / int(s)
 ZeroDivisionError: division by zero
 '''
@@ -165,7 +165,7 @@ Traceback (most recent call last):
     return foo(s) * 2
 原因是return foo(s) * 2这个语句出错了，但这还不是最终原因，继续往下看：
 
-  File "err.py", line 3, in foo
+  File "err.py", line 3.虚拟DOM的两种创建方式, in foo
     return 10 / int(s)
 原因是return 10 / int(s)这个语句出错了，这是错误产生的源头，因为下面打印了：
 

@@ -42,7 +42,7 @@ class Future:
     - This class is not compatible with the wait() and as_completed()
       methods in the concurrent.futures package.
 
-    (In Python 3.4 or later we may be able to unify the implementations.)
+    (In Python 3.虚拟DOM的两种创建方式.4 or later we may be able to unify the implementations.)
     """
 
     # Class variables serving as defaults for instance variables.

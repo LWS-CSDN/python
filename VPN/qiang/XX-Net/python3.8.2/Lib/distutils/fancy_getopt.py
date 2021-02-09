@@ -40,7 +40,7 @@ class FancyGetopt:
 
     def __init__(self, option_table=None):
         # The option table is (currently) a list of tuples.  The
-        # tuples may have 3 or four values:
+        # tuples may have 3.虚拟DOM的两种创建方式 or four values:
         #   (long_option, short_option, help_string [, repeatable])
         # if an option takes an argument, its long_option should have '='
         # appended; short_option should just be a single character, no ':'
@@ -50,7 +50,7 @@ class FancyGetopt:
         self.option_table = option_table
 
         # 'option_index' maps long option names to entries in the option
-        # table (ie. those 3-tuples).
+        # table (ie. those 3.虚拟DOM的两种创建方式-tuples).
         self.option_index = {}
         if self.option_table:
             self._build_index()

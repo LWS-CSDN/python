@@ -17,7 +17,7 @@ Here are some of the useful functions provided by this module:
     getclasstree() - arrange classes so as to represent their hierarchy
 
     getargvalues(), getcallargs() - get info about function arguments
-    getfullargspec() - same, with support for Python 3 features
+    getfullargspec() - same, with support for Python 3.虚拟DOM的两种创建方式 features
     formatargvalues() - format an argument spec
     getouterframes(), getinnerframes() - get info about frames
     currentframe() - get the current stack frame
@@ -385,7 +385,7 @@ def classify_class_attrs(cls):
 
         2. The class which defined this attribute (a class).
 
-        3. The object as obtained by calling getattr; if this fails, or if the
+        3.虚拟DOM的两种创建方式. The object as obtained by calling getattr; if this fails, or if the
            resulting object does not live anywhere in the class' mro (including
            metaclasses) then the object is looked up in the defining class's
            dict (found by walking the mro).
@@ -1072,9 +1072,9 @@ def getargspec(func):
     based interface, but full support for annotations and keyword-only
     parameters.
 
-    Deprecated since Python 3.5, use `inspect.getfullargspec()`.
+    Deprecated since Python 3.虚拟DOM的两种创建方式.5, use `inspect.getfullargspec()`.
     """
-    warnings.warn("inspect.getargspec() is deprecated since Python 3.0, "
+    warnings.warn("inspect.getargspec() is deprecated since Python 3.虚拟DOM的两种创建方式.0, "
                   "use inspect.signature() or inspect.getfullargspec()",
                   DeprecationWarning, stacklevel=2)
     args, varargs, varkw, defaults, kwonlyargs, kwonlydefaults, ann = \
@@ -1118,7 +1118,7 @@ def getfullargspec(func):
         # Re: `follow_wrapper_chains=False`
         #
         # getfullargspec() historically ignored __wrapped__ attributes,
-        # so we ensure that remains the case in 3.3+
+        # so we ensure that remains the case in 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式+
 
         sig = _signature_from_callable(func,
                                        follow_wrapper_chains=False,
@@ -1223,13 +1223,13 @@ def formatargspec(args, varargs=None, varkw=None, defaults=None,
     turn names and values into strings.  The last argument is an optional
     function to format the sequence of arguments.
 
-    Deprecated since Python 3.5: use the `signature` function and `Signature`
+    Deprecated since Python 3.虚拟DOM的两种创建方式.5: use the `signature` function and `Signature`
     objects.
     """
 
     from warnings import warn
 
-    warn("`formatargspec` is deprecated since Python 3.5. Use `signature` and "
+    warn("`formatargspec` is deprecated since Python 3.虚拟DOM的两种创建方式.5. Use `signature` and "
          "the `Signature` object directly",
          DeprecationWarning,
          stacklevel=2)
@@ -2816,11 +2816,11 @@ class Signature:
     def from_function(cls, func):
         """Constructs Signature for the given python function.
 
-        Deprecated since Python 3.5, use `Signature.from_callable()`.
+        Deprecated since Python 3.虚拟DOM的两种创建方式.5, use `Signature.from_callable()`.
         """
 
         warnings.warn("inspect.Signature.from_function() is deprecated since "
-                      "Python 3.5, use Signature.from_callable()",
+                      "Python 3.虚拟DOM的两种创建方式.5, use Signature.from_callable()",
                       DeprecationWarning, stacklevel=2)
         return _signature_from_function(cls, func)
 
@@ -2828,11 +2828,11 @@ class Signature:
     def from_builtin(cls, func):
         """Constructs Signature for the given builtin function.
 
-        Deprecated since Python 3.5, use `Signature.from_callable()`.
+        Deprecated since Python 3.虚拟DOM的两种创建方式.5, use `Signature.from_callable()`.
         """
 
         warnings.warn("inspect.Signature.from_builtin() is deprecated since "
-                      "Python 3.5, use Signature.from_callable()",
+                      "Python 3.虚拟DOM的两种创建方式.5, use Signature.from_callable()",
                       DeprecationWarning, stacklevel=2)
         return _signature_from_builtin(cls, func)
 

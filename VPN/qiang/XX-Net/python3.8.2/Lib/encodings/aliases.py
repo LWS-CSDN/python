@@ -545,7 +545,7 @@ aliases = {
     'zip'                : 'zlib_codec',
     'zlib'               : 'zlib_codec',
 
-    # temporary mac CJK aliases, will be replaced by proper codecs in 3.1
+    # temporary mac CJK aliases, will be replaced by proper codecs in 3.虚拟DOM的两种创建方式.1
     'x_mac_japanese'      : 'shift_jis',
     'x_mac_korean'        : 'euc_kr',
     'x_mac_simp_chinese'  : 'gb2312',

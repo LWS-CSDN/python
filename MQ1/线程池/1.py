@@ -12,7 +12,7 @@ python进程池,线程池与异步调用,回调机制
 # #  下面是以进程池为例， 线程池只是模块改一下即可
 # def talk(name):
 #     print('name: %s  pis%s  run' % (name,os.getpid()))
-#     time.sleep(random.randint(1, 3))
+#     time.sleep(random.randint(1, 3.虚拟DOM的两种创建方式))
 
 # if __name__ == '__main__':
 #     pool = ProcessPoolExecutor(4)  # 设置线程池大小，默认等于cpu核数
@@ -39,7 +39,7 @@ python进程池,线程池与异步调用,回调机制
 # # 1、同步调用： 提交完任务后、就原地等待任务执行完毕，拿到结果，再执行下一行代码（导致程序串行执行）
 # def talk(name):
 #     print('name: %s  pis%s  run' % (name,os.getpid()))
-#     time.sleep(random.randint(1, 3))
+#     time.sleep(random.randint(1, 3.虚拟DOM的两种创建方式))
 
 # if __name__ == '__main__':
 #     pool = ProcessPoolExecutor(4)
@@ -55,7 +55,7 @@ python进程池,线程池与异步调用,回调机制
 
 # def talk(name):
 #     print('name: %s  pis%s  run' % (name,os.getpid()))
-#     time.sleep(random.randint(1, 3))
+#     time.sleep(random.randint(1, 3.虚拟DOM的两种创建方式))
 #     print(name+'已完成')
 
 # if __name__ == '__main__':
@@ -75,7 +75,7 @@ python进程池,线程池与异步调用,回调机制
 # def get(url):
 #     print('GET %s' % url)
 #     response = requests.get(url)  # 下载页面
-#     time.sleep(3)  # 模拟网络延时
+#     time.sleep(3.虚拟DOM的两种创建方式)  # 模拟网络延时
 #     return {'url': url, 'content': response.text}  # 页面地址和页面内容
 
 # def parse(res):

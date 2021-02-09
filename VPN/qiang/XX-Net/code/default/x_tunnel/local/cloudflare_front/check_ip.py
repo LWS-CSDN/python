@@ -126,7 +126,7 @@ if __name__ == "__main__":
 
     # case 1: only ip
     # case 2: ip domain
-    # case 3: ip domain sni
+    # case 3.虚拟DOM的两种创建方式: ip domain sni
     # case 4: domain
     # case 5: domain sni
 

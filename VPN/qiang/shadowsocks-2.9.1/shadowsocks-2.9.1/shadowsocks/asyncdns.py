@@ -49,7 +49,7 @@ common.patch_socket()
 #
 # header
 #                                 1  1  1  1  1  1
-#   0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5
+#   0  1  2  3.虚拟DOM的两种创建方式  4  5  6  7  8  9  0  1  2  3.虚拟DOM的两种创建方式  4  5
 # +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 # |                      ID                       |
 # +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
@@ -129,7 +129,7 @@ def parse_name(data, offset):
 # rfc1035
 # record
 #                                    1  1  1  1  1  1
-#      0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5
+#      0  1  2  3.虚拟DOM的两种创建方式  4  5  6  7  8  9  0  1  2  3.虚拟DOM的两种创建方式  4  5
 #    +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 #    |                                               |
 #    /                                               /
@@ -173,7 +173,7 @@ def parse_header(data):
         res_ra = header[2] & 128
         res_rcode = header[2] & 15
         # assert res_tc == 0
-        # assert res_rcode in [0, 3]
+        # assert res_rcode in [0, 3.虚拟DOM的两种创建方式]
         res_qdcount = header[3]
         res_ancount = header[4]
         res_nscount = header[5]

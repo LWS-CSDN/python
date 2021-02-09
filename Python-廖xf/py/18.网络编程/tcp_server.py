@@ -17,7 +17,7 @@
 # #2.绑定地址（包括ip地址和端口号） 监听端口
 # server.bind((bind_ip, bind_port))
  
-# #3.设置监听数
+# #3.虚拟DOM的两种创建方式.设置监听数
 # server.listen(1)
  
 # print('Waiting for connection...')
@@ -66,7 +66,7 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #2.绑定地址（包括ip地址和端口号） 监听端口
 server.bind((bind_ip, bind_port))
  
-#3.设置监听数
+#3.虚拟DOM的两种创建方式.设置监听数
 server.listen(5)
  
 print('Waiting for connection...')

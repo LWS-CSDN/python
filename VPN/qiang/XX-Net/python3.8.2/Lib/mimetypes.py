@@ -48,7 +48,7 @@ knownfiles = [
     "/usr/local/etc/httpd/conf/mime.types",
     "/usr/local/lib/netscape/mime.types",
     "/usr/local/etc/httpd/conf/mime.types",     # Apache 1.2
-    "/usr/local/etc/mime.types",                # Apache 1.3
+    "/usr/local/etc/mime.types",                # Apache 1.3.虚拟DOM的两种创建方式
     ]
 
 inited = False

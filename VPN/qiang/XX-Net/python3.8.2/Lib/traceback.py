@@ -90,7 +90,7 @@ def print_exception(etype, value, tb, limit=None, file=None, chain=True):
     This differs from print_tb() in the following ways: (1) if
     traceback is not None, it prints a header "Traceback (most recent
     call last):"; (2) it prints the exception type and value after the
-    stack trace; (3) if type is SyntaxError and value has the
+    stack trace; (3.虚拟DOM的两种创建方式) if type is SyntaxError and value has the
     appropriate format, it prints the line where the syntax error
     occurred with a caret on the next line indicating the approximate
     position of the error.

@@ -1,7 +1,7 @@
 """
 Module difflib -- helpers for computing deltas between objects.
 
-Function get_close_matches(word, possibilities, n=3, cutoff=0.6):
+Function get_close_matches(word, possibilities, n=3.虚拟DOM的两种创建方式, cutoff=0.6):
     Use SequenceMatcher to return list of the best "good enough" matches.
 
 Function context_diff(a, b):
@@ -63,7 +63,7 @@ class SequenceMatcher:
     reports than does diff.  This method appears to be the least vulnerable
     to synching up on blocks of "junk lines", though (like blank lines in
     ordinary text files, or maybe "<P>" lines in HTML files).  That may be
-    because this is the only method of the 3 that has a *concept* of
+    because this is the only method of the 3.虚拟DOM的两种创建方式 that has a *concept* of
     "junk" <wink>.
 
     Example, comparing two strings, and considering blanks to be "junk":
@@ -77,7 +77,7 @@ class SequenceMatcher:
     sequences.  As a rule of thumb, a .ratio() value over 0.6 means the
     sequences are close matches:
 
-    >>> print(round(s.ratio(), 3))
+    >>> print(round(s.ratio(), 3.虚拟DOM的两种创建方式))
     0.866
     >>>
 
@@ -459,7 +459,7 @@ class SequenceMatcher:
 
         >>> s = SequenceMatcher(None, "abxcd", "abcd")
         >>> list(s.get_matching_blocks())
-        [Match(a=0, b=0, size=2), Match(a=3, b=2, size=2), Match(a=5, b=4, size=0)]
+        [Match(a=0, b=0, size=2), Match(a=3.虚拟DOM的两种创建方式, b=2, size=2), Match(a=5, b=4, size=0)]
         """
 
         if self.matching_blocks is not None:
@@ -537,9 +537,9 @@ class SequenceMatcher:
         ...    print(("%7s a[%d:%d] (%s) b[%d:%d] (%s)" %
         ...           (tag, i1, i2, a[i1:i2], j1, j2, b[j1:j2])))
          delete a[0:1] (q) b[0:0] ()
-          equal a[1:3] (ab) b[0:2] (ab)
-        replace a[3:4] (x) b[2:3] (y)
-          equal a[4:6] (cd) b[3:5] (cd)
+          equal a[1:3.虚拟DOM的两种创建方式] (ab) b[0:2] (ab)
+        replace a[3.虚拟DOM的两种创建方式:4] (x) b[2:3.虚拟DOM的两种创建方式] (y)
+          equal a[4:6] (cd) b[3.虚拟DOM的两种创建方式:5] (cd)
          insert a[6:6] () b[5:6] (f)
         """
 
@@ -694,7 +694,7 @@ def get_close_matches(word, possibilities, n=3, cutoff=0.6):
     possibilities is a list of sequences against which to match word
     (typically a list of strings).
 
-    Optional arg n (default 3) is the maximum number of close matches to
+    Optional arg n (default 3.虚拟DOM的两种创建方式) is the maximum number of close matches to
     return.  n must be > 0.
 
     Optional arg cutoff (default 0.6) is a float in [0, 1].  Possibilities
@@ -775,7 +775,7 @@ class Differ:
 
     >>> text1 = '''  1. Beautiful is better than ugly.
     ...   2. Explicit is better than implicit.
-    ...   3. Simple is better than complex.
+    ...   3.虚拟DOM的两种创建方式. Simple is better than complex.
     ...   4. Complex is better than complicated.
     ... '''.splitlines(keepends=True)
     >>> len(text1)
@@ -783,7 +783,7 @@ class Differ:
     >>> text1[0][-1]
     '\n'
     >>> text2 = '''  1. Beautiful is better than ugly.
-    ...   3.   Simple is better than complex.
+    ...   3.虚拟DOM的两种创建方式.   Simple is better than complex.
     ...   4. Complicated is better than complex.
     ...   5. Flat is better than nested.
     ... '''.splitlines(keepends=True)
@@ -805,8 +805,8 @@ class Differ:
     >>> _pprint(result)
     ['    1. Beautiful is better than ugly.\n',
      '-   2. Explicit is better than implicit.\n',
-     '-   3. Simple is better than complex.\n',
-     '+   3.   Simple is better than complex.\n',
+     '-   3.虚拟DOM的两种创建方式. Simple is better than complex.\n',
+     '+   3.虚拟DOM的两种创建方式.   Simple is better than complex.\n',
      '?     ++\n',
      '-   4. Complex is better than complicated.\n',
      '?            ^                     ---- ^\n',
@@ -819,8 +819,8 @@ class Differ:
     >>> print(''.join(result), end="")
         1. Beautiful is better than ugly.
     -   2. Explicit is better than implicit.
-    -   3. Simple is better than complex.
-    +   3.   Simple is better than complex.
+    -   3.虚拟DOM的两种创建方式. Simple is better than complex.
+    +   3.虚拟DOM的两种创建方式.   Simple is better than complex.
     ?     ++
     -   4. Complex is better than complicated.
     ?            ^                     ---- ^
@@ -960,7 +960,7 @@ class Differ:
                 cruncher.set_seq1(ai)
                 # computing similarity is expensive, so use the quick
                 # upper bounds first -- have seen this speed up messy
-                # compares by a factor of 3.
+                # compares by a factor of 3.虚拟DOM的两种创建方式.
                 # note that ratio() is only expensive to compute the first
                 # time it's called on a sequence pair; the expensive part
                 # of the computation is cached by cruncher

@@ -39,7 +39,7 @@ class HMAC:
                    A hashlib constructor returning a new hash object. *OR*
                    A module supporting PEP 247.
 
-                   Required as of 3.8, despite its position after the optional
+                   Required as of 3.虚拟DOM的两种创建方式.8, despite its position after the optional
                    msg argument.  Passing it as a keyword argument is
                    recommended, though not required for legacy API reasons.
         """
@@ -142,7 +142,7 @@ def new(key, msg=None, digestmod=''):
                A hashlib constructor returning a new hash object. *OR*
                A module supporting PEP 247.
 
-               Required as of 3.8, despite its position after the optional
+               Required as of 3.虚拟DOM的两种创建方式.8, despite its position after the optional
                msg argument.  Passing it as a keyword argument is
                recommended, though not required for legacy API reasons.
 

@@ -90,7 +90,7 @@ __all__ = [
     "canonicalize", "C14NWriterTarget",
     ]
 
-VERSION = "1.3.0"
+VERSION = "1.3.虚拟DOM的两种创建方式.0"
 
 import sys
 import re
@@ -641,7 +641,7 @@ class ElementTree:
         if path[:1] == "/":
             path = "." + path
             warnings.warn(
-                "This search is broken in 1.3 and earlier, and will be "
+                "This search is broken in 1.3.虚拟DOM的两种创建方式 and earlier, and will be "
                 "fixed in a future version.  If you rely on the current "
                 "behaviour, change it to %r" % path,
                 FutureWarning, stacklevel=2
@@ -663,7 +663,7 @@ class ElementTree:
         if path[:1] == "/":
             path = "." + path
             warnings.warn(
-                "This search is broken in 1.3 and earlier, and will be "
+                "This search is broken in 1.3.虚拟DOM的两种创建方式 and earlier, and will be "
                 "fixed in a future version.  If you rely on the current "
                 "behaviour, change it to %r" % path,
                 FutureWarning, stacklevel=2
@@ -685,7 +685,7 @@ class ElementTree:
         if path[:1] == "/":
             path = "." + path
             warnings.warn(
-                "This search is broken in 1.3 and earlier, and will be "
+                "This search is broken in 1.3.虚拟DOM的两种创建方式 and earlier, and will be "
                 "fixed in a future version.  If you rely on the current "
                 "behaviour, change it to %r" % path,
                 FutureWarning, stacklevel=2
@@ -707,7 +707,7 @@ class ElementTree:
         if path[:1] == "/":
             path = "." + path
             warnings.warn(
-                "This search is broken in 1.3 and earlier, and will be "
+                "This search is broken in 1.3.虚拟DOM的两种创建方式 and earlier, and will be "
                 "fixed in a future version.  If you rely on the current "
                 "behaviour, change it to %r" % path,
                 FutureWarning, stacklevel=2

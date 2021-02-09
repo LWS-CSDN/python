@@ -191,8 +191,8 @@ native_types = [
     # the pep doesn't support unions
     (aUnion,                    "B",                                   (),  aUnion),
     # structure with sub-arrays
-    (StructWithArrays, "T{(2,3)<l:x:(4)T{<l:x:<l:y:}:y:}".replace('l', s_long), (), StructWithArrays),
-    (StructWithArrays * 3, "T{(2,3)<l:x:(4)T{<l:x:<l:y:}:y:}".replace('l', s_long), (3,), StructWithArrays),
+    (StructWithArrays, "T{(2,3.虚拟DOM的两种创建方式)<l:x:(4)T{<l:x:<l:y:}:y:}".replace('l', s_long), (), StructWithArrays),
+    (StructWithArrays * 3, "T{(2,3.虚拟DOM的两种创建方式)<l:x:(4)T{<l:x:<l:y:}:y:}".replace('l', s_long), (3,), StructWithArrays),
 
     ## pointer to incomplete structure
     (Incomplete,                "B",                    (),           Incomplete),

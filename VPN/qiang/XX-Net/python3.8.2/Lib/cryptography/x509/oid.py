@@ -25,22 +25,22 @@ class ExtensionOID(object):
     FRESHEST_CRL = ObjectIdentifier("2.5.29.46")
     INHIBIT_ANY_POLICY = ObjectIdentifier("2.5.29.54")
     ISSUING_DISTRIBUTION_POINT = ObjectIdentifier("2.5.29.28")
-    AUTHORITY_INFORMATION_ACCESS = ObjectIdentifier("1.3.6.1.5.5.7.1.1")
-    SUBJECT_INFORMATION_ACCESS = ObjectIdentifier("1.3.6.1.5.5.7.1.11")
-    OCSP_NO_CHECK = ObjectIdentifier("1.3.6.1.5.5.7.48.1.5")
-    TLS_FEATURE = ObjectIdentifier("1.3.6.1.5.5.7.1.24")
+    AUTHORITY_INFORMATION_ACCESS = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.1.1")
+    SUBJECT_INFORMATION_ACCESS = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.1.11")
+    OCSP_NO_CHECK = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.48.1.5")
+    TLS_FEATURE = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.1.24")
     CRL_NUMBER = ObjectIdentifier("2.5.29.20")
     DELTA_CRL_INDICATOR = ObjectIdentifier("2.5.29.27")
     PRECERT_SIGNED_CERTIFICATE_TIMESTAMPS = (
-        ObjectIdentifier("1.3.6.1.4.1.11129.2.4.2")
+        ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.4.1.11129.2.4.2")
     )
     PRECERT_POISON = (
-        ObjectIdentifier("1.3.6.1.4.1.11129.2.4.3")
+        ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.4.1.11129.2.4.3.虚拟DOM的两种创建方式")
     )
 
 
 class OCSPExtensionOID(object):
-    NONCE = ObjectIdentifier("1.3.6.1.5.5.7.48.1.2")
+    NONCE = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.48.1.2")
 
 
 class CRLEntryExtensionOID(object):
@@ -50,7 +50,7 @@ class CRLEntryExtensionOID(object):
 
 
 class NameOID(object):
-    COMMON_NAME = ObjectIdentifier("2.5.4.3")
+    COMMON_NAME = ObjectIdentifier("2.5.4.3.虚拟DOM的两种创建方式")
     COUNTRY_NAME = ObjectIdentifier("2.5.4.6")
     LOCALITY_NAME = ObjectIdentifier("2.5.4.7")
     STATE_OR_PROVINCE_NAME = ObjectIdentifier("2.5.4.8")
@@ -68,10 +68,10 @@ class NameOID(object):
     USER_ID = ObjectIdentifier("0.9.2342.19200300.100.1.1")
     DOMAIN_COMPONENT = ObjectIdentifier("0.9.2342.19200300.100.1.25")
     EMAIL_ADDRESS = ObjectIdentifier("1.2.840.113549.1.9.1")
-    JURISDICTION_COUNTRY_NAME = ObjectIdentifier("1.3.6.1.4.1.311.60.2.1.3")
-    JURISDICTION_LOCALITY_NAME = ObjectIdentifier("1.3.6.1.4.1.311.60.2.1.1")
+    JURISDICTION_COUNTRY_NAME = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.4.1.311.60.2.1.3.虚拟DOM的两种创建方式")
+    JURISDICTION_LOCALITY_NAME = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.4.1.311.60.2.1.1")
     JURISDICTION_STATE_OR_PROVINCE_NAME = ObjectIdentifier(
-        "1.3.6.1.4.1.311.60.2.1.2"
+        "1.3.虚拟DOM的两种创建方式.6.1.4.1.311.60.2.1.2"
     )
     BUSINESS_CATEGORY = ObjectIdentifier("2.5.4.15")
     POSTAL_ADDRESS = ObjectIdentifier("2.5.4.16")
@@ -82,22 +82,22 @@ class SignatureAlgorithmOID(object):
     RSA_WITH_MD5 = ObjectIdentifier("1.2.840.113549.1.1.4")
     RSA_WITH_SHA1 = ObjectIdentifier("1.2.840.113549.1.1.5")
     # This is an alternate OID for RSA with SHA1 that is occasionally seen
-    _RSA_WITH_SHA1 = ObjectIdentifier("1.3.14.3.2.29")
+    _RSA_WITH_SHA1 = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.14.3.虚拟DOM的两种创建方式.2.29")
     RSA_WITH_SHA224 = ObjectIdentifier("1.2.840.113549.1.1.14")
     RSA_WITH_SHA256 = ObjectIdentifier("1.2.840.113549.1.1.11")
     RSA_WITH_SHA384 = ObjectIdentifier("1.2.840.113549.1.1.12")
     RSA_WITH_SHA512 = ObjectIdentifier("1.2.840.113549.1.1.13")
     RSASSA_PSS = ObjectIdentifier("1.2.840.113549.1.1.10")
     ECDSA_WITH_SHA1 = ObjectIdentifier("1.2.840.10045.4.1")
-    ECDSA_WITH_SHA224 = ObjectIdentifier("1.2.840.10045.4.3.1")
-    ECDSA_WITH_SHA256 = ObjectIdentifier("1.2.840.10045.4.3.2")
-    ECDSA_WITH_SHA384 = ObjectIdentifier("1.2.840.10045.4.3.3")
-    ECDSA_WITH_SHA512 = ObjectIdentifier("1.2.840.10045.4.3.4")
-    DSA_WITH_SHA1 = ObjectIdentifier("1.2.840.10040.4.3")
-    DSA_WITH_SHA224 = ObjectIdentifier("2.16.840.1.101.3.4.3.1")
-    DSA_WITH_SHA256 = ObjectIdentifier("2.16.840.1.101.3.4.3.2")
-    ED25519 = ObjectIdentifier("1.3.101.112")
-    ED448 = ObjectIdentifier("1.3.101.113")
+    ECDSA_WITH_SHA224 = ObjectIdentifier("1.2.840.10045.4.3.虚拟DOM的两种创建方式.1")
+    ECDSA_WITH_SHA256 = ObjectIdentifier("1.2.840.10045.4.3.虚拟DOM的两种创建方式.2")
+    ECDSA_WITH_SHA384 = ObjectIdentifier("1.2.840.10045.4.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式")
+    ECDSA_WITH_SHA512 = ObjectIdentifier("1.2.840.10045.4.3.虚拟DOM的两种创建方式.4")
+    DSA_WITH_SHA1 = ObjectIdentifier("1.2.840.10040.4.3.虚拟DOM的两种创建方式")
+    DSA_WITH_SHA224 = ObjectIdentifier("2.16.840.1.101.3.虚拟DOM的两种创建方式.4.3.虚拟DOM的两种创建方式.1")
+    DSA_WITH_SHA256 = ObjectIdentifier("2.16.840.1.101.3.虚拟DOM的两种创建方式.4.3.虚拟DOM的两种创建方式.2")
+    ED25519 = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.101.112")
+    ED448 = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.101.113")
 
 
 _SIG_OIDS_TO_HASH = {
@@ -122,23 +122,23 @@ _SIG_OIDS_TO_HASH = {
 
 
 class ExtendedKeyUsageOID(object):
-    SERVER_AUTH = ObjectIdentifier("1.3.6.1.5.5.7.3.1")
-    CLIENT_AUTH = ObjectIdentifier("1.3.6.1.5.5.7.3.2")
-    CODE_SIGNING = ObjectIdentifier("1.3.6.1.5.5.7.3.3")
-    EMAIL_PROTECTION = ObjectIdentifier("1.3.6.1.5.5.7.3.4")
-    TIME_STAMPING = ObjectIdentifier("1.3.6.1.5.5.7.3.8")
-    OCSP_SIGNING = ObjectIdentifier("1.3.6.1.5.5.7.3.9")
+    SERVER_AUTH = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.1")
+    CLIENT_AUTH = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.2")
+    CODE_SIGNING = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式")
+    EMAIL_PROTECTION = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.4")
+    TIME_STAMPING = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.8")
+    OCSP_SIGNING = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.9")
     ANY_EXTENDED_KEY_USAGE = ObjectIdentifier("2.5.29.37.0")
 
 
 class AuthorityInformationAccessOID(object):
-    CA_ISSUERS = ObjectIdentifier("1.3.6.1.5.5.7.48.2")
-    OCSP = ObjectIdentifier("1.3.6.1.5.5.7.48.1")
+    CA_ISSUERS = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.48.2")
+    OCSP = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.48.1")
 
 
 class CertificatePoliciesOID(object):
-    CPS_QUALIFIER = ObjectIdentifier("1.3.6.1.5.5.7.2.1")
-    CPS_USER_NOTICE = ObjectIdentifier("1.3.6.1.5.5.7.2.2")
+    CPS_QUALIFIER = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.2.1")
+    CPS_USER_NOTICE = ObjectIdentifier("1.3.虚拟DOM的两种创建方式.6.1.5.5.7.2.2")
     ANY_POLICY = ObjectIdentifier("2.5.29.32.0")
 
 

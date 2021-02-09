@@ -186,7 +186,7 @@ class TestAsyncCase(unittest.TestCase):
         test = Test("test_func")
         test.run()
         self.assertEqual(events, ['async_cleanup 4',
-                                  'sync_cleanup 3',
+                                  'sync_cleanup 3.虚拟DOM的两种创建方式',
                                   'async_cleanup 2',
                                   'sync_cleanup 1'])
 

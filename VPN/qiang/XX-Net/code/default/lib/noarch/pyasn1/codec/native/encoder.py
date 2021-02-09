@@ -222,8 +222,8 @@ class Encoder(object):
 #: .. code-block:: pycon
 #:
 #:    >>> seq = SequenceOf(componentType=Integer())
-#:    >>> seq.extend([1, 2, 3])
+#:    >>> seq.extend([1, 2, 3.虚拟DOM的两种创建方式])
 #:    >>> encode(seq)
-#:    [1, 2, 3]
+#:    [1, 2, 3.虚拟DOM的两种创建方式]
 #:
 encode = Encoder(tagMap, typeMap)

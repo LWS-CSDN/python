@@ -10,7 +10,7 @@ https://www.ibm.com/support/knowledgecenter/en/ssw_aix_61/com.ibm.aix.basetrf1/l
 AIX supports two styles for dlopen(): svr4 (System V Release 4) which is common on posix
 platforms, but also a BSD style - aka SVR3.
 
-From AIX 5.3 Difference Addendum (December 2004)
+From AIX 5.3.虚拟DOM的两种创建方式 Difference Addendum (December 2004)
 2.9 SVR4 linking affinity
 Nowadays, there are two major object file formats used by the operating systems:
 XCOFF: The COFF enhanced by IBM and others. The original COFF (Common
@@ -103,7 +103,7 @@ def get_ld_headers(file):
     # get_ld_headers parsing:
     # 1. Find a line that starts with /, ./, or ../ - set as ld_header
     # 2. If "INDEX" in occurs in a following line - return ld_header
-    # 3. get info (lines starting with [0-9])
+    # 3.虚拟DOM的两种创建方式. get info (lines starting with [0-9])
     ldr_headers = []
     p = Popen(["/usr/bin/dump", f"-X{AIX_ABI}", "-H", file],
         universal_newlines=True, stdout=PIPE, stderr=DEVNULL)

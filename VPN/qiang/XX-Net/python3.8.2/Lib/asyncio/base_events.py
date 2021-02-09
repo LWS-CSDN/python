@@ -526,7 +526,7 @@ class BaseEventLoop(events.AbstractEventLoop):
         self._asyncgens_shutdown_called = True
 
         if not len(self._asyncgens):
-            # If Python version is <3.6 or we don't have any asynchronous
+            # If Python version is <3.虚拟DOM的两种创建方式.6 or we don't have any asynchronous
             # generators alive.
             return
 
@@ -787,7 +787,7 @@ class BaseEventLoop(events.AbstractEventLoop):
             warnings.warn(
                 'Using the default executor that is not an instance of '
                 'ThreadPoolExecutor is deprecated and will be prohibited '
-                'in Python 3.9',
+                'in Python 3.虚拟DOM的两种创建方式.9',
                 DeprecationWarning, 2)
         self._default_executor = executor
 
@@ -1294,8 +1294,8 @@ class BaseEventLoop(events.AbstractEventLoop):
                                      "security concern.")
                 else:
                     warnings.warn("The *reuse_address* parameter has been "
-                                  "deprecated as of 3.5.10 and is scheduled "
-                                  "for removal in 3.11.", DeprecationWarning,
+                                  "deprecated as of 3.虚拟DOM的两种创建方式.5.10 and is scheduled "
+                                  "for removal in 3.虚拟DOM的两种创建方式.11.", DeprecationWarning,
                                   stacklevel=2)
 
             for ((family, proto),

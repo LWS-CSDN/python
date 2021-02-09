@@ -17,7 +17,7 @@
 # Then GAE_proxy local client will switch to range fetch mode.
 
 
-__version__ = '3.3.5'
+__version__ = '3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.5'
 __password__ = ''
 __hostsdeny__ = ()
 #__hostsdeny__ = ('.youtube.com', '.youku.com', ".googlevideo.com")

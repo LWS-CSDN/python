@@ -93,7 +93,7 @@ class TestLoader(object):
         loaded_suite = self.suiteClass(map(testCaseClass, testCaseNames))
         return loaded_suite
 
-    # XXX After Python 3.5, remove backward compatibility hacks for
+    # XXX After Python 3.虚拟DOM的两种创建方式.5, remove backward compatibility hacks for
     # use_load_tests deprecation via *args and **kws.  See issue 16662.
     def loadTestsFromModule(self, module, *args, pattern=None, **kws):
         """Return a suite of all test cases contained in the given module"""

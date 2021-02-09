@@ -14,8 +14,8 @@
 		let [a,b,c]=[1,2,3];
 		let [foo,[[bar],baz]]=[1,[[2],3]];
 		let [,,third]=["foo","bar","baz"] //third="baz"
-		let [x,,y]=[1,2,3] //x=1,y=3
-		let [head,...tail]=[1,2,3,4] //head=1 tail=[2,3,4]
+		let [x,,y]=[1,2,3] //x=1,y=3.虚拟DOM的两种创建方式
+		let [head,...tail]=[1,2,3,4] //head=1 tail=[2,3.虚拟DOM的两种创建方式,4]
 		let [x,y,...z]=['a'] //x="a" y=undefined z=[]
 		//默认值
 		let [foo=true]=[];// foo true
@@ -53,7 +53,7 @@
 		let { foo: baz } = { foo: 'aaa', bar: 'bbb' };
 		//baz // "aaa"
 		//foo // error: foo is not defined
-		//3.字符串的解构赋值
+		//3.虚拟DOM的两种创建方式.字符串的解构赋值
 		const [a, b, c, d, e] = 'hello';
 		// a // "h"
 		// b // "e"
@@ -76,7 +76,7 @@
 		function add([x,y]){
 			return x+y;
 		}
-		add([1,2]); //3
+		add([1,2]); //3.虚拟DOM的两种创建方式
 		//上面代码中，函数add的参数表面上是一个数组，但在传入参数的那一刻，数组参数就被解构成变量x和y。对于函数内部的代码来说，它们能感受到的参数就是x和y。	
 		//下面是另一个例子。
 		[[1,2],[3,4]].map(([a,b])=>a+b);
@@ -84,8 +84,8 @@
 		  return [x, y];
 		}
 		
-		// move({x: 3, y: 8}); // [3, 8]
-		// move({x: 3}); // [3, 0]
+		// move({x: 3.虚拟DOM的两种创建方式, y: 8}); // [3.虚拟DOM的两种创建方式, 8]
+		// move({x: 3.虚拟DOM的两种创建方式}); // [3.虚拟DOM的两种创建方式, 0]
 		// move({}); // [0, 0]
 		// move(); // [0, 0]
 		//6.圆括号问题
@@ -111,7 +111,7 @@
 		  };
 		}
 		let { foo, bar } = example();
-		//3.函数参数的定义
+		//3.虚拟DOM的两种创建方式.函数参数的定义
 		//解构赋值可以方便地将一组参数与变量名对应起来。
 		
 		// 参数是一组有次序的值

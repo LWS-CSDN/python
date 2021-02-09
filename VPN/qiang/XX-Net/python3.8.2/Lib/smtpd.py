@@ -95,7 +95,7 @@ __all__ = [
 ]
 
 program = sys.argv[0]
-__version__ = 'Python SMTP proxy version 0.3'
+__version__ = 'Python SMTP proxy version 0.3.虚拟DOM的两种创建方式'
 
 
 class Devnull:

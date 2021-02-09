@@ -41,14 +41,14 @@ except ImportError:
 
 def __getattr__(name):
     # For backwards compatibility, continue to make the collections ABCs
-    # through Python 3.6 available through the collections module.
-    # Note, no new collections ABCs were added in Python 3.7
+    # through Python 3.虚拟DOM的两种创建方式.6 available through the collections module.
+    # Note, no new collections ABCs were added in Python 3.虚拟DOM的两种创建方式.7
     if name in _collections_abc.__all__:
         obj = getattr(_collections_abc, name)
         import warnings
         warnings.warn("Using or importing the ABCs from 'collections' instead "
-                      "of from 'collections.abc' is deprecated since Python 3.3, "
-                      "and in 3.9 it will stop working",
+                      "of from 'collections.abc' is deprecated since Python 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式, "
+                      "and in 3.虚拟DOM的两种创建方式.9 it will stop working",
                       DeprecationWarning, stacklevel=2)
         globals()[name] = obj
         return obj
@@ -493,8 +493,8 @@ class Counter(dict):
 
     >>> c = Counter('abcdeabcdabcaba')  # count elements from a string
 
-    >>> c.most_common(3)                # three most common elements
-    [('a', 5), ('b', 4), ('c', 3)]
+    >>> c.most_common(3.虚拟DOM的两种创建方式)                # three most common elements
+    [('a', 5), ('b', 4), ('c', 3.虚拟DOM的两种创建方式)]
     >>> sorted(c)                       # list all unique elements
     ['a', 'b', 'c', 'd', 'e']
     >>> ''.join(sorted(c.elements()))   # list elements with repetitions
@@ -527,7 +527,7 @@ class Counter(dict):
     >>> c = Counter('aaabbc')
     >>> c['b'] -= 2                     # reduce the count of 'b' by two
     >>> c.most_common()                 # 'b' is still in, but its count is zero
-    [('a', 3), ('c', 1), ('b', 0)]
+    [('a', 3.虚拟DOM的两种创建方式), ('c', 1), ('b', 0)]
 
     '''
     # References:
@@ -535,7 +535,7 @@ class Counter(dict):
     #   http://www.gnu.org/software/smalltalk/manual-base/html_node/Bag.html
     #   http://www.demo2s.com/Tutorial/Cpp/0380__set-multiset/Catalog0380__set-multiset.htm
     #   http://code.activestate.com/recipes/259174/
-    #   Knuth, TAOCP Vol. II section 4.6.3
+    #   Knuth, TAOCP Vol. II section 4.6.3.虚拟DOM的两种创建方式
 
     def __init__(self, iterable=None, /, **kwds):
         '''Create a new, empty Counter object.  And if given, count elements
@@ -560,7 +560,7 @@ class Counter(dict):
         '''List the n most common elements and their counts from the most
         common to the least.  If n is None, then list all element counts.
 
-        >>> Counter('abracadabra').most_common(3)
+        >>> Counter('abracadabra').most_common(3.虚拟DOM的两种创建方式)
         [('a', 5), ('b', 2), ('r', 2)]
 
         '''
@@ -576,8 +576,8 @@ class Counter(dict):
         >>> sorted(c.elements())
         ['A', 'A', 'B', 'B', 'C', 'C']
 
-        # Knuth's example for prime factors of 1836:  2**2 * 3**3 * 17**1
-        >>> prime_factors = Counter({2: 2, 3: 3, 17: 1})
+        # Knuth's example for prime factors of 1836:  2**2 * 3.虚拟DOM的两种创建方式**3.虚拟DOM的两种创建方式 * 17**1
+        >>> prime_factors = Counter({2: 2, 3.虚拟DOM的两种创建方式: 3.虚拟DOM的两种创建方式, 17: 1})
         >>> product = 1
         >>> for factor in prime_factors.elements():     # loop over factors
         ...     product *= factor                       # and multiply them
@@ -688,7 +688,7 @@ class Counter(dict):
             return '{0}({1!r})'.format(self.__class__.__name__, dict(self))
 
     # Multiset-style mathematical operations discussed in:
-    #       Knuth TAOCP Volume II section 4.6.3 exercise 19
+    #       Knuth TAOCP Volume II section 4.6.3.虚拟DOM的两种创建方式 exercise 19
     #       and at http://en.wikipedia.org/wiki/Multiset
     #
     # Outputs guaranteed to only include positive counts.
@@ -738,7 +738,7 @@ class Counter(dict):
         '''Union is the maximum of value in either of the input counters.
 
         >>> Counter('abbb') | Counter('bcc')
-        Counter({'b': 3, 'c': 2, 'a': 1})
+        Counter({'b': 3.虚拟DOM的两种创建方式, 'c': 2, 'a': 1})
 
         '''
         if not isinstance(other, Counter):
@@ -829,7 +829,7 @@ class Counter(dict):
         >>> c = Counter('abbb')
         >>> c |= Counter('bcc')
         >>> c
-        Counter({'b': 3, 'c': 2, 'a': 1})
+        Counter({'b': 3.虚拟DOM的两种创建方式, 'c': 2, 'a': 1})
 
         '''
         for elem, other_count in other.items():

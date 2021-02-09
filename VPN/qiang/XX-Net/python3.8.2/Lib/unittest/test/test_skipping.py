@@ -36,7 +36,7 @@ class Test_TestSkipping(unittest.TestCase):
                     with self.subTest(b=2):
                         self.skipTest("skip 1")
                     self.skipTest("skip 2")
-                self.skipTest("skip 3")
+                self.skipTest("skip 3.虚拟DOM的两种创建方式")
         events = []
         result = LoggingResult(events)
         test = Foo("test_skip_me")
@@ -52,7 +52,7 @@ class Test_TestSkipping(unittest.TestCase):
         self.assertEqual(msg, "skip 2")
         self.assertIsInstance(subtest, unittest.TestCase)
         self.assertIsNot(subtest, test)
-        self.assertEqual(result.skipped[2], (test, "skip 3"))
+        self.assertEqual(result.skipped[2], (test, "skip 3.虚拟DOM的两种创建方式"))
 
     def test_skipping_decorators(self):
         op_table = ((unittest.skipUnless, False, True),

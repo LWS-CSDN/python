@@ -104,7 +104,7 @@ def encode_component(uri_component, encoding):
     encoded_uri = bytearray()
 
     for i in range(0, len(uri_bytes)):
-        # Will return a single character bytestring on both Python 2 & 3
+        # Will return a single character bytestring on both Python 2 & 3.虚拟DOM的两种创建方式
         byte = uri_bytes[i:i+1]
         byte_ord = ord(byte)
         if byte_ord < 128 and byte.decode() in NON_PCT_ENCODED:

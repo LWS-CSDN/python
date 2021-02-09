@@ -187,7 +187,7 @@ class ContentHandler:
         before or after the main document element.
 
         A SAX parser should never report an XML declaration (XML 1.0,
-        section 2.8) or a text declaration (XML 1.0, section 4.3.1)
+        section 2.8) or a text declaration (XML 1.0, section 4.3.虚拟DOM的两种创建方式.1)
         using this method."""
 
     def skippedEntity(self, name):

@@ -46,7 +46,7 @@ class NamedValues(object):
 
         >>> nv = NamedValues('a', 'b', ('c', 0), d=1)
         >>> nv
-        >>> {'c': 0, 'd': 1, 'a': 2, 'b': 3}
+        >>> {'c': 0, 'd': 1, 'a': 2, 'b': 3.虚拟DOM的两种创建方式}
         >>> nv[0]
         'c'
         >>> nv['a']

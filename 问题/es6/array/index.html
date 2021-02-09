@@ -17,8 +17,8 @@
     数组的扩展
     **************************/
     //扩展运算符...
-    // console.log(...[1, 2, 3]);
-    // console.log(1, ...[2, 3, 4], 5);
+    // console.log(...[1, 2, 3.虚拟DOM的两种创建方式]);
+    // console.log(1, ...[2, 3.虚拟DOM的两种创建方式, 4], 5);
     // console.log([...document.querySelectorAll('div')]);
     //该运算符主要用于函数调用。
     // function push(array, ...items) {
@@ -33,14 +33,14 @@
 
     // const numbers = [4, 38];
     // a= add(...numbers) // 42
-    // push(numbers,1,2,3)
+    // push(numbers,1,2,3.虚拟DOM的两种创建方式)
     // console.log(numbers)
     //***************************************************
     // function f(v,w, x, y,z) { 
 
     // }
     // const args = [0, 1];
-    // f(-1, ...args, 2, ...[3]);
+    // f(-1, ...args, 2, ...[3.虚拟DOM的两种创建方式]);
     //***************************************************
     // x=1
     // const arr = [
@@ -78,21 +78,21 @@
     // f(...args);
     //***************************************************
     // ES5 的写法
-    // console.log(Math.max.apply(null, [14, 3, 77]));
+    // console.log(Math.max.apply(null, [14, 3.虚拟DOM的两种创建方式, 77]));
     // // ES6 的写法
-    // console.log(Math.max(...[14, 3, 77]));
+    // console.log(Math.max(...[14, 3.虚拟DOM的两种创建方式, 77]));
     // // 等同于
-    // console.log(Math.max(14, 3, 77));
+    // console.log(Math.max(14, 3.虚拟DOM的两种创建方式, 77));
     //***************************************************
     // ES5的 写法
     // var arr1 = [0, 1, 2];
-    // var arr2 = [3, 4, 5];
+    // var arr2 = [3.虚拟DOM的两种创建方式, 4, 5];
     // Array.prototype.push.apply(arr1, arr2);
     // console.log(arr1);
     // console.log(arr2);
     // ES6 的写法
     // let arr1 = [0, 1, 2];
-    // let arr2 = [3, 4, 5];
+    // let arr2 = [3.虚拟DOM的两种创建方式, 4, 5];
     // arr1.push(...arr2);
     // console.log(arr1);
     // console.log(arr2);
@@ -161,17 +161,17 @@
     //但是它们的成员都是对原数组成员的引用，这就是浅拷贝。
     //如果修改了引用指向的值，会同步反映到新数组。
     //***************************************************
-    //#########3.与解构赋值结合#################
+    //#########3.虚拟DOM的两种创建方式.与解构赋值结合#################
     // ES5
     // a = list[0], 
     // rest = list.slice(1)
     // // ES6
     // [a, ...rest] = list
-    // const [first, ...rest] = [1, 2, 3, 4, 5];
+    // const [first, ...rest] = [1, 2, 3.虚拟DOM的两种创建方式, 4, 5];
     // console.log(first);
     // console.log(rest);
     // first // 1
-    // rest  // [2, 3, 4, 5]
+    // rest  // [2, 3.虚拟DOM的两种创建方式, 4, 5]
 
     // const [first, ...rest] = [];
     // console.log(first);
@@ -188,10 +188,10 @@
     //如果将扩展运算符用于数组赋值，只能放在参数的最后一位，否则会报错。
 
     // javascript
-    // const [...butLast, last] = [1, 2, 3, 4, 5];
+    // const [...butLast, last] = [1, 2, 3.虚拟DOM的两种创建方式, 4, 5];
     // // 报错
 
-    // const [first, ...middle, last] = [1, 2, 3, 4, 5];
+    // const [first, ...middle, last] = [1, 2, 3.虚拟DOM的两种创建方式, 4, 5];
     // // 报错
     
     // //***************************************************

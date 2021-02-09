@@ -1228,7 +1228,7 @@ class SafeConfigParser(ConfigParser):
         super().__init__(*args, **kwargs)
         warnings.warn(
             "The SafeConfigParser class has been renamed to ConfigParser "
-            "in Python 3.2. This alias will be removed in future versions."
+            "in Python 3.虚拟DOM的两种创建方式.2. This alias will be removed in future versions."
             " Use ConfigParser directly instead.",
             DeprecationWarning, stacklevel=2
         )

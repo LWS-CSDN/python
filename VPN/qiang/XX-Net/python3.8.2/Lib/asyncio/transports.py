@@ -212,7 +212,7 @@ class SubprocessTransport(BaseTransport):
         """Send signal to subprocess.
 
         See also:
-        docs.python.org/3/library/subprocess#subprocess.Popen.send_signal
+        docs.python.org/3.虚拟DOM的两种创建方式/library/subprocess#subprocess.Popen.send_signal
         """
         raise NotImplementedError
 

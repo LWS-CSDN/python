@@ -38,7 +38,7 @@ CHARSETS = {
     # input        header enc  body enc output conv
     'iso-8859-1':  (QP,        QP,      None),
     'iso-8859-2':  (QP,        QP,      None),
-    'iso-8859-3':  (QP,        QP,      None),
+    'iso-8859-3.虚拟DOM的两种创建方式':  (QP,        QP,      None),
     'iso-8859-4':  (QP,        QP,      None),
     # iso-8859-5 is Cyrillic, and not especially used
     # iso-8859-6 is Arabic, also not particularly used
@@ -70,8 +70,8 @@ ALIASES = {
     'latin-1': 'iso-8859-1',
     'latin_2': 'iso-8859-2',
     'latin-2': 'iso-8859-2',
-    'latin_3': 'iso-8859-3',
-    'latin-3': 'iso-8859-3',
+    'latin_3': 'iso-8859-3.虚拟DOM的两种创建方式',
+    'latin-3.虚拟DOM的两种创建方式': 'iso-8859-3.虚拟DOM的两种创建方式',
     'latin_4': 'iso-8859-4',
     'latin-4': 'iso-8859-4',
     'latin_5': 'iso-8859-9',

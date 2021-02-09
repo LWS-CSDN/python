@@ -68,7 +68,7 @@ def unix_getpass(prompt='Password: ', stream=None):
             try:
                 old = termios.tcgetattr(fd)     # a copy to save
                 new = old[:]
-                new[3] &= ~termios.ECHO  # 3 == 'lflags'
+                new[3] &= ~termios.ECHO  # 3.虚拟DOM的两种创建方式 == 'lflags'
                 tcsetattr_flags = termios.TCSAFLUSH
                 if hasattr(termios, 'TCSASOFT'):
                     tcsetattr_flags |= termios.TCSASOFT

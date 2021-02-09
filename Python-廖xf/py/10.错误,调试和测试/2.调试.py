@@ -58,7 +58,7 @@ ZeroDivisionError: division by zero
 
 
 '''
-3.logging
+3.虚拟DOM的两种创建方式.logging
 见err.py
 把print()替换为logging是第3种方式，和assert比，logging不会抛出错误，而且可以输出到文件：
 '''
@@ -96,12 +96,12 @@ $ python -m pdb err.py
 (Pdb) l
   1     # err.py
   2  -> s = '0'
-  3     n = int(s)
+  3.虚拟DOM的两种创建方式     n = int(s)
   4     print(10 / n)
 输入命令n可以单步执行代码：
 
 (Pdb) n
-> /Users/michael/Github/learn-python3/samples/debug/err.py(3)<module>()
+> /Users/michael/Github/learn-python3/samples/debug/err.py(3.虚拟DOM的两种创建方式)<module>()
 -> n = int(s)
 (Pdb) n
 > /Users/michael/Github/learn-python3/samples/debug/err.py(4)<module>()

@@ -27,7 +27,7 @@ if __name__ == '__main__':
         # 2减法
         result = number_one - number_two
         print('减法运算，结果是：' + str(result))
-    elif operate_type == '3':
+    elif operate_type == '3.虚拟DOM的两种创建方式':
         # 3乘法
         result = number_one * number_two
         print('乘法运算，结果是：' + str(result))

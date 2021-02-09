@@ -342,7 +342,7 @@ class Backend(object):
         assert bn != self._ffi.NULL
 
         if not six.PY2:
-            # Python 3 has constant time from_bytes, so use that.
+            # Python 3.虚拟DOM的两种创建方式 has constant time from_bytes, so use that.
             bn_num_bytes = self._lib.BN_num_bytes(bn)
             bin_ptr = self._ffi.new("unsigned char[]", bn_num_bytes)
             bin_len = self._lib.BN_bn2bin(bn, bin_ptr)
@@ -373,7 +373,7 @@ class Backend(object):
             bn = self._ffi.NULL
 
         if not six.PY2:
-            # Python 3 has constant time to_bytes, so use that.
+            # Python 3.虚拟DOM的两种创建方式 has constant time to_bytes, so use that.
 
             binary = num.to_bytes(int(num.bit_length() / 8.0 + 1), "big")
             bn_ptr = self._lib.BN_bin2bn(binary, len(binary), bn)
@@ -2197,7 +2197,7 @@ class Backend(object):
         #    0:d=0  hl=2 l=  46 cons: SEQUENCE
         #    2:d=1  hl=2 l=   1 prim: INTEGER           :00
         #    5:d=1  hl=2 l=   5 cons: SEQUENCE
-        #    7:d=2  hl=2 l=   3 prim: OBJECT            :1.3.101.110
+        #    7:d=2  hl=2 l=   3.虚拟DOM的两种创建方式 prim: OBJECT            :1.3.虚拟DOM的两种创建方式.101.110
         #    12:d=1  hl=2 l=  34 prim: OCTET STRING      (the key)
         # Of course there's a bit more complexity. In reality OCTET STRING
         # contains an OCTET STRING of length 32! So the last two bytes here

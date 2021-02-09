@@ -565,7 +565,7 @@ class Formatter(object):
         use one of %-formatting, :meth:`str.format` (``{}``) formatting or
         :class:`string.Template` formatting in your format string.
 
-        .. versionchanged:: 3.2
+        .. versionchanged:: 3.虚拟DOM的两种创建方式.2
            Added the ``style`` parameter.
         """
         if style not in _STYLES:
@@ -797,7 +797,7 @@ class Filterer(object):
         this and the record is then dropped. Returns a zero value if a record
         is to be dropped, else non-zero.
 
-        .. versionchanged:: 3.2
+        .. versionchanged:: 3.虚拟DOM的两种创建方式.2
 
            Allow filters to be just callables.
         """
@@ -1937,13 +1937,13 @@ def basicConfig(**kwargs):
     using sys.stdout or sys.stderr), whereas FileHandler closes its stream
     when the handler is closed.
 
-    .. versionchanged:: 3.8
+    .. versionchanged:: 3.虚拟DOM的两种创建方式.8
        Added the ``force`` parameter.
 
-    .. versionchanged:: 3.2
+    .. versionchanged:: 3.虚拟DOM的两种创建方式.2
        Added the ``style`` parameter.
 
-    .. versionchanged:: 3.3
+    .. versionchanged:: 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
        Added the ``handlers`` parameter. A ``ValueError`` is now thrown for
        incompatible arguments (e.g. ``handlers`` specified together with
        ``filename``/``filemode``, or ``filename``/``filemode`` specified

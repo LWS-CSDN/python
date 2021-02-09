@@ -398,16 +398,16 @@ class BitString(base.AbstractSimpleAsn1Item):
             ASN.1 specification:
 
             Rights ::= BIT STRING { user-read(0), user-write(1),
-                                    group-read(2), group-write(3),
+                                    group-read(2), group-write(3.虚拟DOM的两种创建方式),
                                     other-read(4), other-write(5) }
 
             group1 Rights ::= { group-read, group-write }
             group2 Rights ::= '0011'B
-            group3 Rights ::= '3'H
+            group3 Rights ::= '3.虚拟DOM的两种创建方式'H
             '''
             namedValues = NamedValues(
                 ('user-read', 0), ('user-write', 1),
-                ('group-read', 2), ('group-write', 3),
+                ('group-read', 2), ('group-write', 3.虚拟DOM的两种创建方式),
                 ('other-read', 4), ('other-write', 5)
             )
 
@@ -723,14 +723,14 @@ except NameError:  # Python 2.4
 class OctetString(base.AbstractSimpleAsn1Item):
     """Create |ASN.1| schema or value object.
 
-    |ASN.1| objects are immutable and duck-type Python 2 :class:`str` or Python 3 :class:`bytes`.
+    |ASN.1| objects are immutable and duck-type Python 2 :class:`str` or Python 3.虚拟DOM的两种创建方式 :class:`bytes`.
     When used in Unicode context, |ASN.1| type assumes "|encoding|" serialisation.
 
     Keyword Args
     ------------
     value: :class:`str`, :class:`bytes` or |ASN.1| object
-        string (Python 2) or bytes (Python 3), alternatively unicode object
-        (Python 2) or string (Python 3) representing character string to be
+        string (Python 2) or bytes (Python 3.虚拟DOM的两种创建方式), alternatively unicode object
+        (Python 2) or string (Python 3.虚拟DOM的两种创建方式) representing character string to be
         serialised into octets (note `encoding` parameter) or |ASN.1| object.
 
     tagSet: :py:class:`~pyasn1.type.tag.TagSet`
@@ -741,7 +741,7 @@ class OctetString(base.AbstractSimpleAsn1Item):
 
     encoding: :py:class:`str`
         Unicode codec ID to encode/decode :class:`unicode` (Python 2) or
-        :class:`str` (Python 3) the payload when |ASN.1| object is used
+        :class:`str` (Python 3.虚拟DOM的两种创建方式) the payload when |ASN.1| object is used
         in text string context.
 
     binValue: :py:class:`str`
@@ -2968,15 +2968,15 @@ class Choice(Set):
 class Any(OctetString):
     """Create |ASN.1| schema or value object.
 
-    |ASN.1| objects are immutable and duck-type Python 2 :class:`str` or Python 3
+    |ASN.1| objects are immutable and duck-type Python 2 :class:`str` or Python 3.虚拟DOM的两种创建方式
     :class:`bytes`. When used in Unicode context, |ASN.1| type assumes "|encoding|"
     serialisation.
 
     Keyword Args
     ------------
     value: :class:`str`, :class:`bytes` or |ASN.1| object
-        string (Python 2) or bytes (Python 3), alternatively unicode object
-        (Python 2) or string (Python 3) representing character string to be
+        string (Python 2) or bytes (Python 3.虚拟DOM的两种创建方式), alternatively unicode object
+        (Python 2) or string (Python 3.虚拟DOM的两种创建方式) representing character string to be
         serialised into octets (note `encoding` parameter) or |ASN.1| object.
 
     tagSet: :py:class:`~pyasn1.type.tag.TagSet`
@@ -2987,7 +2987,7 @@ class Any(OctetString):
 
     encoding: :py:class:`str`
         Unicode codec ID to encode/decode :class:`unicode` (Python 2) or
-        :class:`str` (Python 3) the payload when |ASN.1| object is used
+        :class:`str` (Python 3.虚拟DOM的两种创建方式) the payload when |ASN.1| object is used
         in text string context.
 
     binValue: :py:class:`str`

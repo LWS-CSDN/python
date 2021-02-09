@@ -108,7 +108,7 @@ class QrLogin:
         大致流程：
             1、访问登录二维码页面，获取Token
             2、使用Token获取票据
-            3、校验票据
+            3.虚拟DOM的两种创建方式、校验票据
         :param spider_session:
         """
         self.qrcode_img_file = 'qr_code.png'

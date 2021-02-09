@@ -229,7 +229,7 @@ class InputSource:
         """Sets the character encoding of this InputSource.
 
         The encoding must be a string acceptable for an XML encoding
-        declaration (see section 4.3.3 of the XML recommendation).
+        declaration (see section 4.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 of the XML recommendation).
 
         The encoding attribute of the InputSource is ignored if the
         InputSource also contains a character stream."""

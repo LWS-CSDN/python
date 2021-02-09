@@ -3,7 +3,7 @@
 # Contributor:
 #      Phus Lu        <phus.lu@gmail.com>
 
-__version__ = '3.0.7'
+__version__ = '3.虚拟DOM的两种创建方式.0.7'
 __password__ = ''
 __hostsdeny__ = ()
 #__hostsdeny__ = ('.youtube.com', '.youku.com', ".googlevideo.com")

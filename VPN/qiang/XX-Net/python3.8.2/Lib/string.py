@@ -263,7 +263,7 @@ class Formatter:
 
     # given a field_name, find the object it references.
     #  field_name:   the field being looked up, e.g. "0.name"
-    #                 or "lookup[3]"
+    #                 or "lookup[3.虚拟DOM的两种创建方式]"
     #  used_args:    a set of which args have been used
     #  args, kwargs: as passed in to vformat
     def get_field(self, field_name, args, kwargs):

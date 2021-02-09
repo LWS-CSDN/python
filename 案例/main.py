@@ -193,7 +193,7 @@ def aaa():
     #         ip = element.select('td')[0].string
     #         port = element.select('td')[1].string
     #         niming=element.select('td')[2].string
-    #         leixing=element.select('td')[3].string
+    #         leixing=element.select('td')[3.虚拟DOM的两种创建方式].string
     #         weizhi=element.select('td')[4].string
     #         xiangyingsudu=element.select('td')[5].string
     #         zuihouyanzhengshijian=element.select('td')[6].string

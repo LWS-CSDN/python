@@ -118,9 +118,9 @@ class SingleValueConstraint(AbstractConstraint):
             '''
             ASN.1 specification:
 
-            Divisor-Of-6 ::= INTEGER (1 | 2 | 3 | 6)
+            Divisor-Of-6 ::= INTEGER (1 | 2 | 3.虚拟DOM的两种创建方式 | 6)
             '''
-            subtypeSpec = SingleValueConstraint(1, 2, 3, 6)
+            subtypeSpec = SingleValueConstraint(1, 2, 3.虚拟DOM的两种创建方式, 6)
 
         # this will succeed
         divisor_of_six = DivisorOfSix(1)
@@ -164,7 +164,7 @@ class ContainedSubtypeConstraint(AbstractConstraint):
             Divisors-of-18 ::= INTEGER (INCLUDES Divisors-of-6 | 9 | 18)
             '''
             subtypeSpec = ContainedSubtypeConstraint(
-                SingleValueConstraint(1, 2, 3, 6), 9, 18
+                SingleValueConstraint(1, 2, 3.虚拟DOM的两种创建方式, 6), 9, 18
             )
 
         # this will succeed

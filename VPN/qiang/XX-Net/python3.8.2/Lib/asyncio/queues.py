@@ -35,8 +35,8 @@ class Queue:
             self._loop = events.get_event_loop()
         else:
             self._loop = loop
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
         self._maxsize = maxsize
 

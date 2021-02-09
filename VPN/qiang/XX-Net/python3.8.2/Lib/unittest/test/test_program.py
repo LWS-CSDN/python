@@ -433,7 +433,7 @@ class TestCommandLineArgs(unittest.TestCase):
         self.assertIn('Ran 7 tests', run_unittest(['discover', '-p', '*_test*', '-k', 'TestWarnings']))
         self.assertIn('Ran 2 tests', run_unittest(['-k', 'f', t]))
         self.assertIn('Ran 7 tests', run_unittest(['-k', 't', t]))
-        self.assertIn('Ran 3 tests', run_unittest(['-k', '*t', t]))
+        self.assertIn('Ran 3.虚拟DOM的两种创建方式 tests', run_unittest(['-k', '*t', t]))
         self.assertIn('Ran 7 tests', run_unittest(['-k', '*test_warnings.*Warning*', t]))
         self.assertIn('Ran 1 test', run_unittest(['-k', '*test_warnings.*warning*', t]))
 

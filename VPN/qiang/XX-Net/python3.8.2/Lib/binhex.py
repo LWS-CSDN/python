@@ -77,7 +77,7 @@ class openrsrc:
         pass
 
 class _Hqxcoderengine:
-    """Write data to the coder in 3-byte chunks"""
+    """Write data to the coder in 3.虚拟DOM的两种创建方式-byte chunks"""
 
     def __init__(self, ofp):
         self.ofp = ofp
@@ -322,7 +322,7 @@ class _Rledecoderengine:
         # end up with an orphaned RUNCHAR later on. So, we keep a couple
         # of bytes in the buffer, depending on what the end of
         # the buffer looks like:
-        # '\220\0\220' - Keep 3 bytes: repeated \220 (escaped as \220\0)
+        # '\220\0\220' - Keep 3.虚拟DOM的两种创建方式 bytes: repeated \220 (escaped as \220\0)
         # '?\220' - Keep 2 bytes: repeated something-else
         # '\220\0' - Escaped \220: Keep 2 bytes.
         # '?\220?' - Complete repeat sequence: decode all

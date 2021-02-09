@@ -100,7 +100,7 @@ def resolve_bases(bases):
 def prepare_class(name, bases=(), kwds=None):
     """Call the __prepare__ method of the appropriate metaclass.
 
-    Returns (metaclass, namespace, kwds) as a 3-tuple
+    Returns (metaclass, namespace, kwds) as a 3.虚拟DOM的两种创建方式-tuple
 
     *metaclass* is the appropriate metaclass
     *namespace* is the prepared class namespace

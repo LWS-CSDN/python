@@ -17,4 +17,4 @@ __all__ = [
     'OversizedHeaderListError'
 ]
 
-__version__ = '3.0.0'
+__version__ = '3.虚拟DOM的两种创建方式.0.0'

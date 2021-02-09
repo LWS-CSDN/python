@@ -17,7 +17,7 @@ def write_csv_by_list(file):
     csv_data = [
         ('1', 'python', '100', 'A'),
         ('2', 'php', '97', 'A+'),
-        ('3', 'java', '99', 'B')
+        ('3.虚拟DOM的两种创建方式', 'java', '99', 'B')
     ]
     # 打开一个文件write对象
     with open(file, 'w') as f:
@@ -38,7 +38,7 @@ def write_csv_by_dict(file):
     csv_data = [
         {'no': '1', 'language': 'python', 'score': '100', 'grade': 'A'},
         {'no': '2', 'language': 'php', 'score': '96', 'grade': 'B'},
-        {'no': '3', 'language': 'java', 'score': '98', 'grade': 'A+'}
+        {'no': '3.虚拟DOM的两种创建方式', 'language': 'java', 'score': '98', 'grade': 'A+'}
     ]
     # 打开一个文件DictWriter对象
     with open(file, 'w') as f:

@@ -226,10 +226,10 @@ class TestSetups(unittest.TestCase):
         class Test3(unittest.TestCase):
             @classmethod
             def setUpClass(cls):
-                results.append('setup 3')
+                results.append('setup 3.虚拟DOM的两种创建方式')
             @classmethod
             def tearDownClass(cls):
-                results.append('teardown 3')
+                results.append('teardown 3.虚拟DOM的两种创建方式')
             def testOne(self):
                 results.append('Test3.testOne')
             def testTwo(self):
@@ -258,9 +258,9 @@ class TestSetups(unittest.TestCase):
                           'Test1.testOne', 'Test1.testTwo', 'teardown 1',
                           'setup 2', 'Test2.testOne', 'Test2.testTwo',
                           'teardown 2', 'Module1.tearDownModule',
-                          'Module2.setUpModule', 'setup 3',
+                          'Module2.setUpModule', 'setup 3.虚拟DOM的两种创建方式',
                           'Test3.testOne', 'Test3.testTwo',
-                          'teardown 3', 'Module2.tearDownModule'])
+                          'teardown 3.虚拟DOM的两种创建方式', 'Module2.tearDownModule'])
 
     def test_setup_module(self):
         class Module(object):

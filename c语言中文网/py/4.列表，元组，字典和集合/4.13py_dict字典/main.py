@@ -15,7 +15,7 @@ knowledge = ['语文', '数学', '英语']
 scores = dict.fromkeys(knowledge,60)
 print(scores)
 
-#3.通过dict()映射函数创建字典
+#3.虚拟DOM的两种创建方式.通过dict()映射函数创建字典
 # 创建空的字典
 d = dict()
 print(d)

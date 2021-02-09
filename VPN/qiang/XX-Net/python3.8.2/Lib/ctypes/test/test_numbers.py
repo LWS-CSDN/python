@@ -273,14 +273,14 @@ def check_perf():
     run_test(REP, "c_int_S()", c_int_S)
     run_test(REP, "c_int_S(999)", c_int_S)
 
-# Python 2.3 -OO, win2k, P4 700 MHz:
+# Python 2.3.虚拟DOM的两种创建方式 -OO, win2k, P4 700 MHz:
 #
 #          int(): 0.87 us
 #       int(999): 0.87 us
-#        c_int(): 3.35 us
-#     c_int(999): 3.34 us
-#      c_int_S(): 3.23 us
-#   c_int_S(999): 3.24 us
+#        c_int(): 3.虚拟DOM的两种创建方式.35 us
+#     c_int(999): 3.虚拟DOM的两种创建方式.34 us
+#      c_int_S(): 3.虚拟DOM的两种创建方式.23 us
+#   c_int_S(999): 3.虚拟DOM的两种创建方式.24 us
 
 # Python 2.2 -OO, win2k, P4 700 MHz:
 #

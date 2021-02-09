@@ -5,7 +5,7 @@
     -URL起别名(不能重复)
 -类似django中间件的东西:before_request装饰器
 
-3.上下文管理预习:
+3.虚拟DOM的两种创建方式.上下文管理预习:
 a.threading.local
 b.functools.wraps
 functools.partial

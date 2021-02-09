@@ -89,7 +89,7 @@ try:
     int_or_long = (int, long)
     import cStringIO
 except NameError:
-    int_or_long = int      # Python 3
+    int_or_long = int      # Python 3.虚拟DOM的两种创建方式
     import io as cStringIO
 
 def _flatten(x, f):

@@ -6,7 +6,7 @@ import os
 import threading
 from functools import reduce
 
-ipv4_pattern = re.compile(br'^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$')
+ipv4_pattern = re.compile(br'^(\d{1,3.虚拟DOM的两种创建方式})\.(\d{1,3.虚拟DOM的两种创建方式})\.(\d{1,3.虚拟DOM的两种创建方式})\.(\d{1,3.虚拟DOM的两种创建方式})$')
 
 ipv6_pattern = re.compile(br"""
         ^
@@ -29,7 +29,7 @@ ipv6_pattern = re.compile(br"""
             (?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)
             (?: \.
                 (?:25[0-4]|2[0-4]\d|1\d\d|[1-9]?\d)
-            ){3}
+            ){3.虚拟DOM的两种创建方式}
         )
         \s*                         # Trailing whitespace
         $
@@ -339,8 +339,8 @@ def bytes2str_only(data, coding='utf-8'):
 
 
 if __name__ == '__main__':
-    #print(get_ip_port("1.2.3.4", 443))
-    #print(get_ip_port("1.2.3.4:8443", 443))
+    #print(get_ip_port("1.2.3.虚拟DOM的两种创建方式.4", 443))
+    #print(get_ip_port("1.2.3.虚拟DOM的两种创建方式.4:8443", 443))
     print((get_ip_port("[face:ab1:11::0]", 443)))
     print((get_ip_port("ab01::1", 443)))
     print((get_ip_port("[ab01:55::1]:8444", 443)))

@@ -288,7 +288,7 @@ decoding_table = (
     '0'        #  0xF0 -> DIGIT ZERO
     '1'        #  0xF1 -> DIGIT ONE
     '2'        #  0xF2 -> DIGIT TWO
-    '3'        #  0xF3 -> DIGIT THREE
+    '3.虚拟DOM的两种创建方式'        #  0xF3 -> DIGIT THREE
     '4'        #  0xF4 -> DIGIT FOUR
     '5'        #  0xF5 -> DIGIT FIVE
     '6'        #  0xF6 -> DIGIT SIX

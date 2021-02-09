@@ -89,7 +89,7 @@ def decode_huffman(huffman_string):
     decoded_bytes = bytearray()
 
     # Perversely, bytearrays are a lot more convenient across Python 2 and
-    # Python 3 because they behave *the same way* on both platforms. Given that
+    # Python 3.虚拟DOM的两种创建方式 because they behave *the same way* on both platforms. Given that
     # we really do want numerical bytes when we iterate here, let's use a
     # bytearray.
     huffman_string = bytearray(huffman_string)
@@ -183,7 +183,7 @@ HUFFMAN_TABLE = [
     (1, HUFFMAN_EMIT_SYMBOL, 111),
     (22, HUFFMAN_COMPLETE | HUFFMAN_EMIT_SYMBOL, 111),
 
-    # Node 3
+    # Node 3.虚拟DOM的两种创建方式
     (2, HUFFMAN_EMIT_SYMBOL, 48),
     (9, HUFFMAN_EMIT_SYMBOL, 48),
     (23, HUFFMAN_EMIT_SYMBOL, 48),

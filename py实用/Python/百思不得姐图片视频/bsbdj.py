@@ -8,7 +8,7 @@ while statusValue:
     # 下载网页
     print('Downloading page %s...' % url)
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.5.6'
+        'User-Agent': 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.6) Gecko/20091201 Firefox/3.虚拟DOM的两种创建方式.5.6'
     }
     result = requests.get(url, headers=headers)
     soup = bs4.BeautifulSoup(result.text, "html.parser")

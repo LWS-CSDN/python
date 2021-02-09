@@ -79,7 +79,7 @@ def find_loader(name, path=None):
     This function is deprecated in favor of importlib.util.find_spec().
 
     """
-    warnings.warn('Deprecated since Python 3.4. '
+    warnings.warn('Deprecated since Python 3.虚拟DOM的两种创建方式.4. '
                   'Use importlib.util.find_spec() instead.',
                   DeprecationWarning, stacklevel=2)
     try:

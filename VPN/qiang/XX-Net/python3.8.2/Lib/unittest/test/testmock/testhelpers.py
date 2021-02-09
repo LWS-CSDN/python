@@ -205,9 +205,9 @@ class CallTest(unittest.TestCase):
         self.assertEqual(repr(_Call(('foo',))), 'call.foo()')
 
         self.assertEqual(repr(_Call(((1, 2, 3), {'a': 'b'}))),
-                         "call(1, 2, 3, a='b')")
+                         "call(1, 2, 3.虚拟DOM的两种创建方式, a='b')")
         self.assertEqual(repr(_Call(('bar', (1, 2, 3), {'a': 'b'}))),
-                         "call.bar(1, 2, 3, a='b')")
+                         "call.bar(1, 2, 3.虚拟DOM的两种创建方式, a='b')")
 
         self.assertEqual(repr(call), 'call')
         self.assertEqual(str(call), 'call')
@@ -221,7 +221,7 @@ class CallTest(unittest.TestCase):
                          'call().foo.bar().bing')
         self.assertEqual(
             repr(call().foo(1, 2, a=3)),
-            "call().foo(1, 2, a=3)"
+            "call().foo(1, 2, a=3.虚拟DOM的两种创建方式)"
         )
         self.assertEqual(repr(call()()), "call()()")
         self.assertEqual(repr(call(1)(2)), "call()(2)")
@@ -423,8 +423,8 @@ class SpecSignatureTest(unittest.TestCase):
     def test_create_autospec_keyword_arguments(self):
         class Foo(object):
             a = 3
-        m = create_autospec(Foo, a='3')
-        self.assertEqual(m.a, '3')
+        m = create_autospec(Foo, a='3.虚拟DOM的两种创建方式')
+        self.assertEqual(m.a, '3.虚拟DOM的两种创建方式')
 
 
     def test_create_autospec_keyword_only_arguments(self):
@@ -1031,7 +1031,7 @@ class TestCallList(unittest.TestCase):
 
         expected = (
             "[call(1, 2),\n"
-            " call.foo(a=3),\n"
+            " call.foo(a=3.虚拟DOM的两种创建方式),\n"
             " call.foo.bar(),\n"
             " call.foo.bar().baz('fish', cat='dog')]"
         )

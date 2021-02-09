@@ -710,7 +710,7 @@ locale_encoding_alias = {
     'iso8859_15':                   'ISO8859-15',
     'iso8859_16':                   'ISO8859-16',
     'iso8859_2':                    'ISO8859-2',
-    'iso8859_3':                    'ISO8859-3',
+    'iso8859_3':                    'ISO8859-3.虚拟DOM的两种创建方式',
     'iso8859_4':                    'ISO8859-4',
     'iso8859_5':                    'ISO8859-5',
     'iso8859_6':                    'ISO8859-6',
@@ -833,7 +833,7 @@ for k, v in sorted(locale_encoding_alias.items()):
 # Updated alias mapping to most recent locale.alias file
 # from X.org distribution using makelocalealias.py.
 #
-# These are the differences compared to the old mapping (Python 3.3.3
+# These are the differences compared to the old mapping (Python 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
 # and older):
 #
 #    updated 'a3' -> 'a3_AZ.KOI8-C' to 'az_AZ.KOI8-C'
@@ -854,7 +854,7 @@ for k, v in sorted(locale_encoding_alias.items()):
 # SS 2018-05-05:
 # Updated alias mapping with glibc 2.27 supported locales.
 #
-# These are the differences compared to the old mapping (Python 3.6.5
+# These are the differences compared to the old mapping (Python 3.虚拟DOM的两种创建方式.6.5
 # and older):
 #
 #    updated 'ca_es@valencia' -> 'ca_ES.ISO8859-15@valencia' to 'ca_ES.UTF-8@valencia'
@@ -1025,11 +1025,11 @@ locale_alias = {
     'english_united-states':                'en_US.ISO8859-1',
     'english_united-states.437':            'C',
     'english_us':                           'en_US.ISO8859-1',
-    'eo':                                   'eo_XX.ISO8859-3',
+    'eo':                                   'eo_XX.ISO8859-3.虚拟DOM的两种创建方式',
     'eo.utf8':                              'eo.UTF-8',
-    'eo_eo':                                'eo_EO.ISO8859-3',
+    'eo_eo':                                'eo_EO.ISO8859-3.虚拟DOM的两种创建方式',
     'eo_us.utf8':                           'eo_US.UTF-8',
-    'eo_xx':                                'eo_XX.ISO8859-3',
+    'eo_xx':                                'eo_XX.ISO8859-3.虚拟DOM的两种创建方式',
     'es':                                   'es_ES.ISO8859-1',
     'es_ar':                                'es_AR.ISO8859-1',
     'es_bo':                                'es_BO.ISO8859-1',
@@ -1222,8 +1222,8 @@ locale_alias = {
     'mr_in':                                'mr_IN.UTF-8',
     'ms':                                   'ms_MY.ISO8859-1',
     'ms_my':                                'ms_MY.ISO8859-1',
-    'mt':                                   'mt_MT.ISO8859-3',
-    'mt_mt':                                'mt_MT.ISO8859-3',
+    'mt':                                   'mt_MT.ISO8859-3.虚拟DOM的两种创建方式',
+    'mt_mt':                                'mt_MT.ISO8859-3.虚拟DOM的两种创建方式',
     'my_mm':                                'my_MM.UTF-8',
     'nan_tw':                               'nan_TW.UTF-8',
     'nb':                                   'nb_NO.ISO8859-1',

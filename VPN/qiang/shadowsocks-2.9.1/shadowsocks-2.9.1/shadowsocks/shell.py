@@ -42,7 +42,7 @@ def check_python():
         print('Python 2.6+ required')
         sys.exit(1)
     elif info[0] == 3 and not info[1] >= 3:
-        print('Python 3.3+ required')
+        print('Python 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式+ required')
         sys.exit(1)
     elif info[0] not in [2, 3]:
         print('Python version not supported')
@@ -343,7 +343,7 @@ Proxy options:
   -m METHOD              encryption method, default: aes-256-cfb
   -t TIMEOUT             timeout in seconds, default: 300
   -a ONE_TIME_AUTH       one time auth
-  --fast-open            use TCP_FASTOPEN, requires Linux 3.7+
+  --fast-open            use TCP_FASTOPEN, requires Linux 3.虚拟DOM的两种创建方式.7+
 
 General options:
   -h, --help             show this help message and exit
@@ -373,7 +373,7 @@ Proxy options:
   -m METHOD              encryption method, default: aes-256-cfb
   -t TIMEOUT             timeout in seconds, default: 300
   -a ONE_TIME_AUTH       one time auth
-  --fast-open            use TCP_FASTOPEN, requires Linux 3.7+
+  --fast-open            use TCP_FASTOPEN, requires Linux 3.虚拟DOM的两种创建方式.7+
   --workers WORKERS      number of workers, available on Unix/Linux
   --forbidden-ip IPLIST  comma seperated IP list forbidden to connect
   --manager-address ADDR optional server manager UDP address, see wiki

@@ -25,7 +25,7 @@ class Number(metaclass=ABCMeta):
 ## ----------------
 ## Decimal has all of the methods specified by the Real abc, but it should
 ## not be registered as a Real because decimals do not interoperate with
-## binary floats (i.e.  Decimal('3.14') + 2.71828 is undefined).  But,
+## binary floats (i.e.  Decimal('3.虚拟DOM的两种创建方式.14') + 2.71828 is undefined).  But,
 ## abstract reals are expected to interoperate (i.e. R1 + R2 should be
 ## expected to work if R1 and R2 are both Reals).
 
@@ -310,7 +310,7 @@ class Integral(Rational):
         """self ** exponent % modulus, but maybe faster.
 
         Accept the modulus argument if you want to support the
-        3-argument version of pow(). Raise a TypeError if exponent < 0
+        3.虚拟DOM的两种创建方式-argument version of pow(). Raise a TypeError if exponent < 0
         or any argument isn't Integral. Otherwise, just implement the
         2-argument version described in Complex.
         """

@@ -103,13 +103,13 @@ bytes_types = pickle.bytes_types
 # the older unpickler) opcode.
 #
 # The original pickle used what's now called "protocol 0", and what was called
-# "text mode" before Python 2.3.  The entire pickle bytestream is made up of
+# "text mode" before Python 2.3.虚拟DOM的两种创建方式.  The entire pickle bytestream is made up of
 # printable 7-bit ASCII characters, plus the newline character, in protocol 0.
 # That's why it was called text mode.  Protocol 0 is small and elegant, but
 # sometimes painfully inefficient.
 #
 # The second major set of additions is now called "protocol 1", and was called
-# "binary mode" before Python 2.3.  This added many opcodes with arguments
+# "binary mode" before Python 2.3.虚拟DOM的两种创建方式.  This added many opcodes with arguments
 # consisting of arbitrary bytes, including NUL bytes and unprintable "high bit"
 # bytes.  Binary mode pickles can be substantially smaller than equivalent
 # text mode pickles, and sometimes faster too; e.g., BININT represents a 4-byte
@@ -118,7 +118,7 @@ bytes_types = pickle.bytes_types
 # a number of opcodes that operate on many stack elements at once (like APPENDS
 # and SETITEMS), and "shortcut" opcodes (like EMPTY_DICT and EMPTY_TUPLE).
 #
-# The third major set of additions came in Python 2.3, and is called "protocol
+# The third major set of additions came in Python 2.3.虚拟DOM的两种创建方式, and is called "protocol
 # 2".  This added:
 #
 # - A better way to pickle instances of new-style classes (NEWOBJ).
@@ -127,7 +127,7 @@ bytes_types = pickle.bytes_types
 #
 # - Time- and space- efficient pickling of long ints (LONG{1,4}).
 #
-# - Shortcuts for small tuples (TUPLE{1,2,3}}.
+# - Shortcuts for small tuples (TUPLE{1,2,3.虚拟DOM的两种创建方式}}.
 #
 # - Dedicated opcodes for bools (NEWTRUE, NEWFALSE).
 #
@@ -136,7 +136,7 @@ bytes_types = pickle.bytes_types
 #   the registry contents are predefined (there's nothing akin to the memo's
 #   PUT).
 #
-# Another independent change with Python 2.3 is the abandonment of any
+# Another independent change with Python 2.3.虚拟DOM的两种创建方式 is the abandonment of any
 # pretense that it might be safe to load pickles received from untrusted
 # parties -- no sufficient security analysis has been done to guarantee
 # this and there isn't a use case that warrants the expense of such an
@@ -538,7 +538,7 @@ def read_bytes8(f):
     b''
     >>> read_bytes8(io.BytesIO(b"\x03\x00\x00\x00\x00\x00\x00\x00abcdef"))
     b'abc'
-    >>> bigsize8 = struct.pack("<Q", sys.maxsize//3)
+    >>> bigsize8 = struct.pack("<Q", sys.maxsize//3.虚拟DOM的两种创建方式)
     >>> read_bytes8(io.BytesIO(bigsize8 + b"abcdef"))  #doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
@@ -573,7 +573,7 @@ def read_bytearray8(f):
     bytearray(b'')
     >>> read_bytearray8(io.BytesIO(b"\x03\x00\x00\x00\x00\x00\x00\x00abcdef"))
     bytearray(b'abc')
-    >>> bigsize8 = struct.pack("<Q", sys.maxsize//3)
+    >>> bigsize8 = struct.pack("<Q", sys.maxsize//3.虚拟DOM的两种创建方式)
     >>> read_bytearray8(io.BytesIO(bigsize8 + b"abcdef"))  #doctest: +ELLIPSIS
     Traceback (most recent call last):
     ...
@@ -1171,10 +1171,10 @@ opcodes = [
       int whenever possible.
 
       Another difference is due to that, when bool was introduced as a
-      distinct type in 2.3, builtin names True and False were also added to
+      distinct type in 2.3.虚拟DOM的两种创建方式, builtin names True and False were also added to
       2.2.2, mapping to ints 1 and 0.  For compatibility in both directions,
       True gets pickled as INT + "I01\\n", and False as INT + "I00\\n".
-      Leading zeroes are never produced for a genuine integer.  The 2.3
+      Leading zeroes are never produced for a genuine integer.  The 2.3.虚拟DOM的两种创建方式
       (and later) unpicklers special-case these and return bool instead;
       earlier unpicklers ignore the leading "0" and return the int.
       """),
@@ -1310,7 +1310,7 @@ opcodes = [
       object instead.
       """),
 
-    # Bytes (protocol 3 and higher)
+    # Bytes (protocol 3.虚拟DOM的两种创建方式 and higher)
 
     I(name='BINBYTES',
       code='B',
@@ -1555,8 +1555,8 @@ opcodes = [
       a single Python list, which single list object replaces all of the
       stack from the topmost markobject onward.  For example,
 
-      Stack before: ... markobject 1 2 3 'abc'
-      Stack after:  ... [1, 2, 3, 'abc']
+      Stack before: ... markobject 1 2 3.虚拟DOM的两种创建方式 'abc'
+      Stack after:  ... [1, 2, 3.虚拟DOM的两种创建方式, 'abc']
       """),
 
     # Ways to build tuples.
@@ -1581,8 +1581,8 @@ opcodes = [
       a single Python tuple, which single tuple object replaces all of the
       stack from the topmost markobject onward.  For example,
 
-      Stack before: ... markobject 1 2 3 'abc'
-      Stack after:  ... (1, 2, 3, 'abc')
+      Stack before: ... markobject 1 2 3.虚拟DOM的两种创建方式 'abc'
+      Stack after:  ... (1, 2, 3.虚拟DOM的两种创建方式, 'abc')
       """),
 
     I(name='TUPLE1',
@@ -1624,10 +1624,10 @@ opcodes = [
       doc="""Build a three-tuple out of the top three items on the stack.
 
       This code pops three values off the stack and pushes a tuple of
-      length 3 whose items are those values back onto it.  In other
+      length 3.虚拟DOM的两种创建方式 whose items are those values back onto it.  In other
       words:
 
-          stack[-3:] = [tuple(stack[-3:])]
+          stack[-3.虚拟DOM的两种创建方式:] = [tuple(stack[-3.虚拟DOM的两种创建方式:])]
       """),
 
     # Ways to build dicts.
@@ -1653,8 +1653,8 @@ opcodes = [
       stack from the topmost markobject onward.  The stack slice alternates
       key, value, key, value, ....  For example,
 
-      Stack before: ... markobject 1 2 3 'abc'
-      Stack after:  ... {1: 2, 3: 'abc'}
+      Stack before: ... markobject 1 2 3.虚拟DOM的两种创建方式 'abc'
+      Stack after:  ... {1: 2, 3.虚拟DOM的两种创建方式: 'abc'}
       """),
 
     I(name='SETITEM',
@@ -1736,8 +1736,8 @@ opcodes = [
       a single Python frozenset, which single frozenset object replaces all
       of the stack from the topmost markobject onward.  For example,
 
-      Stack before: ... markobject 1 2 3
-      Stack after:  ... frozenset({1, 2, 3})
+      Stack before: ... markobject 1 2 3.虚拟DOM的两种创建方式
+      Stack after:  ... frozenset({1, 2, 3.虚拟DOM的两种创建方式})
       """),
 
     # Stack manipulation.
@@ -1968,7 +1968,7 @@ opcodes = [
       The callable and the argument tuple are the first two items returned
       by a __reduce__ method.  Applying the callable to the argtuple is
       supposed to reproduce the original object, or at least get it started.
-      If the __reduce__ method returns a 3-tuple, the last component is an
+      If the __reduce__ method returns a 3.虚拟DOM的两种创建方式-tuple, the last component is an
       argument to be passed to the object's __setstate__, and then the REDUCE
       opcode is followed by code to create setstate's argument, and then a
       BUILD opcode to apply  __setstate__ to that argument.
@@ -2051,9 +2051,9 @@ opcodes = [
       argtuple obtained from the stack, and the resulting instance object
       is pushed on the stack.
 
-      NOTE:  checks for __safe_for_unpickling__ went away in Python 2.3.
+      NOTE:  checks for __safe_for_unpickling__ went away in Python 2.3.虚拟DOM的两种创建方式.
       NOTE:  the distinction between old-style and new-style classes does
-             not make sense in Python 3.
+             not make sense in Python 3.虚拟DOM的两种创建方式.
       """),
 
     I(name='OBJ',
@@ -2083,7 +2083,7 @@ opcodes = [
       except that no __safe_for_unpickling__ check is done (XXX this is
       a bug).  See INST for the gory details.
 
-      NOTE:  In Python 2.3, INST and OBJ are identical except for how they
+      NOTE:  In Python 2.3.虚拟DOM的两种创建方式, INST and OBJ are identical except for how they
       get the class object.  That was always the intent; the implementations
       had diverged for accidental reasons.
       """),
@@ -2553,7 +2553,7 @@ class _Example:
 
 _dis_test = r"""
 >>> import pickle
->>> x = [1, 2, (3, 4), {b'abc': "def"}]
+>>> x = [1, 2, (3.虚拟DOM的两种创建方式, 4), {b'abc': "def"}]
 >>> pkl0 = pickle.dumps(x, 0)
 >>> dis(pkl0)
     0: (    MARK
@@ -2564,7 +2564,7 @@ _dis_test = r"""
     9: I    INT        2
    12: a    APPEND
    13: (    MARK
-   14: I        INT        3
+   14: I        INT        3.虚拟DOM的两种创建方式
    17: I        INT        4
    20: t        TUPLE      (MARK at 13)
    21: p    PUT        1
@@ -2573,7 +2573,7 @@ _dis_test = r"""
    26: d        DICT       (MARK at 25)
    27: p    PUT        2
    30: c    GLOBAL     '_codecs encode'
-   46: p    PUT        3
+   46: p    PUT        3.虚拟DOM的两种创建方式
    49: (    MARK
    50: V        UNICODE    'abc'
    55: p        PUT        4
@@ -2596,18 +2596,18 @@ Try again with a "binary" pickle.
 >>> dis(pkl1)
     0: ]    EMPTY_LIST
     1: q    BINPUT     0
-    3: (    MARK
+    3.虚拟DOM的两种创建方式: (    MARK
     4: K        BININT1    1
     6: K        BININT1    2
     8: (        MARK
-    9: K            BININT1    3
+    9: K            BININT1    3.虚拟DOM的两种创建方式
    11: K            BININT1    4
    13: t            TUPLE      (MARK at 8)
    14: q        BINPUT     1
    16: }        EMPTY_DICT
    17: q        BINPUT     2
    19: c        GLOBAL     '_codecs encode'
-   35: q        BINPUT     3
+   35: q        BINPUT     3.虚拟DOM的两种创建方式
    37: (        MARK
    38: X            BINUNICODE 'abc'
    46: q            BINPUT     4
@@ -2620,7 +2620,7 @@ Try again with a "binary" pickle.
    67: X        BINUNICODE 'def'
    75: q        BINPUT     8
    77: s        SETITEM
-   78: e        APPENDS    (MARK at 3)
+   78: e        APPENDS    (MARK at 3.虚拟DOM的两种创建方式)
    79: .    STOP
 highest protocol among opcodes = 1
 
@@ -2645,7 +2645,7 @@ highest protocol among opcodes = 0
    34: c        GLOBAL     'pickletools _Example'
    56: p        PUT        2
    59: c        GLOBAL     '__builtin__ object'
-   79: p        PUT        3
+   79: p        PUT        3.虚拟DOM的两种创建方式
    82: N        NONE
    83: t        TUPLE      (MARK at 33)
    84: p    PUT        4
@@ -2668,14 +2668,14 @@ highest protocol among opcodes = 0
 >>> dis(pickle.dumps(x, 1))
     0: ]    EMPTY_LIST
     1: q    BINPUT     0
-    3: (    MARK
+    3.虚拟DOM的两种创建方式: (    MARK
     4: c        GLOBAL     'copy_reg _reconstructor'
    29: q        BINPUT     1
    31: (        MARK
    32: c            GLOBAL     'pickletools _Example'
    54: q            BINPUT     2
    56: c            GLOBAL     '__builtin__ object'
-   76: q            BINPUT     3
+   76: q            BINPUT     3.虚拟DOM的两种创建方式
    78: N            NONE
    79: t            TUPLE      (MARK at 31)
    80: q        BINPUT     4
@@ -2689,7 +2689,7 @@ highest protocol among opcodes = 0
   102: s        SETITEM
   103: b        BUILD
   104: h        BINGET     5
-  106: e        APPENDS    (MARK at 3)
+  106: e        APPENDS    (MARK at 3.虚拟DOM的两种创建方式)
   107: .    STOP
 highest protocol among opcodes = 1
 
@@ -2721,9 +2721,9 @@ highest protocol among opcodes = 0
 >>> dis(pickle.dumps(L, 1))
     0: ]    EMPTY_LIST
     1: q    BINPUT     0
-    3: (    MARK
+    3.虚拟DOM的两种创建方式: (    MARK
     4: h        BINGET     0
-    6: t        TUPLE      (MARK at 3)
+    6: t        TUPLE      (MARK at 3.虚拟DOM的两种创建方式)
     7: q    BINPUT     1
     9: a    APPEND
    10: .    STOP
@@ -2737,7 +2737,7 @@ rid of the MARK at 0.
     0: (    MARK
     1: (        MARK
     2: l            LIST       (MARK at 1)
-    3: p        PUT        0
+    3.虚拟DOM的两种创建方式: p        PUT        0
     6: (        MARK
     7: g            GET        0
    10: t            TUPLE      (MARK at 6)
@@ -2768,7 +2768,7 @@ Try protocol 2.
 >>> dis(pickle.dumps(L, 2))
     0: \x80 PROTO      2
     2: ]    EMPTY_LIST
-    3: q    BINPUT     0
+    3.虚拟DOM的两种创建方式: q    BINPUT     0
     5: h    BINGET     0
     7: \x85 TUPLE1
     8: q    BINPUT     1
@@ -2779,7 +2779,7 @@ highest protocol among opcodes = 2
 >>> dis(pickle.dumps(T, 2))
     0: \x80 PROTO      2
     2: ]    EMPTY_LIST
-    3: q    BINPUT     0
+    3.虚拟DOM的两种创建方式: q    BINPUT     0
     5: h    BINGET     0
     7: \x85 TUPLE1
     8: q    BINPUT     1
@@ -2789,12 +2789,12 @@ highest protocol among opcodes = 2
    14: .    STOP
 highest protocol among opcodes = 2
 
-Try protocol 3 with annotations:
+Try protocol 3.虚拟DOM的两种创建方式 with annotations:
 
->>> dis(pickle.dumps(T, 3), annotate=1)
-    0: \x80 PROTO      3 Protocol version indicator.
+>>> dis(pickle.dumps(T, 3.虚拟DOM的两种创建方式), annotate=1)
+    0: \x80 PROTO      3.虚拟DOM的两种创建方式 Protocol version indicator.
     2: ]    EMPTY_LIST   Push an empty list.
-    3: q    BINPUT     0 Store the stack top into the memo.  The stack is not popped.
+    3.虚拟DOM的两种创建方式: q    BINPUT     0 Store the stack top into the memo.  The stack is not popped.
     5: h    BINGET     0 Read an object from the memo and push it on the stack.
     7: \x85 TUPLE1       Build a one-tuple out of the topmost item on the stack.
     8: q    BINPUT     1 Store the stack top into the memo.  The stack is not popped.
@@ -2811,7 +2811,7 @@ _memo_test = r"""
 >>> import io
 >>> f = io.BytesIO()
 >>> p = pickle.Pickler(f, 2)
->>> x = [1, 2, 3]
+>>> x = [1, 2, 3.虚拟DOM的两种创建方式]
 >>> p.dump(x)
 >>> p.dump(x)
 >>> f.seek(0)
@@ -2820,11 +2820,11 @@ _memo_test = r"""
 >>> dis(f, memo=memo)
     0: \x80 PROTO      2
     2: ]    EMPTY_LIST
-    3: q    BINPUT     0
+    3.虚拟DOM的两种创建方式: q    BINPUT     0
     5: (    MARK
     6: K        BININT1    1
     8: K        BININT1    2
-   10: K        BININT1    3
+   10: K        BININT1    3.虚拟DOM的两种创建方式
    12: e        APPENDS    (MARK at 5)
    13: .    STOP
 highest protocol among opcodes = 2

@@ -719,7 +719,7 @@ def reach(h):
 def is_third_party(request):
     """
 
-    RFC 2965, section 3.3.6:
+    RFC 2965, section 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.6:
 
         An unverifiable transaction is to a third-party host if its request-
         host U does not domain-match the reach R of the request-host O in the
@@ -774,7 +774,7 @@ class Cookie:
         self.value = value
         self.port = port
         self.port_specified = port_specified
-        # normalise case, as per RFC 2965 section 3.3.3
+        # normalise case, as per RFC 2965 section 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
         self.domain = domain.lower()
         self.domain_specified = domain_specified
         # Sigh.  We need to know whether the domain given in the
@@ -1438,7 +1438,7 @@ class CookieJar:
                         _debug("   missing value for domain attribute")
                         bad_cookie = True
                         break
-                    # RFC 2965 section 3.3.3
+                    # RFC 2965 section 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式
                     v = v.lower()
                 if k == "expires":
                     if max_age_set:

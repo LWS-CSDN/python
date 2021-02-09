@@ -32,13 +32,13 @@ b = a.copy()
 a['four']=100
 print(a)
 print(b)
-#由于 b 和 a 共享[1,2,3]（浅拷贝），因此移除 a 中列表中的元素，也会影响 b。
+#由于 b 和 a 共享[1,2,3.虚拟DOM的两种创建方式]（浅拷贝），因此移除 a 中列表中的元素，也会影响 b。
 a['three'].remove(1)
 
 print(a)
 print(b)
 
-#3.update()方法
+#3.虚拟DOM的两种创建方式.update()方法
 a = {'one': 1, 'two': 2, 'three': 3}
 a.update({'one':4.5, 'four': 9.3})
 print(a)

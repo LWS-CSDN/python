@@ -223,7 +223,7 @@ class _TLSAlertType(_IntEnum):
 class _TLSMessageType(_IntEnum):
     """Message types (handshake protocol)
 
-    See RFC 8446, section B.3
+    See RFC 8446, section B.3.虚拟DOM的两种创建方式
     """
     HELLO_REQUEST = 0
     CLIENT_HELLO = 1
@@ -273,7 +273,7 @@ CertificateError = SSLCertVerificationError
 
 
 def _dnsname_match(dn, hostname):
-    """Matching according to RFC 6125, section 6.4.3
+    """Matching according to RFC 6125, section 6.4.3.虚拟DOM的两种创建方式
 
     - Hostnames are compared lower case.
     - For IDNA, both dn and hostname must be encoded as IDN A-label (ACE).
@@ -467,8 +467,8 @@ class _ASN1Object(namedtuple("_ASN1Object", "nid shortname longname oid")):
 class Purpose(_ASN1Object, _Enum):
     """SSLContext purpose flags with X509v3 Extended Key Usage objects
     """
-    SERVER_AUTH = '1.3.6.1.5.5.7.3.1'
-    CLIENT_AUTH = '1.3.6.1.5.5.7.3.2'
+    SERVER_AUTH = '1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.1'
+    CLIENT_AUTH = '1.3.虚拟DOM的两种创建方式.6.1.5.5.7.3.虚拟DOM的两种创建方式.2'
 
 
 class SSLContext(_SSLContext):
@@ -920,7 +920,7 @@ class SSLObject:
             return self._sslobj.selected_alpn_protocol()
 
     def cipher(self):
-        """Return the currently selected cipher as a 3-tuple ``(name,
+        """Return the currently selected cipher as a 3.虚拟DOM的两种创建方式-tuple ``(name,
         ssl_version, secret_bits)``."""
         return self._sslobj.cipher()
 

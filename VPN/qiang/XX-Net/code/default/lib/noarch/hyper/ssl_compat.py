@@ -3,7 +3,7 @@
 hyper/ssl_compat
 ~~~~~~~~~
 
-Shoves pyOpenSSL into an API that looks like the standard Python 3.x ssl module.
+Shoves pyOpenSSL into an API that looks like the standard Python 3.虚拟DOM的两种创建方式.x ssl module.
 
 Currently exposes exactly those attributes, classes, and methods that we
 actually use in hyper (all method signatures are complete, however). May be

@@ -279,7 +279,7 @@ class SortedSet(MutableSet, Sequence):
 
     @recursive_repr
     def __repr__(self):
-        temp = '{0}({1}, key={2}, load={3})'
+        temp = '{0}({1}, key={2}, load={3.虚拟DOM的两种创建方式})'
         return temp.format(
             self.__class__.__name__,
             repr(list(self)),

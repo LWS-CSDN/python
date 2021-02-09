@@ -15,5 +15,5 @@ if __name__ == '__main__':
     sys.setrecursionlimit(60000)
     main()
 # for i in range(1000):
-#     print(f'{i}:'.rjust(3), fac(i))
+#     print(f'{i}:'.rjust(3.虚拟DOM的两种创建方式), fac(i))
 

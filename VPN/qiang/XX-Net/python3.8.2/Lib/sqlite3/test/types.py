@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import datetime
 import unittest
@@ -402,7 +402,7 @@ class DateTimeTests(unittest.TestCase):
         self.assertEqual(ts, ts2)
 
     @unittest.skipIf(sqlite.sqlite_version_info < (3, 1),
-                     'the date functions are available on 3.1 or later')
+                     'the date functions are available on 3.??DOM???????.1 or later')
     def CheckSqlTimestamp(self):
         now = datetime.datetime.utcnow()
         self.cur.execute("insert into test(ts) values (current_timestamp)")

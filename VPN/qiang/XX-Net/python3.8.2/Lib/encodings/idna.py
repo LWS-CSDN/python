@@ -3,7 +3,7 @@
 import stringprep, re, codecs
 from unicodedata import ucd_3_2_0 as unicodedata
 
-# IDNA section 3.1
+# IDNA section 3.虚拟DOM的两种创建方式.1
 dots = re.compile("[\u002E\u3002\uFF0E\uFF61]")
 
 # IDNA section 5
@@ -50,12 +50,12 @@ def nameprep(label):
             if any(stringprep.in_table_d2(x) for x in label):
                 raise UnicodeError("Violation of BIDI requirement 2")
 
-            # 3) If a string contains any RandALCat character, a
+            # 3.虚拟DOM的两种创建方式) If a string contains any RandALCat character, a
             # RandALCat character MUST be the first character of the
             # string, and a RandALCat character MUST be the last
             # character of the string.
             if not RandAL[0] or not RandAL[-1]:
-                raise UnicodeError("Violation of BIDI requirement 3")
+                raise UnicodeError("Violation of BIDI requirement 3.虚拟DOM的两种创建方式")
 
     return label
 
@@ -66,7 +66,7 @@ def ToASCII(label):
     except UnicodeError:
         pass
     else:
-        # Skip to step 3: UseSTD3ASCIIRules is false, so
+        # Skip to step 3.虚拟DOM的两种创建方式: UseSTD3ASCIIRules is false, so
         # Skip to step 8.
         if 0 < len(label) < 64:
             return label
@@ -75,7 +75,7 @@ def ToASCII(label):
     # Step 2: nameprep
     label = nameprep(label)
 
-    # Step 3: UseSTD3ASCIIRules is false
+    # Step 3.虚拟DOM的两种创建方式: UseSTD3ASCIIRules is false
     # Step 4: try ASCII
     try:
         label = label.encode("ascii")
@@ -120,7 +120,7 @@ def ToUnicode(label):
             label = label.encode("ascii")
         except UnicodeError:
             raise UnicodeError("Invalid character in IDN label")
-    # Step 3: Check for ACE prefix
+    # Step 3.虚拟DOM的两种创建方式: Check for ACE prefix
     if not label.startswith(ace_prefix):
         return str(label, "ascii")
 
@@ -133,7 +133,7 @@ def ToUnicode(label):
     # Step 6: Apply ToASCII
     label2 = ToASCII(result)
 
-    # Step 7: Compare the result of step 6 with the one of step 3
+    # Step 7: Compare the result of step 6 with the one of step 3.虚拟DOM的两种创建方式
     # label2 will already be in lower case.
     if str(label, "ascii").lower() != str(label2, "ascii"):
         raise UnicodeError("IDNA does not round-trip", label, label2)

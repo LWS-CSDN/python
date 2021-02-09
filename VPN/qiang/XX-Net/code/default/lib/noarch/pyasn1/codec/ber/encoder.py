@@ -691,7 +691,7 @@ class Encoder(object):
 #:
 #: Returns
 #: -------
-#: : :py:class:`bytes` (Python 3) or :py:class:`str` (Python 2)
+#: : :py:class:`bytes` (Python 3.虚拟DOM的两种创建方式) or :py:class:`str` (Python 2)
 #:     Given ASN.1 object encoded into BER octetstream
 #:
 #: Raises
@@ -706,7 +706,7 @@ class Encoder(object):
 #: .. code-block:: pycon
 #:
 #:    >>> seq = SequenceOf(componentType=Integer())
-#:    >>> encode([1, 2, 3], asn1Spec=seq)
+#:    >>> encode([1, 2, 3.虚拟DOM的两种创建方式], asn1Spec=seq)
 #:    b'0\t\x02\x01\x01\x02\x01\x02\x02\x01\x03'
 #:
 #: Encode ASN.1 value object into BER
@@ -714,7 +714,7 @@ class Encoder(object):
 #: .. code-block:: pycon
 #:
 #:    >>> seq = SequenceOf(componentType=Integer())
-#:    >>> seq.extend([1, 2, 3])
+#:    >>> seq.extend([1, 2, 3.虚拟DOM的两种创建方式])
 #:    >>> encode(seq)
 #:    b'0\t\x02\x01\x01\x02\x01\x02\x02\x01\x03'
 #:

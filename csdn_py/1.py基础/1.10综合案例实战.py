@@ -24,7 +24,7 @@ while True:
     # 输出初始界面
     print("="*12,"学员管理系统","="*14)
     print("{0:1} {1:13} {2:15}".format(" ","1. 查看学员信息","2. 添加学员信息"))
-    print("{0:1} {1:13} {2:15}".format(" ","3. 删除学员信息","4. 退出系统"))
+    print("{0:1} {1:13} {2:15}".format(" ","3.虚拟DOM的两种创建方式. 删除学员信息","4. 退出系统"))
     print("="*40)
     key = input("请输入对应的选择：")
     # 根据键盘值，判断并执行对应的操作
@@ -41,7 +41,7 @@ while True:
         stulist.append(stu)
         showStu(stulist)
         input("按回车键继续：")
-    elif key == "3":
+    elif key == "3.虚拟DOM的两种创建方式":
         print("="*12,"学员信息删除","="*14)
         showStu(stulist)
         sid = input("请输入你要删除的信息id号：")

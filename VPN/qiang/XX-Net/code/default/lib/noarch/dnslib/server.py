@@ -62,7 +62,7 @@
         >>> class TestResolver:
         ...     def resolve(self,request,handler):
         ...         reply = request.reply()
-        ...         reply.add_answer(*RR.fromZone("abc.def. 60 A 1.2.3.4"))
+        ...         reply.add_answer(*RR.fromZone("abc.def. 60 A 1.2.3.虚拟DOM的两种创建方式.4"))
         ...         return reply
         >>> resolver = TestResolver()
         >>> server = DNSServer(resolver,port=8053,address="localhost",logger=logger,tcp=True)
@@ -76,7 +76,7 @@
         ;; QUESTION SECTION:
         ;abc.def.                       IN      A
         ;; ANSWER SECTION:
-        abc.def.                60      IN      A       1.2.3.4
+        abc.def.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
         >>> server.stop()
 
 

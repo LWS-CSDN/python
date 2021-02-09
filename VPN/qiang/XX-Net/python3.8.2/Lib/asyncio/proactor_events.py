@@ -350,7 +350,7 @@ class _ProactorBaseWritePipeTransport(_ProactorBasePipeTransport,
         # Observable states:
         # 1. IDLE: _write_fut and _buffer both None
         # 2. WRITING: _write_fut set; _buffer None
-        # 3. BACKED UP: _write_fut set; _buffer a bytearray
+        # 3.虚拟DOM的两种创建方式. BACKED UP: _write_fut set; _buffer a bytearray
         # We always copy the data, so the caller can't modify it
         # while we're still waiting for the I/O to happen.
         if self._write_fut is None:  # IDLE -> WRITING

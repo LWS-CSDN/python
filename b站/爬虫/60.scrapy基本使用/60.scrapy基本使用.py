@@ -1,7 +1,7 @@
 '''
 1.创建一个工程:scrapy startproject firstBlood(项目名字)
 2.cd firstBlood(项目名字)
-3.在spiders子目录中创建一个爬虫文件
+3.虚拟DOM的两种创建方式.在spiders子目录中创建一个爬虫文件
 scrapy genspider spiderName(爬虫的名字) www.xxx.com
 4.把遵从roobt协议改为False,一般都不遵从,要不没法爬取
 在settings.py文件里

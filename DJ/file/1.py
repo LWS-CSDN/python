@@ -12,8 +12,8 @@ def my_pow1(x, n):
     return result
 
 
-print("3**5 = ", my_pow1(3, 5))
-# 输出: 3**5 =  243
+print("3.虚拟DOM的两种创建方式**5 = ", my_pow1(3, 5))
+# 输出: 3.虚拟DOM的两种创建方式**5 =  243
 # print(my_pow1('A3', 5)) # raise error
 
 
@@ -27,10 +27,10 @@ def my_pow2(x, n=2):
     return result
 
 
-print("3**2 = ", my_pow2(3))
-# 输出: 3**2 =  9
-print("3**5 = ", my_pow2(3, 5))
-# 输出: 3**5 =  243
+print("3.虚拟DOM的两种创建方式**2 = ", my_pow2(3))
+# 输出: 3.虚拟DOM的两种创建方式**2 =  9
+print("3.虚拟DOM的两种创建方式**5 = ", my_pow2(3, 5))
+# 输出: 3.虚拟DOM的两种创建方式**5 =  243
 
 
 # 可变参数, 可变参数在函数调用时自动组装为一个tuple

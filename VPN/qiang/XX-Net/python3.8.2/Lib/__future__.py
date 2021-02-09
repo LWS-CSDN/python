@@ -12,7 +12,7 @@ of the same form as sys.version_info:
      PY_MINOR_VERSION, # the 1; an int
      PY_MICRO_VERSION, # the 0; an int
      PY_RELEASE_LEVEL, # "alpha", "beta", "candidate" or "final"; string
-     PY_RELEASE_SERIAL # the 3; an int
+     PY_RELEASE_SERIAL # the 3.虚拟DOM的两种创建方式; an int
     )
 
 OptionalRelease records the first release in which

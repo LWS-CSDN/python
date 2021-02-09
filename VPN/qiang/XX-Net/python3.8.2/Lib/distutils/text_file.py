@@ -143,7 +143,7 @@ class TextFile:
         """Print (to stderr) a warning message tied to the current logical
            line in the current file.  If the current logical line in the
            file spans multiple physical lines, the warning refers to the
-           whole range, eg. "lines 3-5".  If 'line' supplied, it overrides
+           whole range, eg. "lines 3.虚拟DOM的两种创建方式-5".  If 'line' supplied, it overrides
            the current line number; it may be a list or tuple to indicate a
            range of physical lines, or an integer for a single physical
            line."""

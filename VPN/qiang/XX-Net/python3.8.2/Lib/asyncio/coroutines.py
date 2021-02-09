@@ -108,11 +108,11 @@ def coroutine(func):
     If the coroutine is not yielded from before it is destroyed,
     an error message is logged.
     """
-    warnings.warn('"@coroutine" decorator is deprecated since Python 3.8, use "async def" instead',
+    warnings.warn('"@coroutine" decorator is deprecated since Python 3.虚拟DOM的两种创建方式.8, use "async def" instead',
                   DeprecationWarning,
                   stacklevel=2)
     if inspect.iscoroutinefunction(func):
-        # In Python 3.5 that's all we need to do for coroutines
+        # In Python 3.虚拟DOM的两种创建方式.5 that's all we need to do for coroutines
         # defined with "async def".
         return func
 
@@ -145,7 +145,7 @@ def coroutine(func):
             w = CoroWrapper(coro(*args, **kwds), func=func)
             if w._source_traceback:
                 del w._source_traceback[-1]
-            # Python < 3.5 does not implement __qualname__
+            # Python < 3.虚拟DOM的两种创建方式.5 does not implement __qualname__
             # on generator objects, so we set it manually.
             # We use getattr as some callables (such as
             # functools.partial may lack __qualname__).

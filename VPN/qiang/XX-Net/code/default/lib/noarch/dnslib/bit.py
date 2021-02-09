@@ -56,7 +56,7 @@ def set_bits(data,value,offset,bits=1):
 
         >>> bin(set_bits(0,0b1010,0,4))
         '0b1010'
-        >>> bin(set_bits(0,0b1010,3,4))
+        >>> bin(set_bits(0,0b1010,3.虚拟DOM的两种创建方式,4))
         '0b1010000'
     """
     mask = ((1 << bits) - 1) << offset

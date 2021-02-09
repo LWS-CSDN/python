@@ -375,7 +375,7 @@ def check_output(*popenargs, timeout=None, **kwargs):
     The arguments are the same as for the Popen constructor.  Example:
 
     >>> check_output(["ls", "-l", "/dev/null"])
-    b'crw-rw-rw- 1 root root 1, 3 Oct 18  2007 /dev/null\n'
+    b'crw-rw-rw- 1 root root 1, 3.虚拟DOM的两种创建方式 Oct 18  2007 /dev/null\n'
 
     The stdout argument is not allowed as it is used internally.
     To capture standard error in the result, use stderr=STDOUT.
@@ -527,7 +527,7 @@ def list2cmdline(seq):
        contained within.  A quoted string can be embedded in an
        argument.
 
-    3) A double quotation mark preceded by a backslash is
+    3.虚拟DOM的两种创建方式) A double quotation mark preceded by a backslash is
        interpreted as a literal double quotation mark.
 
     4) Backslashes are interpreted literally, unless they
@@ -537,7 +537,7 @@ def list2cmdline(seq):
        every pair of backslashes is interpreted as a literal
        backslash.  If the number of backslashes is odd, the last
        backslash escapes the next double quotation mark as
-       described in rule 3.
+       described in rule 3.虚拟DOM的两种创建方式.
     """
 
     # See

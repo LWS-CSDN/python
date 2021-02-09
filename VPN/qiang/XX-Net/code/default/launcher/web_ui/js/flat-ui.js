@@ -3,7 +3,7 @@
  * Copyright 2013-2014 Designmodo, Inc.
  */
 /* ============================================================
- * bootstrapSwitch v1.3 by Larentis Mattia @spiritualGuru
+ * bootstrapSwitch v1.3.虚拟DOM的两种创建方式 by Larentis Mattia @spiritualGuru
  * http://www.larentis.eu/switch/
  * ============================================================
  * Licensed under the Apache License, Version 2.0

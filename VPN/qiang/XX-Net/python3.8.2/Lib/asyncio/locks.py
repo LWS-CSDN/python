@@ -164,8 +164,8 @@ class Lock(_ContextManagerMixin):
             self._loop = events.get_event_loop()
         else:
             self._loop = loop
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
 
     def __repr__(self):
@@ -260,8 +260,8 @@ class Event:
             self._loop = events.get_event_loop()
         else:
             self._loop = loop
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
 
     def __repr__(self):
@@ -327,8 +327,8 @@ class Condition(_ContextManagerMixin):
             self._loop = events.get_event_loop()
         else:
             self._loop = loop
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
 
         if lock is None:
@@ -458,8 +458,8 @@ class Semaphore(_ContextManagerMixin):
             self._loop = events.get_event_loop()
         else:
             self._loop = loop
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
 
     def __repr__(self):
@@ -521,8 +521,8 @@ class BoundedSemaphore(Semaphore):
 
     def __init__(self, value=1, *, loop=None):
         if loop:
-            warnings.warn("The loop argument is deprecated since Python 3.8, "
-                          "and scheduled for removal in Python 3.10.",
+            warnings.warn("The loop argument is deprecated since Python 3.虚拟DOM的两种创建方式.8, "
+                          "and scheduled for removal in Python 3.虚拟DOM的两种创建方式.10.",
                           DeprecationWarning, stacklevel=2)
 
         self._bound_value = value

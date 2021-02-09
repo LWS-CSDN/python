@@ -279,7 +279,7 @@ class EnumMeta(type):
         """Either returns an existing member, or creates a new enum class.
 
         This method is used both when an enum class is given a value to match
-        to an enumeration member (i.e. Color(3)) and for the functional API
+        to an enumeration member (i.e. Color(3.虚拟DOM的两种创建方式)) and for the functional API
         (i.e. Color = Enum('Color', names='RED GREEN BLUE')).
 
         When used for the functional API:
@@ -466,7 +466,7 @@ class EnumMeta(type):
 
     def _convert(cls, *args, **kwargs):
         import warnings
-        warnings.warn("_convert is deprecated and will be removed in 3.9, use "
+        warnings.warn("_convert is deprecated and will be removed in 3.虚拟DOM的两种创建方式.9, use "
                       "_convert_ instead.", DeprecationWarning, stacklevel=2)
         return cls._convert_(*args, **kwargs)
 
@@ -557,7 +557,7 @@ class Enum(metaclass=EnumMeta):
     def __new__(cls, value):
         # all enum instances are actually created during class construction
         # without calling this method; this method is called by the metaclass'
-        # __call__ (i.e. Color(3) ), and by pickle
+        # __call__ (i.e. Color(3.虚拟DOM的两种创建方式) ), and by pickle
         if type(value) is cls:
             # For lookups like Color(Color.RED)
             return value

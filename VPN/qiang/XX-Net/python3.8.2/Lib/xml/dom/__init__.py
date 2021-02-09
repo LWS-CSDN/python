@@ -124,7 +124,7 @@ class ValidationErr(DOMException):
 class UserDataHandler:
     """Class giving the operation constants for UserDataHandler.handle()."""
 
-    # Based on DOM Level 3 (WD 9 April 2002)
+    # Based on DOM Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     NODE_CLONED   = 1
     NODE_IMPORTED = 2

@@ -224,21 +224,21 @@ only screen and (max-width: 480px) and (orientation: landscape) {
 
 
 /**
- *  iPad 3/4 landscape & portrait
+ *  iPad 3.虚拟DOM的两种创建方式/4 landscape & portrait
  */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {}
 
 
 /**
- *  iPad 3/4 portrait
+ *  iPad 3.虚拟DOM的两种创建方式/4 portrait
  */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {}
 
 
 /**
- *  iPad 3/4 landscape
+ *  iPad 3.虚拟DOM的两种创建方式/4 landscape
  */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {}

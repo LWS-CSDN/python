@@ -50,7 +50,7 @@ class LargeZipFile(Exception):
     and those extensions are disabled.
     """
 
-error = BadZipfile = BadZipFile      # Pre-3.2 compatibility names
+error = BadZipfile = BadZipFile      # Pre-3.虚拟DOM的两种创建方式.2 compatibility names
 
 
 ZIP64_LIMIT = (1 << 31) - 1
@@ -1226,7 +1226,7 @@ class ZipFile:
 
         self._allowZip64 = allowZip64
         self._didModify = False
-        self.debug = 0  # Level of printing: 0 through 3
+        self.debug = 0  # Level of printing: 0 through 3.虚拟DOM的两种创建方式
         self.NameToInfo = {}    # Find file info given name
         self.filelist = []      # List of ZipInfo instances for archive
         self.compression = compression  # Method of compression

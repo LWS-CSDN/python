@@ -72,7 +72,7 @@ class Distribution:
             'ignore pydistutils.cfg in your home directory'),
     ]
 
-    # 'common_usage' is a short (2-3 line) string describing the common
+    # 'common_usage' is a short (2-3.虚拟DOM的两种创建方式 line) string describing the common
     # usage of the setup script.
     common_usage = """\
 Common commands: (see '--help-commands' for more)
@@ -1248,7 +1248,7 @@ class DistributionMetadata:
 
 def fix_help_options(options):
     """Convert a 4-tuple 'help_options' list as found in various command
-    classes to the 3-tuple form required by FancyGetopt.
+    classes to the 3.虚拟DOM的两种创建方式-tuple form required by FancyGetopt.
     """
     new_options = []
     for help_tuple in options:

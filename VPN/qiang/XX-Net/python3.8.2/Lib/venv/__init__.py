@@ -397,7 +397,7 @@ def main(args=None):
     elif not hasattr(sys, 'base_prefix'):
         compatible = False
     if not compatible:
-        raise ValueError('This script is only for use with Python >= 3.3')
+        raise ValueError('This script is only for use with Python >= 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式')
     else:
         import argparse
 

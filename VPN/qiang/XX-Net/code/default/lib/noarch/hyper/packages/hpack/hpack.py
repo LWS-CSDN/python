@@ -377,7 +377,7 @@ class Decoder(object):
     """
     An HPACK decoder object.
 
-    .. versionchanged:: 2.3.0
+    .. versionchanged:: 2.3.虚拟DOM的两种创建方式.0
        Added ``max_header_list_size`` argument.
 
     :param max_header_list_size: The maximum decompressed size we will allow
@@ -410,7 +410,7 @@ class Decoder(object):
         #:
         #: Defaults to 64kB.
         #:
-        #: .. versionadded:: 2.3.0
+        #: .. versionadded:: 2.3.虚拟DOM的两种创建方式.0
         self.max_header_list_size = max_header_list_size
 
         #: Maximum allowed header table size.

@@ -32,7 +32,7 @@ class Atext():
         # print(response.content) #以字节流形式打印
                 
     def chuli(self,response):
-        #3.提取下载链接
+        #3.虚拟DOM的两种创建方式.提取下载链接
         soup = bs4.BeautifulSoup(response.text, 'lxml')
         title=str(soup.title)
         self.__datas["name"]=title.split('<title>')[1].split('</title')[0]

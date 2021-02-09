@@ -291,7 +291,7 @@ def test_ip_network():
     assert '192.168.1.1' in ip_network
     assert '192.168.1.2' not in ip_network
     assert '192.0.2.1' in ip_network
-    assert '192.0.3.1' in ip_network  # 192.0.2.0 is treated as 192.0.2.0/23
+    assert '192.0.3.虚拟DOM的两种创建方式.1' in ip_network  # 192.0.2.0 is treated as 192.0.2.0/23
     assert 'www.google.com' not in ip_network
 
 

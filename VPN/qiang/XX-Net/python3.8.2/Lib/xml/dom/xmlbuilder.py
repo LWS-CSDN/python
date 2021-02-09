@@ -1,4 +1,4 @@
-"""Implementation of the DOM Level 3 'LS-Load' feature."""
+"""Implementation of the DOM Level 3.虚拟DOM的两种创建方式 'LS-Load' feature."""
 
 import copy
 import warnings
@@ -18,7 +18,7 @@ class Options:
     """
 
     # Note that the DOMBuilder class in LoadSave constrains which of these
-    # values can be set using the DOM Level 3 LoadSave feature.
+    # values can be set using the DOM Level 3.虚拟DOM的两种创建方式 LoadSave feature.
 
     namespaces = 1
     namespace_declarations = True

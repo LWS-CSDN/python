@@ -92,7 +92,7 @@ The part <data of object #n> saves the data of object #n. It may contains refere
                                       <reference to item #0>
                                       <reference to item #1>
                                       [...]
-                                      e.g. '3\\ni0\\ni1\\ni2\\n' for [0, 1, 2]
+                                      e.g. '3.虚拟DOM的两种创建方式\\ni0\\ni1\\ni2\\n' for [0, 1, 2]
 
  - a  dict             is saved by :  <number of item>\\n
                                       <reference to value #0>
@@ -111,12 +111,12 @@ same file, or a raw value (e.g. an integer).
  - a  bool             is saved by      'b0' or 'b1'
  - a  string           is saved by e.g. 's5\\nascii' (where 5 is the number of characters)
  - an unicode          is saved by e.g. 'u4\\nutf8'  (where 4 is the number of characters)
- - an object reference is saved by e.g. 'r3\\n'      (where 3 means reference to object #3)
+ - an object reference is saved by e.g. 'r3\\n'      (where 3.虚拟DOM的两种创建方式 means reference to object #3.虚拟DOM的两种创建方式)
  -    None             is saved by      'n'
 """
 
 __all__ = ["load", "dump", "loads", "dumps", "freeze_configuration", "register", "register_class", "register_alias", "unregister"]
-VERSION = "0.8.3"
+VERSION = "0.8.3.虚拟DOM的两种创建方式"
 
 import logging
 logger = logging.getLogger("cerealizer")
@@ -198,9 +198,9 @@ Reads a reference from file S."""
     c = s.read(1)
     if   c == b"i": return int  (s.readline())
     elif c == b"f": return float(s.readline())
-    elif c == b"s": return s.read(int(s.readline())).decode("latin") # str in Python 2 => str in Python 3
-    elif c == b"u": return s.read(int(s.readline())).decode("utf8") # str in Python 3 or unicode in Python2
-    elif c == b"y": return s.read(int(s.readline())) # bytes in Python 3
+    elif c == b"s": return s.read(int(s.readline())).decode("latin") # str in Python 2 => str in Python 3.虚拟DOM的两种创建方式
+    elif c == b"u": return s.read(int(s.readline())).decode("utf8") # str in Python 3.虚拟DOM的两种创建方式 or unicode in Python2
+    elif c == b"y": return s.read(int(s.readline())) # bytes in Python 3.虚拟DOM的两种创建方式
     elif c == b"r": return self.id2obj[int(s.readline())]
     elif c == b"n": return None
     elif c == b"b": return bool(int(s.read(1)))

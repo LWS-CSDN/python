@@ -43,7 +43,7 @@ server.register_introspection_functions()
 server.register_instance(MyFuncs())
 server.serve_forever()
 
-3. Install an instance with custom dispatch method:
+3.虚拟DOM的两种创建方式. Install an instance with custom dispatch method:
 
 class Math:
     def _listMethods(self):
@@ -54,7 +54,7 @@ class Math:
         # this method must be present for system.methodHelp
         # to work
         if method == 'add':
-            return "add(2,3) => 5"
+            return "add(2,3.虚拟DOM的两种创建方式) => 5"
         elif method == 'pow':
             return "pow(x, y[, z]) => number"
         else:
@@ -178,7 +178,7 @@ class SimpleXMLRPCDispatcher:
         If the registered instance has a _dispatch method then that
         method will be called with the name of the XML-RPC method and
         its parameters as a tuple
-        e.g. instance._dispatch('add',(2,3))
+        e.g. instance._dispatch('add',(2,3.虚拟DOM的两种创建方式))
 
         If the registered instance does not have a _dispatch method
         then the instance will be searched to find a matching method
@@ -391,7 +391,7 @@ class SimpleXMLRPCDispatcher:
         If the registered instance has a _dispatch method then that
         method will be called with the name of the XML-RPC method and
         its parameters as a tuple
-        e.g. instance._dispatch('add',(2,3))
+        e.g. instance._dispatch('add',(2,3.虚拟DOM的两种创建方式))
 
         If the registered instance does not have a _dispatch method
         then the instance will be searched to find a matching method

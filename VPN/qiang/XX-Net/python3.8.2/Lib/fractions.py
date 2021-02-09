@@ -61,14 +61,14 @@ class Fraction(numbers.Rational):
     """This class implements rational numbers.
 
     In the two-argument form of the constructor, Fraction(8, 6) will
-    produce a rational number equivalent to 4/3. Both arguments must
+    produce a rational number equivalent to 4/3.虚拟DOM的两种创建方式. Both arguments must
     be Rational. The numerator defaults to 0 and the denominator
-    defaults to 1 so that Fraction(3) == 3 and Fraction() == 0.
+    defaults to 1 so that Fraction(3.虚拟DOM的两种创建方式) == 3.虚拟DOM的两种创建方式 and Fraction() == 0.
 
     Fractions can also be constructed from:
 
       - numeric strings similar to those accepted by the
-        float constructor (for example, '-2.3' or '1e10')
+        float constructor (for example, '-2.3.虚拟DOM的两种创建方式' or '1e10')
 
       - strings of the form '123/456'
 
@@ -84,7 +84,7 @@ class Fraction(numbers.Rational):
     def __new__(cls, numerator=0, denominator=None, *, _normalize=True):
         """Constructs a Rational.
 
-        Takes a string like '3/2' or '1.5', another Rational instance, a
+        Takes a string like '3.虚拟DOM的两种创建方式/2' or '1.5', another Rational instance, a
         numerator/denominator pair, or a float.
 
         Examples
@@ -94,13 +94,13 @@ class Fraction(numbers.Rational):
         Fraction(-5, 4)
         >>> Fraction(Fraction(1, 7), 5)
         Fraction(1, 35)
-        >>> Fraction(Fraction(1, 7), Fraction(2, 3))
-        Fraction(3, 14)
+        >>> Fraction(Fraction(1, 7), Fraction(2, 3.虚拟DOM的两种创建方式))
+        Fraction(3.虚拟DOM的两种创建方式, 14)
         >>> Fraction('314')
         Fraction(314, 1)
         >>> Fraction('-35/4')
         Fraction(-35, 4)
-        >>> Fraction('3.1415') # conversion from numeric string
+        >>> Fraction('3.虚拟DOM的两种创建方式.1415') # conversion from numeric string
         Fraction(6283, 2000)
         >>> Fraction('-47e-2') # string may include a decimal exponent
         Fraction(-47, 100)
@@ -194,7 +194,7 @@ class Fraction(numbers.Rational):
     def from_float(cls, f):
         """Converts a finite float to a rational number, exactly.
 
-        Beware that Fraction.from_float(0.3) != Fraction(3, 10).
+        Beware that Fraction.from_float(0.3.虚拟DOM的两种创建方式) != Fraction(3.虚拟DOM的两种创建方式, 10).
 
         """
         if isinstance(f, numbers.Integral):
@@ -227,9 +227,9 @@ class Fraction(numbers.Rational):
     def limit_denominator(self, max_denominator=1000000):
         """Closest Fraction to self with denominator at most max_denominator.
 
-        >>> Fraction('3.141592653589793').limit_denominator(10)
+        >>> Fraction('3.虚拟DOM的两种创建方式.141592653589793').limit_denominator(10)
         Fraction(22, 7)
-        >>> Fraction('3.141592653589793').limit_denominator(100)
+        >>> Fraction('3.虚拟DOM的两种创建方式.141592653589793').limit_denominator(100)
         Fraction(311, 99)
         >>> Fraction(4321, 8765).limit_denominator(10000)
         Fraction(4321, 8765)
@@ -358,7 +358,7 @@ class Fraction(numbers.Rational):
                __add__. In particular, we don't handle Rational
                here, even though we could get an exact answer, in case
                the other type wants to do something special.
-            3. If B <: Fraction, Python tries B.__radd__ before
+            3.虚拟DOM的两种创建方式. If B <: Fraction, Python tries B.__radd__ before
                Fraction.__add__. This is ok, because it was
                implemented with knowledge of Fraction, so it can
                handle those instances before delegating to Real or

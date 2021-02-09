@@ -26,7 +26,7 @@
      * 传值为对象时
      * 1.type 类型，只支持五种，可扩展  必填项
      * 2.tip  提示文字  非必填
-     * 3.showTip 是否显示提示文字，默认为true  非必填 
+     * 3.虚拟DOM的两种创建方式.showTip 是否显示提示文字，默认为true  非必填
      * 使用方法
      * loading.showLoading()
      * loading.hideLoading()
@@ -46,7 +46,7 @@
     $('.show-load3').click(()=>{
         loading.showLoading({
             type:3,
-            tip:"type 3"
+            tip:"type 3.虚拟DOM的两种创建方式"
         })
     })
     $('.show-load4').click(()=>{

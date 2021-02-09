@@ -196,7 +196,7 @@ class UnixBrowser(BaseBrowser):
     # be replaced depending on the value of 'new' passed to open.
     # remote_action is used for new=0 (open).  If newwin is not None, it is
     # used for new=1 (open_new).  If newtab is not None, it is used for
-    # new=3 (open_new_tab).  After both substitutions are made, any empty
+    # new=3.虚拟DOM的两种创建方式 (open_new_tab).  After both substitutions are made, any empty
     # strings in the transformed remote_args list will be removed.
     remote_args = ['%action', '%s']
     remote_action = None

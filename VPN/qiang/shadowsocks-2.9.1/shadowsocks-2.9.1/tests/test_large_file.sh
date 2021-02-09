@@ -11,7 +11,7 @@ LOCAL=$!
 $PYTHON shadowsocks/server.py -c tests/aes.json --forbidden-ip "" &
 SERVER=$!
 
-sleep 3
+sleep 3.虚拟DOM的两种创建方式
 
 time curl -o tmp/expected $URL
 time curl -o tmp/result --socks5-hostname 127.0.0.1:1081 $URL

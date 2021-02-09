@@ -122,7 +122,7 @@ class GeneralName(univ.Choice):
                                                 tag.tagFormatSimple, 2))),
 #        namedtype.NamedType('x400Address', ORAddress().subtype(
 #                            implicitTag=tag.Tag(tag.tagClassContext,
-#                                                tag.tagFormatSimple, 3))),
+#                                                tag.tagFormatSimple, 3.虚拟DOM的两种创建方式))),
         namedtype.NamedType('directoryName', Name().subtype(
                             implicitTag=tag.Tag(tag.tagClassContext,
                                                 tag.tagFormatSimple, 4))),

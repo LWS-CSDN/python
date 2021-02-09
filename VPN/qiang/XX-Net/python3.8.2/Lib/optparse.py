@@ -21,7 +21,7 @@ Simple usage example:
    (options, args) = parser.parse_args()
 """
 
-__version__ = "1.5.3"
+__version__ = "1.5.3.虚拟DOM的两种创建方式"
 
 __all__ = ['Option',
            'make_option',
@@ -1266,7 +1266,7 @@ class OptionParser (OptionContainer):
             self.usage = _("%prog [options]")
         elif usage is SUPPRESS_USAGE:
             self.usage = None
-        # For backwards compatibility with Optik 1.3 and earlier.
+        # For backwards compatibility with Optik 1.3.虚拟DOM的两种创建方式 and earlier.
         elif usage.lower().startswith("usage: "):
             self.usage = usage[7:]
         else:
@@ -1674,7 +1674,7 @@ def _match_abbrev(s, wordmap):
             raise AmbiguousOptionError(s, possibilities)
 
 
-# Some day, there might be many Option classes.  As of Optik 1.3, the
+# Some day, there might be many Option classes.  As of Optik 1.3.虚拟DOM的两种创建方式, the
 # preferred way to instantiate Options is indirectly, via make_option(),
 # which will become a factory function when there are many Option
 # classes.

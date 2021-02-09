@@ -23,7 +23,7 @@ Generate Plist example:
 
     pl = dict(
         aString = "Doodah",
-        aList = ["A", "B", 12, 32.1, [1, 2, 3]],
+        aList = ["A", "B", 12, 32.1, [1, 2, 3.虚拟DOM的两种创建方式]],
         aFloat = 0.1,
         anInt = 728,
         aDict = dict(

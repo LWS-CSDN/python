@@ -62,7 +62,7 @@ given, it specifies the extension for the backup file, and the backup
 file remains around; by default, the extension is ".bak" and it is
 deleted when the output file is closed.  In-place filtering is
 disabled when standard input is read.  XXX The current implementation
-does not work for MS-DOS 8+3 filesystems.
+does not work for MS-DOS 8+3.虚拟DOM的两种创建方式 filesystems.
 
 XXX Possible additions:
 

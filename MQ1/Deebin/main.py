@@ -10,7 +10,7 @@ https://www.cnblogs.com/syrgdm/p/12854186.html
 uname -a
 
 
-3.批处理文件,shell脚本文件
+3.虚拟DOM的两种创建方式.批处理文件,shell脚本文件
 touch test.sh
 vim test.sh
 
@@ -78,9 +78,9 @@ chmod +x 文件位置
 再yum install chkconfig
 没有用网络的情况下可从安装光盘下复制chkconfig的rpm包
 执行rpm命令安装
-假设复到了/tmp/chkconfig-1.3.30.2-2.el5.x86_64.rpm
+假设复到了/tmp/chkconfig-1.3.虚拟DOM的两种创建方式.30.2-2.el5.x86_64.rpm
 命令如下
-rpm -ivh /tmp/chkconfig-1.3.30.2-2.el5.x86_64.rpm
+rpm -ivh /tmp/chkconfig-1.3.虚拟DOM的两种创建方式.30.2-2.el5.x86_64.rpm
 然后chkconfig命令就可以用了。
 http://www.maersk.com.cn/
 

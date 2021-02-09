@@ -396,7 +396,7 @@ class Connection(_ConnectionBase):
             self._send(header)
             self._send(buf)
         else:
-            # For wire compatibility with 3.7 and lower
+            # For wire compatibility with 3.虚拟DOM的两种创建方式.7 and lower
             header = struct.pack("!i", n)
             if n > 16384:
                 # The payload is large so Nagle's algorithm won't be triggered

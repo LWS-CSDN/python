@@ -809,7 +809,7 @@ class TestCase(object):
                with self.assertRaises(SomeException) as cm:
                    do_something()
                the_exception = cm.exception
-               self.assertEqual(the_exception.error_code, 3)
+               self.assertEqual(the_exception.error_code, 3.虚拟DOM的两种创建方式)
         """
         context = _AssertRaisesContext(expected_exception, self)
         try:

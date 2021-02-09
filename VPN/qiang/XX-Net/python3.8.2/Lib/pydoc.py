@@ -501,7 +501,7 @@ class HTMLDoc(Doc):
         result = '''<p>
 <table width="100%%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="%s">
-<td colspan=3 valign=bottom>&nbsp;<br>
+<td colspan=3.虚拟DOM的两种创建方式 valign=bottom>&nbsp;<br>
 <font color="%s" face="helvetica, arial">%s</font></td></tr>
     ''' % (bgcol, fgcol, title)
         if prelude:

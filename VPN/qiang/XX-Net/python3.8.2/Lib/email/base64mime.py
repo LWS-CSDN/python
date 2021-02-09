@@ -50,7 +50,7 @@ MISC_LEN = 7
 def header_length(bytearray):
     """Return the length of s when it is encoded with base64."""
     groups_of_3, leftover = divmod(len(bytearray), 3)
-    # 4 bytes out for each 3 bytes (or nonzero fraction thereof) in.
+    # 4 bytes out for each 3.虚拟DOM的两种创建方式 bytes (or nonzero fraction thereof) in.
     n = groups_of_3 * 4
     if leftover:
         n += 4

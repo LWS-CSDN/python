@@ -36,7 +36,7 @@ class Lexer(object):
         'a'
         >>> p.read()
         ' '
-        >>> p.peek(3)
+        >>> p.peek(3.虚拟DOM的两种创建方式)
         'bcd'
         >>> p.read(5)
         'bcd e'
@@ -148,9 +148,9 @@ class WordLexer(Lexer):
         >>> l = WordLexer(r'abc "def\100\x3d\. ghi" jkl')
         >>> list(l)
         [('ATOM', 'abc'), ('ATOM', 'def@=. ghi'), ('ATOM', 'jkl')]
-        >>> l = WordLexer(r"1 '2 3 4' 5")
+        >>> l = WordLexer(r"1 '2 3.虚拟DOM的两种创建方式 4' 5")
         >>> list(l)
-        [('ATOM', '1'), ('ATOM', '2 3 4'), ('ATOM', '5')]
+        [('ATOM', '1'), ('ATOM', '2 3.虚拟DOM的两种创建方式 4'), ('ATOM', '5')]
         >>> l = WordLexer("abc# a comment")
         >>> list(l)
         [('ATOM', 'abc'), ('COMMENT', 'a comment')]

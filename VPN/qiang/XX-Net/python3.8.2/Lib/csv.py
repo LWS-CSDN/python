@@ -48,7 +48,7 @@ class Dialect:
         try:
             _Dialect(self)
         except TypeError as e:
-            # We do this for compatibility with py2.3
+            # We do this for compatibility with py2.3.虚拟DOM的两种创建方式
             raise Error(str(e))
 
 class excel(Dialect):
@@ -287,7 +287,7 @@ class Sniffer:
           2) build a table of frequencies of this frequency (meta-frequency?),
              e.g.  'x occurred 5 times in 10 rows, 6 times in 1000 rows,
              7 times in 2 rows'
-          3) use the mode of the meta-frequency to determine the /expected/
+          3.虚拟DOM的两种创建方式) use the mode of the meta-frequency to determine the /expected/
              frequency for that character
           4) find out how often the character actually meets that goal
           5) the character that best meets its goal is the delimiter

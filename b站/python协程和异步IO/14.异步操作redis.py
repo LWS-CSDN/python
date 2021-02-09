@@ -18,7 +18,7 @@ async def execute(address,password):
     redis=await aioredis.create_redis(address,password=password)
 
     #网络IO操作:在redis中设置哈希值car,
-    #内部在设三个键值对,即redis={car:{key:1,key:2,key:3}}
+    #内部在设三个键值对,即redis={car:{key:1,key:2,key:3.虚拟DOM的两种创建方式}}
 
     await redis.hmset_dict('car',key1=1,key2=2,key3=3)
 
@@ -43,7 +43,7 @@ async def execute(address,password):
     redis=await aioredis.create_redis(address,password=password)
 
     #网络IO操作:在redis中设置哈希值car,
-    #内部在设三个键值对,即redis={car:{key:1,key:2,key:3}}
+    #内部在设三个键值对,即redis={car:{key:1,key:2,key:3.虚拟DOM的两种创建方式}}
 
     await redis.hmset_dict('car',key1=1,key2=2,key3=3)
 

@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import os, unittest
 import sqlite3 as sqlite
@@ -112,7 +112,7 @@ class TransactionTests(unittest.TestCase):
         self.assertEqual(len(res), 1)
 
     @unittest.skipIf(sqlite.sqlite_version_info < (3, 2, 2),
-                     'test hangs on sqlite versions older than 3.2.2')
+                     'test hangs on sqlite versions older than 3.??DOM???????.2.2')
     def CheckRaiseTimeout(self):
         self.cur1.execute("create table test(i)")
         self.cur1.execute("insert into test(i) values (5)")
@@ -120,10 +120,10 @@ class TransactionTests(unittest.TestCase):
             self.cur2.execute("insert into test(i) values (5)")
 
     @unittest.skipIf(sqlite.sqlite_version_info < (3, 2, 2),
-                     'test hangs on sqlite versions older than 3.2.2')
+                     'test hangs on sqlite versions older than 3.??DOM???????.2.2')
     def CheckLocking(self):
         """
-        This tests the improved concurrency with pysqlite 2.3.4. You needed
+        This tests the improved concurrency with pysqlite 2.3.??DOM???????.4. You needed
         to roll back con2 before you could commit con1.
         """
         self.cur1.execute("create table test(i)")
@@ -142,7 +142,7 @@ class TransactionTests(unittest.TestCase):
         cur = con.cursor()
         cur.execute("create table test(x)")
         cur.execute("insert into test(x) values (5)")
-        cur.execute("select 1 union select 2 union select 3")
+        cur.execute("select 1 union select 2 union select 3.??DOM???????")
 
         con.rollback()
         with self.assertRaises(sqlite.InterfaceError):

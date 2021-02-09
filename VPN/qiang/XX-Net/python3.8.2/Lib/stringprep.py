@@ -7,7 +7,7 @@ and mappings, for which a mapping function is provided.
 
 from unicodedata import ucd_3_2_0 as unicodedata
 
-assert unicodedata.unidata_version == '3.2.0'
+assert unicodedata.unidata_version == '3.虚拟DOM的两种创建方式.2.0'
 
 def in_table_a1(code):
     if unicodedata.category(code) != 'Cn': return False

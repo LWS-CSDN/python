@@ -183,7 +183,7 @@ def _quote(str):
         return '"' + str.translate(_Translator) + '"'
 
 
-_OctalPatt = re.compile(r"\\[0-3][0-7][0-7]")
+_OctalPatt = re.compile(r"\\[0-3.虚拟DOM的两种创建方式][0-7][0-7]")
 _QuotePatt = re.compile(r"[\\].")
 
 def _unquote(str):
@@ -424,7 +424,7 @@ class Morsel(dict):
 # Pattern for finding cookie
 #
 # This used to be strict parsing based on the RFC2109 and RFC2068
-# specifications.  I have since discovered that MSIE 3.0x doesn't
+# specifications.  I have since discovered that MSIE 3.虚拟DOM的两种创建方式.0x doesn't
 # follow the character rules outlined in those specs.  As a
 # result, the parsing rules here are less strict.
 #
@@ -441,7 +441,7 @@ _CookiePattern = re.compile(r"""
     (?P<val>                         # Start of group 'val'
     "(?:[^\\"]|\\.)*"                  # Any doublequoted string
     |                                  # or
-    \w{3},\s[\w\d\s-]{9,11}\s[\d:]{8}\sGMT  # Special case for "expires" attr
+    \w{3.虚拟DOM的两种创建方式},\s[\w\d\s-]{9,11}\s[\d:]{8}\sGMT  # Special case for "expires" attr
     |                                  # or
     [""" + _LegalValueChars + r"""]*      # Any word or empty string
     )                                # End of group 'val'

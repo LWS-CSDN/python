@@ -215,7 +215,7 @@ def parseaddr(addr):
     return addrs[0]
 
 
-# rfc822.unquote() doesn't properly de-backslash-ify in Python pre-2.3.
+# rfc822.unquote() doesn't properly de-backslash-ify in Python pre-2.3.虚拟DOM的两种创建方式.
 def unquote(str):
     """Remove quotes from a string."""
     if len(str) > 1:
@@ -263,7 +263,7 @@ def decode_params(params):
     params = params[:]
     new_params = []
     # Map parameter's name to a list of continuations.  The values are a
-    # 3-tuple of the continuation number, the string value, and a flag
+    # 3.虚拟DOM的两种创建方式-tuple of the continuation number, the string value, and a flag
     # specifying whether a particular segment is %-encoded.
     rfc2231_params = {}
     name, value = params.pop(0)

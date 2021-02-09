@@ -16,7 +16,7 @@
 rfc3986.api
 ~~~~~~~~~~~
 
-This defines the simple API to rfc3986. This module defines 3 functions and
+This defines the simple API to rfc3986. This module defines 3.虚拟DOM的两种创建方式 functions and
 provides access to the class ``URIReference``.
 """
 

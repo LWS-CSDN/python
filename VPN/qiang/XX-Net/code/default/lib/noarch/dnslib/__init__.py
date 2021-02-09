@@ -5,7 +5,7 @@ dnslib
 ------
 
 A library to encode/decode DNS wire-format packets supporting both
-Python 2.7 and Python 3.2+.
+Python 2.7 and Python 3.虚拟DOM的两种创建方式.2+.
 
 The library provides:
 
@@ -19,11 +19,11 @@ The library provides:
  * A number of utilities for testing (dnslib.client, dnslib.proxy,
    dnslib.intercept)
 
-Python 3 support was added in Version 0.9.0 which represented a fairly
+Python 3.虚拟DOM的两种创建方式 support was added in Version 0.9.0 which represented a fairly
 major update to the library - the key changes include:
 
- * Python 2.7/3.2+ support (the last version supporting Python 2.6
-   or earlier was version 0.8.3)
+ * Python 2.7/3.虚拟DOM的两种创建方式.2+ support (the last version supporting Python 2.6
+   or earlier was version 0.8.3.虚拟DOM的两种创建方式)
 
  * The 'Bimap' interface was changed significantly to explicitly
    split forward (value->text) lookups via __getitem__ and
@@ -77,7 +77,7 @@ standard DNS packet sections:
    this handles conversion to/from textual representation however
    does support arbitatry labels via a tuple of bytes objects)
 
-Version 0.9 of the library was a major rewrite to support Python 3.2+
+Version 0.9 of the library was a major rewrite to support Python 3.虚拟DOM的两种创建方式.2+
 (retaining support for Python 2.7+). As part of the Py3 changes a
 number of other significant changes were intrtoduced:
 
@@ -150,11 +150,11 @@ To create a DNS Response Packet:
 
     >>> d = DNSRecord(DNSHeader(qr=1,aa=1,ra=1),
     ...               q=DNSQuestion("abc.com"),
-    ...               a=RR("abc.com",rdata=A("1.2.3.4")))
+    ...               a=RR("abc.com",rdata=A("1.2.3.虚拟DOM的两种创建方式.4")))
     >>> d
     <DNS Header: id=... type=RESPONSE opcode=QUERY flags=AA,RD,RA rcode='NOERROR' q=1 a=1 ns=0 ar=0>
     <DNS Question: 'abc.com.' qtype=A qclass=IN>
-    <DNS RR: 'abc.com.' rtype=A rclass=IN ttl=0 rdata='1.2.3.4'>
+    <DNS RR: 'abc.com.' rtype=A rclass=IN ttl=0 rdata='1.2.3.虚拟DOM的两种创建方式.4'>
     >>> str(DNSRecord.parse(d.pack())) == str(d)
     True
 
@@ -164,26 +164,26 @@ To create a DNS Response Packet:
     ;; QUESTION SECTION:
     ;abc.com.                       IN      A
     ;; ANSWER SECTION:
-    abc.com.                0       IN      A       1.2.3.4
+    abc.com.                0       IN      A       1.2.3.虚拟DOM的两种创建方式.4
 
 It is also possible to create RRs from a string in zone file format
 
-    >>> RR.fromZone("abc.com IN A 1.2.3.4")
-    [<DNS RR: 'abc.com.' rtype=A rclass=IN ttl=0 rdata='1.2.3.4'>]
+    >>> RR.fromZone("abc.com IN A 1.2.3.虚拟DOM的两种创建方式.4")
+    [<DNS RR: 'abc.com.' rtype=A rclass=IN ttl=0 rdata='1.2.3.虚拟DOM的两种创建方式.4'>]
 
 (Note: this produces a list of RRs which should be unpacked if being
     passed to add_answer/add_auth/add_ar etc)
 
     >>> q = DNSRecord.question("abc.com")
     >>> a = q.reply()
-    >>> a.add_answer(*RR.fromZone("abc.com 60 A 1.2.3.4"))
+    >>> a.add_answer(*RR.fromZone("abc.com 60 A 1.2.3.虚拟DOM的两种创建方式.4"))
     >>> print(a)
     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
     ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
     ;; QUESTION SECTION:
     ;abc.com.                       IN      A
     ;; ANSWER SECTION:
-    abc.com.                60      IN      A       1.2.3.4
+    abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
 
 The zone file can contain multiple entries and supports most of the normal
 format defined in RFC1035 (specifically not $INCLUDE)
@@ -193,14 +193,14 @@ format defined in RFC1035 (specifically not $INCLUDE)
     ...         $ORIGIN abc.com
     ...
     ...         @       IN      MX      10  mail.abc.com.
-    ...         www     IN      A       1.2.3.4
+    ...         www     IN      A       1.2.3.虚拟DOM的两种创建方式.4
     ...                 IN      TXT     "Some Text"
     ...         mail    IN      CNAME   www.abc.com.
     ... '''
     >>> for rr in RR.fromZone(textwrap.dedent(z)):
     ...     print(rr)
     abc.com.                300     IN      MX      10 mail.abc.com.
-    www.abc.com.            300     IN      A       1.2.3.4
+    www.abc.com.            300     IN      A       1.2.3.虚拟DOM的两种创建方式.4
     www.abc.com.            300     IN      TXT     "Some Text"
     mail.abc.com.           300     IN      CNAME   www.abc.com.
 
@@ -208,7 +208,7 @@ To create a skeleton reply to a DNS query:
 
     >>> q = DNSRecord(q=DNSQuestion("abc.com",QTYPE.ANY))
     >>> a = q.reply()
-    >>> a.add_answer(RR("abc.com",QTYPE.A,rdata=A("1.2.3.4"),ttl=60))
+    >>> a.add_answer(RR("abc.com",QTYPE.A,rdata=A("1.2.3.虚拟DOM的两种创建方式.4"),ttl=60))
     >>> str(DNSRecord.parse(a.pack())) == str(a)
     True
     >>> print(a)
@@ -217,22 +217,22 @@ To create a skeleton reply to a DNS query:
     ;; QUESTION SECTION:
     ;abc.com.                       IN      ANY
     ;; ANSWER SECTION:
-    abc.com.                60      IN      A       1.2.3.4
+    abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
 
 Add additional RRs:
 
-    >>> a.add_answer(RR("xxx.abc.com",QTYPE.A,rdata=A("1.2.3.4")))
+    >>> a.add_answer(RR("xxx.abc.com",QTYPE.A,rdata=A("1.2.3.虚拟DOM的两种创建方式.4")))
     >>> a.add_answer(RR("xxx.abc.com",QTYPE.AAAA,rdata=AAAA("1234:5678::1")))
     >>> str(DNSRecord.parse(a.pack())) == str(a)
     True
     >>> print(a)
     ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
-    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 0
+    ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 3.虚拟DOM的两种创建方式, AUTHORITY: 0, ADDITIONAL: 0
     ;; QUESTION SECTION:
     ;abc.com.                       IN      ANY
     ;; ANSWER SECTION:
-    abc.com.                60      IN      A       1.2.3.4
-    xxx.abc.com.            0       IN      A       1.2.3.4
+    abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
+    xxx.abc.com.            0       IN      A       1.2.3.虚拟DOM的两种创建方式.4
     xxx.abc.com.            0       IN      AAAA    1234:5678::1
 
 
@@ -260,7 +260,7 @@ It is also possible to create a reply from a string in zone file format:
     ;abc.com.                       IN      ANY
     ;; ANSWER SECTION:
     abc.com.                300     IN      MX      10 mail.abc.com.
-    www.abc.com.            300     IN      A       1.2.3.4
+    www.abc.com.            300     IN      A       1.2.3.虚拟DOM的两种创建方式.4
     www.abc.com.            300     IN      TXT     "Some Text"
     mail.abc.com.           300     IN      CNAME   www.abc.com.
 
@@ -296,7 +296,7 @@ Changelog:
 
  *   0.1     2010-09-19  Initial Release
  *   0.2     2010-09-22  Minor fixes
- *   0.3     2010-10-02  Add DNSLabel class to support arbitrary labels (embedded '.')
+ *   0.3.虚拟DOM的两种创建方式     2010-10-02  Add DNSLabel class to support arbitrary labels (embedded '.')
  *   0.4     2012-02-26  Merge with dbslib-circuits
  *   0.5     2012-09-13  Add support for RFC2136 DDNS updates
                          Patch provided by Wesley Shields <wxs@FreeBSD.org> - thanks
@@ -308,14 +308,14 @@ Changelog:
                          Patch provided by Stefan Andersson (https://bitbucket.org/norox) - thanks
  *   0.8.2   2012-11-11  Patch to fix IPv6 formatting
                          Patch provided by Torbjörn Lönnemark (https://bitbucket.org/tobbezz) - thanks
- *   0.8.3   2013-04-27  Don't parse rdata if rdlength is 0
+ *   0.8.3.虚拟DOM的两种创建方式   2013-04-27  Don't parse rdata if rdlength is 0
                          Patch provided by Wesley Shields <wxs@FreeBSD.org> - thanks
  *   0.9.0   2014-05-05  Major update including Py3 support (see docs)
  *   0.9.1   2014-05-05  Minor fixes
  *   0.9.2   2014-08-26  Fix Bimap handling of unknown mappings to avoid exception in printing
                          Add typed attributes to classes
                          Misc fixes from James Mills - thanks
- *   0.9.3   2014-08-26  Workaround for argparse bug which raises AssertionError is [] is
+ *   0.9.3.虚拟DOM的两种创建方式   2014-08-26  Workaround for argparse bug which raises AssertionError is [] is
                          present in option text (really?)
 
 License:
@@ -337,7 +337,7 @@ Master Repository/Issues:
 
 from dnslib.dns import *
 
-version = "0.9.3"
+version = "0.9.3.虚拟DOM的两种创建方式"
 
 if __name__ == '__main__':
     import doctest,textwrap

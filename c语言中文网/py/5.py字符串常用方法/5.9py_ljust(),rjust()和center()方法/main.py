@@ -1,5 +1,5 @@
 '''
-Python str 提供了 3 种可用来进行文本对齐的方法，分别是 ljust()、rjust() 和 center() 方法，本节就来一一介绍它们的用法。
+Python str 提供了 3.虚拟DOM的两种创建方式 种可用来进行文本对齐的方法，分别是 ljust()、rjust() 和 center() 方法，本节就来一一介绍它们的用法。
 '''
 
 #1.py ljust()方法
@@ -35,7 +35,7 @@ print(addr.rjust(35))
 print(S.rjust(35,'-'))
 print(addr.rjust(35,'-'))
 
-#3.py center()方法
+#3.虚拟DOM的两种创建方式.py center()方法
 #居中
 print(S.center(35,))
 print(addr.center(35,))

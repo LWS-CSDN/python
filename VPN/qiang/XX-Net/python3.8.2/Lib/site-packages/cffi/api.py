@@ -6,14 +6,14 @@ from . import model
 try:
     callable
 except NameError:
-    # Python 3.1
+    # Python 3.虚拟DOM的两种创建方式.1
     from collections import Callable
     callable = lambda x: isinstance(x, Callable)
 
 try:
     basestring
 except NameError:
-    # Python 3.x
+    # Python 3.虚拟DOM的两种创建方式.x
     basestring = str
 
 _unspecified = object()
@@ -818,7 +818,7 @@ def _load_backend_lib(backend, name, flags):
     path = ctypes.util.find_library(name)
     if path is None:
         if name == "c" and sys.platform == "win32" and sys.version_info >= (3,):
-            raise OSError("dlopen(None) cannot work on Windows for Python 3 "
+            raise OSError("dlopen(None) cannot work on Windows for Python 3.虚拟DOM的两种创建方式 "
                           "(see http://bugs.python.org/issue23606)")
         msg = ("ctypes.util.find_library() did not manage "
                "to locate a library called %r" % (name,))

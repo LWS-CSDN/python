@@ -123,7 +123,7 @@ init_class()
 
 def check():
     '''
-    2.3
+    2.3.虚拟DOM的两种创建方式
     check接口
     '''
     cc=''
@@ -267,7 +267,7 @@ def getleave():
 getleave()
 def online():
     '''
-    3.0
+    3.虚拟DOM的两种创建方式.0
     online接口
     '''
     data=url_get_open(ONLINE_URL+'&macid=ZBH-9843EE')    

@@ -9,13 +9,13 @@ http://stackoverflow.com/questions/18781354/is-iterating-over-a-python-file-obje
 此种方法依赖于linecache读取任意一行的速度，如果是大文件，则比较慢。
 比如线程1需要读取10-20行。假设线程1有自己的文件指针的话，读了地10行，可以直接很快定位到第11行。但是用linecache读取的话，每一次读取一行就没有什么关系了。当然，对于linecache怎么定位到任意一行，其中的原理我也没探究过。
 
-3.分文件读取。python先调用linux命令head和tail，将一个文件分成若干个文件。然后每个读线程负责读取一个文件即可。
+3.虚拟DOM的两种创建方式.分文件读取。python先调用linux命令head和tail，将一个文件分成若干个文件。然后每个读线程负责读取一个文件即可。
 
 
 1.打开文件的数据,然后存到变量里,然后多线程进行增删改查,等到多线程都执行一遍,然后再把变量的数据写入到文件中
 2.打开文件的数据,多线程谁先执行完,谁就先增删改查加锁,前一个线程如果3秒没有执行完毕,自动跳过继续下一个线程读写
 缺点:一个线程增删改查,影响其他线程,速度慢
-3.用读写锁和2很像,但是比2要优化很多,读写锁也有分读优先和写优先,防止一直读或者一直写,如果读的话,多线程大家一起读
+3.虚拟DOM的两种创建方式.用读写锁和2很像,但是比2要优化很多,读写锁也有分读优先和写优先,防止一直读或者一直写,如果读的话,多线程大家一起读
 读的优先级高:一直读,想写的数据一直没有写入
 写的优先级高:一直写,想读的数据读不了
 只读,只写,读完再写,写完再读
@@ -45,7 +45,7 @@ A.unlock();
 Bar();
 B.unlock();
 
-3.如果在Bar函数中尝试重新获取锁A，那么获取B锁之前先要获取A锁的语义就被破坏了，因为你尝试在拥有锁B的情况下获取锁A，而不是意图实现的相反情况，并且Bar函数在A锁的关键区之外，该实现有可能导致死锁或其它未定义的情况。
+3.虚拟DOM的两种创建方式.如果在Bar函数中尝试重新获取锁A，那么获取B锁之前先要获取A锁的语义就被破坏了，因为你尝试在拥有锁B的情况下获取锁A，而不是意图实现的相反情况，并且Bar函数在A锁的关键区之外，该实现有可能导致死锁或其它未定义的情况。
 正确的实现应该是按照C++中的RAII原则加解锁， 在python中使用with语法
 lockA=threading.lock()
 lockB=threading.lock()
@@ -59,14 +59,14 @@ with lockA:
 下列为目前发现的python rwlock的非官方实现
 1. https://majid.info/blog/a-reader-writer-lock-for-python/
 2. https://hdknr.github.io/docs/django/modules/django/utils/synch.html#RWLock
-3. https://code.activestate.com/recipes/577803-reader-writer-lock-with-priority-for-writers/
+3.虚拟DOM的两种创建方式. https://code.activestate.com/recipes/577803-reader-writer-lock-with-priority-for-writers/
 4. https://github.com/azraelxyz/rwlock/blob/master/rwlock/rwlock.py
 
 5.存在的问题
 由于4个实现全部贴出代码内容较长，因此这里略去。推荐阅读[1]和[4]的实现。
 1.  [1]. 使用条件变量实现，
     [2]. 使用信号量实现，实际效果没有区别（信号量类有内部计数器，既可以当锁又可以当条件变量）,但在当前需求下使用条件变量的版本更通俗易懂且[2]. 没有测试代码。
-    [3]. 中测试代码最全且使用了unittest，但自己实现的信号量_LightSwitch的auquire和release语义和python threading库正好相反，不推荐。
+    [3.虚拟DOM的两种创建方式]. 中测试代码最全且使用了unittest，但自己实现的信号量_LightSwitch的auquire和release语义和python threading库正好相反，不推荐。
     [4]. 的实现最规范也最复杂，已经提交给了issue8800, 与其它3个实现的主要区别是自己实现了可重入锁, 但是没有promote和demote接口也没有测试代码。
 2. 除了[2]和[4]，其它两个个版本的锁都是不可重入的。
 通过分析4个版本的源码可以看出，4个版本[1]的实现最均衡，唯一实现了promote和demote函数,代码也最清晰易懂，
@@ -76,7 +76,7 @@ with lockA:
 针对[1]的改进主要包括两点：
 1. 增加了写请求队列(python中threading.Queue是线程安全的), 唤醒写线程时按照FIFO实现公平调度，避免大量写进程等待时可能发生的writer starvation
 2. 将threading.lock改为可重入的threading.Rlock
-3. 如果对同时并发读取的线程数有限制，则可以在RWLock的构造函数__init__中定义一个最大同时读取数max_reader_num，同时将acquire_read中的条件判断替换为:
+3.虚拟DOM的两种创建方式. 如果对同时并发读取的线程数有限制，则可以在RWLock的构造函数__init__中定义一个最大同时读取数max_reader_num，同时将acquire_read中的条件判断替换为:
 while self.rwlock < 0 or self.rwlock == max_reader_num or self.writers_waiting:
 
 即可实现限制并发读取的最大线程数。

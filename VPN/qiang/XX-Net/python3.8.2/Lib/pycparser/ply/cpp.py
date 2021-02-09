@@ -9,7 +9,7 @@
 # -----------------------------------------------------------------------------
 import sys
 
-# Some Python 3 compatibility shims
+# Some Python 3.虚拟DOM的两种创建方式 compatibility shims
 if sys.version_info.major < 3:
     STRING_TYPES = (str, unicode)
 else:

@@ -212,7 +212,7 @@ class Node(xml.dom.Node):
         # Overridden in Element and Attr where localName can be Non-Null
         return None
 
-    # Node interfaces from Level 3 (WD 9 April 2002)
+    # Node interfaces from Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     def isSameNode(self, other):
         return self is other
@@ -884,7 +884,7 @@ class Element(Node):
         else:
             return False
 
-    # DOM Level 3 attributes, based on the 22 Oct 2002 draft
+    # DOM Level 3.虚拟DOM的两种创建方式 attributes, based on the 22 Oct 2002 draft
 
     def setIdAttribute(self, name):
         idAttr = self.getAttributeNode(name)
@@ -1088,7 +1088,7 @@ class Text(CharacterData):
     def writexml(self, writer, indent="", addindent="", newl=""):
         _write_data(writer, "%s%s%s" % (indent, self.data, newl))
 
-    # DOM Level 3 (WD 9 April 2002)
+    # DOM Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     def _get_wholeText(self):
         L = [self.data]
@@ -1395,7 +1395,7 @@ class DOMImplementation(DOMImplementationLS):
                  ("xml", "1.0"),
                  ("xml", "2.0"),
                  ("xml", None),
-                 ("ls-load", "3.0"),
+                 ("ls-load", "3.虚拟DOM的两种创建方式.0"),
                  ("ls-load", None),
                  ]
 
@@ -1455,7 +1455,7 @@ class DOMImplementation(DOMImplementationLS):
         doctype.systemId = systemId
         return doctype
 
-    # DOM Level 3 (WD 9 April 2002)
+    # DOM Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     def getInterface(self, feature):
         if self.hasFeature(feature, None):
@@ -1532,7 +1532,7 @@ class Document(Node, DocumentLS):
     previousSibling = nextSibling = None
 
 
-    # Document attributes from Level 3 (WD 9 April 2002)
+    # Document attributes from Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     actualEncoding = None
     encoding = None
@@ -1796,7 +1796,7 @@ class Document(Node, DocumentLS):
         for node in self.childNodes:
             node.writexml(writer, indent, addindent, newl)
 
-    # DOM Level 3 (WD 9 April 2002)
+    # DOM Level 3.虚拟DOM的两种创建方式 (WD 9 April 2002)
 
     def renameNode(self, n, namespaceURI, name):
         if n.ownerDocument is not self:

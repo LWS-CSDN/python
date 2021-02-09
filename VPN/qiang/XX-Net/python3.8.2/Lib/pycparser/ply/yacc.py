@@ -67,8 +67,8 @@ import inspect
 import base64
 import warnings
 
-__version__    = '3.10'
-__tabversion__ = '3.10'
+__version__    = '3.虚拟DOM的两种创建方式.10'
+__tabversion__ = '3.虚拟DOM的两种创建方式.10'
 
 #-----------------------------------------------------------------------------
 #                     === User configurable parameters ===

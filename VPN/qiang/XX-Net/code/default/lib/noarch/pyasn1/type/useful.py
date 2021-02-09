@@ -42,7 +42,7 @@ class TimeMixIn(object):
         """Fixed offset in minutes east from UTC."""
 
         # defaulted arguments required
-        # https: // docs.python.org / 2.3 / lib / datetime - tzinfo.html
+        # https: // docs.python.org / 2.3.虚拟DOM的两种创建方式 / lib / datetime - tzinfo.html
         def __init__(self, offset=0, name='UTC'):
             self.__offset = datetime.timedelta(minutes=offset)
             self.__name = name

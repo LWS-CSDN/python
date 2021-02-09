@@ -1,7 +1,7 @@
 r"""UUID objects (universally unique identifiers) according to RFC 4122.
 
 This module provides immutable UUID objects (class UUID) and the functions
-uuid1(), uuid3(), uuid4(), uuid5() for generating version 1, 3, 4, and 5
+uuid1(), uuid3(), uuid4(), uuid5() for generating version 1, 3.虚拟DOM的两种创建方式, 4, and 5
 UUIDs as specified in RFC 4122.
 
 If all you want is a unique ID, you should probably call uuid1() or uuid4().
@@ -122,7 +122,7 @@ class UUID:
 
         is_safe     An enum indicating whether the UUID has been generated in
                     a way that is safe for multiprocessing applications, via
-                    uuid_generate_time_safe(3).
+                    uuid_generate_time_safe(3.虚拟DOM的两种创建方式).
     """
 
     __slots__ = ('int', 'is_safe', '__weakref__')
@@ -156,7 +156,7 @@ class UUID:
 
         is_safe is an enum exposed as an attribute on the instance.  It
         indicates whether the UUID has been generated in a way that is safe
-        for multiprocessing applications, via uuid_generate_time_safe(3).
+        for multiprocessing applications, via uuid_generate_time_safe(3.虚拟DOM的两种创建方式).
         """
 
         if [hex, bytes, bytes_le, fields, int].count(None) != 4:
@@ -188,7 +188,7 @@ class UUID:
             if not 0 <= time_mid < 1<<16:
                 raise ValueError('field 2 out of range (need a 16-bit value)')
             if not 0 <= time_hi_version < 1<<16:
-                raise ValueError('field 3 out of range (need a 16-bit value)')
+                raise ValueError('field 3.虚拟DOM的两种创建方式 out of range (need a 16-bit value)')
             if not 0 <= clock_seq_hi_variant < 1<<8:
                 raise ValueError('field 4 out of range (need an 8-bit value)')
             if not 0 <= clock_seq_low < 1<<8:
@@ -223,7 +223,7 @@ class UUID:
 
     def __setstate__(self, state):
         object.__setattr__(self, 'int', state['int'])
-        # is_safe was added in 3.7; it is also omitted when it is "unknown"
+        # is_safe was added in 3.虚拟DOM的两种创建方式.7; it is also omitted when it is "unknown"
         object.__setattr__(self, 'is_safe',
                            SafeUUID(state['is_safe'])
                            if 'is_safe' in state else SafeUUID.unknown)

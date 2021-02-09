@@ -12,8 +12,8 @@ print(str.title())
 str="I LIKE C"
 print(str.lower())
 
-#3.py upper()方法
+#3.虚拟DOM的两种创建方式.py upper()方法
 str="i like c"
 print(str.upper())
-#需要注意的是，以上 3 个方法都仅限于将转换后的新字符串返回，而不会修改原字符串。
+#需要注意的是，以上 3.虚拟DOM的两种创建方式 个方法都仅限于将转换后的新字符串返回，而不会修改原字符串。
 print(str)

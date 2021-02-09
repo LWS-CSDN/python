@@ -206,9 +206,9 @@ class Decoder(object):
 #: .. code-block:: pycon
 #:
 #:    >>> seq = SequenceOf(componentType=Integer())
-#:    >>> s, _ = decode([1, 2, 3], asn1Spec=seq)
+#:    >>> s, _ = decode([1, 2, 3.虚拟DOM的两种创建方式], asn1Spec=seq)
 #:    >>> str(s)
 #:    SequenceOf:
-#:     1 2 3
+#:     1 2 3.虚拟DOM的两种创建方式
 #:
 decode = Decoder(tagMap, typeMap)

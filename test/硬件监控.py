@@ -97,7 +97,7 @@ def cmd_neicun():
   
  
 cmd_neicun()
-# temp=(1,2,3,4,5)
+# temp=(1,2,3.虚拟DOM的两种创建方式,4,5)
 # temp=temp[:2]+(8,)+temp[2:]
 # print(temp[:2]+(8,))
 # print(temp)
@@ -157,7 +157,7 @@ cmd_neicun()
 # # Index 0: total disk space                                                         
 # # Index 1: used disk space                                                         
 # # Index 2: remaining disk space                                                     
-# # Index 3: percentage of disk used                                                  
+# # Index 3.虚拟DOM的两种创建方式: percentage of disk used                                                  
 # def getDiskSpace():
 #     p = os.popen("df -h /")
 #     i = 0
@@ -183,7 +183,7 @@ cmd_neicun()
 # DISK_stats = getDiskSpace()
 # DISK_total = DISK_stats[0]
 # DISK_used = DISK_stats[1]
-# DISK_perc = DISK_stats[3]
+# DISK_perc = DISK_stats[3.虚拟DOM的两种创建方式]
 
 # if __name__ == '__main__':
 #   print('')

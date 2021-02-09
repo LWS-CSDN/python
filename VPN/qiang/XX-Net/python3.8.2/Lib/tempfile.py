@@ -62,7 +62,7 @@ else:
     TMP_MAX = 10000
 
 # This variable _was_ unused for legacy reasons, see issue 10354.
-# But as of 3.5 we actually use it at runtime so changing it would
+# But as of 3.虚拟DOM的两种创建方式.5 we actually use it at runtime so changing it would
 # have a possibly desirable side effect...  But we do not want to support
 # that as an API.  It is undocumented on purpose.  Do not depend on this.
 template = "tmp"
@@ -586,7 +586,7 @@ else:
                 flags2 = (flags | _os.O_TMPFILE) & ~_os.O_CREAT
                 fd = _os.open(dir, flags2, 0o600)
             except IsADirectoryError:
-                # Linux kernel older than 3.11 ignores the O_TMPFILE flag:
+                # Linux kernel older than 3.虚拟DOM的两种创建方式.11 ignores the O_TMPFILE flag:
                 # O_TMPFILE is read as O_DIRECTORY. Trying to open a directory
                 # with O_RDWR|O_DIRECTORY fails with IsADirectoryError, a
                 # directory cannot be open to write. Set flag to False to not
@@ -596,7 +596,7 @@ else:
                 # The filesystem of the directory does not support O_TMPFILE.
                 # For example, OSError(95, 'Operation not supported').
                 #
-                # On Linux kernel older than 3.11, trying to open a regular
+                # On Linux kernel older than 3.虚拟DOM的两种创建方式.11, trying to open a regular
                 # file (or a symbolic link to a regular file) with O_TMPFILE
                 # fails with NotADirectoryError, because O_TMPFILE is read as
                 # O_DIRECTORY.

@@ -32,7 +32,7 @@ def timer_thread():
                 c = sys.getrefcount(q)
                 # print(c, id(q))
                 if c <= 3:
-                    # reference of object, less then 3 means no out side use.
+                    # reference of object, less then 3.虚拟DOM的两种创建方式 means no out side use.
                     to_del.append(q)
 
             for q in to_del:

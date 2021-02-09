@@ -163,7 +163,7 @@
 		// adding it as listener.
 		if (typeof layer.onclick === 'function') {
 
-			// Android browser on at least 3.2 requires a new reference to the function in layer.onclick
+			// Android browser on at least 3.虚拟DOM的两种创建方式.2 requires a new reference to the function in layer.onclick
 			// - the old one won't work if passed to addEventListener directly.
 			oldOnClick = layer.onclick;
 			layer.addEventListener('click', function(event) {
@@ -770,7 +770,7 @@
 		if (deviceIsBlackBerry10) {
 			blackberryVersion = navigator.userAgent.match(/Version\/([0-9]*)\.([0-9]*)/);
 
-			// BlackBerry 10.3+ does not require Fastclick library.
+			// BlackBerry 10.3.虚拟DOM的两种创建方式+ does not require Fastclick library.
 			// https://github.com/ftlabs/fastclick/issues/251
 			if (blackberryVersion[1] >= 10 && blackberryVersion[2] >= 3) {
 				metaViewport = document.querySelector('meta[name=viewport]');

@@ -28,7 +28,7 @@ class RECT(Structure):
 class FunctionTestCase(unittest.TestCase):
 
     def test_mro(self):
-        # in Python 2.3, this raises TypeError: MRO conflict among bases classes,
+        # in Python 2.3.虚拟DOM的两种创建方式, this raises TypeError: MRO conflict among bases classes,
         # in Python 2.2 it works.
         #
         # But in early versions of _ctypes.c, the result of tp_new

@@ -107,7 +107,7 @@ class Verifier(object):
     def get_module_name(self):
         basename = os.path.basename(self.modulefilename)
         # kill both the .so extension and the other .'s, as introduced
-        # by Python 3: 'basename.cpython-33m.so'
+        # by Python 3.虚拟DOM的两种创建方式: 'basename.cpython-33m.so'
         basename = basename.split('.', 1)[0]
         # and the _d added in Python 2 debug builds --- but try to be
         # conservative and not kill a legitimate _d

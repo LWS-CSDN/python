@@ -103,7 +103,7 @@ class DeletePointerTestCase(unittest.TestCase):
         from sys import getrefcount as grc
         print("2?", grc(i))
         x.p = pointer(i)
-        print("3?", grc(i))
+        print("3.虚拟DOM的两种创建方式?", grc(i))
         for i in range(320):
             c_int(99)
             x.p[0]

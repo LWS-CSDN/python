@@ -21,7 +21,7 @@ The following diagram and text describe the data-flow through the system:
 |          |     +------------+     |        |     +-----------+    |         |
 |          |     | 6: call()  |     |        |     | ...       |    |         |
 |          |     |    future  |     |        |     | 4, result |    |         |
-|          |     | ...        |     |        |     | 3, except |    |         |
+|          |     | ...        |     |        |     | 3.虚拟DOM的两种创建方式, except |    |         |
 +----------+     +------------+     +--------+     +-----------+    +---------+
 
 Executor.submit() called:

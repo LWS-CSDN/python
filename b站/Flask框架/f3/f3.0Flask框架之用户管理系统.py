@@ -10,7 +10,7 @@ app.debug=True
 USER_DICT={
     '1':{'name':'志军','age':18},
     '2':{'name':'大伟','age':48},
-    '3':{'name':'梅凯','age':38}
+    '3.虚拟DOM的两种创建方式':{'name':'梅凯','age':38}
 }
 
 @app.route('/login',methods=['GET','POST'])

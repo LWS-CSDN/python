@@ -14,10 +14,10 @@ from .http20.response import HTTP20Response, HTTP20Push
 from .http11.connection import HTTP11Connection
 from .http11.response import HTTP11Response
 
-# Throw import errors on Python <2.7 and 3.0-3.2.
+# Throw import errors on Python <2.7 and 3.虚拟DOM的两种创建方式.0-3.虚拟DOM的两种创建方式.2.
 import sys as _sys
 if _sys.version_info < (2,7) or (3,0) <= _sys.version_info < (3,3):
-    raise ImportError("hyper only supports Python 2.7 and Python 3.3 or higher.")
+    raise ImportError("hyper only supports Python 2.7 and Python 3.虚拟DOM的两种创建方式.3.虚拟DOM的两种创建方式 or higher.")
 
 __all__ = [
     HTTPConnection,

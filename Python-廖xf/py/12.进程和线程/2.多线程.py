@@ -33,7 +33,7 @@ thread MainThread is running...
 thread LoopThread is running...
 thread LoopThread >>> 1
 thread LoopThread >>> 2
-thread LoopThread >>> 3
+thread LoopThread >>> 3.虚拟DOM的两种创建方式
 thread LoopThread >>> 4
 thread LoopThread >>> 5
 thread LoopThread ended.
@@ -143,7 +143,7 @@ def run_thread(n):
 '''
 
 '''
-3.多核CPU
+3.虚拟DOM的两种创建方式.多核CPU
 如果你不幸拥有一个多核CPU，你肯定在想，多核应该可以同时执行多个线程。
 
 如果写一个死循环的话，会出现什么情况呢？

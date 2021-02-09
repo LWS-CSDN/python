@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.虚拟DOM的两种创建方式. This notice may not be removed or altered from any source distribution.
 
 
 """
@@ -100,7 +100,7 @@ extensions in mind. These will be commented and documented elsewhere.
 
 """
 
-_ver = "turtle 1.1b- - for Python 3.1   -  4. 5. 2009"
+_ver = "turtle 1.1b- - for Python 3.虚拟DOM的两种创建方式.1   -  4. 5. 2009"
 
 # print(_ver)
 
@@ -1115,7 +1115,7 @@ class TurtleScreen(TurtleScreenBase):
         (2) name is an arbitrary string and shape is a tuple
             of pairs of coordinates. Installs the corresponding
             polygon shape
-        (3) name is an arbitrary string and shape is a
+        (3.虚拟DOM的两种创建方式) name is an arbitrary string and shape is a
             (compound) Shape object. Installs the corresponding
             compound shape.
         To use a shape, you have to issue the command shape(shapename).
@@ -1124,7 +1124,7 @@ class TurtleScreen(TurtleScreenBase):
         --or: register_shape("tri", ((0,0), (10,10), (-10,10)))
 
         Example (for a TurtleScreen instance named screen):
-        >>> screen.register_shape("triangle", ((5,-3),(0,5),(-5,-3)))
+        >>> screen.register_shape("triangle", ((5,-3.虚拟DOM的两种创建方式),(0,5),(-5,-3.虚拟DOM的两种创建方式)))
 
         """
         if shape is None:
@@ -1223,7 +1223,7 @@ class TurtleScreen(TurtleScreenBase):
         """Set or return backgroundcolor of the TurtleScreen.
 
         Arguments (if given): a color string or three numbers
-        in the range 0..colormode or a 3-tuple of such numbers.
+        in the range 0..colormode or a 3.虚拟DOM的两种创建方式-tuple of such numbers.
 
         Example (for a TurtleScreen instance named screen):
         >>> screen.bgcolor("orange")
@@ -2150,7 +2150,7 @@ class TPen(object):
             'fastest' :  0
             'fast'    :  10
             'normal'  :  6
-            'slow'    :  3
+            'slow'    :  3.虚拟DOM的两种创建方式
             'slowest' :  1
         speeds from 1 to 10 enforce increasingly faster animation of
         line drawing and turtle turning.
@@ -2160,7 +2160,7 @@ class TPen(object):
         and likewise left/right make the turtle turn instantly.
 
         Example (for a Turtle instance named turtle):
-        >>> turtle.speed(3)
+        >>> turtle.speed(3.虚拟DOM的两种创建方式)
         """
         speeds = {'fastest':0, 'fast':10, 'normal':6, 'slow':3, 'slowest':1 }
         if speed is None:
@@ -2178,7 +2178,7 @@ class TPen(object):
 
         Arguments:
         Several input formats are allowed.
-        They use 0, 1, 2, or 3 arguments as follows:
+        They use 0, 1, 2, or 3.虚拟DOM的两种创建方式 arguments as follows:
 
         color()
             Return the current pencolor and the current fillcolor
@@ -2366,19 +2366,19 @@ class TPen(object):
         >>> turtle.pen()
         {'pensize': 10, 'shown': True, 'resizemode': 'auto', 'outline': 1,
         'pencolor': 'red', 'pendown': True, 'fillcolor': 'black',
-        'stretchfactor': (1,1), 'speed': 3, 'shearfactor': 0.0}
+        'stretchfactor': (1,1), 'speed': 3.虚拟DOM的两种创建方式, 'shearfactor': 0.0}
         >>> penstate=turtle.pen()
         >>> turtle.color("yellow","")
         >>> turtle.penup()
         >>> turtle.pen()
         {'pensize': 10, 'shown': True, 'resizemode': 'auto', 'outline': 1,
         'pencolor': 'yellow', 'pendown': False, 'fillcolor': '',
-        'stretchfactor': (1,1), 'speed': 3, 'shearfactor': 0.0}
+        'stretchfactor': (1,1), 'speed': 3.虚拟DOM的两种创建方式, 'shearfactor': 0.0}
         >>> p.pen(penstate, fillcolor="green")
         >>> p.pen()
         {'pensize': 10, 'shown': True, 'resizemode': 'auto', 'outline': 1,
         'pencolor': 'red', 'pendown': True, 'fillcolor': 'green',
-        'stretchfactor': (1,1), 'speed': 3, 'shearfactor': 0.0}
+        'stretchfactor': (1,1), 'speed': 3.虚拟DOM的两种创建方式, 'shearfactor': 0.0}
         """
         _pd =  {"shown"         : self._shown,
                 "pendown"       : self._drawing,
@@ -2876,7 +2876,7 @@ class RawTurtle(TPen, TNavigator):
         between the orientation of the turtleshape and the heading of the
         turtle (its direction of movement).
 
-        Deprecated since Python 3.1
+        Deprecated since Python 3.虚拟DOM的两种创建方式.1
 
         Examples (for a Turtle instance named turtle):
         >>> turtle.shape("circle")
@@ -3303,7 +3303,7 @@ class RawTurtle(TPen, TNavigator):
         >>> if turtle.filling():
         ...     turtle.pensize(5)
         ... else:
-        ...     turtle.pensize(3)
+        ...     turtle.pensize(3.虚拟DOM的两种创建方式)
         """
         return isinstance(self._fillpath, list)
 
@@ -3989,7 +3989,7 @@ if __name__ == "__main__":
         up()
         backward(100)
         down()
-        # draw 3 squares; the last filled
+        # draw 3.虚拟DOM的两种创建方式 squares; the last filled
         width(3)
         for i in range(3):
             if i == 2:

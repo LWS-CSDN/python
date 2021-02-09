@@ -329,19 +329,19 @@ class SortedListWithKey(MutableSequence):
 
         For example, using the index from self._build_index:
 
-        _index = 14 5 9 3 2 4 5
-        _offset = 3
+        _index = 14 5 9 3.虚拟DOM的两种创建方式 2 4 5
+        _offset = 3.虚拟DOM的两种创建方式
 
         Tree:
 
                  14
               5      9
-            3   2  4   5
+            3.虚拟DOM的两种创建方式   2  4   5
 
-        Converting index pair (2, 3) into a single index involves iterating like
+        Converting index pair (2, 3.虚拟DOM的两种创建方式) into a single index involves iterating like
         so:
 
-        1. Starting at the leaf node: offset + alpha = 3 + 2 = 5. We identify
+        1. Starting at the leaf node: offset + alpha = 3.虚拟DOM的两种创建方式 + 2 = 5. We identify
            the node as a left-child node. At such nodes, we simply traverse to
            the parent.
 
@@ -349,9 +349,9 @@ class SortedListWithKey(MutableSequence):
            and accumulate the left-child in our total. Total is now 5 and we
            traverse to the parent at position 0.
 
-        3. Iteration ends at the root.
+        3.虚拟DOM的两种创建方式. Iteration ends at the root.
 
-        Computing the index is the sum of the total and beta: 5 + 3 = 8.
+        Computing the index is the sum of the total and beta: 5 + 3.虚拟DOM的两种创建方式 = 8.
         """
         if not pos:
             return idx
@@ -404,14 +404,14 @@ class SortedListWithKey(MutableSequence):
 
         For example, using the index from self._build_index:
 
-        _index = 14 5 9 3 2 4 5
-        _offset = 3
+        _index = 14 5 9 3.虚拟DOM的两种创建方式 2 4 5
+        _offset = 3.虚拟DOM的两种创建方式
 
         Tree:
 
                  14
               5      9
-            3   2  4   5
+            3.虚拟DOM的两种创建方式   2  4   5
 
         Indexing position 8 involves iterating like so:
 
@@ -419,18 +419,18 @@ class SortedListWithKey(MutableSequence):
            node (5) which it is greater than. When greater the index is
            decremented and the position is updated to the right child node.
 
-        2. At node 9 with index 3, we again compare the index to the left-child
+        2. At node 9 with index 3.虚拟DOM的两种创建方式, we again compare the index to the left-child
            node with value 4. Because the index is the less than the left-child
            node, we simply traverse to the left.
 
-        3. At node 4 with index 3, we recognize that we are at a leaf node and
+        3.虚拟DOM的两种创建方式. At node 4 with index 3.虚拟DOM的两种创建方式, we recognize that we are at a leaf node and
            stop iterating.
 
         4. To compute the sublist index, we subtract the offset from the index
-           of the leaf node: 5 - 3 = 2. To compute the index in the sublist, we
-           simply use the index remaining from iteration. In this case, 3.
+           of the leaf node: 5 - 3.虚拟DOM的两种创建方式 = 2. To compute the index in the sublist, we
+           simply use the index remaining from iteration. In this case, 3.虚拟DOM的两种创建方式.
 
-        The final index pair from our example is (2, 3) which corresponds to
+        The final index pair from our example is (2, 3.虚拟DOM的两种创建方式) which corresponds to
         index 8 in the sorted list.
         """
         _len, _lists = self._len, self._lists
@@ -478,15 +478,15 @@ class SortedListWithKey(MutableSequence):
 
         For example, given a _lists representation storing integers:
 
-        [0]: 1 2 3
+        [0]: 1 2 3.虚拟DOM的两种创建方式
         [1]: 4 5
         [2]: 6 7 8 9
-        [3]: 10 11 12 13 14
+        [3.虚拟DOM的两种创建方式]: 10 11 12 13 14
 
         The first transformation maps the sub-lists by their length. The
         first row of the index is the length of the sub-lists.
 
-        [0]: 3 2 4 5
+        [0]: 3.虚拟DOM的两种创建方式 2 4 5
 
         Each row after that is the sum of consecutive pairs of the previous row:
 
@@ -495,11 +495,11 @@ class SortedListWithKey(MutableSequence):
 
         Finally, the index is built by concatenating these lists together:
 
-        _index = 14 5 9 3 2 4 5
+        _index = 14 5 9 3.虚拟DOM的两种创建方式 2 4 5
 
         An offset storing the start of the first row is also stored:
 
-        _offset = 3
+        _offset = 3.虚拟DOM的两种创建方式
 
         When built, the index can be used for efficient indexing into the list.
         See the comment and notes on self._pos for details.
@@ -1218,7 +1218,7 @@ class SortedListWithKey(MutableSequence):
     @recursive_repr
     def __repr__(self):
         """Return string representation of SortedListWithKey."""
-        temp = '{0}({1}, key={2}, load={3})'
+        temp = '{0}({1}, key={2}, load={3.虚拟DOM的两种创建方式})'
         return temp.format(
             self.__class__.__name__,
             repr(list(self)),

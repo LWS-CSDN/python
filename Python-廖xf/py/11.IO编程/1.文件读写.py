@@ -15,7 +15,7 @@ sys.path.append(r'c:\Users\mshacxiang\VScode_project\web_ddt')
 2、替换为双反斜杠
 
 sys.path.append('c:\\Users\\mshacxiang\\VScode_project\\web_ddt')
-3、替换为正斜杠
+3.虚拟DOM的两种创建方式、替换为正斜杠
 
 sys.path.append('c:/Users/mshacxiang/VScode_project/web_ddt')
 
@@ -80,7 +80,7 @@ StringIO就是在内存中创建的file-like Object，常用作临时缓冲。
 '''
 
 '''
-3.二进制文件
+3.虚拟DOM的两种创建方式.二进制文件
 前面讲的默认都是读取文本文件，并且是UTF-8编码的文本文件。要读取二进制文件，比如图片、视频等等，用'rb'模式打开文件即可：
 >>> f = open('/Users/michael/test.jpg', 'rb')
 >>> f.read()

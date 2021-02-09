@@ -11,8 +11,8 @@ __all__ = ['ZipAppError', 'create_archive', 'get_interpreter']
 
 # The __main__.py used if the users specifies "-m module:fn".
 # Note that this will always be written as UTF-8 (module and
-# function names can be non-ASCII in Python 3).
-# We add a coding cookie even though UTF-8 is the default in Python 3
+# function names can be non-ASCII in Python 3.虚拟DOM的两种创建方式).
+# We add a coding cookie even though UTF-8 is the default in Python 3.虚拟DOM的两种创建方式
 # because the resulting archive may be intended to be run under Python 2.
 MAIN_TEMPLATE = """\
 # -*- coding: utf-8 -*-

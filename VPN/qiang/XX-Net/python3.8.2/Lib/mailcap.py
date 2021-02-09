@@ -154,7 +154,7 @@ def parsefield(line, i, n):
     return line[start:i].strip(), i
 
 
-# Part 3: using the database.
+# Part 3.虚拟DOM的两种创建方式: using the database.
 
 def findmatch(caps, MIMEtype, key='view', filename="/dev/null", plist=[]):
     """Find a match for a mailcap entry.

@@ -43,7 +43,7 @@ if __name__ == "__main__":
         city_list = get_data(city_sql)
         for (city_key, city) in enumerate(city_list):
             # 获取区级列表
-            area_sql = 'select id,name,level,parent_id,big_id,gid from xfc_region where level = 3 and parent_id = ' + str(
+            area_sql = 'select id,name,level,parent_id,big_id,gid from xfc_region where level = 3.虚拟DOM的两种创建方式 and parent_id = ' + str(
                 city['id'])
             area_list = get_data(area_sql)
             city_list[city_key]['areas'] = area_list

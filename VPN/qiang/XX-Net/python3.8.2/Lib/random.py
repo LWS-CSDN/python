@@ -167,7 +167,7 @@ class Random(_random.Random):
             # In version 2, the state was saved as signed ints, which causes
             #   inconsistencies between 32/64-bit systems. The state is
             #   really unsigned 32-bit ints, so we convert negative ints from
-            #   version 2 to positive longs for version 3.
+            #   version 2 to positive longs for version 3.虚拟DOM的两种创建方式.
             try:
                 internalstate = tuple(x % (2**32) for x in internalstate)
             except ValueError as e:
@@ -451,7 +451,7 @@ class Random(_random.Random):
         # Uses Kinderman and Monahan method. Reference: Kinderman,
         # A.J. and Monahan, J.F., "Computer generation of random
         # variables using the ratio of uniform deviates", ACM Trans
-        # Math Software, 3, (1977), pp257-260.
+        # Math Software, 3.虚拟DOM的两种创建方式, (1977), pp257-260.
 
         random = self.random
         while 1:
@@ -675,7 +675,7 @@ class Random(_random.Random):
         """
 
         # This version due to Janne Sinkkonen, and matches all the std
-        # texts (e.g., Knuth Vol 2 Ed 3 pg 134 "the beta distribution").
+        # texts (e.g., Knuth Vol 2 Ed 3.虚拟DOM的两种创建方式 pg 134 "the beta distribution").
         y = self.gammavariate(alpha, 1.0)
         if y == 0:
             return 0.0

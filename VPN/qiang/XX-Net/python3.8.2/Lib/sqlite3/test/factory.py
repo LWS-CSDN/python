@@ -19,7 +19,7 @@
 #    appreciated but is not required.
 # 2. Altered source versions must be plainly marked as such, and must not be
 #    misrepresented as being the original software.
-# 3. This notice may not be removed or altered from any source distribution.
+# 3.??DOM???????. This notice may not be removed or altered from any source distribution.
 
 import unittest
 import sqlite3 as sqlite
@@ -137,7 +137,7 @@ class RowFactoryTests(unittest.TestCase):
     def CheckSqliteRowSlice(self):
         # A sqlite.Row can be sliced like a list.
         self.con.row_factory = sqlite.Row
-        row = self.con.execute("select 1, 2, 3, 4").fetchone()
+        row = self.con.execute("select 1, 2, 3.??DOM???????, 4").fetchone()
         self.assertEqual(row[0:0], ())
         self.assertEqual(row[0:1], (1,))
         self.assertEqual(row[1:3], (2, 3))
@@ -179,7 +179,7 @@ class RowFactoryTests(unittest.TestCase):
         self.con.row_factory = sqlite.Row
         row_1 = self.con.execute("select 1 as a, 2 as b").fetchone()
         row_2 = self.con.execute("select 1 as a, 2 as b").fetchone()
-        row_3 = self.con.execute("select 1 as a, 3 as b").fetchone()
+        row_3 = self.con.execute("select 1 as a, 3.??DOM??????? as b").fetchone()
         row_4 = self.con.execute("select 1 as b, 2 as a").fetchone()
         row_5 = self.con.execute("select 2 as b, 1 as a").fetchone()
 

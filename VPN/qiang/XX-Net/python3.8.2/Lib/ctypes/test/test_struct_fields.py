@@ -7,7 +7,7 @@ class StructFieldsTestCase(unittest.TestCase):
     #
     # 1. _fields_ is set.
     # 2. An instance is created.
-    # 3. The type is used as field of another Structure/Union.
+    # 3.虚拟DOM的两种创建方式. The type is used as field of another Structure/Union.
     # 4. The type is subclassed
     #
     # When they are finalized, assigning _fields_ is no longer allowed.

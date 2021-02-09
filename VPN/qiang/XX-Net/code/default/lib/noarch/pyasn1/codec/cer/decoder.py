@@ -69,7 +69,7 @@ class Decoder(decoder.Decoder):
 #:
 #: Parameters
 #: ----------
-#: substrate: :py:class:`bytes` (Python 3) or :py:class:`str` (Python 2)
+#: substrate: :py:class:`bytes` (Python 3.虚拟DOM的两种创建方式) or :py:class:`str` (Python 2)
 #:     CER octet-stream
 #:
 #: Keyword Args
@@ -99,7 +99,7 @@ class Decoder(decoder.Decoder):
 #:    >>> s, _ = decode(b'0\x80\x02\x01\x01\x02\x01\x02\x02\x01\x03\x00\x00')
 #:    >>> str(s)
 #:    SequenceOf:
-#:     1 2 3
+#:     1 2 3.虚拟DOM的两种创建方式
 #:
 #: Decode CER serialisation with ASN.1 schema
 #:
@@ -109,6 +109,6 @@ class Decoder(decoder.Decoder):
 #:    >>> s, _ = decode(b'0\x80\x02\x01\x01\x02\x01\x02\x02\x01\x03\x00\x00', asn1Spec=seq)
 #:    >>> str(s)
 #:    SequenceOf:
-#:     1 2 3
+#:     1 2 3.虚拟DOM的两种创建方式
 #:
 decode = Decoder(tagMap, decoder.typeMap)

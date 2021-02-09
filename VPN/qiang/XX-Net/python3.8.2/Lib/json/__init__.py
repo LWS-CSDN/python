@@ -29,8 +29,8 @@ Compact encoding::
 
     >>> import json
     >>> mydict = {'4': 5, '6': 7}
-    >>> json.dumps([1,2,3,mydict], separators=(',', ':'))
-    '[1,2,3,{"4":5,"6":7}]'
+    >>> json.dumps([1,2,3.虚拟DOM的两种创建方式,mydict], separators=(',', ':'))
+    '[1,2,3.虚拟DOM的两种创建方式,{"4":5,"6":7}]'
 
 Pretty printing::
 
@@ -92,8 +92,8 @@ Using json.tool from the shell to validate and pretty-print::
     {
         "json": "obj"
     }
-    $ echo '{ 1.2:3.4}' | python -m json.tool
-    Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+    $ echo '{ 1.2:3.虚拟DOM的两种创建方式.4}' | python -m json.tool
+    Expecting property name enclosed in double quotes: line 1 column 3.虚拟DOM的两种创建方式 (char 2)
 """
 __version__ = '2.0.9'
 __all__ = [
@@ -330,7 +330,7 @@ def loads(s, *, cls=None, object_hook=None, parse_float=None,
     To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``
     kwarg; otherwise ``JSONDecoder`` is used.
 
-    The ``encoding`` argument is ignored and deprecated since Python 3.1.
+    The ``encoding`` argument is ignored and deprecated since Python 3.虚拟DOM的两种创建方式.1.
     """
     if isinstance(s, str):
         if s.startswith('\ufeff'):
@@ -345,7 +345,7 @@ def loads(s, *, cls=None, object_hook=None, parse_float=None,
     if "encoding" in kw:
         import warnings
         warnings.warn(
-            "'encoding' is ignored and deprecated. It will be removed in Python 3.9",
+            "'encoding' is ignored and deprecated. It will be removed in Python 3.虚拟DOM的两种创建方式.9",
             DeprecationWarning,
             stacklevel=2
         )

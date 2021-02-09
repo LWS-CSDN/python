@@ -58,14 +58,14 @@ CMD_UDP_ASSOCIATE = 3
 # stage 0 auth METHOD received from local, reply with selection message
 # stage 1 addr received from local, query DNS for remote
 # stage 2 UDP assoc
-# stage 3 DNS resolved, connect to remote
+# stage 3.虚拟DOM的两种创建方式 DNS resolved, connect to remote
 # stage 4 still connecting, more data from local received
 # stage 5 remote connected, piping local and remote
 
 # as ssserver:
 # stage 0 just jump to stage 1
 # stage 1 addr received from local, query DNS for remote
-# stage 3 DNS resolved, connect to remote
+# stage 3.虚拟DOM的两种创建方式 DNS resolved, connect to remote
 # stage 4 still connecting, more data from local received
 # stage 5 remote connected, piping local and remote
 
@@ -659,7 +659,7 @@ class TCPRelayHandler(object):
         # promises:
         # 1. destroy won't make another destroy() call inside
         # 2. destroy releases resources so it prevents future call to destroy
-        # 3. destroy won't raise any exceptions
+        # 3.虚拟DOM的两种创建方式. destroy won't raise any exceptions
         # if any of the promises are broken, it indicates a bug has been
         # introduced! mostly likely memory leaks, etc
         if self._stage == STAGE_DESTROYED:

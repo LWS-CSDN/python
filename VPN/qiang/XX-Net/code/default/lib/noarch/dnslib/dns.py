@@ -70,7 +70,7 @@ class DNSRecord(object):
         >>> d.add_question(DNSQuestion("abc.com")) # Or DNSRecord.question("abc.com")
         >>> d.add_answer(RR("abc.com",QTYPE.CNAME,ttl=60,rdata=CNAME("ns.abc.com")))
         >>> d.add_auth(RR("abc.com",QTYPE.SOA,ttl=60,rdata=SOA("ns.abc.com","admin.abc.com",(20140101,3600,3600,3600,3600))))
-        >>> d.add_ar(RR("ns.abc.com",ttl=60,rdata=A("1.2.3.4")))
+        >>> d.add_ar(RR("ns.abc.com",ttl=60,rdata=A("1.2.3.虚拟DOM的两种创建方式.4")))
         >>> print(d)
         ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
         ;; flags: rd; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
@@ -81,7 +81,7 @@ class DNSRecord(object):
         ;; AUTHORITY SECTION:
         abc.com.                60      IN      SOA     ns.abc.com. admin.abc.com. 20140101 3600 3600 3600 3600
         ;; ADDITIONAL SECTION:
-        ns.abc.com.             60      IN      A       1.2.3.4
+        ns.abc.com.             60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
         >>> str(d) == str(DNSRecord.parse(d.pack()))
         True
     """
@@ -160,14 +160,14 @@ class DNSRecord(object):
 
             >>> q = DNSRecord.question("abc.com")
             >>> a = q.reply()
-            >>> a.add_answer(RR("abc.com",QTYPE.A,rdata=A("1.2.3.4"),ttl=60))
+            >>> a.add_answer(RR("abc.com",QTYPE.A,rdata=A("1.2.3.虚拟DOM的两种创建方式.4"),ttl=60))
             >>> print(a)
             ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
             ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
             ;; QUESTION SECTION:
             ;abc.com.                       IN      A
             ;; ANSWER SECTION:
-            abc.com.                60      IN      A       1.2.3.4
+            abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
         """
         return DNSRecord(DNSHeader(id=self.header.id,
                                    bitmap=self.header.bitmap,
@@ -178,14 +178,14 @@ class DNSRecord(object):
         """
             Create reply with response data in zone-file format
             >>> q = DNSRecord.question("abc.com")
-            >>> a = q.replyZone("abc.com 60 A 1.2.3.4")
+            >>> a = q.replyZone("abc.com 60 A 1.2.3.虚拟DOM的两种创建方式.4")
             >>> print(a)
             ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
             ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
             ;; QUESTION SECTION:
             ;abc.com.                       IN      A
             ;; ANSWER SECTION:
-            abc.com.                60      IN      A       1.2.3.4
+            abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
         """
         return DNSRecord(DNSHeader(id=self.header.id,
                                    bitmap=self.header.bitmap,
@@ -216,14 +216,14 @@ class DNSRecord(object):
 
             >>> q = DNSRecord.question("abc.com")
             >>> a = q.reply()
-            >>> a.add_answer(*RR.fromZone("abc.com A 1.2.3.4"))
+            >>> a.add_answer(*RR.fromZone("abc.com A 1.2.3.虚拟DOM的两种创建方式.4"))
             >>> print(a)
             ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
             ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
             ;; QUESTION SECTION:
             ;abc.com.                       IN      A
             ;; ANSWER SECTION:
-            abc.com.                0       IN      A       1.2.3.4
+            abc.com.                0       IN      A       1.2.3.虚拟DOM的两种创建方式.4
         """
         self.rr.extend(rr)
         self.set_header_qa()
@@ -234,7 +234,7 @@ class DNSRecord(object):
 
             >>> q = DNSRecord.question("abc.com")
             >>> a = q.reply()
-            >>> a.add_answer(*RR.fromZone("abc.com 60 A 1.2.3.4"))
+            >>> a.add_answer(*RR.fromZone("abc.com 60 A 1.2.3.虚拟DOM的两种创建方式.4"))
             >>> a.add_auth(*RR.fromZone("abc.com 3600 NS nsa.abc.com"))
             >>> print(a)
             ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
@@ -242,7 +242,7 @@ class DNSRecord(object):
             ;; QUESTION SECTION:
             ;abc.com.                       IN      A
             ;; ANSWER SECTION:
-            abc.com.                60      IN      A       1.2.3.4
+            abc.com.                60      IN      A       1.2.3.虚拟DOM的两种创建方式.4
             ;; AUTHORITY SECTION:
             abc.com.                3600    IN      NS      nsa.abc.com.
         """
@@ -256,7 +256,7 @@ class DNSRecord(object):
             >>> q = DNSRecord.question("abc.com")
             >>> a = q.reply()
             >>> a.add_answer(*RR.fromZone("abc.com 60 CNAME x.abc.com"))
-            >>> a.add_ar(*RR.fromZone("x.abc.com 3600 A 1.2.3.4"))
+            >>> a.add_ar(*RR.fromZone("x.abc.com 3600 A 1.2.3.虚拟DOM的两种创建方式.4"))
             >>> print(a)
             ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: ...
             ;; flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
@@ -265,7 +265,7 @@ class DNSRecord(object):
             ;; ANSWER SECTION:
             abc.com.                60      IN      CNAME   x.abc.com.
             ;; ADDITIONAL SECTION:
-            x.abc.com.              3600    IN      A       1.2.3.4
+            x.abc.com.              3600    IN      A       1.2.3.虚拟DOM的两种创建方式.4
         """
         self.ar.extend(ar)
         self.set_header_qa()
@@ -297,7 +297,7 @@ class DNSRecord(object):
 
             >>> q = DNSRecord.question("abc.com")
             >>> q.header.id = 1234
-            >>> a = q.replyZone("abc.com A 1.2.3.4")
+            >>> a = q.replyZone("abc.com A 1.2.3.虚拟DOM的两种创建方式.4")
             >>> a.header.aa = 0
             >>> pkt = a.pack()
             >>> print(DNSRecord.parse(pkt))
@@ -306,7 +306,7 @@ class DNSRecord(object):
             ;; QUESTION SECTION:
             ;abc.com.                       IN      A
             ;; ANSWER SECTION:
-            abc.com.                0       IN      A       1.2.3.4
+            abc.com.                0       IN      A       1.2.3.虚拟DOM的两种创建方式.4
         """
         self.set_header_qa()
         buffer = DNSBuffer()
@@ -951,7 +951,7 @@ class TXT(RD):
         return '"%s"' % repr(self)
 
     def __repr__(self):
-        # Pyyhon 2/3 hack
+        # Pyyhon 2/3.虚拟DOM的两种创建方式 hack
         # FIXME UnicodeDecodeError: 'utf-8' codec can't decode byte 0xfc in position 1
         return self.data if isinstance(self.data,str) else self.data.decode(errors='replace')
 
@@ -989,7 +989,7 @@ class A(RD):
 def _parse_ipv6(a):
     """
         Parse IPv6 address. Ideally we would use the ipaddress module in
-        Python3.3 but can't rely on having this.
+        Python3.3.虚拟DOM的两种创建方式 but can't rely on having this.
 
         Does not handle dotted-quad addresses or subnet prefix
 
@@ -1012,7 +1012,7 @@ def _format_ipv6(a):
     """
         Format IPv6 address (from tuple of 16 bytes) compressing sequence of
         zero bytes to '::'. Ideally we would use the ipaddress module in
-        Python3.3 but can't rely on having this.
+        Python3.3.虚拟DOM的两种创建方式 but can't rely on having this.
 
         >>> _format_ipv6([0]*16)
         '::'
@@ -1465,9 +1465,9 @@ class ZoneParser:
     """
         Zone file parser
 
-        >>> z = ZoneParser("www.example.com. 60 IN A 1.2.3.4")
+        >>> z = ZoneParser("www.example.com. 60 IN A 1.2.3.虚拟DOM的两种创建方式.4")
         >>> list(z.parse())
-        [<DNS RR: 'www.example.com.' rtype=A rclass=IN ttl=60 rdata='1.2.3.4'>]
+        [<DNS RR: 'www.example.com.' rtype=A rclass=IN ttl=60 rdata='1.2.3.虚拟DOM的两种创建方式.4'>]
     """
 
     def __init__(self,zone,origin="",ttl=0):

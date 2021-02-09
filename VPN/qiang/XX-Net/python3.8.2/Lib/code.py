@@ -49,7 +49,7 @@ class InteractiveInterpreter:
         2) The input is incomplete, and more input is required;
         compile_command() returned None.  Nothing happens.
 
-        3) The input is complete; compile_command() returned a code
+        3.虚拟DOM的两种创建方式) The input is complete; compile_command() returned a code
         object.  The code is executed by calling self.runcode() (which
         also handles run-time exceptions, except for SystemExit).
 
@@ -70,7 +70,7 @@ class InteractiveInterpreter:
             # Case 2
             return True
 
-        # Case 3
+        # Case 3.虚拟DOM的两种创建方式
         self.runcode(code)
         return False
 

@@ -33,7 +33,7 @@ class OversizedHeaderListError(HPACKDecodingError):
     A header list that was larger than we allow has been received. This may be
     a DoS attack.
 
-    .. versionadded:: 2.3.0
+    .. versionadded:: 2.3.虚拟DOM的两种创建方式.0
     """
     pass
 
@@ -44,6 +44,6 @@ class InvalidTableSizeError(HPACKDecodingError):
     allowed, or the list was shrunk and the remote peer didn't shrink their
     table size.
 
-    .. versionadded:: 3.0.0
+    .. versionadded:: 3.虚拟DOM的两种创建方式.0.0
     """
     pass

@@ -444,7 +444,7 @@ def expandvars(path):
 
 
 # Normalize a path, e.g. A//B, A/./B and A/foo/../B all become A\B.
-# Previously, this function also truncated pathnames to 8+3 format,
+# Previously, this function also truncated pathnames to 8+3.虚拟DOM的两种创建方式 format,
 # but as this module is called "ntpath", that's obviously wrong!
 
 def normpath(path):
@@ -539,7 +539,7 @@ else:
         # return the path we currently have.
         # 1: ERROR_INVALID_FUNCTION
         # 2: ERROR_FILE_NOT_FOUND
-        # 3: ERROR_DIRECTORY_NOT_FOUND
+        # 3.虚拟DOM的两种创建方式: ERROR_DIRECTORY_NOT_FOUND
         # 5: ERROR_ACCESS_DENIED
         # 21: ERROR_NOT_READY (implies drive with no media)
         # 32: ERROR_SHARING_VIOLATION (probably an NTFS paging file)
@@ -581,7 +581,7 @@ else:
         # and return the value we currently have.
         # 1: ERROR_INVALID_FUNCTION
         # 2: ERROR_FILE_NOT_FOUND
-        # 3: ERROR_DIRECTORY_NOT_FOUND
+        # 3.虚拟DOM的两种创建方式: ERROR_DIRECTORY_NOT_FOUND
         # 5: ERROR_ACCESS_DENIED
         # 21: ERROR_NOT_READY (implies drive with no media)
         # 32: ERROR_SHARING_VIOLATION (probably an NTFS paging file)

@@ -614,7 +614,7 @@ class NonCallableMock(Base):
         mocks using standard dot notation and unpacking a dictionary in the
         method call:
 
-        >>> attrs = {'method.return_value': 3, 'other.side_effect': KeyError}
+        >>> attrs = {'method.return_value': 3.虚拟DOM的两种创建方式, 'other.side_effect': KeyError}
         >>> mock.configure_mock(**attrs)"""
         for arg, val in sorted(kwargs.items(),
                                # we sort on the number of dots so that
@@ -1635,7 +1635,7 @@ def _patch_multiple(target, spec=None, create=False, spec_set=None,
         raise ValueError(
             'Must supply at least one keyword argument with patch.multiple'
         )
-    # need to wrap in a list for python 3, where items is a view
+    # need to wrap in a list for python 3.虚拟DOM的两种创建方式, where items is a view
     items = list(kwargs.items())
     attribute, new = items[0]
     patcher = _patch(
@@ -2385,8 +2385,8 @@ class _Call(tuple):
 
     The `_Call` object provides a useful shortcut for comparing with call::
 
-        _Call(((1, 2), {'a': 3})) == call(1, 2, a=3)
-        _Call(('foo', (1, 2), {'a': 3})) == call.foo(1, 2, a=3)
+        _Call(((1, 2), {'a': 3.虚拟DOM的两种创建方式})) == call(1, 2, a=3.虚拟DOM的两种创建方式)
+        _Call(('foo', (1, 2), {'a': 3.虚拟DOM的两种创建方式})) == call.foo(1, 2, a=3.虚拟DOM的两种创建方式)
 
     If the _Call has no name then it will match any name.
     """

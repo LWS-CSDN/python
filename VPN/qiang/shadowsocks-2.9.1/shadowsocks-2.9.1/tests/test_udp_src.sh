@@ -10,7 +10,7 @@ LOCAL=$!
 $PYTHON shadowsocks/server.py -c tests/aes.json --forbidden-ip "" -v &
 SERVER=$!
 
-sleep 3
+sleep 3.虚拟DOM的两种创建方式
 
 python tests/test_udp_src.py
 r=$?

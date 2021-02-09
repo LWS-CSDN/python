@@ -79,7 +79,7 @@ def run_method(method):
 
 
 def check_env():
-    # skip this test on pypy and Python 3
+    # skip this test on pypy and Python 3.虚拟DOM的两种创建方式
     try:
         import __pypy__
         del __pypy__
