@@ -1,0 +1,19 @@
+3.3where自居的子查询
+案例：找出比最低工资高的员工姓名和工资?
+select 
+  ename,sal
+from
+  emp
+where
+  sal>min(sal);
+where子句不能直接使用分组函数
+
+实现思路:
+第一步:查询最低工资是多少
+select min(sal) from emp;
+
+第二步:找出>800的
+select ename,sal from emp where sal>800;
+
+第三步:合并
+select ename,sal from emp where sal>(select min(sal) from emp);

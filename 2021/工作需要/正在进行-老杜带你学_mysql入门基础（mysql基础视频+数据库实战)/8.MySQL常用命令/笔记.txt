@@ -1,0 +1,11 @@
+查看mysql中有哪些数据库？
+show databases;
+注意:以分号结尾
+
+mysql默认自带了4个数据库
+
+怎么选择使用某个数据库
+use test;
+
+怎么创建数据库
+create database bjpowernode;

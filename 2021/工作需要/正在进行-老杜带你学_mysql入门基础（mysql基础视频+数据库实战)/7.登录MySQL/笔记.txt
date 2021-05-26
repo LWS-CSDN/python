@@ -1,0 +1,10 @@
+本地登录
+
+(显示密码的形式)
+mysql -uroot -p123456
+
+隐藏密码的形式
+mysql -uroot -p
+
+mysql常用命令
+退出:exit

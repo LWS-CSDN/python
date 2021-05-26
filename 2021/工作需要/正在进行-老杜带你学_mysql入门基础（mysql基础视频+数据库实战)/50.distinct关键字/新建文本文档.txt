@@ -1,0 +1,6 @@
+1.把查询结果去除重复记录
+select distinct job from emp;
+
+//这样编写是错误的，语法错误
+select distinct job,deptno from emp;
+

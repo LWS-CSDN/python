@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+        {{msg}}
+        {{user.name}}{{user.des}}
+
+    </div>
+</body>
+<script>
+    var app=new Vue({
+        el:'#app',
+        data:{
+            msg:'百知欢迎您!',
+            user:{name:'小陈',des:"他在百知,百知等你!!!"},//定义对象
+            schools:["河南校区","北京校区","天津校区","无锡校区"],//定义一个数组
+            users:[
+                {name:"小王",age:23,bir:"2012-12-12"},
+                {name:"小李",age:23,bir:"2020-11-12"},
+                {name:"小明",age:23,bir:"2012-09-12"}
+            ]
+        }
+    })
+</script>
+</html>

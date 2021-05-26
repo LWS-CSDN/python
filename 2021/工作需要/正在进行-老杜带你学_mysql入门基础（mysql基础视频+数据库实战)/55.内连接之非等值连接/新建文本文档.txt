@@ -1,0 +1,16 @@
+2.6内连接之非等值连接
+案例:找出每个员工的薪资等级,要求显示员工名，薪资，薪资等级?
+
+select * from emp; e
+
+select * from salgrade;  s
+
+
+select
+    e.ename, e.sal, s.grade
+from
+    emp e
+join
+    salgrade s
+on
+    e.sal between s.losal and s.hisal;//条件不是一个等量关系，称为非等值连接

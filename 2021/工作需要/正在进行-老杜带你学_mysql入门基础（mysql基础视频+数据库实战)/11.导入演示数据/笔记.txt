@@ -1,0 +1,23 @@
+10.导入一下提前准备好的数据
+bjpowernode.sql这个文件
+
+注意:路径不要有中文!!!
+
+11.关于导入的这几张表?
+dept是部门表
+emp是员工表
+salgrade是工资等级表
+
+怎么查看表中的数据呢?
+select * from 表名;//同一执行这个SQL语句。 
+
+7
+
+
+自己的理解:
+要先选择数据库
+再导入表
+再查看表
+1.use bjpowernode;
+2.source 文件路径.sql
+3.show tables;

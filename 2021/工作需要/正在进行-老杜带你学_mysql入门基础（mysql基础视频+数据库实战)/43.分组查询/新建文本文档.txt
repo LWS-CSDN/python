@@ -1,0 +1,23 @@
+19.3找出每个工作岗位的工资和?
+实现思路:按照工作岗位分组，然后对工资求和
+select
+  job,sum(sal)
+from
+  emp
+group by
+  job;
+以上这个语句的执行顺序?
+先从emp表中查询数据
+根据job字段进行分组
+然后对每一组的数据进行sum(sal)
+
+重要结论:
+在一条select语句当中，如果有group by语句的话
+select后面只能跟,参加分组的字段，以及分组函数
+其他的一律不能跟
+
+19.4找出每个部门的最高薪资
+实现思路是什么?
+按照部门编号分组，求每一组的最大值
+select后面添加ename字段没有意义，另外oracle会报错
+select deptno,max(sal) from emp group by deptno;

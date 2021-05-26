@@ -1,0 +1,16 @@
+15.排序
+15.1查询所有员工薪资，排序?
+select
+  ename,sal
+from
+  emp
+order by
+  sal;//默认是升序!asc（可以不写）
+
+15.2怎么降序?
+select
+  ename,sal
+from
+  emp
+order by
+  sal desc;//默认是升序!

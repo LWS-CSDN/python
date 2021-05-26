@@ -1,0 +1,11 @@
+is null 为null(is not null 不为空)
+查询哪些员工的津贴/补助为null?
+select empno,ename,sal,comm from emp where comm=null;
+select empno,ename,sal,comm from emp where comm is null;
+
+注意:在数据库当中null不能使用等号进行衡量。需要使用is null
+因为数据库中的null代表什么也没有，它不是一个值，所以不能使用
+等号衡量
+
+查询哪些员工的津贴/补助不为null?
+select empno,ename,sal,comm from emp where comm is not null;

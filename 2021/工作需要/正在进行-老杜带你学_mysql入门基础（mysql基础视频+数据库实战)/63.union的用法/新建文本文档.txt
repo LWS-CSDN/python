@@ -1,0 +1,25 @@
+4. union合并查询结果集
+案例：查询工作岗位是MANAGER和SALESMAN的员工?
+select ename,job from emp where job='MANAGER' or job='SALESMAN';
+select ename,job from emp where job in('MANAGER','SALESMAN');
+
+select ename,job from emp where job='MANAGER'
+union
+select ename,job from emp where job='SALESMAN';
+
+union的效率要高一些,对于表连接来说，每连接一次新表
+但匹配的次数满足笛卡尔积,成倍的翻...
+但是union可以减少匹配的次数，在减少匹配次数的情况下,
+还可以完成两个结果集的拼接
+a连接b连接c
+a 10条记录
+b 10条记录
+匹配次数是:1000
+
+a连接b一个结果:10*10-->100次
+a连接c一个结果:10*10-->100次
+
+使用union的话是:100次+100次=200次
+
+union在使用的时候注意事项
+mysql可以,oracle不可以(数据类型必须一样)

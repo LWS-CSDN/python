@@ -1,0 +1,6 @@
+create table mytable as select empno,ename from emp where job='MANAGER';
+4.将查询结果插入到一张表中?insert相关的!!(了解)
+create table dept_bak as select *from dept;
+select * from dept_bak;
+insert into dept_bak select * from dept;//很少用!
+select * from dept_bak;

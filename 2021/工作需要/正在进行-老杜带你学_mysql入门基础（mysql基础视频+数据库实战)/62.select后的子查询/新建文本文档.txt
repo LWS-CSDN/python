@@ -1,0 +1,7 @@
+3.5select后面出现的子查询(这个内容不需要掌握,了解即可!!)
+
+案例:找出每个员工的部门名称,要求显示员工名,部门名?
+select 
+   e.ename,(select d.dname from dept d where e.deptno=d.deptno) as dname 
+from 
+   emp e;

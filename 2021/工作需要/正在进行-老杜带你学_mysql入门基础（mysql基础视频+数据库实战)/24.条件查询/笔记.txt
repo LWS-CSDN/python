@@ -1,0 +1,14 @@
+in 包含，相当于多个or(not in 不在这个范围中)
+查询工作岗位是MANAGER和SALESMAN的员工?
+select empno,ename,job from emp where job ='MANAGER' or job='SALESMAN';
+select empno,ename,job from emp where job in ('MANAGER','SALESMAN');
+
+注意：in不是一个区间，in后面跟的是具体的值
+
+查询薪资是800和5000的员工信息?
+select empno,sal from emp where sal=800 or sal=5000;
+select empno,sal from emp where sal in (800,5000);//这个不是表示800到5000都找出来
+
+not in
+select empno,sal from emp where sal not in (800,5000);
+

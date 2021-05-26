@@ -1,0 +1,10 @@
+第三点:分组函数不能够直接使用where字句中
+找出最低工资高的员工信息
+select ename,sal from emp where sal>min(sal);
+表面上没问题，统运行一下?
+
+说完分组查询之后就明白了
+
+
+第四点:所有的
+

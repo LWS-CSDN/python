@@ -1,0 +1,7 @@
+分组函数在使用的时候注意哪些?
+
+select * from emp;
+select sum(comm) from emp;
+select count(comm) from emp;
+select avg(comm) from emp;
+第一点:分组函数自动忽略NULL，你不需要提前对NULL进行处理

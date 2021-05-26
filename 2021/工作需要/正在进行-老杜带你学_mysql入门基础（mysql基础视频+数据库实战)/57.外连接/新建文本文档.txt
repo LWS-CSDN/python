@@ -1,0 +1,61 @@
+2.8外连接
+select * from emp; e
+select * from dept; d
+
+内连接(平等的):
+select
+  e.ename,d.dname
+from
+  emp e
+join
+  dept d
+on 
+  e.deptno=d.deptno;//内连接的特点:完成能够匹配上这个条件的数据查询出来
+
+外连接(右外连接):
+select
+  e.ename,d.dname
+from
+  emp e right join dept d
+on 
+  e.deptno=d.deptno;
+
+right代表什么：表示将join关键字右边的这张表看成主表,主要是为了
+将这张表的数据全部查询出来,捎带着关联查询左边的表.
+
+在外连接当中,两张表连接，产生主次关系
+
+//outer 是可以省略的，带着可读性强
+select(左外连接)
+  e.ename,d.dname
+from
+  emp d 
+left outer join 
+  emp e
+on 
+  e.deptno=d.deptno;
+带有right的是右外连接,又叫做右连接
+带有left的是左外连接,又叫做左连接
+任何一个右连接都有左连接的写法
+任何一个左连接都有右连接的写法
+
+外连接和内连接的区别
+内连接是平等关系
+外连接是主次关系
+
+思考:外连接的查询结果条数一定是>=内连接的查询结果条数?
+正确
+
+案例:查询每个员工的上级领导,要求显示所有员工的名字和领导名?
+select empno,ename,mgr from emp;
+
+select 
+  a.ename as '员工名',b.ename as '领导名'
+from
+  emp a
+left join
+  emp b
+on
+  a.mgr=b.empno;
+
+

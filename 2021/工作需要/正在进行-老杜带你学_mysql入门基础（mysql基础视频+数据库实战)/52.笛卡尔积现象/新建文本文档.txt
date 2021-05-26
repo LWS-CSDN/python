@@ -1,0 +1,37 @@
+2.3当两张表进行连接查询时,没有任何条件的限制会发生什么现象?
+案例：查询每个员工所在部门名称?
+select * from emp;
+select * from dept;
+
+两张表连接没有任何限制
+select ename,dname from emp,dept;
+14*4=56
+
+当两张表进行连接查询，没有任何条件限制的时候
+最终查询结果条数，是两张表条数的乘积,这种现象被称为
+笛卡尔积现象(笛卡尔发现的，这是一个数学现象)
+
+2.4怎么避免笛卡尔积现象?
+连接时加条件，满足这个条件的记录被筛选出来
+select
+   ename,dname
+from
+   emp,dept
+where
+   emp.deptno=dept.deptno;
+
+//表起别名，很重要，效率问题
+select
+   e.ename,d.dname
+from
+   emp e,dept d
+where
+   e.deptno=d.deptno;//SQL92语法
+
+思考：最终查询的结果条数是14条,但是匹配的过程中
+匹配的次数减少了吗?
+还是56次,只不过进行了四选一,次数没有减少
+
+
+;
+

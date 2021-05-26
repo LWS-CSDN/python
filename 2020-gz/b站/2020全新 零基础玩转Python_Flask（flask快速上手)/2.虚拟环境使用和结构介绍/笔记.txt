@@ -1,0 +1,24 @@
+python
+mtv
+model模型
+template模板 -->html
+view视图 起控制作用 python代码
+
+b/s:
+browser 浏览器
+server 服务器
+
+c/s:
+client 客户端
+server 服务器
+
+
+flask实现wsgi
+f4进入看源码
+
+WSGI:web服务器网关接口
+是为python语言定义的web服务器和web应用程序或框架之间的一种简单而通用的接口
+
+flask app应用程序-------部署---------->webserver
+
+装饰器

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app" class="aa">
+        {{msg}}
+        {{age}}
+    <h1 v-show="isShow">{{content}}</h1>
+    <h1 v-if="isShow">{{content}}</h1>
+    <!-- 
+        区别:
+        v-show:底层在控制页面标签是否展示时底层使用的css中display属性来标签展示和隐藏
+        v-if:底层在控制页面标签是否展示时底层是直接操作dom元素,通过dom元素删除和添加来控制标签的展示隐藏
+     -->
+    <input type="button" value="点我" @click="aaa(10)">
+    </div>
+</body>
+<script>
+    var app=new Vue({
+        el:'#app',//指定vue作用范围   推荐id选择器 id选择具有唯一性  
+        data:{
+            msg:'hello vue',
+            age:23,
+            content:"欢迎来到<a href='http://www.baidu.com'>百知教育</a>",
+            isShow:true
+        },
+        methods:{
+            aaa(number){//es6语法
+                //this对象代表实例本身
+                this.age=this.age+number;      
+            }
+        }
+    })
+</script>
+</html>

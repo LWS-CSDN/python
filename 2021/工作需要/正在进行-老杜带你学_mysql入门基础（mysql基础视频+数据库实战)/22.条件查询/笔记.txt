@@ -1,0 +1,20 @@
+and 并且
+查询工作岗位是MANAGER并且工资大于2500的员工信息?
+select
+  empno,ename,job,sal
+from
+  emp
+where
+  job='MANAGER' and sal >2500;
+
+or或者
+查询工作岗位是MANAGER和SALESMAN的员工?
+select empno,ename,job from emp where job='MANAGER';
+select empno,ename,job from emp where job='SALESMAN';
+
+select 
+  empno,ename,job
+from
+  emp
+where
+  job='MANAGER' or job='SALESMAN';

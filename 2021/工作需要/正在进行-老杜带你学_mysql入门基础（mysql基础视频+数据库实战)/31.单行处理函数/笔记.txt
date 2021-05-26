@@ -1,0 +1,29 @@
+substr 取子串(substr(被截取的字符串，起始下标，截取的长度))
+select substr(ename,0,1) from emp;
+注意:起始下标从1开始,没有0
+找出员工名字第一个字母是A的员工信息?
+第一种方式:模糊查询
+select ename from emp where ename lik 'A%';
+第二种方式:substr函数
+select 
+  ename
+from
+  emp
+where
+  substr(ename,1,1)='A';
+
+首字母大写?
+select name from t_student;
+
+
+concat函数进行字符串的拼接
+select concat(empno,ename) from emp;
+
+length 取长度
+trim 去空格
+str_to_date 将字符串转换成日期
+date_format 格式化日期
+format 设置千分位
+round 四舍五入
+rand() 生成随机数
+ifnull 可以将null转换成一个具体值

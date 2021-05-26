@@ -1,0 +1,20 @@
+16.综合一点的案例:
+找出工资在1250到3000之间的员工信息,要求按照薪资降序排列
+select 
+   ename,sal 
+from
+  emp
+where
+  sal between 1250 and 3000
+order by
+  sal desc;
+
+关键字顺序不能变
+select
+..
+from
+..
+where
+..
+order by
+...

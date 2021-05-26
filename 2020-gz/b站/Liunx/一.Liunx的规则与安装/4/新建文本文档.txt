@@ -1,0 +1,42 @@
+4.2命令行模式下的执行
+
+commannd [-options] parameter1 parameter2
+命令	选项	参数1	参数2
+
+1.显示目前所支持的语系
+locale
+2.修改语系成为英文语系
+LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+4.2.2基础命令的操作
+1.显示日期的命令
+date
+date+%Y/%m/%d
+date+%H:%M
+2.显示日历的命令
+cal
+cal 2021
+cal 3 2021
+3.简单好用的计算器
+bc
+退出计算器quit
+
+4.2.3重要的几个热键Tab ，Ctrl-c，Ctrl-d
+
+4.4超简单的文本编辑器:nano
+4.5正确的关机方法
+sync同步自己的数据
+su -
+同步整个系统的数据
+1.常用的关机命令:shutdown
+/sbin/shutdown -h 10 'I will shutdown after 10 mins'
+提醒大家,10分钟后要关机
+shutdown -c来取消关机命令
+shutdown -h now 现在马上关机
+shutdown -k now 'This system will reboot'
+
+系统重新启动
+systeamctl reboot
+
+

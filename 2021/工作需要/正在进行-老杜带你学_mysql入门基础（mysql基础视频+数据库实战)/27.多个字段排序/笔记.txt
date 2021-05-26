@@ -1,0 +1,10 @@
+15.3可以两个字段排序吗?或者说按照多个字段排序?
+查询员工名字和薪资，要求按照薪资升序,如果薪资一样的话
+，再按照名字升序排列
+
+select
+  ename,sal
+from
+  emp
+order by
+  sal asc,ename asc;//sal在前，起主导，只有sal相等的时候，才会考虑启用ename排序

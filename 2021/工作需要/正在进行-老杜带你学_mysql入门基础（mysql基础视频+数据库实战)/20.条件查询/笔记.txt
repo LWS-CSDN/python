@@ -1,0 +1,34 @@
+14.2都有哪些条件?
+
+
+=等于
+查询薪资等于800的员工姓名和编号?
+select empno,ename from emp where sal=800;
+查询SMITH的编号和薪资?
+select empno,sal from emp where ename = 'SMITH';//字符串使用单引号
+
+<>或!=不等于
+查询薪资不等于800的员工姓名和编号?
+select empno,ename from emp where sal!=800;
+select empno,ename from emp where sal<>800;//小于号和大于号组成的不等号
+
+<小于
+查询薪资小于2000的员工姓名和编号?
+select empno,ename from emp where sal<2000;
+
+<=小于等于
+查询薪资小于等于3000的员工姓名和编号?
+select empno,ename from emp where sal<=3000;
+
+between ... and ...两个值之间,等同于>= and<=
+查询薪资在2450和3000之间的员工信息?包括2450和3000
+第一种方式: >= and <= (and是并且的意思)
+select empno,ename,sal from emp where sal>=2450 and sal<=3000;
+第二种方式:between ... and 
+select 
+  empno,ename,sal
+from
+  emp
+where
+  sal between 2450 and 3000;
+注意:使用between and的时候，必须遵循左小右大,闭区间，包括两端的值

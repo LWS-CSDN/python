@@ -1,0 +1,5 @@
+13.2查询两个字段，或者多个字段怎么办?
+使用逗号隔开,
+查询部门编号和部门名
+select deptno,dname from dept;
+

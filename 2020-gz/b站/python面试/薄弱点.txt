@@ -1,0 +1,5 @@
+薄弱点:
+1.mysql表设计
+2.熟悉django
+3.熟悉liunx
+  

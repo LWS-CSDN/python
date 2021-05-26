@@ -1,0 +1,6 @@
+13.5计算员工年薪?sal*12
+select ename,sal from emp;
+select ename,sal*12 from emp;
+select ename,sal*12 as yearsal from emp;
+select ename,sal*12 as '年薪' from emp;
+select ename,sal*12 as 年薪 from emp;//不可以

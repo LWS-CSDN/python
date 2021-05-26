@@ -1,0 +1,4 @@
+trim去空格
+select * from emp where ename='   KING';
+
+select * from emp where ename=trim(' KING');

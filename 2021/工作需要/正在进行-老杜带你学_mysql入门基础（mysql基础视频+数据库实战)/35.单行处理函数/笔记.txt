@@ -1,0 +1,17 @@
+ifnull可以将null转换成一个具体值
+ifnull是空处理函数，专门处理空的
+在所有数据库当中,只要有NULL参与的数学运算,最终结果就是NULL
+select ename,sal +comm as salcomm from emp;
+
+计算每个员工的年薪?
+年薪=(月薪+月补助)*12
+
+select ename,(sal+comm)*12 as yearsal from emp;
+
+注意：NULL只要参与运算，最终结果一定是NULL，为了避免这个
+现象，需要使用ifnull函数用法:ifnull(数据,被当做哪个值)
+
+如果数据为NULL的时候,把数据结构当做哪个值
+
+补助为NULL的时候，将补助当做0
+select ename,(sal+ifnull(comm,0))*12 as yearsal from emp;

@@ -1,0 +1,18 @@
+2.7内连接之自连接
+案例:查询员工的上级领导,要求显示员工名和对应的领导名？
+select empno,ename,mgr from emp;
+
+技巧：一张表看成两张表
+emp a员工表
+emp b领导表
+
+select 
+   a.ename as '员工名',b.ename as '领导名'
+from
+   emp a
+join
+   emp b
+on
+   a.mgr=b.empno;//员工的领导编号=领导的员工编号
+
+以上就是内连接中的:自连接,技巧：一张表看做两张表

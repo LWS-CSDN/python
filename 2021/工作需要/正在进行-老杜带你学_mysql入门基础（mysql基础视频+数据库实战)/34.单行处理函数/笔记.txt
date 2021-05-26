@@ -1,0 +1,4 @@
+rand()生成随机数
+select rand() from emp;
+
+select round(rand()*100,0) from emp;//100以内的随机数

@@ -1,0 +1,21 @@
+7.3非空约束:not null
+
+非空约束not null 约束的字段不能为NULL
+drop table if exists t_vip;
+create table t_vip(
+  id int,
+  name varchar(255) not null
+);
+insert into t_vip(id,name) values(1,'zhangsan');
+insert into t_vip(id,name) values(2,'lisi');
+insert into t_vip(id) values (3);//错误的，因为name为null
+
+小差曲,
+xxx.sql这种文件被称为sql脚本文件
+sql脚本文件中编写了大量的sql语句
+我们执行sql脚本，该文件中所有的sql语句会全部执行
+
+source 绝对路径
+
+你在实际的工作中，第一天到了公司，项目经理给你xxx.sql文件
+你执行这个脚本文件，你电脑上的数据库数据就有了!

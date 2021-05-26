@@ -1,0 +1,10 @@
+查看mysql数据库的版本号
+select version;
+
+查看当前使用的数据库
+select database();
+
+mysql>show
+->
+->\c
+用来终止

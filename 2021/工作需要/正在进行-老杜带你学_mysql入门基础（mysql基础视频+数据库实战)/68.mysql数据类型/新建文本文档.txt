@@ -1,0 +1,31 @@
+int(最长11)
+数字中的整数型等同于java的int
+
+bigint
+数字中的长整型，等同于java中的long
+
+float
+单精度浮点型数据
+
+double
+双精度浮点型数据
+
+date
+短日期类型
+
+datetime
+长日期类型
+
+clob
+字符大对象
+最多可以存储4g的字符串
+比如:存储一篇文章,存储一个说明
+超过255个字符的都要采用CLOB字符大对象来存储
+Character Large Object:CLOB
+
+blob
+二进制大对象
+Binary Large OBject
+专门用来存储图片，声音，视频等流媒体数据
+往BLOB类型的字段上插入数据的时候，例如插入一个图片，视频
+你需要使用IO流才行

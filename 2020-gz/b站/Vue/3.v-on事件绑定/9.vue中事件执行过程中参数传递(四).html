@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app" class="aa">
+        {{msg}}
+        {{age}}
+    <input type="button" value="点我" @click="aaa(10)">
+    </div>
+</body>
+<script>
+    var app=new Vue({
+        el:'#app',//指定vue作用范围   推荐id选择器 id选择具有唯一性  
+        data:{
+            msg:'hello vue',
+            age:23,
+            content:"欢迎来到<a href='http://www.baidu.com'>百知教育</a>",
+        },
+        methods:{
+            aaa(number){//es6语法
+                //this对象代表实例本身
+                this.age=this.age+number;      
+            }
+        }
+    })
+</script>
+</html>
