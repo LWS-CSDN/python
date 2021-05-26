@@ -1,2 +1,0 @@
-mstsc
-TIMEOUT /T 5 /NOBREAK

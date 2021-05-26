@@ -1,1 +1,0 @@
-open('xxx',mode='abc',encoding='utf-8')

@@ -1,2 +1,0 @@
-ipconfig
-TIMEOUT /T 5 /NOBREAK

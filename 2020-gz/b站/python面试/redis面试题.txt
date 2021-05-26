@@ -1,6 +1,0 @@
-redis有哪些数据类型
-string
-list
-set
-hash hash
-sort set
