@@ -1,0 +1,48 @@
+成功安装Django后,虚拟机终端会有django-admin命令
+执行django-admin startproject 项目名 即可创建出对应项目文件夹
+例如终端执行django-admin startproject mysite1则创建出mysite1项目
+
+启动服务
+启动[测试开发阶段]
+1.终端cd进入到项目文件夹,例如cd mysite1
+2.进入到项目文件夹后,执行python3 manage.py runserver启动
+django服务[注：该启动方式下,django在前台启动服务,默认监听8000端口]
+3.浏览器访问http://127.0.0.1:8000可看到django的启动页面
+注:如果想更换端口,则可以用python3 manage.py runserver端口号
+
+关闭服务
+方式1:在runserver启动终端下
+执行ctrl+c可关闭django服务
+方式2:在其他终端下
+执行sudo lsof -i:8000查询出Django的进程id
+执行kill -9对应Django进程id
+
+启动常见问题
+问题:启动时报错
+Error:That port is already in use
+问题原因:端口已被使用,证明当前Django启动时,默认监听
+的8000端口已被其他进程占用
+解决方案:参考关闭服务
+
+mysite1
+-db.sqlite3
+-manage.py
+-mysite1
+--__init__.py
+--settings.py
+--urls.py
+--wsgi.py
+
+项目结构-manage.py
+manage.py包含项目管理的子命令,如
+python3 manage.py runserver启动服务
+python3 manage.py startapp创建应用
+python3 manage.py migrate数据库迁移
+直接执行python3 manage.py可列出所有的Django子命令
+
+项目同名文件夹-mysite1/mysite1
+__init__:python包的初始化文件
+wsgi.py:web服务网关的配置文件-Django正式启动时,需要用到
+urls.py:项目的主路由配置-HTTP请求进入Django时,优先调用该文件
+settings.py:项目的配置文件-包含项目启动时需要的配置
+

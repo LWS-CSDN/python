@@ -1,0 +1,33 @@
+包含组件
+基本配置文件/路由系统
+模型层M/模板层T/视图层V
+Cookies和Session
+分页及发邮件
+Admin管理后台
+
+用途一:网站/微信公众号/小程序后端开发
+用途二:人工智能平台融合
+微信小程序--->    Django------>人工智能系统
+(我要打车) <----- | |             |
+                 | |             |
+                 | |             |
+                 | |             |
+第三方打车平台----- ---------------
+
+Django中文文档参考网站https://yiyibooks.cn/
+版本
+最新版本3.0.x
+当前教学版本2.2.12
+
+支持python的版本-3.5,3.6,3.7,3.8
+在线安装
+虚拟机执行sudo pip3 install django==2.2.12
+检查是否成功sudo pip3 freeze|grep -i 'Django'
+离线安装-官网下载离线安装包
+将安装包复制到虚拟机
+解压缩tar -xvf Django-2.2.12.tar.gz
+进入目录cd Django-2.2.12
+执行安装sudo python3 setup.py install
+检查是否成功sudo pip3 freeze|grep -i 'Django'
+
+
