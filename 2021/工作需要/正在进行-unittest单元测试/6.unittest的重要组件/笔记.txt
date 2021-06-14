@@ -1,0 +1,6 @@
+重要组件
+1.TestCase
+2.TestSuite
+3.TestFixture
+4.TestLoader
+5.TesrRuner
